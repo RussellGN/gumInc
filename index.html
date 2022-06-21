@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width | initial-scale=1.0"
+		/>
+		<title>Gum.Inc</title>
+
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="assets/vendor/fontawesome/css/all.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/vendor/bootstrap/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+
+	<style>
+		.hero-bg-1 {
+			background: linear-gradient(
+					to top right,
+					rgba(103, 95, 95, 0.7),
+					rgba(77, 73, 73, 0.9)
+				),
+				url(assets/images/directory3.jpg) center no-repeat;
+			background-size: cover;
+		}
+		.hero-bg-2 {
+			background: linear-gradient(
+					to top right,
+					rgba(103, 95, 95, 0.7),
+					rgba(77, 73, 73, 0.9)
+				),
+				url(assets/images/business-cards2.jpg) center no-repeat;
+			background-size: cover;
+		}
+		.hero-bg-3 {
+			background: linear-gradient(
+					to top right,
+					rgba(103, 95, 95, 0.7),
+					rgba(77, 73, 73, 0.9)
+				),
+				url(assets/images/profiling.jpg) center no-repeat;
+			background-size: cover;
+		}
+		.hero-bg-4 {
+			background: linear-gradient(
+					to top right,
+					rgba(103, 95, 95, 0.7),
+					rgba(77, 73, 73, 0.9)
+				),
+				url(assets/images/directory2.jpg) center no-repeat;
+			background-size: cover;
+		}
+		.hero-bg-5 {
+			background: linear-gradient(
+					to top right,
+					rgba(103, 95, 95, 0.7),
+					rgba(77, 73, 73, 0.9)
+				),
+				url(assets/img/2.jpg) center no-repeat;
+			background-size: cover;
+		}
+	</style>
+
+	<body
+		class="container-xxl p-0 pt-5 d-flex flex-column justify-content-center"
+		style="min-height: 100vh"
+	>
+		<div id="offcanvases">
+			<div
+				class="offcanvas offcanvas-start bg-dark"
+				tabindex="-1"
+				id="mobileNavOffcanvas"
+				aria-labelledby="mobileNavOffcanvasLabel"
+			>
+				<div class="offcanvas-header">
+					<h5 id="mobileNavOffcanvasLabel"></h5>
+
+					<button
+						type="button"
+						class="btn text-gray"
+						data-bs-dismiss="offcanvas"
+						aria-label="Close"
+					>
+						<i class="bi bi-x-circle fs-1"></i>
+					</button>
+				</div>
+
+				<div class="offcanvas-body">
+					<div class="d-flex flex-column">
+						<a class="mobile-link p-3 active" href="index.html">
+							Home
+						</a>
+
+						<a class="mobile-link p-3" href="store.html">Store</a>
+
+						<a class="mobile-link p-3" href="">Almanacs</a>
+						<a class="mobile-link p-3" href="">Subscriptions </a>
+						<a class="mobile-link p-3" href="">Login</a>
+						<a class="mobile-link p-3" href=""> About </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<header
+			id="header"
+			class="container-xxl d-flex pt-3 pt-md-2 align-items-center justify-content-around fixed-top"
+		>
+			<a href="index.html" class="navbar-brand text-dark p-0 fs-2"
+				>Gum.Inc</a
+			>
+
+			<button
+				class="btn p-0 d-md-none nav-link"
+				id="nav-toggle"
+				type="button"
+				data-bs-toggle="offcanvas"
+				data-bs-target="#mobileNavOffcanvas"
+				aria-controls="mobileNavOffcanvas"
+			>
+				<i class="bi bi-list fs-2"></i>
+			</button>
+
+			<div class="d-md-flex d-none p-0">
+				<a
+					href="index.html"
+					class="nav-link rounded-pill px-2 py-1 active"
+					>Home</a
+				>
+				<a href="directory.html" class="nav-link rounded-pill px-2 py-1"
+					>Directory</a
+				>
+				<a href="store.html" class="nav-link rounded-pill px-2 py-1"
+					>Store</a
+				>
+				<a
+					href="directories-and-almanacs.html"
+					class="nav-link rounded-pill px-2 py-1"
+					>Almanacs & Directories</a
+				>
+				<a href="about.html" class="nav-link rounded-pill px-2 py-1"
+					>About</a
+				>
+				<a href="account.html" class="nav-link rounded-pill px-2 py-1"
+					>Account</a
+				>
+				<a
+					href="cart.html"
+					class="nav-link border rounded-circle px-2 ms-2 py-1"
+					><i class="bi bi-cart4"></i
+				></a>
+			</div>
+		</header>
+
+		<section id="hero" class="mt-5 container-fluid p-0 overflow-hidden">
+			<div class="h-100">
+				<div
+					class="h-100 w-75 mx-auto text-center d-flex flex-column align-items-center justify-content-center gap-2"
+				>
+					<h1 class="hero-item display-1">
+						Gum.Inc<i class="bi bi-circle-fill ms-2"></i>
+					</h1>
+
+					<h4 class="hero-item mb-1">Some text goes here.</h4>
+
+					<div
+						class="input-group c-rounded-3 overflow-hidden border border-brown input-group-lg mb-3 w-50"
+					>
+						<input
+							type="search"
+							class="form-control border-0"
+							placeholder="Search People & Businesses..."
+							aria-label="Search People & Businesses..."
+							aria-describedby="basic-addon2"
+						/>
+						<a
+							href="directory.html"
+							class="input-group-text btn btn-primary border-0"
+							id="basic-addon2"
+						>
+							<i class="bi bi-search"></i>
+						</a>
+					</div>
+
+					<div class="hero-item lead d-flex gap-2">
+						<p>
+							<i class="bi bi-book mx-2"></i>Almanacs &
+							Directories |
+						</p>
+						<p>
+							<i class="bi bi-person-badge mx-2"></i>Contact
+							Management Platform |
+						</p>
+						<p>
+							<i class="bi bi-globe mx-2"></i>Information Sharing
+						</p>
+					</div>
+
+					<!-- <a
+						href="#one-big-directory"
+						class="btn btn-primary scrollto px-3 rounded-pill"
+						>Get Started</a
+					> -->
+				</div>
+			</div>
+		</section>
+
+		<main
+			class="container my-5 c-rounded-3 shadow-lg"
+			style="min-height: 100vh"
+		>
+			<div
+				id="one-big-directory"
+				class="row align-items-center justify-content-around gap-2 p-5"
+			>
+				<div class="col-lg-5">
+					<h2 class="mb-3">One Big Online Directory</h2>
+
+					<p class="lead">
+						Lorem ipsum, dolor sit amet consectetur adipisicing
+						elit. Harum alias eum iusto repellendus ex iste!
+						Assumenda ipsam, nobis quas corrupti magni atque nihil
+					</p>
+
+					<div>
+						<a
+							href="signup.html"
+							class="btn btn-primary rounded-pill px-3"
+						>
+							Join!
+						</a>
+
+						<a
+							href="directory.html"
+							class="btn btn-outline-dark rounded-pill px-3"
+							>Explore</a
+						>
+					</div>
+				</div>
+
+				<div class="col-5">
+					<div class="row row-cols-auto gap-4 justify-content-around">
+						<div class="col text-center p-4 shadow-lg c-rounded-3">
+							<div
+								style="width: 6rem; height: 6rem"
+								class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+							>
+								<img
+									src="assets/images/user.jpg"
+									class="w-100"
+								/>
+							</div>
+							<h5 class="text-center my-2">John Doe</h5>
+
+							<p class="text-center my-1">Financial Advisor</p>
+
+							<p class="text-center my-1">
+								<i class="bi bi-geo-alt me-2"></i>Harare
+							</p>
+						</div>
+
+						<div class="col text-center p-3 c-rounded-3">
+							<div
+								style="width: 6rem; height: 6rem"
+								class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+							>
+								<img
+									src="assets/images/user2.jpg"
+									class="w-100"
+								/>
+							</div>
+							<h5 class="text-center my-2">John Doe</h5>
+
+							<p class="text-center my-1">Financial Advisor</p>
+
+							<p class="text-center my-1">
+								<i class="bi bi-geo-alt me-2"></i>Harare
+							</p>
+						</div>
+
+						<div class="col text-center p-3 c-rounded-3">
+							<div
+								style="width: 6rem; height: 6rem"
+								class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+							>
+								<img
+									src="assets/images/user3.jpg"
+									class="w-100"
+								/>
+							</div>
+							<h5 class="text-center my-2">John Doe</h5>
+
+							<p class="text-center my-1">Financial Advisor</p>
+
+							<p class="text-center my-1">
+								<i class="bi bi-geo-alt me-2"></i>Harare
+							</p>
+						</div>
+
+						<div class="col text-center p-4 shadow-lg c-rounded-3">
+							<div
+								style="width: 6rem; height: 6rem"
+								class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+							>
+								<img
+									src="assets/images/user5.jpg"
+									class="w-100"
+								/>
+							</div>
+							<h5 class="text-center my-2">John Doe</h5>
+
+							<p class="text-center my-1">Financial Advisor</p>
+
+							<p class="text-center my-1">
+								<i class="bi bi-geo-alt me-2"></i>Harare
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row align-items-center justify-content-around my-5">
+				<div class="col-5" style="height: 300px">
+					<div
+						id="homeStoreCarousel"
+						class="carousel c-rounded-3 overflow-hidden shadow-lg slide carousel-fade h-100"
+						data-bs-ride="carousel"
+					>
+						<div
+							class="carousel-inner text-white h-100"
+							role="listbox"
+						>
+							<div
+								class="carousel-item active text-center hero-bg-1 h-100"
+							>
+								<h2
+									class="h-100 d-flex justify-content-center align-items-center w-75 mx-auto"
+								>
+									Buy Hardcopy Almanacs & Directories
+								</h2>
+							</div>
+
+							<div
+								class="carousel-item hero-bg-2 text-center h-100"
+							>
+								<h2
+									class="h-100 d-flex justify-content-center align-items-center w-75 mx-auto"
+								>
+									Print Your Business Cards
+								</h2>
+							</div>
+
+							<div
+								class="carousel-item hero-bg-3 text-center h-100"
+							>
+								<h2
+									class="h-100 d-flex justify-content-center align-items-center w-75 mx-auto"
+								>
+									Profiling
+								</h2>
+							</div>
+
+							<div
+								class="carousel-item hero-bg-4 text-center h-100"
+							>
+								<h2
+									class="h-100 d-flex justify-content-center align-items-center w-75 mx-auto"
+								>
+									And More!
+								</h2>
+							</div>
+						</div>
+
+						<button
+							class="carousel-control-prev"
+							type="button"
+							data-bs-target="#homeStoreCarousel"
+							data-bs-slide="prev"
+						>
+							<span
+								class="carousel-control-prev-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+
+						<button
+							class="carousel-control-next"
+							type="button"
+							data-bs-target="#homeStoreCarousel"
+							data-bs-slide="next"
+						>
+							<span
+								class="carousel-control-next-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<h2 class="mb-3">Digital - Physical</h2>
+
+					<p class="lead">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						A corporis doloremque excepturi similique praesentium
+						reiciendis illo nihil. Sit debitis quos recusandae
+						omnis?
+					</p>
+
+					<div
+						class="d-grid gap-2 d-md-flex justify-content-md-start"
+					>
+						<a
+							href="store.html"
+							class="btn btn-primary rounded-pill px-4 me-md-2"
+						>
+							Visit Store
+						</a>
+
+						<a
+							href="about.html"
+							class="btn btn-outline-dark rounded-pill px-4"
+						>
+							Read more<i
+								class="bi bi-arrow-right-short ms-2"
+							></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<section>
+			<footer
+				class="d-flex container flex-wrap justify-content-between align-items-center py-5"
+			>
+				<div class="col-md-4 d-flex align-items-center">
+					<span class="text-muted">&copy; 2022 Gum.Inc</span>
+				</div>
+
+				<ul
+					class="nav col-md-4 justify-content-end fs-4 list-unstyled d-flex"
+				>
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-twitter"></i
+						></a>
+					</li>
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-instagram"></i
+						></a>
+					</li>
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-facebook"></i
+						></a>
+					</li>
+
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-whatsapp"></i
+						></a>
+					</li>
+				</ul>
+			</footer>
+		</section>
+		<div
+			class="fixed-top top-0 bottom-0 start-0 end-0 bg-white d-none text-center flex-column justify-content-center align-items-center gap-2 mobile-barrier"
+		>
+			<h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
+			<h1 class="p-4">
+				Please view on desktop. Site is not mobile ready
+			</h1>
+		</div>
+
+		<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/custom.js"></script>
+	</body>
+</html>

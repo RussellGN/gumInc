@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width | initial-scale=1.0"
+		/>
+		<title>Gum.Inc</title>
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+			rel="stylesheet"
+		/>
+
+		<link
+			href="assets/vendor/swiper/swiper-bundle.min.css"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="assets/vendor/fontawesome/css/all.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/vendor/bootstrap/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+
+	<style>
+		/* account tab */
+		@media screen {
+			#accountTab .nav-link {
+				color: inherit;
+				margin: 0.1rem;
+				border: 0;
+				width: 100%;
+				text-align: left;
+				border-radius: 10px;
+			}
+			#accountTab .nav-link:hover,
+			#accountTab .nav-link:focus,
+			#accountTab .nav-link.active {
+				color: white;
+				background: #712d24;
+			}
+		}
+
+		/* monetization tab */
+		@media screen {
+			#monetizationTab .nav-item {
+				display: flex;
+			}
+
+			#monetizationTab .nav-link {
+				color: inherit;
+				text-align: center !important;
+				text-transform: capitalize;
+				margin-bottom: 0;
+				border: solid thin;
+				width: 100%;
+				text-align: left;
+				border-radius: 10px 10px 0 0;
+			}
+			#monetizationTab .nav-link:hover,
+			#monetizationTab .nav-link:focus,
+			#monetizationTab .nav-link.active {
+				color: white;
+				background: #712d24;
+			}
+		}
+
+		/* contact manager tab */
+		@media screen {
+			#contactManagerTab .nav-item {
+				display: flex;
+			}
+
+			#contactManagerTab .nav-link {
+				color: inherit;
+				text-align: center !important;
+				text-transform: capitalize;
+				margin-bottom: 0;
+				border: solid thin;
+				width: 100%;
+				text-align: left;
+				border-radius: 10px 10px 0 0;
+			}
+			#contactManagerTab .nav-link:hover,
+			#contactManagerTab .nav-link:focus,
+			#contactManagerTab .nav-link.active {
+				color: white;
+				background: #712d24;
+			}
+		}
+
+		/* activity tab */
+		@media screen {
+			#activityTab .nav-item {
+				display: flex;
+			}
+
+			#activityTab .nav-link {
+				color: inherit;
+				text-align: center !important;
+				text-transform: capitalize;
+				margin-bottom: 0;
+				border: solid thin;
+				width: 100%;
+				text-align: left;
+				border-radius: 10px 10px 0 0;
+			}
+			#activityTab .nav-link:hover,
+			#activityTab .nav-link:focus,
+			#activityTab .nav-link.active {
+				color: white;
+				background: #712d24;
+			}
+		}
+	</style>
+
+	<body
+		class="container-xxl p-0 position-relative pt-5 d-flex flex-column justify-content-center"
+		style="min-height: 100vh"
+	>
+		<div id="offcanvases">
+			<div
+				class="offcanvas offcanvas-start bg-brown"
+				tabindex="-1"
+				id="mobileNavOffcanvas"
+				aria-labelledby="mobileNavOffcanvasLabel"
+			>
+				<div class="offcanvas-header">
+					<h5 id="mobileNavOffcanvasLabel"></h5>
+
+					<button
+						type="button"
+						class="btn text-gray"
+						data-bs-dismiss="offcanvas"
+						aria-label="Close"
+					>
+						<i class="bi bi-x-circle fs-1"></i>
+					</button>
+				</div>
+
+				<div class="offcanvas-body">
+					<div class="d-flex flex-column">
+						<a class="mobile-link p-3 active" href="index.html">
+							Home
+						</a>
+
+						<a class="mobile-link p-3" href="store.html">Store</a>
+
+						<a class="mobile-link p-3" href="">Almanacs</a>
+						<a class="mobile-link p-3" href="">Subscriptions </a>
+						<a class="mobile-link p-3" href="">Login</a>
+						<a class="mobile-link p-3" href=""> About </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<header
+			id="header"
+			class="container-xxl d-flex pt-3 pt-md-2 align-items-center justify-content-around fixed-top"
+		>
+			<a href="index.html" class="navbar-brand text-dark p-0 fs-2"
+				>Gum.Inc</a
+			>
+
+			<button
+				class="btn p-0 d-md-none nav-link"
+				id="nav-toggle"
+				type="button"
+				data-bs-toggle="offcanvas"
+				data-bs-target="#mobileNavOffcanvas"
+				aria-controls="mobileNavOffcanvas"
+			>
+				<i class="bi bi-list fs-2"></i>
+			</button>
+
+			<div class="d-md-flex d-none p-0">
+				<a href="index.html" class="nav-link rounded-pill px-2 py-1"
+					>Home</a
+				>
+				<a
+					href="directory.html"
+					class="nav-link active rounded-pill px-2 py-1"
+					>Directory</a
+				>
+				<a href="store.html" class="nav-link rounded-pill px-2 py-1"
+					>Store</a
+				>
+				<a
+					href="directories-and-almanacs.html"
+					class="nav-link rounded-pill px-2 py-1"
+					>Almanacs & Directories</a
+				>
+				<a href="about.html" class="nav-link rounded-pill px-2 py-1"
+					>About</a
+				>
+				<a href="account.html" class="nav-link rounded-pill px-2 py-1"
+					>Account</a
+				>
+				<a
+					href="cart.html"
+					class="nav-link border rounded-circle px-2 ms-2 py-1"
+					><i class="bi bi-cart4"></i
+				></a>
+			</div>
+		</header>
+
+		<section
+			id="hero"
+			style="height: fit-content !important"
+			class="mt-5 container-fluid p-5 overflow-hidden"
+		>
+			<div class="h-100">
+				<div
+					class="h-100 w-75 mx-auto text-center d-flex flex-column align-items-center justify-content-center gap-2"
+				>
+					<h1 class="hero-item display-1">
+						Gum.Inc<i class="bi bi-circle-fill ms-2"></i>
+					</h1>
+
+					<h4 class="hero-item mb-1">
+						What Are We Looking For Today ?
+					</h4>
+
+					<div
+						class="input-group c-rounded-3 overflow-hidden border border-brown input-group-lg mb-3 w-50"
+					>
+						<input
+							type="search"
+							class="form-control border-0"
+							placeholder="Search People & Businesses..."
+							aria-label="Search People & Businesses..."
+							aria-describedby="basic-addon2"
+						/>
+						<a
+							href="directory.html"
+							class="input-group-text btn btn-primary border-0"
+							id="basic-addon2"
+						>
+							<i class="bi bi-search"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="bg-dark text-white p-2">
+			<div class="categories-slider swiper">
+				<div class="swiper-wrapper align-items-center">
+					<div class="swiper-slide text-center">
+						<i class="bi bi-briefcase fs-5 me-2"></i>Legal
+					</div>
+
+					<div class="swiper-slide text-center">
+						<i class="bi bi-plug fs-5 me-2"></i>Utilities
+					</div>
+
+					<div class="swiper-slide text-center">
+						<i class="bi bi-bandaid fs-5 me-2"></i>Medical
+					</div>
+
+					<div class="swiper-slide text-center">
+						<i class="bi bi-camera-reels fs-5 me-2"></i>Photography
+					</div>
+
+					<div class="swiper-slide text-center">
+						<i class="bi bi-book fs-5 me-2"></i>Education
+					</div>
+
+					<div class="swiper-slide text-center">
+						<i class="bi bi-broadcast-pin fs-5 me-2"></i>Telecomms
+					</div>
+
+					<div class="swiper-slide text-center">
+						<i class="bi bi-brush fs-5 me-2"></i>Creativity
+					</div>
+
+					<div class="swiper-slide text-center">
+						<i class="bi bi-cash-coin fs-5 me-2"></i>Finance
+					</div>
+
+					<div class="swiper-slide text-center">
+						<i class="bi bi-display fs-5 me-2"></i>IT & Tech
+					</div>
+
+					<div class="swiper-slide text-center">
+						<i class="bi bi-cup-straw fs-5 me-2"></i>Leisure
+					</div>
+
+					<div class="swiper-slide text-center">
+						<i class="bi bi-dribbble fs-5 me-2"></i>Sports
+					</div>
+
+					<div class="swiper-slide text-center">
+						<i class="bi bi-house-door fs-5 me-2"></i>Real Estate
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<main class="container my-5">
+			<div class="row my-5">
+				<div class="col-lg-7">
+					<div class="shadow-lg p-5 c-rounded-2">
+						<div
+							class="row row-cols-4 gap-2 gy-4 justify-content-around"
+						>
+							<h2
+								class="col-12 border-bottom border-3 pb-2 text-center d-flex justify-content-between"
+							>
+								People
+
+								<div class="input-group border-brown w-fit">
+									<span
+										class="input-group-text bg-white border-brown"
+										id="basic-addon2"
+										>Sort By</span
+									>
+									<select
+										class="form-select w-fit border-brown"
+										aria-label="Sort by"
+									>
+										<option selected>Popularity</option>
+										<option>Date joined</option>
+										<option>Name</option>
+									</select>
+								</div>
+							</h2>
+
+							<div
+								class="col text-center p-4 flex-fill shadow c-rounded-3"
+							>
+								<div
+									style="width: 6rem; height: 6rem"
+									class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+								>
+									<img
+										src="assets/images/user.jpg"
+										class="w-100"
+									/>
+								</div>
+								<h5 class="text-center my-2">
+									<a
+										href="account-person.html"
+										class="text-decoration-none"
+										>John Doe</a
+									>
+								</h5>
+
+								<p class="text-center my-1">
+									Financial Advisor
+								</p>
+
+								<p class="text-center my-1">
+									<i class="bi bi-geo-alt me-2"></i>Harare
+								</p>
+							</div>
+
+							<div
+								class="col text-center p-4 flex-fill shadow c-rounded-3"
+							>
+								<div
+									style="width: 6rem; height: 6rem"
+									class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+								>
+									<img
+										src="assets/images/user2.jpg"
+										class="w-100"
+									/>
+								</div>
+								<h5 class="text-center my-2">
+									<a
+										href="account-person.html"
+										class="text-decoration-none"
+										>John Doe</a
+									>
+								</h5>
+
+								<p class="text-center my-1">
+									Financial Advisor
+								</p>
+
+								<p class="text-center my-1">
+									<i class="bi bi-geo-alt me-2"></i>Harare
+								</p>
+							</div>
+
+							<div
+								class="col text-center p-4 flex-fill shadow c-rounded-3"
+							>
+								<div
+									style="width: 6rem; height: 6rem"
+									class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+								>
+									<img
+										src="assets/images/user3.jpg"
+										class="w-100"
+									/>
+								</div>
+								<h5 class="text-center my-2">
+									<a
+										href="account-person.html"
+										class="text-decoration-none"
+										>John Doe</a
+									>
+								</h5>
+
+								<p class="text-center my-1">
+									Financial Advisor
+								</p>
+
+								<p class="text-center my-1">
+									<i class="bi bi-geo-alt me-2"></i>Harare
+								</p>
+							</div>
+
+							<div
+								class="col text-center p-4 flex-fill shadow c-rounded-3"
+							>
+								<div
+									style="width: 6rem; height: 6rem"
+									class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+								>
+									<img
+										src="assets/images/user4.jpg"
+										class="w-100"
+									/>
+								</div>
+								<h5 class="text-center my-2">
+									<a
+										href="account-person.html"
+										class="text-decoration-none"
+										>John Doe</a
+									>
+								</h5>
+
+								<p class="text-center my-1">
+									Financial Advisor
+								</p>
+
+								<p class="text-center my-1">
+									<i class="bi bi-geo-alt me-2"></i>Harare
+								</p>
+							</div>
+
+							<div
+								class="col text-center p-4 flex-fill shadow c-rounded-3"
+							>
+								<div
+									style="width: 6rem; height: 6rem"
+									class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+								>
+									<img
+										src="assets/images/user5.jpg"
+										class="w-100"
+									/>
+								</div>
+								<h5 class="text-center my-2">
+									<a
+										href="account-person.html"
+										class="text-decoration-none"
+										>John Doe</a
+									>
+								</h5>
+
+								<p class="text-center my-1">
+									Financial Advisor
+								</p>
+
+								<p class="text-center my-1">
+									<i class="bi bi-geo-alt me-2"></i>Harare
+								</p>
+							</div>
+
+							<div
+								class="col text-center p-4 flex-fill shadow c-rounded-3"
+							>
+								<div
+									style="width: 6rem; height: 6rem"
+									class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+								>
+									<img src="assets/img/5.jpg" class="w-100" />
+								</div>
+								<h5 class="text-center my-2">
+									<a
+										href="account-person.html"
+										class="text-decoration-none"
+										>John Doe</a
+									>
+								</h5>
+
+								<p class="text-center my-1">
+									Financial Advisor
+								</p>
+
+								<p class="text-center my-1">
+									<i class="bi bi-geo-alt me-2"></i>Harare
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg">
+					<div class="shadow-lg p-4 c-rounded-2">
+						<div
+							class="row row-cols-auto gap-2 gy-4 p-4 justify-content-around"
+						>
+							<h2 class="col-12 text-center">
+								Companies & Organizations
+							</h2>
+
+							<div class="col-12">
+								<div
+									class="row d-flex justify-content-around gap-2 p-4 shadow c-rounded-2"
+								>
+									<div
+										class="col-4 p-0 d-flex align-items-center"
+									>
+										<img
+											src="assets/images/more.jpg"
+											class="w-100 c-rounded-1"
+										/>
+									</div>
+
+									<div class="col">
+										<h5 class="my-2">
+											<a
+												href="account-business.html"
+												class="text-decoration-none"
+											>
+												YSL Trading Pvt</a
+											>
+										</h5>
+
+										<p class="my-1">Digital solutions</p>
+
+										<p class="my-1">
+											<i class="bi bi-geo-alt me-2"></i
+											>Harare
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-12">
+								<div
+									class="row d-flex justify-content-around gap-2 p-4 shadow c-rounded-2"
+								>
+									<div
+										class="col-4 p-0 d-flex align-items-center"
+									>
+										<img
+											src="assets/images/business-cards.jpg"
+											class="w-100 c-rounded-1"
+										/>
+									</div>
+
+									<div class="col">
+										<h5 class="my-2">
+											<a
+												href="account-business.html"
+												class="text-decoration-none"
+											>
+												J's Printing</a
+											>
+										</h5>
+
+										<p class="my-1">Book Printing</p>
+
+										<p class="my-1">
+											<i class="bi bi-geo-alt me-2"></i
+											>Vic Falls
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-12">
+								<div
+									class="row d-flex justify-content-around gap-2 p-4 shadow c-rounded-2"
+								>
+									<div
+										class="col-4 p-0 d-flex align-items-center"
+									>
+										<img
+											src="assets/images/book.jpg"
+											class="w-100 c-rounded-1"
+										/>
+									</div>
+
+									<div class="col">
+										<h5 class="my-2">
+											<a
+												href="account-business.html"
+												class="text-decoration-none"
+											>
+												Harare City Library</a
+											>
+										</h5>
+
+										<p class="my-1">Library</p>
+
+										<p class="my-1">
+											<i class="bi bi-geo-alt me-2"></i
+											>Harare
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<div class="container">
+			<nav class="mx-auto w-fit" aria-label="...">
+				<ul class="pagination">
+					<li class="page-item disabled">
+						<span class="page-link">Previous</span>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">1</a>
+					</li>
+					<li class="page-item active" aria-current="page">
+						<span class="page-link">2</span>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">3</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link" href="#">Next</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<section>
+			<footer
+				class="d-flex container flex-wrap justify-content-between align-items-center py-5"
+			>
+				<div class="col-md-4 d-flex align-items-center">
+					<span class="text-muted">&copy; 2022 Gum.Inc</span>
+				</div>
+
+				<ul
+					class="nav col-md-4 justify-content-end fs-4 list-unstyled d-flex"
+				>
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-twitter"></i
+						></a>
+					</li>
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-instagram"></i
+						></a>
+					</li>
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-facebook"></i
+						></a>
+					</li>
+
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-whatsapp"></i
+						></a>
+					</li>
+				</ul>
+			</footer>
+		</section>
+		<div
+			class="fixed-top top-0 bottom-0 start-0 end-0 bg-white d-none text-center flex-column justify-content-center align-items-center gap-2 mobile-barrier"
+		>
+			<h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
+			<h1 class="p-4">
+				Please view on desktop. Site is not mobile ready
+			</h1>
+		</div>
+
+		<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+		<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/custom.js"></script>
+	</body>
+</html>

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width | initial-scale=1.0"
+		/>
+		<title>Gum.Inc</title>
+
+		<link
+			rel="stylesheet"
+			href="assets/vendor/fontawesome/css/all.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/vendor/bootstrap/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+
+	<body class="container-xxl p-0 position-relative">
+		<div id="offcanvases">
+			<div
+				class="offcanvas offcanvas-start bg-brown"
+				tabindex="-1"
+				id="mobileNavOffcanvas"
+				aria-labelledby="mobileNavOffcanvasLabel"
+			>
+				<div class="offcanvas-header">
+					<h5 id="mobileNavOffcanvasLabel"></h5>
+
+					<button
+						type="button"
+						class="btn text-gray"
+						data-bs-dismiss="offcanvas"
+						aria-label="Close"
+					>
+						<i class="bi bi-x-circle fs-1"></i>
+					</button>
+				</div>
+
+				<div class="offcanvas-body">
+					<div class="d-flex flex-column">
+						<a class="mobile-link p-3 active" href="index.html">
+							Home
+						</a>
+
+						<a class="mobile-link p-3" href="store.html">Store</a>
+
+						<a class="mobile-link p-3" href="">Almanacs</a>
+						<a class="mobile-link p-3" href="">Subscriptions </a>
+						<a class="mobile-link p-3" href="">Login</a>
+						<a class="mobile-link p-3" href=""> About </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<header
+			id="header"
+			class="container-xxl d-flex pt-3 pt-md-2 align-items-center justify-content-around sticky-top"
+		>
+			<a href="index.html" class="navbar-brand text-dark p-0 fs-2"
+				>Gum.Inc</a
+			>
+
+			<button
+				class="btn p-0 d-md-none nav-link"
+				id="nav-toggle"
+				type="button"
+				data-bs-toggle="offcanvas"
+				data-bs-target="#mobileNavOffcanvas"
+				aria-controls="mobileNavOffcanvas"
+			>
+				<i class="bi bi-list fs-2"></i>
+			</button>
+
+			<div class="d-md-flex d-none p-0">
+				<a href="index.html" class="nav-link rounded-pill px-2 py-1"
+					>Home</a
+				>
+				<a href="directory.html" class="nav-link rounded-pill px-2 py-1"
+					>Directory</a
+				>
+				<a
+					href="store.html"
+					class="nav-link rounded-pill active px-2 py-1"
+					>Store</a
+				>
+				<a
+					href="directories-and-almanacs.html"
+					class="nav-link rounded-pill px-2 py-1"
+					>Almanacs & Directories</a
+				>
+				<a href="about.html" class="nav-link rounded-pill px-2 py-1"
+					>About</a
+				>
+				<a href="account.html" class="nav-link rounded-pill px-2 py-1"
+					>Account</a
+				>
+				<a
+					href="cart.html"
+					class="nav-link border rounded-circle px-2 ms-2 py-1"
+					><i class="bi bi-cart4"></i
+				></a>
+			</div>
+		</header>
+
+		<main>
+			<section
+				class="container w-fit rounded-pill border border-3 text-gray text-center p-2 px-5 my-5"
+			>
+				<h2>
+					<i class="bi bi-bag me-2"></i> Store - Browse Products &
+					Services
+				</h2>
+			</section>
+
+			<section class="my-5">
+				<div
+					id="almanacs-and-directories"
+					class="container p-5 bg-white mb-5 shadow-lg c-rounded-4"
+				>
+					<h2
+						class="pb-2 border-bottom border-4 d-flex justify-content-between"
+					>
+						Almanacs & Directories
+						<a
+							href="books.html"
+							class="btn btn-primary rounded-pill px-3"
+							>See All <i class="bi bi-arrow-right-short ms-2"></i
+						></a>
+					</h2>
+
+					<div class="row row-cols-4 justify-content-around">
+						<div class="col my-3 d-flex">
+							<div
+								class="bg-white listing border shadow text-dark overflow-hidden c-rounded-1"
+							>
+								<p
+									class="py-2 px-3 border-bottom fw-bold border-2"
+								>
+									Upcoming Events
+								</p>
+
+								<div
+									style="max-height: 200px"
+									class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden"
+								>
+									<img
+										src="assets/images/book.jpg"
+										class="w-100"
+									/>
+								</div>
+
+								<p class="p-3 m-0">
+									Lorem ipsum, dolor sit amet consectetur
+									adipisicing elit.
+									<br />
+									<a
+										href=""
+										class="mt-2 btn btn-outline-dark rounded-pill px-3"
+										>View</a
+									>
+								</p>
+
+								<div class="px-3 pb-3">
+									<span class="me-3">
+										<i
+											class="bi bi-currency-dollar me-1"
+										></i
+										>150.00</span
+									><span>
+										<i class="bi bi-calendar-date me-1"></i
+										>12 feb 22</span
+									>
+								</div>
+							</div>
+						</div>
+
+						<div class="col my-3 d-flex">
+							<div
+								class="bg-white listing border shadow text-dark overflow-hidden c-rounded-1"
+							>
+								<p
+									class="py-2 px-3 border-bottom fw-bold border-2"
+								>
+									Gummy Pages
+								</p>
+
+								<div
+									style="max-height: 200px"
+									class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden"
+								>
+									<img
+										src="assets/img/images.jpeg"
+										class="w-100"
+									/>
+								</div>
+
+								<p class="p-3 m-0">
+									Lorem ipsum, dolor sit amet consectetur
+									adipisicing elit.
+									<br />
+									<a
+										href=""
+										class="mt-2 btn btn-outline-dark rounded-pill px-3"
+										>View</a
+									>
+								</p>
+
+								<div class="px-3 pb-3">
+									<span class="me-3">
+										<i
+											class="bi bi-currency-dollar me-1"
+										></i
+										>150.00</span
+									><span>
+										<i class="bi bi-calendar-date me-1"></i
+										>12 feb 22</span
+									>
+								</div>
+							</div>
+						</div>
+
+						<div class="col my-3 d-flex">
+							<div
+								class="bg-white listing border shadow text-dark overflow-hidden c-rounded-1"
+							>
+								<p
+									class="py-2 px-3 border-bottom fw-bold border-2"
+								>
+									Crème Almanac
+								</p>
+
+								<div
+									style="max-height: 200px"
+									class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden"
+								>
+									<img
+										src="assets/images/book.jpg"
+										class="w-100"
+									/>
+								</div>
+
+								<p class="p-3 m-0">
+									Lorem ipsum, dolor sit amet consectetur
+									adipisicing elit.
+									<br />
+									<a
+										href=""
+										class="mt-2 btn btn-outline-dark rounded-pill px-3"
+										>View</a
+									>
+								</p>
+
+								<div class="px-3 pb-3">
+									<span class="me-3">
+										<i
+											class="bi bi-currency-dollar me-1"
+										></i
+										>150.00</span
+									><span>
+										<i class="bi bi-calendar-date me-1"></i
+										>12 feb 22</span
+									>
+								</div>
+							</div>
+						</div>
+
+						<div class="col my-3 d-flex">
+							<div
+								class="bg-white listing border shadow text-dark overflow-hidden c-rounded-1"
+							>
+								<p
+									class="py-2 px-3 border-bottom fw-bold border-2"
+								>
+									Creatives & Artistes
+								</p>
+
+								<div
+									style="max-height: 200px"
+									class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden"
+								>
+									<img
+										src="assets/img/images.jpeg"
+										class="w-100"
+									/>
+								</div>
+
+								<p class="p-3 m-0">
+									Lorem ipsum, dolor sit amet consectetur
+									adipisicing elit.
+									<br />
+									<a
+										href=""
+										class="mt-2 btn btn-outline-dark rounded-pill px-3"
+										>View</a
+									>
+								</p>
+
+								<div class="px-3 pb-3">
+									<span class="me-3">
+										<i
+											class="bi bi-currency-dollar me-1"
+										></i
+										>150.00</span
+									><span>
+										<i class="bi bi-calendar-date me-1"></i
+										>12 feb 22</span
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div
+					id="business-cards"
+					class="container text-white mb-5 shadow-lg c-rounded-4 p-5 py-3"
+				>
+					<div class="row">
+						<div class="col-lg-5 py-5">
+							<h2 class="mb-3">Business Cards</h2>
+
+							<p class="lead">
+								Lorem ipsum dolor, sit amet consectetur
+								adipisicing elit. Doloremque sint id voluptas
+								deserunt error hic sit facere! Iure quos, optio,
+								repellat voluptate
+								<br />
+								<a
+									href="business-cards.html"
+									class="btn btn-light border-0 rounded-pill px-3 mt-4 me-3"
+									>Get Started</a
+								>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="container px-4 bg-white mb-5 shadow-lg c-rounded-4 py-5"
+				>
+					<div class="row align-items-center justify-content-around">
+						<div class="col-lg-4">
+							<div
+								class="overflow-hidden border border-4 c-rounded-2"
+							>
+								<img
+									src="assets/images/profiling.jpg"
+									class="w-100"
+								/>
+							</div>
+						</div>
+
+						<div class="col-lg-7 text-center text-lg-start">
+							<h2>One Pager Power By The Grape Surgery</h2>
+
+							<p class="col-lg-10 lead">
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Dignissimos possimus velit
+								ipsam rem praesentium, incidunt sint commodi
+								sunt laborum
+								<br />
+								<a
+									href="profiling.html"
+									class="btn btn-primary rounded-pill mt-3 px-3"
+									>Get Started</a
+								>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div
+					id="gum-ink-package"
+					class="container shadow-lg c-rounded-4 py-5"
+				>
+					<div class="row justify-content-around align-items-center">
+						<div class="col-lg-5 text-white">
+							<h2 class="mb-3">
+								<i class="bi bi-stars me-2"></i>The Gum.iNc
+								Package<i class="bi bi-stars ms-2"></i>
+							</h2>
+
+							<h5 class="mb-2">Some Text Goes Here</h5>
+
+							<p class="lead">
+								Lorem, ipsum dolor sit amet consectetur
+								adipisicing elit. Qui fugit blanditiis tempora
+								ratione laboriosam ullam maxime quaerat,
+								deleniti consequatur recusandae excepturi sit,
+								amet expedita, nulla porro libero eaque odit
+								enim?
+							</p>
+
+							<p>
+								<a
+									href="gum-inc-bundle.html"
+									class="btn btn-light rounded-pill px-3"
+									>Get Started</a
+								>
+							</p>
+						</div>
+
+						<div class="col-lg-4">
+							<div
+								id="carouselId"
+								class="shadow-lg p-3 bg-white c-rounded-3 carousel slide"
+								data-bs-ride="carousel"
+							>
+								<div class="carousel-inner" role="listbox">
+									<div class="carousel-item p-3 active">
+										<div
+											class="bg-white text-center w-100 c-rounded-2 p-4 border border-2"
+										>
+											<div class="mb-2 fs-1 text-brown">
+												<i
+													class="bi bi-file-earmark-text-fill"
+												></i>
+											</div>
+
+											<h5>CV/Resume</h5>
+										</div>
+									</div>
+
+									<div class="carousel-item p-3">
+										<div
+											class="bg-white text-center w-100 c-rounded-2 p-4 border border-2"
+										>
+											<div class="mb-2 fs-1 text-brown">
+												<i
+													class="bi bi-file-earmark-text-fill"
+												></i>
+											</div>
+
+											<h5>Profiling</h5>
+										</div>
+									</div>
+
+									<div class="carousel-item p-3">
+										<div
+											class="bg-white text-center w-100 c-rounded-2 p-4 border border-2"
+										>
+											<div class="mb-2 fs-1 text-brown">
+												<i
+													class="bi bi-file-earmark-text-fill"
+												></i>
+											</div>
+
+											<h5>Creative Card</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="container px-4 bg-white my-5 shadow-lg c-rounded-4 py-5"
+				>
+					<div class="row align-items-center justify-content-around">
+						<div class="col-lg-4">
+							<div>
+								<img
+									src="assets/img/profiling4.png"
+									class="w-100"
+								/>
+							</div>
+						</div>
+
+						<div class="col-lg-7 text-center text-lg-start">
+							<h2>Gum.iNc Access Card</h2>
+
+							<p class="col-lg-10 lead">
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Dignissimos possimus velit
+								ipsam rem praesentium, incidunt sint commodi
+								sunt laborum
+								<br />
+								<a
+									href="data-card.html	"
+									class="btn btn-primary rounded-pill mt-3 px-3"
+									>Get Started</a
+								>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<section>
+			<footer
+				class="d-flex container flex-wrap justify-content-between align-items-center py-5"
+			>
+				<div class="col-md-4 d-flex align-items-center">
+					<span class="text-muted">&copy; 2022 Gum.Inc</span>
+				</div>
+
+				<ul
+					class="nav col-md-4 justify-content-end fs-4 list-unstyled d-flex"
+				>
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-twitter"></i
+						></a>
+					</li>
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-instagram"></i
+						></a>
+					</li>
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-facebook"></i
+						></a>
+					</li>
+
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-whatsapp"></i
+						></a>
+					</li>
+				</ul>
+			</footer>
+		</section>
+		<div
+			class="fixed-top top-0 bottom-0 start-0 end-0 bg-white d-none text-center flex-column justify-content-center align-items-center gap-2 mobile-barrier"
+		>
+			<h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
+			<h1 class="p-4">
+				Please view on desktop. Site is not mobile ready
+			</h1>
+		</div>
+
+		<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/custom.js"></script>
+	</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width | initial-scale=1.0"
+		/>
+		<title>Gum.Inc</title>
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="assets/vendor/fontawesome/css/all.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/vendor/bootstrap/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+	<body
+		class="container-xxl p-0 position-relative pt-5 d-flex flex-column justify-content-center"
+		style="min-height: 100vh"
+	>
+		<div id="offcanvases">
+			<div
+				class="offcanvas offcanvas-start bg-brown"
+				tabindex="-1"
+				id="mobileNavOffcanvas"
+				aria-labelledby="mobileNavOffcanvasLabel"
+			>
+				<div class="offcanvas-header">
+					<h5 id="mobileNavOffcanvasLabel"></h5>
+
+					<button
+						type="button"
+						class="btn text-gray"
+						data-bs-dismiss="offcanvas"
+						aria-label="Close"
+					>
+						<i class="bi bi-x-circle fs-1"></i>
+					</button>
+				</div>
+
+				<div class="offcanvas-body">
+					<div class="d-flex flex-column">
+						<a class="mobile-link p-3 active" href="index.html">
+							Home
+						</a>
+
+						<a class="mobile-link p-3" href="store.html">Store</a>
+
+						<a class="mobile-link p-3" href="">Almanacs</a>
+						<a class="mobile-link p-3" href="">Subscriptions </a>
+						<a class="mobile-link p-3" href="">Login</a>
+						<a class="mobile-link p-3" href=""> About </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<header
+			id="header"
+			class="container-xxl d-flex pt-3 pt-md-2 align-items-center justify-content-around fixed-top"
+		>
+			<a href="index.html" class="navbar-brand text-dark p-0 fs-2"
+				>Gum.Inc</a
+			>
+
+			<button
+				class="btn p-0 d-md-none nav-link"
+				id="nav-toggle"
+				type="button"
+				data-bs-toggle="offcanvas"
+				data-bs-target="#mobileNavOffcanvas"
+				aria-controls="mobileNavOffcanvas"
+			>
+				<i class="bi bi-list fs-2"></i>
+			</button>
+
+			<div class="d-md-flex d-none p-0">
+				<a href="index.html" class="nav-link rounded-pill px-2 py-1"
+					>Home</a
+				>
+
+				<a href="directory.html" class="nav-link rounded-pill px-2 py-1"
+					>Directory</a
+				>
+				<a href="store.html" class="nav-link rounded-pill px-2 py-1"
+					>Store</a
+				>
+				<a
+					href="directories-and-almanacs.html"
+					class="nav-link rounded-pill px-2 py-1"
+					>Almanacs & Directories</a
+				>
+				<a href="about.html" class="nav-link rounded-pill px-2 py-1"
+					>About</a
+				>
+				<a
+					href="account.html"
+					class="nav-link active rounded-pill px-2 py-1"
+					>Account</a
+				>
+				<a
+					href="cart.html"
+					class="nav-link border rounded-circle px-2 ms-2 py-1"
+					><i class="bi bi-cart4"></i
+				></a>
+			</div>
+		</header>
+
+		<main class="container my-5">
+			<h1 class="display-5 text-center mb-4">
+				<i class="bi bi-person-circle"></i> <br />
+				Login
+			</h1>
+
+			<form class="d-flex flex-column align-items-center">
+				<div class="col-lg-5 form-floating mb-3">
+					<input
+						type="email"
+						class="form-control"
+						id="floatingInput"
+						placeholder="name@example.com"
+					/>
+					<label for="floatingInput">Email address</label>
+				</div>
+
+				<div class="col-lg-5 form-floating mb-3">
+					<input
+						type="number"
+						class="form-control"
+						id="floatingInput"
+						placeholder="Phone Number"
+					/>
+					<label for="floatingInput">Phone Number</label>
+				</div>
+
+				<div class="col-lg-5 form-floating mb-3">
+					<input
+						type="password"
+						class="form-control"
+						id="floatingPassword"
+						placeholder="Password"
+					/>
+					<label for="floatingPassword">Password</label>
+				</div>
+
+				<div class="col-lg-5 d-flex justify-content-between">
+					<div>
+						<p class="mb-3">
+							Don't have an account? <br />
+							<a class="" href="signup.html">Signup</a>
+						</p>
+
+						<a class="d-block">Forgot Password</a>
+					</div>
+
+					<div>
+						<a
+							href="account.html"
+							class="btn btn-primary rounded-pill px-3"
+						>
+							Login
+						</a>
+					</div>
+				</div>
+			</form>
+		</main>
+
+		<!-- <section>
+			<footer
+				class="d-flex container flex-wrap justify-content-between align-items-center py-5"
+			>
+				<div class="col-md-4 d-flex align-items-center">
+					<span class="text-muted">&copy; 2022 Gum.Inc</span>
+				</div>
+
+				<ul
+					class="nav col-md-4 justify-content-end fs-4 list-unstyled d-flex"
+				>
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-twitter"></i
+						></a>
+					</li>
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-instagram"></i
+						></a>
+					</li>
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-facebook"></i
+						></a>
+					</li>
+
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-whatsapp"></i
+						></a>
+					</li>
+				</ul>
+			</footer>
+		</section> -->
+		<div
+			class="fixed-top top-0 bottom-0 start-0 end-0 bg-white d-none text-center flex-column justify-content-center align-items-center gap-2 mobile-barrier"
+		>
+			<h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
+			<h1 class="p-4">
+				Please view on desktop. Site is not mobile ready
+			</h1>
+		</div>
+
+		<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/custom.js"></script>
+	</body>
+</html>

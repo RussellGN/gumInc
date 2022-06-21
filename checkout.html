@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width | initial-scale=1.0"
+		/>
+		<title>Gum.Inc</title>
+
+		<link
+			rel="stylesheet"
+			href="assets/vendor/fontawesome/css/all.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/vendor/bootstrap/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+
+	<style>
+		.btn:hover,
+		.btn:focus {
+			box-shadow: none;
+		}
+		.nice-grad {
+			color: white !important;
+			background: linear-gradient(
+					to bottom right,
+					rgba(26, 115, 81, 0.752),
+					rgba(71, 71, 243, 0.603)
+				),
+				url("assets/img/circles.jpg") center center no-repeat;
+			background-size: cover;
+		}
+		.text-shadow {
+			text-shadow: 1px 1px 2px black;
+		}
+		.text-shadow-0 {
+			text-shadow: none;
+		}
+
+		.nice-grad a:hover,
+		.nice-grad a:focus {
+			background-color: rgb(206, 228, 234);
+		}
+
+		.carousel-control-next,
+		.carousel-control-prev {
+			position: static;
+			width: fit-content;
+		}
+		.carousel-indicators {
+			position: static;
+			display: flex;
+			justify-content: center;
+			padding: 0;
+			list-style: none;
+		}
+		.carousel-indicators [data-bs-target] {
+			width: 10px;
+			height: 10px;
+			background-color: #243171;
+			opacity: 0.3;
+			border-radius: 100%;
+		}
+		.carousel-indicators [data-bs-target].active {
+			opacity: 1;
+		}
+	</style>
+
+	<body class="container-xxl p-0 position-relative">
+		<div id="offcanvases">
+			<div
+				class="offcanvas offcanvas-start bg-brown"
+				tabindex="-1"
+				id="mobileNavOffcanvas"
+				aria-labelledby="mobileNavOffcanvasLabel"
+			>
+				<div class="offcanvas-header">
+					<h5 id="mobileNavOffcanvasLabel"></h5>
+
+					<button
+						type="button"
+						class="btn text-gray"
+						data-bs-dismiss="offcanvas"
+						aria-label="Close"
+					>
+						<i class="bi bi-x-circle fs-1"></i>
+					</button>
+				</div>
+
+				<div class="offcanvas-body">
+					<div class="d-flex flex-column">
+						<a class="mobile-link p-3 active" href="index.html">
+							Home
+						</a>
+
+						<a class="mobile-link p-3" href="store.html">Store</a>
+
+						<a class="mobile-link p-3" href="">Almanacs</a>
+						<a class="mobile-link p-3" href="">Subscriptions </a>
+						<a class="mobile-link p-3" href="">Login</a>
+						<a class="mobile-link p-3" href=""> About </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<header
+			id="header"
+			class="container-xxl d-flex pt-3 pt-md-2 align-items-center justify-content-around sticky-top"
+		>
+			<a href="index.html" class="navbar-brand text-dark p-0 fs-2"
+				>Gum.Inc</a
+			>
+
+			<button
+				class="btn p-0 d-md-none nav-link"
+				id="nav-toggle"
+				type="button"
+				data-bs-toggle="offcanvas"
+				data-bs-target="#mobileNavOffcanvas"
+				aria-controls="mobileNavOffcanvas"
+			>
+				<i class="bi bi-list fs-2"></i>
+			</button>
+
+			<div class="d-md-flex d-none p-0">
+				<a href="index.html" class="nav-link rounded-pill px-2 py-1"
+					>Home</a
+				>
+				<a
+					href="directory.html"
+					class="nav-link  rounded-pill px-2 py-1"
+					>Directory</a
+				>
+				<a href="store.html" class="nav-link rounded-pill px-2 py-1"
+					>Store</a
+				>
+				<a
+					href="directories-and-almanacs.html"
+					class="nav-link rounded-pill px-2 py-1"
+					>Almanacs & Directories</a
+				>
+				<a href="about.html" class="nav-link rounded-pill px-2 py-1"
+					>About</a
+				>
+				<a href="account.html" class="nav-link rounded-pill px-2 py-1"
+					>Account</a
+				>
+				<a
+					href="cart.html"
+					class="nav-link border rounded-circle active px-2 ms-2 py-1"
+					><i class="bi bi-cart4"></i
+				></a>
+			</div>
+		</header>
+
+		<main>
+			<section
+				class="container w-fit rounded-pill border border-3 text-gray text-center p-2 px-5 my-5"
+			>
+				<h2><i class="bi bi-cart4 me-2"></i> Cart - View your order</h2>
+			</section>
+
+			<section class="my-5 container">
+				<div class="row gap-3">
+					<div class="col p-5 bg-white mb-5 shadow-lg c-rounded-4">
+						<h2
+							class="pb-2 px-5 border-bottom border-4 d-flex justify-content-between"
+						>
+							Items
+							<a
+								href="directories-and-almanacs.html"
+								class="btn btn-primary rounded-pill px-3"
+								>5
+							</a>
+						</h2>
+
+						<div>
+							<div
+								class="row border border-2 align-items-center gap-3 p-4 my-3 position-relative c-rounded-1"
+							>
+								<button
+									style="right: -20px; top: -10px"
+									class="btn btn-light border btn-sm rounded-circle position-absolute w-fit"
+								>
+									<i class="bi bi-x fs-4"></i>
+								</button>
+
+								<div
+									class="col-3 shadow d-flex justify-content-center p-0 align-items-center overflow-hidden c-rounded-1 h-fit"
+								>
+									<img
+										src="assets/img/images.jpeg"
+										class="w-100"
+									/>
+								</div>
+
+								<div class="col-auto h-fit">
+									<h6 class="text-success">
+										USD 59.99
+										<del
+											class="ms-2 text-muted"
+											style="font-size: 80%"
+											>USD 98.99</del
+										>
+									</h6>
+
+									<p class="my-3">
+										<b> Gummy Pages Directory</b> <br />
+										12 Feb Issue
+									</p>
+
+									<div
+										class="d-flex align-items-center gap-1 w-fit"
+									>
+										<span class="me-2">Copies:</span>
+										<button
+											type="button"
+											class="btn p-0 rounded-circle text-danger"
+											onclick="subtractOne(this.nextElementSibling)"
+										>
+											<i
+												class="bi bi-dash-circle fs-5"
+											></i>
+										</button>
+
+										<input
+											style="width: 40px"
+											type="text"
+											value="1"
+											maxlength="3"
+											disabled
+											class="rounded p-1 text-center bg-light border"
+										/>
+
+										<button
+											type="button"
+											class="btn p-0 rounded-circle text-success"
+											onclick="addOne(this.previousElementSibling)"
+										>
+											<i
+												class="bi bi-plus-circle fs-5"
+											></i>
+										</button>
+									</div>
+								</div>
+
+								<div
+									class="col-3 p-0 d-flex ms-auto flex-column justify-content-center"
+								>
+									<div
+										id="item1Carousel"
+										class="carousel slide"
+										data-bs-ride="carousel"
+									>
+										<div
+											class="carousel-inner"
+											role="listbox"
+										>
+											<div class="carousel-item active">
+												<div
+													style="
+														height: 180px;
+														width: 90%;
+													"
+													class="shadow d-flex align-items-center nice-grad mx-auto c-rounded-1 p-2 position-relative"
+												>
+													<!-- <i
+														class="bi bi-check-circle position-absolute top-0 end-0 m-2"
+													></i> -->
+
+													<p
+														class="text-center text-shadow"
+													>
+														<i
+															class="bi bi-calendar-check text-shadow-0 fs-1"
+														></i>
+														<br />
+														Subscribe for weekly
+														deliveries!
+														<br />
+														<a
+															class="btn btn-light mt-2 btn-sm text-shadow-0 rounded-pill"
+															>Subscribe</a
+														>
+													</p>
+												</div>
+											</div>
+
+											<div class="carousel-item">
+												<div
+													style="
+														height: 180px;
+														width: 90%;
+													"
+													class="border d-flex align-items-center mx-auto c-rounded-1 p-2 position-relative"
+												>
+													<i
+														class="bi bi-check-circle text-success position-absolute top-0 end-0 m-2"
+													></i>
+													<p class="text-center">
+														<span class="fs-1"
+															>1</span
+														>
+														<br />
+														Stick to a single
+														purchase
+														<br />
+														<span
+															class="text-success mt-2"
+															>Selected
+														</span>
+													</p>
+												</div>
+											</div>
+										</div>
+
+										<ol
+											class="mt-1 m-0 carousel-indicators"
+										>
+											<li
+												data-bs-target="#item1Carousel"
+												data-bs-slide-to="0"
+												class="active"
+												aria-current="true"
+												aria-label="First slide"
+											></li>
+
+											<li
+												data-bs-target="#item1Carousel"
+												data-bs-slide-to="1"
+												aria-label="Second slide"
+											></li>
+										</ol>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="row border border-2 align-items-center gap-3 p-4 my-3 position-relative c-rounded-1"
+							>
+								<button
+									style="right: -20px; top: -10px"
+									class="btn btn-light border btn-sm rounded-circle position-absolute w-fit"
+								>
+									<i class="bi bi-x fs-4"></i>
+								</button>
+
+								<div
+									class="col-3 shadow d-flex justify-content-center p-0 align-items-center overflow-hidden c-rounded-1 h-fit"
+								>
+									<img
+										src="assets/img/attachment_89400387.jpeg"
+										class="w-100"
+									/>
+								</div>
+
+								<div class="col-auto h-fit">
+									<h6 class="text-success">
+										USD 15.99
+										<del
+											class="ms-2 text-muted"
+											style="font-size: 80%"
+											>USD 100</del
+										>
+									</h6>
+
+									<p class="my-3">
+										<b> Creme chefs Almanac</b> <br />
+										Mid 2022 Issue
+									</p>
+
+									<div
+										class="d-flex align-items-center gap-1 w-fit"
+									>
+										<span class="me-2">Copies:</span>
+										<button
+											type="button"
+											class="btn p-0 rounded-circle text-danger"
+											onclick="subtractOne(this.nextElementSibling)"
+										>
+											<i
+												class="bi bi-dash-circle fs-5"
+											></i>
+										</button>
+
+										<input
+											style="width: 40px"
+											type="text"
+											value="1"
+											maxlength="3"
+											disabled
+											class="rounded p-1 text-center bg-light border"
+										/>
+
+										<button
+											type="button"
+											class="btn p-0 rounded-circle text-success"
+											onclick="addOne(this.previousElementSibling)"
+										>
+											<i
+												class="bi bi-plus-circle fs-5"
+											></i>
+										</button>
+									</div>
+								</div>
+
+								<div
+									class="col-3 p-0 d-flex ms-auto flex-column justify-content-center"
+								>
+									<div
+										id="item2Carousel"
+										class="carousel slide"
+										data-bs-ride="carousel"
+									>
+										<div
+											class="carousel-inner"
+											role="listbox"
+										>
+											<div class="carousel-item active">
+												<div
+													style="
+														height: 180px;
+														width: 90%;
+													"
+													class="shadow d-flex align-items-center nice-grad mx-auto c-rounded-1 p-2 position-relative"
+												>
+													<!-- <i
+														class="bi bi-check-circle position-absolute top-0 end-0 m-2"
+													></i> -->
+
+													<p
+														class="text-center text-shadow"
+													>
+														<i
+															class="bi bi-calendar-check text-shadow-0 fs-1"
+														></i>
+														<br />
+														Subscribe for mid year
+														deliveries!
+														<br />
+														<a
+															class="btn btn-light mt-2 btn-sm text-shadow-0 rounded-pill"
+															>Subscribe</a
+														>
+													</p>
+												</div>
+											</div>
+
+											<div class="carousel-item">
+												<div
+													style="
+														height: 180px;
+														width: 90%;
+													"
+													class="border d-flex align-items-center mx-auto c-rounded-1 p-2 position-relative"
+												>
+													<i
+														class="bi bi-check-circle text-success position-absolute top-0 end-0 m-2"
+													></i>
+
+													<p class="text-center">
+														<span class="fs-1"
+															>1</span
+														>
+														<br />
+														Stick to a single
+														purchase
+														<br />
+														<span
+															class="text-success mt-2"
+															>Selected
+														</span>
+													</p>
+												</div>
+											</div>
+										</div>
+
+										<ol
+											class="mt-1 m-0 carousel-indicators"
+										>
+											<li
+												data-bs-target="#item2Carousel"
+												data-bs-slide-to="0"
+												class="active"
+												aria-current="true"
+												aria-label="First slide"
+											></li>
+
+											<li
+												data-bs-target="#item2Carousel"
+												data-bs-slide-to="1"
+												aria-label="Second slide"
+											></li>
+										</ol>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="row border border-2 align-items-center gap-3 p-4 my-3 position-relative c-rounded-1"
+							>
+								<button
+									style="right: -20px; top: -10px"
+									class="btn btn-light border btn-sm rounded-circle position-absolute w-fit"
+								>
+									<i class="bi bi-x fs-4"></i>
+								</button>
+
+								<div
+									class="col-3 shadow d-flex justify-content-center p-0 align-items-center overflow-hidden c-rounded-1 h-fit"
+								>
+
+									<p><i class="bi bi-credit-card-2-front-fill fs-1 me-2"></i><i class="bi bi-credit-card-2-front fs-1"></i><br>
+									<i class="bi bi-credit-card-2-front fs-1 me-2"></i><i class="bi bi-credit-card-2-front-fill fs-1 "></i></p>
+								</div>
+
+								<div class="col-auto h-fit">
+									<h6 class="text-success">
+										USD 20.00
+									</h6>
+
+									<p class="mt-3">
+										<b>
+											120 Businness cards. Design &
+											Printing</b
+										>
+										<p>Delivery date: 1 March</p>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="col-lg-3 px-4 bg-white mb-5 shadow c-rounded-4 py-5"
+					>
+						<div id="detail-view">
+							<h2
+								class="pb-2 border-bottom border-4 d-flex align-items-center justify-content-between"
+							>
+								Summary
+							</h2>
+
+							<div class="">
+								<div class="d-flex justify-content-between">
+									<p>Total</p>
+									<p class="text-success">167.95</p>
+								</div>
+
+								<div class="d-flex justify-content-between">
+									<p>Subscription discount</p>
+									<p class="text-success">- 2.95</p>
+								</div>
+
+								<div class="d-flex justify-content-between">
+									<p>Delivery costs</p>
+									<p class="text-success">+ 0.95</p>
+								</div>
+
+								<div
+									class="d-flex border-top pt-2 border-4 my-4 justify-content-between"
+								>
+									<b>You pay</b>
+									<p class="text-success">USD 167.95</p>
+								</div>
+							</div>
+
+							<a
+								href="checkout.html"
+								class="btn btn-success w-100"
+								>Proceed To Checkout<i
+									class="bi bi-arrow-right ms-2"
+								></i
+							></a>
+
+							<p class="text-center mt-3 m-0">
+								<b>We Accept</b>
+							</p>
+
+							<div>
+								<img
+									src="assets/img/payment.png"
+									class="w-100"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<section >
+			<footer
+				class="d-flex container flex-wrap justify-content-between align-items-center py-5"
+			>
+				<div class="col-md-4 d-flex align-items-center">
+					
+					<span class="text-muted">&copy; 2022 Gum.Inc</span>
+				</div>
+
+				<ul
+					class="nav col-md-4 justify-content-end fs-4 list-unstyled d-flex"
+				>
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-twitter"></i
+						></a>
+					</li>
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-instagram"></i
+						></a>
+					</li>
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-facebook"></i
+						></a>
+					</li>
+
+					<li class="ms-3">
+						<a class="text-muted" href="#"
+							><i class="bi bi-whatsapp"></i
+						></a>
+					</li>
+				</ul>
+			</footer>
+		</section>
+
+		
+		<div
+			class="fixed-top top-0 bottom-0 start-0 end-0 bg-white d-flex flex-column justify-content-center align-items-center gap-2"
+		>
+			<h1>Page Under Construction</h1>
+			<a href="index.html" class="btn btn-primary rounded-pill px-3"
+				><i class="bi bi-house me-2"></i>Home</a
+			>
+		</div>
+
+		<div
+			class="fixed-top top-0 bottom-0 start-0 end-0 bg-white d-none text-center flex-column justify-content-center align-items-center gap-2 mobile-barrier"
+		>
+			<h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
+			<h1 class="p-4">
+				Please view on desktop. Site is not mobile ready
+			</h1>
+		</div>
+
+		<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/custom.js"></script>
+	</body>
+</html>
