@@ -49,6 +49,12 @@
 		window.addEventListener("load", headerScrolled);
 		onscroll(document, headerScrolled);
 	}
+	/**
+	 * Initiate glightbox
+	 */
+	const glightbox = GLightbox({
+		selector: ".glightbox",
+	});
 
 	/**
 	 * Scrolls to an element with header offset
