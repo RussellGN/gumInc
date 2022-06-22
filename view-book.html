@@ -14,7 +14,6 @@
 			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
 			rel="stylesheet"
 		/>
-
 		<!-- <link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css"
@@ -22,7 +21,6 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/> -->
-
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
@@ -46,67 +44,7 @@
 		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
 
-	<style>
-		.carousel-control-next,
-		.carousel-control-prev {
-			position: absolute;
-			top: initial !important;
-			bottom: 50% !important;
-			width: fit-content !important	;
-			padding: 0.3rem !important;
-			border-radius: 100%;
-			opacity: 1 !important;
-			transition: all 0.3s;
-			background-color: #712d24 !important;
-		}
-		.increase-hover-opacity {
-			opacity: 0.5;
-			transition: opacity 0.3s;
-		}
-		.increase-hover-opacity:hover,
-		.increase-hover-opacity:focus {
-			opacity: 1;
-		}
-
-		.h-80-px {
-			height: 80px;
-		}
-		.h-120-px {
-			height: 120px;
-		}
-	</style>
-
-	<style>
-		@media screen {
-			.tabs .nav-link {
-				margin: 0 0.5rem;
-				height: 3rem;
-				width: 3rem;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				border-radius: 100%;
-				color: #fff !important;
-				background-color: rgba(113, 45, 36, 0.5);
-				border: solid !important;
-				cursor: pointer;
-			}
-
-			.tabs .nav-link:hover {
-				border-color: #712d24 !important;
-			}
-			.tabs .nav-link.active {
-				background: #712d24 !important;
-				color: #fff !important;
-				border-color: #712d24 !important;
-			}
-		}
-	</style>
-
-	<body
-		class="p-0 position-relative pt-5 d-flex flex-column justify-content-center"
-		style="min-height: 100vh"
-	>
+	<body class="p-0 position-relative">
 		<div id="offcanvases">
 			<div
 				class="offcanvas offcanvas-start"
@@ -155,6 +93,34 @@
 			</div>
 		</div>
 
+		<div id="popovers">
+			<button type="button" class="d-none" id="addToCartToastBtn">
+				Add To Cart
+			</button>
+
+			<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+				<div
+					id="addToCartToast"
+					class="toast text-white bg-primary"
+					role="alert"
+					aria-live="assertive"
+					aria-atomic="true"
+				>
+					<div class="toast-body">
+						<div class="d-flex align-items-center">
+							Added!
+							<button
+								type="button"
+								class="btn-close me-2 ms-auto"
+								data-bs-dismiss="toast"
+								aria-label="Close"
+							></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<header id="header" class="p-2 px-5 px-md-2 pt-md-2 fixed-top">
 			<div
 				class="container-xxl d-flex justify-content-between align-items-center justify-content-md-around"
@@ -189,7 +155,9 @@
 						class="nav-link rounded-pill px-2 py-1"
 						>Directory</a
 					>
-					<a href="store.html" class="nav-link rounded-pill px-2 py-1"
+					<a
+						href="store.html"
+						class="nav-link rounded-pill px-2 py-1 active"
 						>Store</a
 					>
 					<a
@@ -197,9 +165,7 @@
 						class="nav-link rounded-pill px-2 py-1"
 						>Almanacs & Directories</a
 					>
-					<a
-						href="about.html"
-						class="nav-link rounded-pill px-2 py-1 active"
+					<a href="about.html" class="nav-link rounded-pill px-2 py-1"
 						>About</a
 					>
 					<a
@@ -216,52 +182,73 @@
 			</div>
 		</header>
 
-		<main class="container-xxl my-5">
-			<div
-				class="container px-4 bg-white mb-5 shadow-lg c-rounded-4 py-5"
-			>
-				<div class="row align-items-center justify-content-around my-5">
-					<div class="col-auto">
-						<img
-							src="assets/img/hero2.jpg"
-							class="d-block c-rounded-3 img-fluid"
-							width="400"
-						/>
+		<main class="container py-5">
+			<section class="my-5 container">
+				<div
+					class="p-4 p-md-5 d-flex flex-wrap flex-column flex-lg-row justify-content-around align-items-center shadow-lg c-rounded-4 gap-2"
+				>
+					<h2 class="pb-2 col-lg-12 border-bottom border-4 w-100">
+						Gummy Pages Directory <br />
+						<small class="text-success">/detailed view</small>
+					</h2>
+
+					<div
+						class="col-6 col-lg-3 shadow d-flex justify-content-center p-0 align-items-center overflow-hidden c-rounded-1 h-fit"
+					>
+						<img src="assets/img/images.jpeg" class="w-100" />
 					</div>
 
-					<div class="col-lg-6">
-						<h1 class="fw-bold mb-3">What Is Gum.Inc</h1>
+					<div class="col-lg-5">
+						<div class="listing my-3 border-top border-3">
+							<p class="p-3 m-0">
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Facilis fuga inventore quod,
+								pariatur, rerum corrupti nisi rem eum optio quia
+								ipsam debitis aspernatur sint suscipit, impedit
+								sapiente soluta. Labore, corporis.
+							</p>
 
-						<p class="lead">
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. A corporis doloremque excepturi similique
-							praesentium unde illum magni nesciunt quos nisi aut,
-							minima reiciendis illo nihil. Sit debitis quos
-							recusandae omnis?
-						</p>
+							<div class="px-3 pb-3 d-flex flex-wrap">
+								<p
+									class="me-3 border border-2 p-2 rounded-pill"
+								>
+									<i class="bi bi-bank me-2"></i>Educational
+								</p>
 
-						<div
-							class="d-grid gap-2 d-md-flex justify-content-md-start"
-						>
-							<button
-								type="button"
-								class="btn btn-primary rounded-pill px-4 me-md-2"
-							>
-								Link
-							</button>
+								<p
+									class="me-3 border border-2 p-2 rounded-pill"
+								>
+									<i class="bi bi-currency-dollar me-1"></i
+									>150.00
+								</p>
 
-							<button
-								type="button"
-								class="btn btn-outline-secondary rounded-pill px-4"
-							>
-								Read more<i
-									class="bi bi-arrow-right-short ms-2"
-								></i>
-							</button>
+								<p
+									class="me-3 border border-2 p-2 rounded-pill"
+								>
+									<i class="bi bi-calendar-date me-1"></i>12
+									feb 22
+								</p>
+							</div>
+
+							<div class="p-4 pt-0 d-lg-flex align-items-center">
+								<button
+									onclick="document.getElementById('addToCartToastBtn').click()"
+									class="btn btn-primary m-1 rounded-pill w-100"
+								>
+									Add To Cart<i
+										class="bi bi-cart-plus ms-2"
+									></i>
+								</button>
+								<a
+									href="directories-and-almanacs.html"
+									class="btn btn-success m-1 rounded-pill w-100"
+									>Join Directory</a
+								>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 		</main>
 
 		<section>
@@ -304,19 +291,10 @@
 			<div
 				class="d-flex h-100 w-100 align-items-center justify-content-center"
 			>
-				<div class="spinner-border text-secondary" role="status">
+				<div class="spinner-border text-dark" role="status">
 					<span class="visually-hidden">Loading...</span>
 				</div>
 			</div>
-		</div>
-
-		<div
-			class="fixed-top top-0 bottom-0 start-0 end-0 bg-white d-flex flex-column justify-content-center align-items-center gap-2"
-		>
-			<h1>Page Under Construction</h1>
-			<a href="index.html" class="btn btn-primary rounded-pill px-3"
-				><i class="bi bi-house me-2"></i>Home</a
-			>
 		</div>
 
 		<!-- <div
@@ -349,7 +327,6 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		></script> -->
-
 		<script src="assets/js/main.js"></script>
 		<script src="assets/js/custom.js"></script>
 	</body>

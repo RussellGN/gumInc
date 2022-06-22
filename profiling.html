@@ -101,7 +101,7 @@
 		}
 	</style>
 
-	<body class="container-xxl p-0 position-relative">
+	<body class="p-0 position-relative">
 		<div id="offcanvases">
 			<div
 				class="offcanvas offcanvas-start bg-brown"
@@ -139,53 +139,64 @@
 			</div>
 		</div>
 
-		<header
-			id="header"
-			class="container-xxl d-flex pt-3 pt-md-2 align-items-center justify-content-around sticky-top"
-		>
-			<a href="index.html" class="navbar-brand text-dark p-0 fs-2"
-				>Gum.Inc</a
+		<header id="header" class="p-2 px-5 px-md-2 pt-md-2 fixed-top">
+			<div
+				class="container-xxl d-flex justify-content-between align-items-center justify-content-md-around"
 			>
+				<button
+					class="btn p-0 d-md-none nav-link"
+					id="nav-toggle"
+					type="button"
+					data-bs-toggle="offcanvas"
+					data-bs-target="#mobileNavOffcanvas"
+					aria-controls="mobileNavOffcanvas"
+				>
+					<i class="bi bi-list fs-2"></i>
+				</button>
 
-			<button
-				class="btn p-0 d-md-none nav-link"
-				id="nav-toggle"
-				type="button"
-				data-bs-toggle="offcanvas"
-				data-bs-target="#mobileNavOffcanvas"
-				aria-controls="mobileNavOffcanvas"
-			>
-				<i class="bi bi-list fs-2"></i>
-			</button>
+				<a href="index.html" class="navbar-brand text-dark p-0 fs-2"
+					>Gum.Inc</a
+				>
 
-			<div class="d-md-flex d-none p-0">
-				<a href="index.html" class="nav-link rounded-pill px-2 py-1"
-					>Home</a
-				>
-				<a href="directory.html" class="nav-link rounded-pill px-2 py-1"
-					>Directory</a
-				>
 				<a
-					href="store.html"
-					class="nav-link active rounded-pill px-2 py-1"
-					>Store</a
-				>
-				<a
-					href="directories-and-almanacs.html"
-					class="nav-link rounded-pill px-2 py-1"
-					>Almanacs & Directories</a
-				>
-				<a href="about.html" class="nav-link rounded-pill px-2 py-1"
-					>About</a
-				>
-				<a href="account.html" class="nav-link rounded-pill px-2 py-1"
-					>Account</a
-				>
-				<a
+					class="btn order-last btn-primary rounded-circle d-lg-none"
 					href="cart.html"
-					class="nav-link border rounded-circle px-2 ms-2 py-1"
 					><i class="bi bi-cart4"></i
 				></a>
+
+				<div class="d-md-flex d-none p-0">
+					<a href="index.html" class="nav-link rounded-pill px-2 py-1"
+						>Home</a
+					>
+					<a
+						href="directory.html"
+						class="nav-link rounded-pill px-2 py-1"
+						>Directory</a
+					>
+					<a
+						href="store.html"
+						class="nav-link rounded-pill px-2 py-1 active"
+						>Store</a
+					>
+					<a
+						href="directories-and-almanacs.html"
+						class="nav-link rounded-pill px-2 py-1"
+						>Almanacs & Directories</a
+					>
+					<a href="about.html" class="nav-link rounded-pill px-2 py-1"
+						>About</a
+					>
+					<a
+						href="account.html"
+						class="nav-link rounded-pill px-2 py-1"
+						>Account</a
+					>
+					<a
+						href="cart.html"
+						class="nav-link border rounded-circle px-2 ms-2 py-1"
+						><i class="bi bi-cart4"></i
+					></a>
+				</div>
 			</div>
 		</header>
 
@@ -625,7 +636,7 @@ Input any other details you wish to include</textarea
 
 		<section>
 			<footer
-				class="d-flex container flex-wrap justify-content-between align-items-center py-5"
+				class="d-flex container flex-wrap justify-content-between align-items-center py-5 px-3"
 			>
 				<div class="col-md-4 d-flex align-items-center">
 					<span class="text-muted">&copy; 2022 Gum.Inc</span>
@@ -668,6 +679,7 @@ Input any other details you wish to include</textarea
 				</div>
 			</div>
 		</div> -->
+
 		<div
 			class="fixed-top top-0 bottom-0 start-0 end-0 bg-white d-flex flex-column justify-content-center align-items-center gap-2"
 		>
@@ -677,14 +689,14 @@ Input any other details you wish to include</textarea
 			>
 		</div>
 
-		<div
+		<!-- <div
 			class="fixed-top top-0 bottom-0 start-0 end-0 bg-white d-none text-center flex-column justify-content-center align-items-center gap-2 mobile-barrier"
 		>
 			<h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
 			<h1 class="p-4">
 				Please view on desktop. Site is not mobile ready
 			</h1>
-		</div>
+		</div> -->
 
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"

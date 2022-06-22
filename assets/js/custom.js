@@ -32,3 +32,22 @@ function subtractOne(quantityInput) {
 		quantityInput.value = currentValue - 1;
 	}
 }
+
+accountMenuLinks = document.querySelectorAll(".account-menu-link");
+accountMenuClose = document.getElementById("account-menu-close");
+
+accountMenuLinks.forEach((el) => {
+	el.onclick = function () {
+		accountMenuClose.click();
+	};
+});
+
+var addToCartToastTrigger = document.getElementById("addToCartToastBtn");
+var addToCartToast = document.getElementById("addToCartToast");
+if (addToCartToastTrigger) {
+	addToCartToastTrigger.addEventListener("click", function () {
+		var toast = new bootstrap.Toast(addToCartToast);
+
+		toast.show();
+	});
+}

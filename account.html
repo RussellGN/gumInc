@@ -58,7 +58,7 @@
 			#accountTab .nav-link:hover,
 			#accountTab .nav-link:focus,
 			#accountTab .nav-link.active {
-				color: white;
+				color: white !important;
 				background: #712d24;
 			}
 		}
@@ -79,10 +79,15 @@
 				text-align: left;
 				border-radius: 10px 10px 0 0;
 			}
+			@media screen and (max-width: 992px) {
+				#monetizationTab .nav-link {
+					border-radius: 10px;
+				}
+			}
 			#monetizationTab .nav-link:hover,
 			#monetizationTab .nav-link:focus,
 			#monetizationTab .nav-link.active {
-				color: white;
+				color: white !important;
 				background: #712d24;
 			}
 		}
@@ -106,7 +111,7 @@
 			#contactManagerTab .nav-link:hover,
 			#contactManagerTab .nav-link:focus,
 			#contactManagerTab .nav-link.active {
-				color: white;
+				color: white !important;
 				background: #712d24;
 			}
 		}
@@ -130,7 +135,7 @@
 			#activityTab .nav-link:hover,
 			#activityTab .nav-link:focus,
 			#activityTab .nav-link.active {
-				color: white;
+				color: white !important;
 				background: #712d24;
 			}
 		}
@@ -142,7 +147,7 @@
 	>
 		<div id="offcanvases">
 			<div
-				class="offcanvas offcanvas-start bg-brown"
+				class="offcanvas offcanvas-start"
 				tabindex="-1"
 				id="mobileNavOffcanvas"
 				aria-labelledby="mobileNavOffcanvasLabel"
@@ -162,75 +167,238 @@
 
 				<div class="offcanvas-body">
 					<div class="d-flex flex-column">
-						<a class="mobile-link p-3 active" href="index.html">
-							Home
+						<a class="mobile-link p-3" href="index.html">Home</a>
+						<a class="mobile-link p-3" href="directory.html"
+							>Directory
 						</a>
-
 						<a class="mobile-link p-3" href="store.html">Store</a>
-
-						<a class="mobile-link p-3" href="">Almanacs</a>
-						<a class="mobile-link p-3" href="">Subscriptions </a>
-						<a class="mobile-link p-3" href="">Login</a>
-						<a class="mobile-link p-3" href=""> About </a>
+						<a
+							class="mobile-link p-3"
+							href="directories-and-almanacs.html"
+							>Almanacs & Directories</a
+						>
+						<a class="mobile-link p-3" href="about.html"> About </a>
+						<a class="mobile-link p-3" href="account.html"
+							>Account</a
+						>
 					</div>
+				</div>
+			</div>
+
+			<div
+				class="offcanvas offcanvas-start"
+				tabindex="-1"
+				id="accountMenuOffcanvas"
+				aria-labelledby="accountMenuOffcanvasLabel"
+			>
+				<div class="offcanvas-header">
+					<h5
+						class="offcanvas-title ps-3"
+						id="accountMenuOffcanvasLabel"
+					>
+						My account
+					</h5>
+
+					<button
+						id="account-menu-close"
+						type="button"
+						class="btn-close text-reset"
+						data-bs-dismiss="offcanvas"
+						aria-label="Close"
+					></button>
+				</div>
+
+				<div class="offcanvas-body">
+					<div
+						class="bg-dark mx-auto d-flex justify-content-center shadow-lg align-items-center rounded-circle overflow-hidden"
+						style="
+							width: 6rem;
+							height: 6rem;
+							border: solid 10px gray;
+						"
+					>
+						<img src="assets/img/5.jpg" class="w-100" />
+					</div>
+
+					<h3 class="text-center my-2">John Doe</h3>
+
+					<ul
+						class="nav nav-tabs border-0 d-flex flex-column mt-3"
+						id="accountTab"
+						role="tablist"
+					>
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link account-menu-link active"
+								id="details"
+								data-bs-toggle="tab"
+								data-bs-target="#details-tab"
+								type="button"
+								role="tab"
+								aria-controls="details-tab"
+								aria-selected="true"
+							>
+								<i class="bi bi-person me-2 fs-5"></i>My Details
+							</button>
+						</li>
+
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link account-menu-link"
+								id="activity"
+								data-bs-toggle="tab"
+								data-bs-target="#activity-tab"
+								type="button"
+								role="tab"
+								aria-controls="activity-tab"
+								aria-selected="false"
+							>
+								<i class="bi bi-bell me-2 fs-5"></i>Activity
+							</button>
+						</li>
+
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link account-menu-link"
+								id="monetization"
+								data-bs-toggle="tab"
+								data-bs-target="#monetization-tab"
+								type="button"
+								role="tab"
+								aria-controls="monetization-tab"
+								aria-selected="false"
+							>
+								<i class="bi bi-currency-dollar fs-5 me-2"></i
+								>Monetization
+							</button>
+						</li>
+
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link account-menu-link"
+								id="contacts"
+								data-bs-toggle="tab"
+								data-bs-target="#contacts-tab"
+								type="button"
+								role="tab"
+								aria-controls="contacts-tab"
+								aria-selected="false"
+							>
+								<i class="bi bi-person-badge fs-5 me-2"></i
+								>Contacts
+							</button>
+						</li>
+
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link account-menu-link"
+								id="my-directories"
+								data-bs-toggle="tab"
+								data-bs-target="#my-directories-tab"
+								type="button"
+								role="tab"
+								aria-controls="my-directories-tab"
+								aria-selected="false"
+							>
+								<i class="bi bi-book me-2 fs-5"></i>My
+								Directories
+							</button>
+						</li>
+
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link account-menu-link"
+								id="my-subscriptions"
+								data-bs-toggle="tab"
+								data-bs-target="#my-subscriptions-tab"
+								type="button"
+								role="tab"
+								aria-controls="my-subscriptions-tab"
+								aria-selected="false"
+							>
+								<i class="bi bi-calendar-date me-2 fs-5"></i
+								>Subscriptions
+							</button>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
 
-		<header
-			id="header"
-			class="container-xxl d-flex pt-3 pt-md-2 align-items-center justify-content-around fixed-top"
+		<button
+			style="z-index: 5; border-radius: 0 20px 20px 0; top: 180px"
+			class="btn btn-primary position-fixed start-0 d-lg-none"
+			type="button"
+			data-bs-toggle="offcanvas"
+			data-bs-target="#accountMenuOffcanvas"
+			aria-controls="accountMenuOffcanvas"
 		>
-			<a href="index.html" class="navbar-brand text-dark p-0 fs-2"
-				>Gum.Inc</a
-			>
+			Menu<i class="bi bi-arrow-right-short ms-2"></i>
+		</button>
 
-			<button
-				class="btn p-0 d-md-none nav-link"
-				id="nav-toggle"
-				type="button"
-				data-bs-toggle="offcanvas"
-				data-bs-target="#mobileNavOffcanvas"
-				aria-controls="mobileNavOffcanvas"
+		<header id="header" class="p-2 px-5 px-md-2 pt-md-2 fixed-top">
+			<div
+				class="container-xxl d-flex justify-content-between align-items-center justify-content-md-around"
 			>
-				<i class="bi bi-list fs-2"></i>
-			</button>
+				<button
+					class="btn p-0 d-md-none nav-link"
+					id="nav-toggle"
+					type="button"
+					data-bs-toggle="offcanvas"
+					data-bs-target="#mobileNavOffcanvas"
+					aria-controls="mobileNavOffcanvas"
+				>
+					<i class="bi bi-list fs-2"></i>
+				</button>
 
-			<div class="d-md-flex d-none p-0">
-				<a href="index.html" class="nav-link rounded-pill px-2 py-1"
-					>Home</a
+				<a href="index.html" class="navbar-brand text-dark p-0 fs-2"
+					>Gum.Inc</a
 				>
-				<a href="directory.html" class="nav-link rounded-pill px-2 py-1"
-					>Directory</a
-				>
-				<a href="store.html" class="nav-link rounded-pill px-2 py-1"
-					>Store</a
-				>
+
 				<a
-					href="directories-and-almanacs.html"
-					class="nav-link rounded-pill px-2 py-1"
-					>Almanacs & Directories</a
-				>
-				<a href="about.html" class="nav-link rounded-pill px-2 py-1"
-					>About</a
-				>
-				<a
-					href="account.html"
-					class="nav-link active rounded-pill px-2 py-1"
-					>Account</a
-				>
-				<a
+					class="btn order-last btn-primary rounded-circle d-lg-none"
 					href="cart.html"
-					class="nav-link border rounded-circle px-2 ms-2 py-1"
 					><i class="bi bi-cart4"></i
 				></a>
+
+				<div class="d-md-flex d-none p-0">
+					<a href="index.html" class="nav-link rounded-pill px-2 py-1"
+						>Home</a
+					>
+					<a
+						href="directory.html"
+						class="nav-link rounded-pill px-2 py-1"
+						>Directory</a
+					>
+					<a href="store.html" class="nav-link rounded-pill px-2 py-1"
+						>Store</a
+					>
+					<a
+						href="directories-and-almanacs.html"
+						class="nav-link rounded-pill px-2 py-1"
+						>Almanacs & Directories</a
+					>
+					<a href="about.html" class="nav-link rounded-pill px-2 py-1"
+						>About</a
+					>
+					<a
+						href="account.html"
+						class="nav-link rounded-pill px-2 py-1 active"
+						>Account</a
+					>
+					<a
+						href="cart.html"
+						class="nav-link border rounded-circle px-2 ms-2 py-1"
+						><i class="bi bi-cart4"></i
+					></a>
+				</div>
 			</div>
 		</header>
 
 		<main class="container my-5">
 			<div class="row">
 				<div
-					class="col-lg-3 sticky-top h-fit"
+					class="col-lg-3 sticky-top h-fit d-none d-lg-block"
 					style="top: 100px !important"
 				>
 					<div class="shadow-lg p-4 c-rounded-2">
@@ -353,7 +521,10 @@
 				</div>
 
 				<div class="col-lg" style="min-height: 80vh !important">
-					<div class="tab-content shadow-lg c-rounded-2 p-5">
+					<div
+						class="tab-content shadow-lg c-rounded-2 p-4 p-md-5"
+						style="min-height: 80vh !important"
+					>
 						<div
 							class="tab-pane active position-relative"
 							id="details-tab"
@@ -434,7 +605,9 @@
 									</p>
 								</div>
 
-								<div class="col bg-gray c-rounded-2 p-4">
+								<div
+									class="col-12 col-lg bg-gray c-rounded-2 p-4"
+								>
 									<p>
 										<i class="bi bi-telephone me-2 fs-4"></i
 										>+263 77566832
@@ -455,7 +628,9 @@
 									</p>
 								</div>
 
-								<div class="col bg-gray c-rounded-2 p-4">
+								<div
+									class="col-12 col-lg bg-gray c-rounded-2 p-4"
+								>
 									<h5>
 										<i class="bi bi-geo-alt me-2 fs-4"></i
 										>Location
@@ -487,7 +662,7 @@
 									role="tablist"
 								>
 									<li
-										class="nav-item col-2"
+										class="nav-item col-lg-2"
 										role="presentation"
 									>
 										<button
@@ -505,7 +680,7 @@
 									</li>
 
 									<li
-										class="nav-item col-2"
+										class="nav-item col-lg-2"
 										role="presentation"
 									>
 										<button
@@ -618,12 +793,12 @@
 								</h2>
 
 								<ul
-									class="nav nav-tabs border-3 gap-2 border-brown justify-content-center"
+									class="nav row-cols-1 nav-tabs border-3 gap-2 border-brown justify-content-center"
 									id="monetizationTab"
 									role="tablist"
 								>
 									<li
-										class="nav-item col-2"
+										class="nav-item col-lg-2"
 										role="presentation"
 									>
 										<button
@@ -641,7 +816,7 @@
 									</li>
 
 									<li
-										class="nav-item col-2"
+										class="nav-item col-lg-2"
 										role="presentation"
 									>
 										<button
@@ -659,7 +834,7 @@
 									</li>
 
 									<li
-										class="nav-item col-2"
+										class="nav-item col-lg-2"
 										role="presentation"
 									>
 										<button
@@ -677,7 +852,7 @@
 									</li>
 
 									<li
-										class="nav-item col-2"
+										class="nav-item col-lg-2"
 										role="presentation"
 									>
 										<button
@@ -695,7 +870,7 @@
 									</li>
 
 									<li
-										class="nav-item col-2"
+										class="nav-item col-lg-2"
 										role="presentation"
 									>
 										<button
@@ -720,7 +895,7 @@
 										role="tabpanel"
 										aria-labelledby="option-1"
 									>
-										<div class="p-5">
+										<div class="pt-4 p-md-5">
 											<h5 class="text-success mb-3">
 												Blanditiis aperiam mollitia
 											</h5>
@@ -754,7 +929,7 @@
 										role="tabpanel"
 										aria-labelledby="option-2"
 									>
-										<div class="p-5">
+										<div class="pt-4 p-md-5">
 											<h5 class="text-success mb-3">
 												Blanditiis aperiam mollitia
 											</h5>
@@ -778,7 +953,7 @@
 										role="tabpanel"
 										aria-labelledby="option-3"
 									>
-										<div class="p-5">
+										<div class="pt-4 p-md-5">
 											<h5 class="text-success mb-3">
 												Blanditiis aperiam mollitia
 											</h5>
@@ -812,7 +987,7 @@
 										role="tabpanel"
 										aria-labelledby="option-4"
 									>
-										<div class="p-5">
+										<div class="pt-4 p-md-5">
 											<h5 class="text-success mb-3">
 												Blanditiis aperiam mollitia
 											</h5>
@@ -865,7 +1040,7 @@
 										role="tabpanel"
 										aria-labelledby="option-5"
 									>
-										<div class="p-5">
+										<div class="pt-4 p-md-5">
 											<h5 class="text-success mb-3">
 												Blanditiis aperiam mollitia
 											</h5>
@@ -913,7 +1088,7 @@
 									role="tablist"
 								>
 									<li
-										class="nav-item col-2"
+										class="nav-item col-lg-2"
 										role="presentation"
 									>
 										<button
@@ -931,7 +1106,7 @@
 									</li>
 
 									<li
-										class="nav-item col-2"
+										class="nav-item col-lg-2"
 										role="presentation"
 									>
 										<button
@@ -949,14 +1124,14 @@
 									</li>
 								</ul>
 
-								<div class="tab-content">
+								<div class="tab-content pt-3">
 									<div
 										class="tab-pane active"
 										id="contact-option-1-tab"
 										role="tabpanel"
 										aria-labelledby="contact-option-1"
 									>
-										<div class="p-2">
+										<div class="p-md-2">
 											<div
 												class="border border-2 align-items-center gap-3 d-flex px-4 p-2 c-rounded-2"
 											>
@@ -1074,7 +1249,7 @@
 										role="tabpanel"
 										aria-labelledby="contact-option-2"
 									>
-										<div class="p-2">
+										<div class="p-md-2">
 											<div
 												class="border border-2 align-items-center gap-3 d-flex c-rounded-2 px-4 p-2"
 											>
@@ -1090,7 +1265,7 @@
 											</div>
 
 											<div
-												class="d-flex mt-3 gap-3 border border-2 align-items-center border-2 px-4 p-3 c-rounded-2"
+												class="d-flex flex-column flex-md-row mt-3 gap-2 gap-md-3 border border-2 align-items-center border-2 px-4 p-3 c-rounded-2"
 											>
 												<div
 													style="
@@ -1121,7 +1296,7 @@
 											</div>
 
 											<div
-												class="d-flex mt-3 gap-3 border border-2 align-items-center border-2 px-4 p-3 c-rounded-2"
+												class="d-flex flex-column flex-md-row mt-3 gap-2 gap-md-3 border border-2 align-items-center border-2 px-4 p-3 c-rounded-2"
 											>
 												<div
 													style="
@@ -1161,7 +1336,7 @@
 							role="tabpanel"
 							aria-labelledby="my-directories"
 						>
-							<div class="p-5">
+							<div class="p-md-5">
 								<h2 class="text-center">
 									Featured Directories
 								</h2>
@@ -1252,11 +1427,11 @@
 							role="tabpanel"
 							aria-labelledby="my-subscriptions"
 						>
-							<div class="p-5">
+							<div class="p-md-5">
 								<h2 class="text-center">Subscriptions</h2>
 
 								<div
-									class="d-flex align-items-center gap-3 p-3 px-4 border border-2 c-rounded-2 mt-3"
+									class="d-flex flex-column flex-md-row align-items-center gap-3 p-3 px-4 border border-2 c-rounded-2 mt-3"
 								>
 									<div
 										style="width: 100px"
@@ -1281,7 +1456,7 @@
 								</div>
 
 								<div
-									class="d-flex align-items-center gap-3 p-3 px-4 border border-2 c-rounded-2 mt-3"
+									class="d-flex flex-column flex-md-row align-items-center gap-3 p-3 px-4 border border-2 c-rounded-2 mt-3"
 								>
 									<div
 										style="width: 100px"
@@ -1313,7 +1488,7 @@
 
 		<section>
 			<footer
-				class="d-flex container flex-wrap justify-content-between align-items-center py-5"
+				class="d-flex container flex-wrap justify-content-between align-items-center py-5 px-3"
 			>
 				<div class="col-md-4 d-flex align-items-center">
 					<span class="text-muted">&copy; 2022 Gum.Inc</span>
@@ -1346,6 +1521,7 @@
 				</ul>
 			</footer>
 		</section>
+
 		<div id="preloader">
 			<div
 				class="d-flex h-100 w-100 align-items-center justify-content-center"
@@ -1356,14 +1532,14 @@
 			</div>
 		</div>
 
-		<div
+		<!-- <div
 			class="fixed-top top-0 bottom-0 start-0 end-0 bg-white d-none text-center flex-column justify-content-center align-items-center gap-2 mobile-barrier"
 		>
 			<h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
 			<h1 class="p-4">
 				Please view on desktop. Site is not mobile ready
 			</h1>
-		</div>
+		</div> -->
 
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
