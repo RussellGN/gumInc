@@ -128,7 +128,7 @@
 			</div>
 		</div>
 
-		<header id="header" class="p-2 px-5 px-md-2 pt-md-2 fixed-top">
+		<header id="header" class="p-2 px-4 px-md-2 pt-md-2 fixed-top">
 			<div
 				class="container-xxl d-flex justify-content-between align-items-center justify-content-md-around"
 			>
@@ -189,7 +189,7 @@
 			</div>
 		</header>
 
-		<main class="p-4 pt-5 container">
+		<main class="p-md-5 pt-5 container">
 			<section
 				class="container w-fit rounded-pill border border-3 text-gray text-center p-2 px-5 my-5"
 			>
@@ -204,10 +204,10 @@
 			<section class="my-5">
 				<div
 					id="almanacs-and-directories"
-					class="container p-4 p-md-5 mb-5 shadow-lg c-rounded-4"
+					class="container p-2 p-md-5 py-4 mb-5 shadow-lg c-rounded-3"
 				>
 					<div
-						class="pb-2 border-bottom border-4 d-flex justify-content-between align-items-center"
+						class="pb-2 px-3 border-bottom border-4 d-flex justify-content-between align-items-center"
 					>
 						<h2>
 							Almanacs & <br class="d-md-none" />
@@ -222,14 +222,12 @@
 					</div>
 
 					<div
-						class="row row-cols-2 row-cols-lg-4 justify-content-around"
+						class="row row-cols-2 px-2 row-cols-lg-4 justify-content-around"
 					>
-						<div class="col my-3 d-flex">
-							<div
-								class="bg-white listing border shadow text-dark overflow-hidden c-rounded-1"
-							>
+						<div class="col my-3 d-flex p-1">
+							<div class="border shadow w-100 c-rounded-1">
 								<p
-									class="py-2 px-3 border-bottom fw-bold border-2"
+									class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
 								>
 									Gummy Pages
 								</p>
@@ -243,37 +241,21 @@
 										class="w-100"
 									/>
 									<span
-										class="bg-dark text-white p-2 position-absolute top-0 end-0"
+										class="bg-success text-white p-2 position-absolute top-0 end-0"
 										style="border-radius: 0 0 0 10px"
-										>directory</span
+										>almanac</span
 									>
 								</div>
 
 								<p class="p-3 m-0 d-none d-md-block">
 									Lorem ipsum, dolor sit amet consectetur
 									adipisicing elit.
-									<br />
-									<a
-										href="view-book.html"
-										class="mt-2 btn btn-outline-dark rounded-pill px-3"
-										>View</a
-									><button
-										onclick="document.getElementById('addToCartToastBtn').click()"
-										class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
-									>
-										<i class="bi bi-cart-plus"></i>
-									</button>
 								</p>
 
 								<div
 									class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
 								>
-									<span>
-										<i
-											class="bi bi-currency-dollar me-1"
-										></i
-										>150.00</span
-									>
+									<div>$150.00</div>
 
 									<div class="dropdown open">
 										<button
@@ -310,28 +292,32 @@
 									</div>
 								</div>
 
+								<div class="px-3 d-none d-md-block">
+									<span class="me-3"> $150.00</span
+									><span> 12 feb</span>
+								</div>
+
 								<div class="px-3 pb-3 d-none d-md-block">
-									<span class="me-3">
-										<i
-											class="bi bi-currency-dollar me-1"
-										></i
-										>150.00</span
-									><span>
-										<i class="bi bi-calendar-date me-1"></i
-										>12 feb 22</span
+									<a
+										href="view-book.html"
+										class="mt-2 btn btn-outline-dark rounded-pill px-3"
+										>View</a
+									><button
+										onclick="document.getElementById('addToCartToastBtn').click()"
+										class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
 									>
+										<i class="bi bi-cart-plus"></i>
+									</button>
 								</div>
 							</div>
 						</div>
 
-						<div class="col my-3 d-flex">
-							<div
-								class="bg-white listing border shadow text-dark overflow-hidden c-rounded-1"
-							>
+						<div class="col my-3 d-flex p-1">
+							<div class="border shadow w-100 c-rounded-1">
 								<p
-									class="py-2 px-3 border-bottom fw-bold border-2"
+									class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
 								>
-									Creme Chefs
+									Gummy Pages
 								</p>
 
 								<div
@@ -352,28 +338,12 @@
 								<p class="p-3 m-0 d-none d-md-block">
 									Lorem ipsum, dolor sit amet consectetur
 									adipisicing elit.
-									<br />
-									<a
-										href="view-book.html"
-										class="mt-2 btn btn-outline-dark rounded-pill px-3"
-										>View</a
-									><button
-										onclick="document.getElementById('addToCartToastBtn').click()"
-										class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
-									>
-										<i class="bi bi-cart-plus"></i>
-									</button>
 								</p>
 
 								<div
 									class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
 								>
-									<span>
-										<i
-											class="bi bi-currency-dollar me-1"
-										></i
-										>150.00</span
-									>
+									<div>$150.00</div>
 
 									<div class="dropdown open">
 										<button
@@ -410,28 +380,32 @@
 									</div>
 								</div>
 
+								<div class="px-3 d-none d-md-block">
+									<span class="me-3"> $150.00</span
+									><span> 12 feb</span>
+								</div>
+
 								<div class="px-3 pb-3 d-none d-md-block">
-									<span class="me-3">
-										<i
-											class="bi bi-currency-dollar me-1"
-										></i
-										>150.00</span
-									><span>
-										<i class="bi bi-calendar-date me-1"></i
-										>12 feb 22</span
+									<a
+										href="view-book.html"
+										class="mt-2 btn btn-outline-dark rounded-pill px-3"
+										>View</a
+									><button
+										onclick="document.getElementById('addToCartToastBtn').click()"
+										class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
 									>
+										<i class="bi bi-cart-plus"></i>
+									</button>
 								</div>
 							</div>
 						</div>
 
-						<div class="col my-3 d-flex">
-							<div
-								class="bg-white listing border shadow text-dark overflow-hidden c-rounded-1"
-							>
+						<div class="col my-3 d-flex p-1">
+							<div class="border shadow w-100 c-rounded-1">
 								<p
-									class="py-2 px-3 border-bottom fw-bold border-2"
+									class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
 								>
-									Creme Chefs
+									Gummy Pages
 								</p>
 
 								<div
@@ -452,28 +426,12 @@
 								<p class="p-3 m-0 d-none d-md-block">
 									Lorem ipsum, dolor sit amet consectetur
 									adipisicing elit.
-									<br />
-									<a
-										href="view-book.html"
-										class="mt-2 btn btn-outline-dark rounded-pill px-3"
-										>View</a
-									><button
-										onclick="document.getElementById('addToCartToastBtn').click()"
-										class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
-									>
-										<i class="bi bi-cart-plus"></i>
-									</button>
 								</p>
 
 								<div
 									class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
 								>
-									<span>
-										<i
-											class="bi bi-currency-dollar me-1"
-										></i
-										>150.00</span
-									>
+									<div>$150.00</div>
 
 									<div class="dropdown open">
 										<button
@@ -510,28 +468,32 @@
 									</div>
 								</div>
 
+								<div class="px-3 d-none d-md-block">
+									<span class="me-3"> $150.00</span
+									><span> 12 feb</span>
+								</div>
+
 								<div class="px-3 pb-3 d-none d-md-block">
-									<span class="me-3">
-										<i
-											class="bi bi-currency-dollar me-1"
-										></i
-										>150.00</span
-									><span>
-										<i class="bi bi-calendar-date me-1"></i
-										>12 feb 22</span
+									<a
+										href="view-book.html"
+										class="mt-2 btn btn-outline-dark rounded-pill px-3"
+										>View</a
+									><button
+										onclick="document.getElementById('addToCartToastBtn').click()"
+										class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
 									>
+										<i class="bi bi-cart-plus"></i>
+									</button>
 								</div>
 							</div>
 						</div>
 
-						<div class="col my-3 d-flex">
-							<div
-								class="bg-white listing border shadow text-dark overflow-hidden c-rounded-1"
-							>
+						<div class="col my-3 d-flex p-1">
+							<div class="border shadow w-100 c-rounded-1">
 								<p
-									class="py-2 px-3 border-bottom fw-bold border-2"
+									class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
 								>
-									Creme Chefs
+									Gummy Pages
 								</p>
 
 								<div
@@ -552,28 +514,12 @@
 								<p class="p-3 m-0 d-none d-md-block">
 									Lorem ipsum, dolor sit amet consectetur
 									adipisicing elit.
-									<br />
-									<a
-										href="view-book.html"
-										class="mt-2 btn btn-outline-dark rounded-pill px-3"
-										>View</a
-									><button
-										onclick="document.getElementById('addToCartToastBtn').click()"
-										class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
-									>
-										<i class="bi bi-cart-plus"></i>
-									</button>
 								</p>
 
 								<div
 									class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
 								>
-									<span>
-										<i
-											class="bi bi-currency-dollar me-1"
-										></i
-										>150.00</span
-									>
+									<div>$150.00</div>
 
 									<div class="dropdown open">
 										<button
@@ -610,16 +556,22 @@
 									</div>
 								</div>
 
+								<div class="px-3 d-none d-md-block">
+									<span class="me-3"> $150.00</span
+									><span> 12 feb</span>
+								</div>
+
 								<div class="px-3 pb-3 d-none d-md-block">
-									<span class="me-3">
-										<i
-											class="bi bi-currency-dollar me-1"
-										></i
-										>150.00</span
-									><span>
-										<i class="bi bi-calendar-date me-1"></i
-										>12 feb 22</span
+									<a
+										href="view-book.html"
+										class="mt-2 btn btn-outline-dark rounded-pill px-3"
+										>View</a
+									><button
+										onclick="document.getElementById('addToCartToastBtn').click()"
+										class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
 									>
+										<i class="bi bi-cart-plus"></i>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -628,7 +580,7 @@
 
 				<div
 					id="business-cards"
-					class="container text-center text-md-start text-white mb-5 shadow-lg c-rounded-4 p-3 p-md-5 py-3"
+					class="container text-center text-md-start text-white mb-5 shadow-lg c-rounded-3 p-2 p-md-5"
 				>
 					<div class="row">
 						<div class="col-md-7 col-lg-5 py-5">
@@ -659,7 +611,7 @@
 				</div>
 
 				<div
-					class="container px-4 bg-white mb-5 shadow-lg c-rounded-4 py-5"
+					class="container p-4 px-3 p-md-5 bg-white mb-5 shadow-lg c-rounded-3"
 				>
 					<div class="row align-items-center justify-content-around">
 						<div class="col-lg-4">
@@ -696,7 +648,7 @@
 
 				<div
 					id="gum-ink-package"
-					class="container shadow-lg c-rounded-4 px-4 px-lg-0 text-center text-lg-start py-5"
+					class="container shadow-lg c-rounded-3 px-3 px-lg-0 text-center text-lg-start py-5"
 				>
 					<div class="row justify-content-around align-items-center">
 						<div class="col-lg-5 text-white">
@@ -779,9 +731,7 @@
 					</div>
 				</div>
 
-				<div
-					class="container px-4 bg-white my-5 shadow-lg c-rounded-4 py-5"
-				>
+				<div class="container px-3 my-5 shadow-lg c-rounded-3 py-5">
 					<div class="row align-items-center justify-content-around">
 						<div class="col-lg-4">
 							<div>
