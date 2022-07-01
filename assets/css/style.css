@@ -152,25 +152,21 @@
 	.bg-brown {
 		background: #712d24;
 	}
-	.background-screen {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background: linear-gradient(
-			to top right,
-			rgba(103, 95, 95, 0.7),
-			rgba(77, 73, 73, 0.9)
-		);
-	}
 	#hero {
-		position: relative;
 		height: 70vh;
-		background: url(../images/hero2.png) center no-repeat;
+		background: linear-gradient(
+				to top right,
+				rgba(103, 95, 95, 0.7),
+				rgba(77, 73, 73, 0.9)
+			),
+			url("../images/hero2.png") center no-repeat;
 		background-size: cover;
 		color: white !important;
-		background-attachment: fixed;
+	}
+	@supports (background-attachment: fixed) {
+		#hero {
+			background-attachment: fixed;
+		}
 	}
 	#hero .input-group {
 		max-width: 500px;
