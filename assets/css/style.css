@@ -163,7 +163,7 @@
 		background-size: cover;
 		color: white !important;
 	}
-	@supports (background-attachment: fixed) {
+	@media screen and (min-width: 991px) {
 		#hero {
 			background-attachment: fixed;
 		}
