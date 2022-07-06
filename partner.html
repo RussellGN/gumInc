@@ -44,7 +44,10 @@
 		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
 
-	<body class="p-0 position-relative">
+	<body
+		class="container-xxl p-0 position-relative pt-5 d-flex flex-column justify-content-center"
+		style="min-height: 100vh"
+	>
 		<div class="custom-modals">
 			<!--Location Modal -->
 			<button
@@ -207,32 +210,143 @@
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<div id="popovers">
-			<button type="button" class="d-none" id="addToCartToastBtn">
-				Add To Cart
-			</button>
+			<div
+				class="offcanvas offcanvas-start"
+				tabindex="-1"
+				id="accountMenuOffcanvas"
+				aria-labelledby="accountMenuOffcanvasLabel"
+			>
+				<div class="offcanvas-header">
+					<h5
+						class="offcanvas-title ps-3"
+						id="accountMenuOffcanvasLabel"
+					>
+						My account
+					</h5>
 
-			<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-				<div
-					id="addToCartToast"
-					class="toast text-white bg-primary"
-					role="alert"
-					aria-live="assertive"
-					aria-atomic="true"
-				>
-					<div class="toast-body">
-						<div class="d-flex align-items-center">
-							Added!
-							<button
-								type="button"
-								class="btn-close me-2 ms-auto"
-								data-bs-dismiss="toast"
-								aria-label="Close"
-							></button>
-						</div>
+					<button
+						id="account-menu-close"
+						type="button"
+						class="btn-close text-reset"
+						data-bs-dismiss="offcanvas"
+						aria-label="Close"
+					></button>
+				</div>
+
+				<div class="offcanvas-body">
+					<div
+						class="bg-dark mx-auto d-flex justify-content-center shadow-lg align-items-center rounded-circle overflow-hidden"
+						style="
+							width: 6rem;
+							height: 6rem;
+							border: solid 10px gray;
+						"
+					>
+						<img src="assets/img/5.jpg" class="w-100" />
 					</div>
+
+					<h3 class="text-center my-2">John Doe</h3>
+
+					<ul
+						class="nav nav-tabs border-0 d-flex flex-column mt-3"
+						id="accountTab"
+						role="tablist"
+					>
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link account-menu-link active"
+								id="details"
+								data-bs-toggle="tab"
+								data-bs-target="#details-tab"
+								type="button"
+								role="tab"
+								aria-controls="details-tab"
+								aria-selected="true"
+							>
+								<i class="bi bi-person me-2 fs-5"></i>My Details
+							</button>
+						</li>
+
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link account-menu-link"
+								id="activity"
+								data-bs-toggle="tab"
+								data-bs-target="#activity-tab"
+								type="button"
+								role="tab"
+								aria-controls="activity-tab"
+								aria-selected="false"
+							>
+								<i class="bi bi-bell me-2 fs-5"></i>Activity
+							</button>
+						</li>
+
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link account-menu-link"
+								id="monetization"
+								data-bs-toggle="tab"
+								data-bs-target="#monetization-tab"
+								type="button"
+								role="tab"
+								aria-controls="monetization-tab"
+								aria-selected="false"
+							>
+								<i class="bi bi-currency-dollar fs-5 me-2"></i
+								>Monetization
+							</button>
+						</li>
+
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link account-menu-link"
+								id="contacts"
+								data-bs-toggle="tab"
+								data-bs-target="#contacts-tab"
+								type="button"
+								role="tab"
+								aria-controls="contacts-tab"
+								aria-selected="false"
+							>
+								<i class="bi bi-person-badge fs-5 me-2"></i
+								>Contacts
+							</button>
+						</li>
+
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link account-menu-link"
+								id="my-directories"
+								data-bs-toggle="tab"
+								data-bs-target="#my-directories-tab"
+								type="button"
+								role="tab"
+								aria-controls="my-directories-tab"
+								aria-selected="false"
+							>
+								<i class="bi bi-book me-2 fs-5"></i>My
+								Directories
+							</button>
+						</li>
+
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link account-menu-link"
+								id="my-subscriptions"
+								data-bs-toggle="tab"
+								data-bs-target="#my-subscriptions-tab"
+								type="button"
+								role="tab"
+								aria-controls="my-subscriptions-tab"
+								aria-selected="false"
+							>
+								<i class="bi bi-calendar-date me-2 fs-5"></i
+								>Subscriptions
+							</button>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -271,9 +385,7 @@
 						class="nav-link rounded-pill px-2 py-1"
 						>Directory</a
 					>
-					<a
-						href="store.html"
-						class="nav-link rounded-pill px-2 py-1 active"
+					<a href="store.html" class="nav-link rounded-pill px-2 py-1"
 						>Store</a
 					>
 					<a
@@ -298,73 +410,100 @@
 			</div>
 		</header>
 
-		<main class="container py-5">
-			<section class="my-5 container">
-				<div
-					class="p-4 p-md-5 d-flex flex-wrap flex-column flex-lg-row justify-content-around align-items-center shadow-lg c-rounded-3 gap-2"
-				>
-					<h2 class="pb-2 col-lg-12 border-bottom border-4 w-100">
-						Gummy Pages Directory <br />
-						<small class="text-success">/detailed view</small>
-					</h2>
+		<main class="container-fluid my-5">
+			<h1 class="text-center mb-3">Partner With Us</h1>
+			<form class="container p-3">
+				<div class="row">
+					<div class="col-md-6 order-md-2">
+						<h5 class="text-center p-2">Write To Us</h5>
 
-					<div
-						class="col-6 col-lg-3 shadow d-flex justify-content-center p-0 align-items-center overflow-hidden c-rounded-1 h-fit"
-					>
-						<img src="assets/img/images.jpeg" class="w-100" />
-					</div>
-
-					<div class="col-lg-5">
-						<div class="listing my-3 border-top border-3">
-							<p class="p-3 m-0">
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Facilis fuga inventore quod,
-								pariatur, rerum corrupti nisi rem eum optio quia
-								ipsam debitis aspernatur sint suscipit, impedit
-								sapiente soluta. Labore, corporis.
-							</p>
-
-							<div class="px-3 pb-3 d-flex flex-wrap">
-								<p
-									class="me-3 border border-2 p-2 rounded-pill"
-								>
-									<i class="bi bi-bank me-2"></i>Educational
-								</p>
-
-								<p
-									class="me-3 border border-2 p-2 rounded-pill"
-								>
-									<i class="bi bi-currency-dollar me-1"></i
-									>150.00
-								</p>
-
-								<p
-									class="me-3 border border-2 p-2 rounded-pill"
-								>
-									<i class="bi bi-calendar-date me-1"></i>12
-									feb 22
-								</p>
+						<div class="row">
+							<div class="col-6">
+								<div class="form-floating mb-3">
+									<input
+										name="name"
+										type="text"
+										id="floatingInput"
+										class="form-control"
+										placeholder="Your Name"
+									/>
+									<label for="floatingInput">Your Name</label>
+								</div>
 							</div>
 
-							<div class="p-4 pt-0 d-lg-flex align-items-center">
-								<button
-									onclick="document.getElementById('addToCartToastBtn').click()"
-									class="btn btn-primary m-1 rounded-pill w-100"
+							<div class="col-6">
+								<div class="form-floating mb-3">
+									<input
+										name="email"
+										type="email"
+										id="floatingInput"
+										class="form-control"
+										placeholder="Your Email"
+									/>
+									<label for="floatingInput"
+										>Your Email</label
+									>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-floating mb-3">
+							<input
+								name="subject"
+								type="text"
+								id="floatingInput"
+								class="form-control"
+								placeholder="Subject"
+							/>
+							<label for="floatingInput">Subject</label>
+						</div>
+
+						<div class="mb-3">
+							<div class="mb-3">
+								<textarea
+									class="form-control"
+									name="message"
+									rows="4"
 								>
-									Add To Cart<i
-										class="bi bi-cart-plus ms-2"
-									></i>
-								</button>
-								<a
-									href="directories-and-almanacs.html"
-									class="btn btn-success m-1 rounded-pill w-100"
-									>Join Directory</a
+Your Message</textarea
 								>
 							</div>
 						</div>
+
+						<div class="text-center">
+							<button
+								class="btn btn-primary rounded-pill px-3 m-2"
+								type="submit"
+							>
+								Send
+							</button>
+
+							<button
+								class="btn btn-outline-dark rounded-pill px-3"
+								type="reset"
+							>
+								Reset
+							</button>
+						</div>
+					</div>
+
+					<div class="col contact-details py-4">
+						<div class="my-3">
+							<h4>
+								<i class="bi bi-telephone fs-3 me-2"></i>Call
+							</h4>
+							<p>+263 719668444</p>
+						</div>
+
+						<div class="my-3">
+							<h4>
+								<i class="bi bi-envelope fs-3 me-2"></i>Email
+							</h4>
+							<p>inquiries@cars.zim</p>
+						</div>
 					</div>
 				</div>
-			</section>
+			</form>
 		</main>
 
 		<section>

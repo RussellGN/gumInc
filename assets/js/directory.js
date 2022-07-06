@@ -152,20 +152,20 @@
 		slidesPerView: "auto",
 		breakpoints: {
 			320: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			// 575: {
+			// 	slidesPerView: 3,
+			// 	spaceBetween: 10,
+			// },
+			768: {
 				slidesPerView: 2,
 				spaceBetween: 10,
 			},
-			575: {
+			992: {
 				slidesPerView: 3,
 				spaceBetween: 10,
-			},
-			768: {
-				slidesPerView: 3,
-				spaceBetween: 20,
-			},
-			992: {
-				slidesPerView: 5,
-				spaceBetween: 20,
 			},
 		},
 	});

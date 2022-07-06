@@ -1,3 +1,3 @@
-# gum.inc
+# Gum.iNc
 
 website for client

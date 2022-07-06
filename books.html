@@ -7,7 +7,7 @@
 			name="viewport"
 			content="width=device-width | initial-scale=1.0"
 		/>
-		<title>Gum.Inc</title>
+		<title>Gum.iNc</title>
 
 		<!-- Google Fonts -->
 		<link
@@ -45,6 +45,123 @@
 	</head>
 
 	<body class="p-0 position-relative">
+		<div class="custom-modals">
+			<!--Location Modal -->
+			<button
+				style="top: 80px; right: 0; z-index: 5"
+				type="button"
+				class="btn m-2 rounded-pill px-3 shadow border-0 btn-success position-fixed"
+				data-bs-toggle="modal"
+				data-bs-target="#locationModal"
+			>
+				Location<i class="bi bi-caret-down fs-5 ms-2"></i>
+			</button>
+
+			<div
+				class="modal fade"
+				id="locationModal"
+				data-bs-backdrop="static"
+				data-bs-keyboard="false"
+				tabindex="-1"
+				aria-labelledby="locationModalLabel"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="locationModalLabel">
+								Change Access Location
+							</h5>
+
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+							></button>
+						</div>
+
+						<div class="modal-body">
+							<a
+								href=""
+								class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2"
+							>
+								Local - Zimbabwe<i
+									class="bi bi-check-circle fs-5 ms-2"
+								></i>
+							</a>
+
+							<a
+								href=""
+								class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2"
+							>
+								Global
+							</a>
+
+							<div class="dropdown">
+								<button
+									class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2 dropdown-toggle"
+									type="button"
+									id="coTrigger"
+									data-bs-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									Continent
+								</button>
+
+								<div
+									class="dropdown-menu"
+									aria-labelledby="coTrigger"
+								>
+									<a class="dropdown-item" href="#">Africa</a>
+									<a class="dropdown-item" href="#">Europe</a>
+									<a class="dropdown-item" href="#">Asia</a>
+									<a class="dropdown-item" href="#"
+										>Astralia</a
+									>
+									<a class="dropdown-item" href="#"
+										>North America</a
+									>
+									<a class="dropdown-item" href="#"
+										>South America</a
+									>
+								</div>
+							</div>
+
+							<div class="dropdown">
+								<button
+									class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2 dropdown-toggle"
+									type="button"
+									id="counTrigger"
+									data-bs-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									Country
+								</button>
+
+								<div
+									class="dropdown-menu"
+									aria-labelledby="counTrigger"
+								>
+									<a class="dropdown-item" href="#"
+										>Argentina</a
+									>
+									<a class="dropdown-item" href="#">Brasil</a>
+									<a class="dropdown-item" href="#">France</a>
+									<a class="dropdown-item" href="#">France</a>
+									<a class="dropdown-item" href="#"
+										>And So Forth...</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div id="offcanvases">
 			<div
 				class="offcanvas offcanvas-start"
@@ -68,7 +185,7 @@
 				<div class="offcanvas-body">
 					<div class="text-center mb-4">
 						<span class="text-gray p-2 fw-bold display-5 p-0 fs-2"
-							>Gum.Inc<i class="bi bi-circle-fill ms-2"></i>
+							>Gum.iNc<i class="bi bi-circle-fill ms-2"></i>
 						</span>
 					</div>
 
@@ -136,7 +253,7 @@
 				</button>
 
 				<a href="index.html" class="navbar-brand text-dark p-0 fs-2"
-					>Gum.Inc</a
+					>Gum.iNc</a
 				>
 
 				<a
@@ -239,7 +356,7 @@
 									<p
 										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
 									>
-										Gummy Pages
+										Upcoming Events by the Gum.iNc &reg;
 									</p>
 
 									<div
@@ -326,7 +443,8 @@
 									<p
 										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
 									>
-										Gummy Pages
+										Gummy Pages (Yellow Pages) by the
+										Gum.iNc &reg;
 									</p>
 
 									<div
@@ -413,7 +531,7 @@
 									<p
 										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
 									>
-										Gummy Pages
+										Creme Chefs by the Gum.iNc &reg;
 									</p>
 
 									<div
@@ -500,7 +618,7 @@
 									<p
 										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
 									>
-										Gummy Pages
+										Creme Restaurants by the Gum.iNc &reg;
 									</p>
 
 									<div
@@ -587,7 +705,7 @@
 									<p
 										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
 									>
-										Gummy Pages
+										Sports by the Gum.iNc &reg;
 									</p>
 
 									<div
@@ -674,7 +792,7 @@
 									<p
 										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
 									>
-										Gummy Pages
+										Craft/Skill by the Gum.iNc &reg;
 									</p>
 
 									<div
@@ -761,7 +879,7 @@
 									<p
 										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
 									>
-										Gummy Pages
+										Coin (Business) by the Gum.iNc &reg;
 									</p>
 
 									<div
@@ -848,7 +966,7 @@
 									<p
 										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
 									>
-										Gummy Pages
+										Thrift (Fashion) by the Gum.iNc &reg;
 									</p>
 
 									<div
@@ -930,12 +1048,541 @@
 								</div>
 							</div>
 
-							<div class="col my-3 d-none d-lg-flex p-1">
+							<div class="col my-3 d-flex p-1">
 								<div class="border shadow w-100 c-rounded-1">
 									<p
 										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
 									>
-										Gummy Pages
+										Edu-Cation by the Gum.iNc &reg;
+									</p>
+
+									<div
+										style="max-height: 200px"
+										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
+									>
+										<img
+											src="assets/img/images.jpeg"
+											class="w-100"
+										/>
+										<span
+											class="bg-success text-white p-2 position-absolute top-0 end-0"
+											style="border-radius: 0 0 0 10px"
+											>almanac</span
+										>
+									</div>
+
+									<p class="p-3 m-0 d-none d-md-block">
+										Lorem ipsum, dolor sit amet consectetur
+										adipisicing elit.
+									</p>
+
+									<div
+										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+									>
+										<div>$150.00</div>
+
+										<div class="dropdown open">
+											<button
+												class="btn fs-4"
+												type="button"
+												id="triggerId"
+												data-bs-toggle="dropdown"
+												aria-haspopup="true"
+												aria-expanded="false"
+											>
+												<i
+													class="bi bi-three-dots-vertical"
+												></i>
+											</button>
+
+											<div
+												class="dropdown-menu"
+												aria-labelledby="triggerId"
+											>
+												<a
+													class="dropdown-item"
+													href="view-book.html"
+												>
+													View
+												</a>
+												<button
+													type="button"
+													class="dropdown-item"
+													onclick="document.getElementById('addToCartToastBtn').click()"
+												>
+													Add to cart
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="px-3 d-none d-md-block">
+										<span class="me-3"> $150.00</span
+										><span> 12 feb</span>
+									</div>
+
+									<div class="px-3 pb-3 d-none d-md-block">
+										<a
+											class="mt-2 btn btn-outline-dark rounded-pill px-3"
+											>View</a
+										><button
+											onclick="document.getElementById('addToCartToastBtn').click()"
+											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="col my-3 d-flex p-1">
+								<div class="border shadow w-100 c-rounded-1">
+									<p
+										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
+									>
+										Creatives &amp; Artists by the Gum.iNc
+										&reg;
+									</p>
+
+									<div
+										style="max-height: 200px"
+										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
+									>
+										<img
+											src="assets/img/images.jpeg"
+											class="w-100"
+										/>
+										<span
+											class="bg-success text-white p-2 position-absolute top-0 end-0"
+											style="border-radius: 0 0 0 10px"
+											>almanac</span
+										>
+									</div>
+
+									<p class="p-3 m-0 d-none d-md-block">
+										Lorem ipsum, dolor sit amet consectetur
+										adipisicing elit.
+									</p>
+
+									<div
+										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+									>
+										<div>$150.00</div>
+
+										<div class="dropdown open">
+											<button
+												class="btn fs-4"
+												type="button"
+												id="triggerId"
+												data-bs-toggle="dropdown"
+												aria-haspopup="true"
+												aria-expanded="false"
+											>
+												<i
+													class="bi bi-three-dots-vertical"
+												></i>
+											</button>
+
+											<div
+												class="dropdown-menu"
+												aria-labelledby="triggerId"
+											>
+												<a
+													class="dropdown-item"
+													href="view-book.html"
+												>
+													View
+												</a>
+												<button
+													type="button"
+													class="dropdown-item"
+													onclick="document.getElementById('addToCartToastBtn').click()"
+												>
+													Add to cart
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="px-3 d-none d-md-block">
+										<span class="me-3"> $150.00</span
+										><span> 12 feb</span>
+									</div>
+
+									<div class="px-3 pb-3 d-none d-md-block">
+										<a
+											class="mt-2 btn btn-outline-dark rounded-pill px-3"
+											>View</a
+										><button
+											onclick="document.getElementById('addToCartToastBtn').click()"
+											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="col my-3 d-flex p-1">
+								<div class="border shadow w-100 c-rounded-1">
+									<p
+										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
+									>
+										Recording Labels | Artists &amp;
+										Repertoire/Booking Agents by the Gum.iNc
+										&reg;
+									</p>
+
+									<div
+										style="max-height: 200px"
+										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
+									>
+										<img
+											src="assets/img/images.jpeg"
+											class="w-100"
+										/>
+										<span
+											class="bg-success text-white p-2 position-absolute top-0 end-0"
+											style="border-radius: 0 0 0 10px"
+											>almanac</span
+										>
+									</div>
+
+									<p class="p-3 m-0 d-none d-md-block">
+										Lorem ipsum, dolor sit amet consectetur
+										adipisicing elit.
+									</p>
+
+									<div
+										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+									>
+										<div>$150.00</div>
+
+										<div class="dropdown open">
+											<button
+												class="btn fs-4"
+												type="button"
+												id="triggerId"
+												data-bs-toggle="dropdown"
+												aria-haspopup="true"
+												aria-expanded="false"
+											>
+												<i
+													class="bi bi-three-dots-vertical"
+												></i>
+											</button>
+
+											<div
+												class="dropdown-menu"
+												aria-labelledby="triggerId"
+											>
+												<a
+													class="dropdown-item"
+													href="view-book.html"
+												>
+													View
+												</a>
+												<button
+													type="button"
+													class="dropdown-item"
+													onclick="document.getElementById('addToCartToastBtn').click()"
+												>
+													Add to cart
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="px-3 d-none d-md-block">
+										<span class="me-3"> $150.00</span
+										><span> 12 feb</span>
+									</div>
+
+									<div class="px-3 pb-3 d-none d-md-block">
+										<a
+											class="mt-2 btn btn-outline-dark rounded-pill px-3"
+											>View</a
+										><button
+											onclick="document.getElementById('addToCartToastBtn').click()"
+											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="col my-3 d-flex p-1">
+								<div class="border shadow w-100 c-rounded-1">
+									<p
+										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
+									>
+										NGOs/Sponsorships &amp; Funds by the
+										Gum.iNc &reg;
+									</p>
+
+									<div
+										style="max-height: 200px"
+										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
+									>
+										<img
+											src="assets/img/images.jpeg"
+											class="w-100"
+										/>
+										<span
+											class="bg-success text-white p-2 position-absolute top-0 end-0"
+											style="border-radius: 0 0 0 10px"
+											>almanac</span
+										>
+									</div>
+
+									<p class="p-3 m-0 d-none d-md-block">
+										Lorem ipsum, dolor sit amet consectetur
+										adipisicing elit.
+									</p>
+
+									<div
+										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+									>
+										<div>$150.00</div>
+
+										<div class="dropdown open">
+											<button
+												class="btn fs-4"
+												type="button"
+												id="triggerId"
+												data-bs-toggle="dropdown"
+												aria-haspopup="true"
+												aria-expanded="false"
+											>
+												<i
+													class="bi bi-three-dots-vertical"
+												></i>
+											</button>
+
+											<div
+												class="dropdown-menu"
+												aria-labelledby="triggerId"
+											>
+												<a
+													class="dropdown-item"
+													href="view-book.html"
+												>
+													View
+												</a>
+												<button
+													type="button"
+													class="dropdown-item"
+													onclick="document.getElementById('addToCartToastBtn').click()"
+												>
+													Add to cart
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="px-3 d-none d-md-block">
+										<span class="me-3"> $150.00</span
+										><span> 12 feb</span>
+									</div>
+
+									<div class="px-3 pb-3 d-none d-md-block">
+										<a
+											class="mt-2 btn btn-outline-dark rounded-pill px-3"
+											>View</a
+										><button
+											onclick="document.getElementById('addToCartToastBtn').click()"
+											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="col my-3 d-flex p-1">
+								<div class="border shadow w-100 c-rounded-1">
+									<p
+										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
+									>
+										Creative Hubs/Studios &amp; Co-working
+										spaces by the Gum.iNc &reg;
+									</p>
+
+									<div
+										style="max-height: 200px"
+										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
+									>
+										<img
+											src="assets/img/images.jpeg"
+											class="w-100"
+										/>
+										<span
+											class="bg-success text-white p-2 position-absolute top-0 end-0"
+											style="border-radius: 0 0 0 10px"
+											>almanac</span
+										>
+									</div>
+
+									<p class="p-3 m-0 d-none d-md-block">
+										Lorem ipsum, dolor sit amet consectetur
+										adipisicing elit.
+									</p>
+
+									<div
+										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+									>
+										<div>$150.00</div>
+
+										<div class="dropdown open">
+											<button
+												class="btn fs-4"
+												type="button"
+												id="triggerId"
+												data-bs-toggle="dropdown"
+												aria-haspopup="true"
+												aria-expanded="false"
+											>
+												<i
+													class="bi bi-three-dots-vertical"
+												></i>
+											</button>
+
+											<div
+												class="dropdown-menu"
+												aria-labelledby="triggerId"
+											>
+												<a
+													class="dropdown-item"
+													href="view-book.html"
+												>
+													View
+												</a>
+												<button
+													type="button"
+													class="dropdown-item"
+													onclick="document.getElementById('addToCartToastBtn').click()"
+												>
+													Add to cart
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="px-3 d-none d-md-block">
+										<span class="me-3"> $150.00</span
+										><span> 12 feb</span>
+									</div>
+
+									<div class="px-3 pb-3 d-none d-md-block">
+										<a
+											class="mt-2 btn btn-outline-dark rounded-pill px-3"
+											>View</a
+										><button
+											onclick="document.getElementById('addToCartToastBtn').click()"
+											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="col my-3 d-flex p-1">
+								<div class="border shadow w-100 c-rounded-1">
+									<p
+										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
+									>
+										Air Bnbs, Hotels &amp; Resorts by the
+										Gum.iNc &reg;
+									</p>
+
+									<div
+										style="max-height: 200px"
+										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
+									>
+										<img
+											src="assets/img/images.jpeg"
+											class="w-100"
+										/>
+										<span
+											class="bg-success text-white p-2 position-absolute top-0 end-0"
+											style="border-radius: 0 0 0 10px"
+											>almanac</span
+										>
+									</div>
+
+									<p class="p-3 m-0 d-none d-md-block">
+										Lorem ipsum, dolor sit amet consectetur
+										adipisicing elit.
+									</p>
+
+									<div
+										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+									>
+										<div>$150.00</div>
+
+										<div class="dropdown open">
+											<button
+												class="btn fs-4"
+												type="button"
+												id="triggerId"
+												data-bs-toggle="dropdown"
+												aria-haspopup="true"
+												aria-expanded="false"
+											>
+												<i
+													class="bi bi-three-dots-vertical"
+												></i>
+											</button>
+
+											<div
+												class="dropdown-menu"
+												aria-labelledby="triggerId"
+											>
+												<a
+													class="dropdown-item"
+													href="view-book.html"
+												>
+													View
+												</a>
+												<button
+													type="button"
+													class="dropdown-item"
+													onclick="document.getElementById('addToCartToastBtn').click()"
+												>
+													Add to cart
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="px-3 d-none d-md-block">
+										<span class="me-3"> $150.00</span
+										><span> 12 feb</span>
+									</div>
+
+									<div class="px-3 pb-3 d-none d-md-block">
+										<a
+											class="mt-2 btn btn-outline-dark rounded-pill px-3"
+											>View</a
+										><button
+											onclick="document.getElementById('addToCartToastBtn').click()"
+											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="col my-3 d-flex p-1">
+								<div class="border shadow w-100 c-rounded-1">
+									<p
+										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
+									>
+										Hospitals/Medical Specialists &amp;
+										facilities by the Gum.iNc &reg;
 									</p>
 
 									<div
@@ -1020,7 +1667,7 @@
 					</div>
 
 					<div
-						class="col d-none d-lg-block px-4 bg-white mb-5 shadow-lg c-rounded-3 py-5"
+						class="col d-none d-lg-block px-4 mb-5 shadow-lg c-rounded-3 py-5"
 					>
 						<div id="detail-view">
 							<h2
@@ -1032,12 +1679,12 @@
 							<div class="row">
 								<div class="col my-3 d-flex">
 									<div
-										class="bg-white listing border shadow text-dark overflow-hidden c-rounded-1"
+										class="listing border shadow text-dark overflow-hidden c-rounded-1"
 									>
 										<p
 											class="py-2 px-3 border-bottom fw-bold border-2"
 										>
-											Upcoming Events
+											Upcoming Events by the Gum.iNc &reg;
 										</p>
 
 										<p class="p-3 m-0">
@@ -1130,7 +1777,8 @@
 				class="d-flex container flex-wrap justify-content-between align-items-center py-5 px-3"
 			>
 				<div class="col-md-4 d-flex align-items-center">
-					<span class="text-muted">&copy; 2022 Gum.Inc</span>
+					<span class="text-muted">&copy; 2022 Gum.iNc</span>
+					<a href="partner.html" class="ms-3">Partner With Us</a>
 				</div>
 
 				<ul
@@ -1170,14 +1818,14 @@
 			</div>
 		</div>
 
-		<!-- <div
+		<div
 			class="fixed-top top-0 bottom-0 start-0 end-0 bg-white d-none text-center flex-column justify-content-center align-items-center gap-2 mobile-barrier"
 		>
 			<h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
 			<h1 class="p-4">
 				Please view on desktop. Site is not mobile ready
 			</h1>
-		</div> -->
+		</div>
 
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"

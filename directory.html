@@ -7,7 +7,7 @@
 			name="viewport"
 			content="width=device-width | initial-scale=1.0"
 		/>
-		<title>Gum.Inc</title>
+		<title>Gum.iNc</title>
 
 		<!-- Google Fonts -->
 		<link
@@ -40,107 +40,132 @@
 			rel="stylesheet"
 			href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
 		/>
+		<link rel="stylesheet" href="/assets/fontawsome/css/all.min.css" />
 
 		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
 
-	<style>
-		/* account tab */
-		@media screen {
-			#accountTab .nav-link {
-				color: inherit;
-				margin: 0.1rem;
-				border: 0;
-				width: 100%;
-				text-align: left;
-				border-radius: 10px;
-			}
-			#accountTab .nav-link:hover,
-			#accountTab .nav-link:focus,
-			#accountTab .nav-link.active {
-				color: white;
-				background: #712d24;
-			}
-		}
-
-		/* monetization tab */
-		@media screen {
-			#monetizationTab .nav-item {
-				display: flex;
-			}
-
-			#monetizationTab .nav-link {
-				color: inherit;
-				text-align: center !important;
-				text-transform: capitalize;
-				margin-bottom: 0;
-				border: solid thin;
-				width: 100%;
-				text-align: left;
-				border-radius: 10px 10px 0 0;
-			}
-			#monetizationTab .nav-link:hover,
-			#monetizationTab .nav-link:focus,
-			#monetizationTab .nav-link.active {
-				color: white;
-				background: #712d24;
-			}
-		}
-
-		/* contact manager tab */
-		@media screen {
-			#contactManagerTab .nav-item {
-				display: flex;
-			}
-
-			#contactManagerTab .nav-link {
-				color: inherit;
-				text-align: center !important;
-				text-transform: capitalize;
-				margin-bottom: 0;
-				border: solid thin;
-				width: 100%;
-				text-align: left;
-				border-radius: 10px 10px 0 0;
-			}
-			#contactManagerTab .nav-link:hover,
-			#contactManagerTab .nav-link:focus,
-			#contactManagerTab .nav-link.active {
-				color: white;
-				background: #712d24;
-			}
-		}
-
-		/* activity tab */
-		@media screen {
-			#activityTab .nav-item {
-				display: flex;
-			}
-
-			#activityTab .nav-link {
-				color: inherit;
-				text-align: center !important;
-				text-transform: capitalize;
-				margin-bottom: 0;
-				border: solid thin;
-				width: 100%;
-				text-align: left;
-				border-radius: 10px 10px 0 0;
-			}
-			#activityTab .nav-link:hover,
-			#activityTab .nav-link:focus,
-			#activityTab .nav-link.active {
-				color: white;
-				background: #712d24;
-			}
-		}
-	</style>
-
-	<style></style>
 	<body
 		class="p-1 p-lg-0 pt-5 position-relative d-flex flex-column justify-content-center"
 		style="min-height: 100vh"
 	>
+		<div class="custom-modals">
+			<!--Location Modal -->
+			<button
+				style="top: 80px; right: 0; z-index: 5"
+				type="button"
+				class="btn m-2 rounded-pill px-3 shadow border-0 btn-success position-fixed"
+				data-bs-toggle="modal"
+				data-bs-target="#locationModal"
+			>
+				Location<i class="bi bi-caret-down fs-5 ms-2"></i>
+			</button>
+
+			<div
+				class="modal fade"
+				id="locationModal"
+				data-bs-backdrop="static"
+				data-bs-keyboard="false"
+				tabindex="-1"
+				aria-labelledby="locationModalLabel"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="locationModalLabel">
+								Change Access Location
+							</h5>
+
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+							></button>
+						</div>
+
+						<div class="modal-body">
+							<a
+								href=""
+								class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2"
+							>
+								Local - Zimbabwe<i
+									class="bi bi-check-circle fs-5 ms-2"
+								></i>
+							</a>
+
+							<a
+								href=""
+								class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2"
+							>
+								Global
+							</a>
+
+							<div class="dropdown">
+								<button
+									class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2 dropdown-toggle"
+									type="button"
+									id="coTrigger"
+									data-bs-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									Continent
+								</button>
+
+								<div
+									class="dropdown-menu"
+									aria-labelledby="coTrigger"
+								>
+									<a class="dropdown-item" href="#">Africa</a>
+									<a class="dropdown-item" href="#">Europe</a>
+									<a class="dropdown-item" href="#">Asia</a>
+									<a class="dropdown-item" href="#"
+										>Astralia</a
+									>
+									<a class="dropdown-item" href="#"
+										>North America</a
+									>
+									<a class="dropdown-item" href="#"
+										>South America</a
+									>
+								</div>
+							</div>
+
+							<div class="dropdown">
+								<button
+									class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2 dropdown-toggle"
+									type="button"
+									id="counTrigger"
+									data-bs-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									Country
+								</button>
+
+								<div
+									class="dropdown-menu"
+									aria-labelledby="counTrigger"
+								>
+									<a class="dropdown-item" href="#"
+										>Argentina</a
+									>
+									<a class="dropdown-item" href="#">Brasil</a>
+									<a class="dropdown-item" href="#">France</a>
+									<a class="dropdown-item" href="#">France</a>
+									<a class="dropdown-item" href="#"
+										>And So Forth...</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div id="offcanvases">
 			<div
 				class="offcanvas offcanvas-start"
@@ -164,7 +189,7 @@
 				<div class="offcanvas-body">
 					<div class="text-center mb-4">
 						<span class="text-gray p-2 fw-bold display-5 p-0 fs-2"
-							>Gum.Inc<i class="bi bi-circle-fill ms-2"></i>
+							>Gum.iNc<i class="bi bi-circle-fill ms-2"></i>
 						</span>
 					</div>
 
@@ -204,7 +229,7 @@
 				</button>
 
 				<a href="index.html" class="navbar-brand text-dark p-0 fs-2"
-					>Gum.Inc</a
+					>Gum.iNc</a
 				>
 
 				<a
@@ -253,10 +278,10 @@
 			class="mt-3 mt-lg-5 c-rounded-1 c-rounded-lg-0 container-fluid p-0 overflow-hidden"
 		>
 			<div
-				class="h-100 p-2 p-md-4 py-5 text-center d-flex flex-column align-items-center justify-content-center gap-2"
+				class="h-100 p-2 p-md-4 py-5 my-5 text-center d-flex flex-column align-items-center justify-content-center gap-2"
 			>
 				<h1 class="display-1">
-					Gum.Inc<i class="bi bi-circle-fill ms-2"></i>
+					Gum.iNc<i class="bi bi-circle-fill ms-2"></i>
 				</h1>
 
 				<h4 class="mb-1 px-2">What Are We Looking For Today ?</h4>
@@ -288,57 +313,5357 @@
 			<div class="categories-slider swiper">
 				<div class="swiper-wrapper align-items-center">
 					<div class="swiper-slide text-center">
-						<i class="bi bi-briefcase fs-5 me-2"></i>Legal
+						<i class="fas fa-hourglass fs-5 me-2"></i>Upcoming
+						Events
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="bi bi-plug fs-5 me-2"></i>Utilities
+						<i class="fas fa-phone fs-5 me-2"></i>Gummy Pages
+						(Yellow Pages)
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="bi bi-bandaid fs-5 me-2"></i>Medical
+						<i class="fas fa-pepper-hot fs-5 me-2"></i>Crème Chefs
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="bi bi-camera-reels fs-5 me-2"></i>Photography
+						<i class="fas fa-hamburger fs-5 me-2"></i>Crème
+						Restaurants
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="bi bi-book fs-5 me-2"></i>Education
+						<i class="fas fa-futbol fs-5 me-2"></i>Sports
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="bi bi-broadcast-pin fs-5 me-2"></i>Telecomms
+						<i class="fas fa-feather fs-5 me-2"></i>Craft/Skill
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="bi bi-brush fs-5 me-2"></i>Creativity
+						<i class="fas fa-briefcase fs-5 me-2"></i>Coin
+						(Business)
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="bi bi-cash-coin fs-5 me-2"></i>Finance
+						<i class="fas fa-tshirt fs-5 me-2"></i>Thrift (Fashion)
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="bi bi-display fs-5 me-2"></i>IT & Tech
+						<i class="fas fa-book-open fs-5 me-2"></i>Edu-Cation
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="bi bi-cup-straw fs-5 me-2"></i>Leisure
+						<i class="fas fa-brush fs-5 me-2"></i>Creatives &
+						Artists
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="bi bi-dribbble fs-5 me-2"></i>Sports
+						<i class="fas fa-record-vinyl fs-5 me-2"></i>Recording
+						Labels | Artists &amp; Repertoire/Booking Agents
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="bi bi-house-door fs-5 me-2"></i>Real Estate
+						<i class="fas fa-university fs-5 me-2"></i
+						>NGOs/Sponsorships &amp; Funds
+					</div>
+
+					<div class="swiper-slide text-center">
+						<i class="fas fa-users fs-5 me-2"></i>Creative
+						Hubs/Studios &amp; Co-working spaces
+					</div>
+
+					<div class="swiper-slide text-center">
+						<i class="fas fa-hotel fs-5 me-2"></i>Bnbs, Hotels &amp;
+						Resorts
+					</div>
+
+					<div class="swiper-slide text-center">
+						<i class="fas fa-first-aid fs-5 me-2"></i
+						>Hospitals/Medical Specialists &amp; facilities
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<main class="container my-5">
+		<main class="container-fluid my-5">
+			<div class="row">
+				<div
+					class="col-lg-3 sticky-top h-fit d-none d-lg-block"
+					style="top: 100px !important"
+				>
+					<div class="shadow-lg p-4 c-rounded-2">
+						<ul
+							class="nav nav-tabs border-0 d-flex flex-column mt-3"
+							id="bookTab"
+							role="tablist"
+						>
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link d-flex align-items-center mb-2 active"
+									id="1"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-1"
+									type="button"
+									role="tab"
+									aria-controls="tab-1"
+									aria-selected="true"
+								>
+									<i class="fas fs-5 fa-hourglass me-3"></i
+									>Upcoming Events
+								</button>
+							</li>
+
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link d-flex align-items-center mb-2"
+									id="2"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-2"
+									type="button"
+									role="tab"
+									aria-controls="tab-2"
+									aria-selected="false"
+								>
+									<i class="fas fs-5 fa-phone me-3"></i>Gummy
+									Pages (Yellow Pages)
+								</button>
+							</li>
+
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link d-flex align-items-center mb-2"
+									id="3"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-3"
+									type="button"
+									role="tab"
+									aria-controls="tab-3"
+									aria-selected="false"
+								>
+									<i class="fas fs-5 fa-pepper-hot me-3"></i
+									>Crème Chefs
+								</button>
+							</li>
+
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link d-flex align-items-center mb-2"
+									id="4"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-4"
+									type="button"
+									role="tab"
+									aria-controls="tab-4"
+									aria-selected="false"
+								>
+									<i class="fas fs-5 fa-hamburger me-3"></i
+									>Crème Restaurants
+								</button>
+							</li>
+
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link d-flex align-items-center mb-2"
+									id="5"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-5"
+									type="button"
+									role="tab"
+									aria-controls="tab-5"
+									aria-selected="false"
+								>
+									<i class="fas fs-5 fa-futbol me-3"></i
+									>Sports
+								</button>
+							</li>
+
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link d-flex align-items-center mb-2"
+									id="6"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-6"
+									type="button"
+									role="tab"
+									aria-controls="tab-6"
+									aria-selected="false"
+								>
+									<i class="fas fs-5 fa-feather me-3"></i
+									>Craft/Skill
+								</button>
+							</li>
+
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link d-flex align-items-center mb-2"
+									id="7"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-7"
+									type="button"
+									role="tab"
+									aria-controls="tab-7"
+									aria-selected="false"
+								>
+									<i class="fas fs-5 fa-briefcase me-3"></i
+									>Coin (Business)
+								</button>
+							</li>
+
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link d-flex align-items-center mb-2"
+									id="8"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-8"
+									type="button"
+									role="tab"
+									aria-controls="tab-8"
+									aria-selected="false"
+								>
+									<i class="fas fs-5 fa-tshirt me-3"></i
+									>Thrift (Fashion)
+								</button>
+							</li>
+
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link d-flex align-items-center mb-2"
+									id="9"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-9"
+									type="button"
+									role="tab"
+									aria-controls="tab-9"
+									aria-selected="false"
+								>
+									<i class="fas fs-5 fa-book-open me-3"></i
+									>Edu-Cation
+								</button>
+							</li>
+
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link d-flex align-items-center mb-2"
+									id="10"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-10"
+									type="button"
+									role="tab"
+									aria-controls="tab-10"
+									aria-selected="false"
+								>
+									<i class="fas fs-5 fa-brush me-3"></i
+									>Creatives & Artists
+								</button>
+							</li>
+
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link d-flex align-items-center mb-2"
+									id="11"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-11"
+									type="button"
+									role="tab"
+									aria-controls="tab-11"
+									aria-selected="false"
+								>
+									<i class="fas fs-5 fa-record-vinyl me-3"></i
+									>Recording Labels | Artists &amp;
+									Repertoire/Booking Agents
+								</button>
+							</li>
+
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link d-flex align-items-center mb-2"
+									id="12"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-12"
+									type="button"
+									role="tab"
+									aria-controls="tab-12"
+									aria-selected="false"
+								>
+									<i class="fas fs-5 fa-university me-3"></i
+									>NGOs/Sponsorships &amp; Funds
+								</button>
+							</li>
+
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link d-flex align-items-center mb-2"
+									id="13"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-13"
+									type="button"
+									role="tab"
+									aria-controls="tab-13"
+									aria-selected="false"
+								>
+									<i class="fas fs-5 fa-users me-3"></i
+									>Creative Hubs/Studios &amp; Co-working
+									spaces
+								</button>
+							</li>
+
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link d-flex align-items-center mb-2"
+									id="14"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-14"
+									type="button"
+									role="tab"
+									aria-controls="my-directories-tab"
+									aria-selected="false"
+								>
+									<i class="fas fs-5 fa-hotel me-3"></i>Air
+									Bnbs, Hotels &amp; Resorts
+								</button>
+							</li>
+
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link d-flex align-items-center mb-2"
+									id="15"
+									data-bs-toggle="tab"
+									data-bs-target="#tab-15"
+									type="button"
+									role="tab"
+									aria-controls="tab-15"
+									aria-selected="false"
+								>
+									<i class="fas fs-5 fa-first-aid me-3"></i
+									>Hospitals/Medical Specialists &amp;
+									facilities
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg" style="min-height: 80vh !important">
+					<div
+						class="tab-content shadow-lg c-rounded-2 p-3 p-md-5"
+						style="min-height: 80vh !important"
+					>
+						<div
+							class="tab-pane active position-relative"
+							id="tab-1"
+							role="tabpanel"
+							aria-labelledby="1"
+						>
+							<div>
+								<h2
+									class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
+								>
+									<p class="p-0 m-0 me-2 text-start">
+										Upcoming Events
+										<a
+											href="signup.html "
+											class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
+											>Join iNc<i
+												class="bi bi-arrow-right-short fs-5 ms-2"
+											></i
+										></a>
+									</p>
+
+									<div
+										class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
+									>
+										<span
+											class="input-group-text bg-white border-brown"
+											id="basic-addon2"
+											>Sort By</span
+										>
+										<select
+											class="form-select w-fit border-brown"
+											aria-label="Sort by"
+										>
+											<option selected>Popularity</option>
+											<option>Relevance</option>
+											<option>Name</option>
+										</select>
+									</div>
+								</h2>
+
+								<div
+									class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4"
+								>
+									<div class="col p-1">
+										<div class="p-3 shadow c-rounded-2">
+											<div
+												class="d-flex align-items-center"
+											>
+												<div
+													style="
+														width: 6rem;
+														height: 6rem;
+													"
+													class="d-flex bg-dark justify-content-center align-items-center c-rounded-1 overflow-hidden me-3"
+												>
+													<img
+														src="assets/img/4.jpg"
+														class="w-100"
+													/>
+												</div>
+
+												<div>
+													<h5 class="mb-1">
+														<a
+															href="account-event.html"
+														>
+															Fiesta Festival
+														</a>
+													</h5>
+
+													<p class="my-1">
+														<i
+															class="bi bi-geo-alt me-2"
+														></i
+														>Harare
+													</p>
+													<p class="my-1">
+														Leisure, Music, Drinks
+													</p>
+												</div>
+											</div>
+
+											<div
+												class="border-top mt-2 pt-2 border-2"
+											>
+												<p>
+													Lorem ipsum dolor sit amet,
+													consectetur adipisicing
+													elit. Laborum officia
+													necessitatibus.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div class="p-3 shadow c-rounded-2">
+											<div
+												class="d-flex align-items-center"
+											>
+												<div
+													style="
+														width: 6rem;
+														height: 6rem;
+													"
+													class="d-flex bg-dark justify-content-center align-items-center c-rounded-1 overflow-hidden me-3"
+												>
+													<img
+														src="assets/img/4.jpg"
+														class="w-100"
+													/>
+												</div>
+
+												<div>
+													<h5 class="mb-1">
+														<a
+															href="account-event.html"
+														>
+															Fiesta Festival
+														</a>
+													</h5>
+
+													<p class="my-1">
+														<i
+															class="bi bi-geo-alt me-2"
+														></i
+														>Harare
+													</p>
+													<p class="my-1">
+														Leisure, Music, Drinks
+													</p>
+												</div>
+											</div>
+
+											<div
+												class="border-top mt-2 pt-2 border-2"
+											>
+												<p>
+													Lorem ipsum dolor sit amet,
+													consectetur adipisicing
+													elit. Laborum officia
+													necessitatibus.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div class="p-3 shadow c-rounded-2">
+											<div
+												class="d-flex align-items-center"
+											>
+												<div
+													style="
+														width: 6rem;
+														height: 6rem;
+													"
+													class="d-flex bg-dark justify-content-center align-items-center c-rounded-1 overflow-hidden me-3"
+												>
+													<img
+														src="assets/img/4.jpg"
+														class="w-100"
+													/>
+												</div>
+
+												<div>
+													<h5 class="mb-1">
+														<a
+															href="account-event.html"
+														>
+															Fiesta Festival
+														</a>
+													</h5>
+
+													<p class="my-1">
+														<i
+															class="bi bi-geo-alt me-2"
+														></i
+														>Harare
+													</p>
+													<p class="my-1">
+														Leisure, Music, Drinks
+													</p>
+												</div>
+											</div>
+
+											<div
+												class="border-top mt-2 pt-2 border-2"
+											>
+												<p>
+													Lorem ipsum dolor sit amet,
+													consectetur adipisicing
+													elit. Laborum officia
+													necessitatibus.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div class="p-3 shadow c-rounded-2">
+											<div
+												class="d-flex align-items-center"
+											>
+												<div
+													style="
+														width: 6rem;
+														height: 6rem;
+													"
+													class="d-flex bg-dark justify-content-center align-items-center c-rounded-1 overflow-hidden me-3"
+												>
+													<img
+														src="assets/img/4.jpg"
+														class="w-100"
+													/>
+												</div>
+
+												<div>
+													<h5 class="mb-1">
+														<a
+															href="account-event.html"
+														>
+															Fiesta Festival
+														</a>
+													</h5>
+
+													<p class="my-1">
+														<i
+															class="bi bi-geo-alt me-2"
+														></i
+														>Harare
+													</p>
+													<p class="my-1">
+														Leisure, Music, Drinks
+													</p>
+												</div>
+											</div>
+
+											<div
+												class="border-top mt-2 pt-2 border-2"
+											>
+												<p>
+													Lorem ipsum dolor sit amet,
+													consectetur adipisicing
+													elit. Laborum officia
+													necessitatibus.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div class="p-3 shadow c-rounded-2">
+											<div
+												class="d-flex align-items-center"
+											>
+												<div
+													style="
+														width: 6rem;
+														height: 6rem;
+													"
+													class="d-flex bg-dark justify-content-center align-items-center c-rounded-1 overflow-hidden me-3"
+												>
+													<img
+														src="assets/img/4.jpg"
+														class="w-100"
+													/>
+												</div>
+
+												<div>
+													<h5 class="mb-1">
+														<a
+															href="account-event.html"
+														>
+															Fiesta Festival
+														</a>
+													</h5>
+
+													<p class="my-1">
+														<i
+															class="bi bi-geo-alt me-2"
+														></i
+														>Harare
+													</p>
+													<p class="my-1">
+														Leisure, Music, Drinks
+													</p>
+												</div>
+											</div>
+
+											<div
+												class="border-top mt-2 pt-2 border-2"
+											>
+												<p>
+													Lorem ipsum dolor sit amet,
+													consectetur adipisicing
+													elit. Laborum officia
+													necessitatibus.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="tab-pane position-relative"
+							id="tab-2"
+							role="tabpanel"
+							aria-labelledby="2"
+						>
+							<div>
+								<h2
+									class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
+								>
+									<p class="p-0 m-0 me-2 text-start">
+										Gummy Pages (Yellow Pages)
+										<a
+											href="signup.html "
+											class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
+											>Join iNc<i
+												class="bi bi-arrow-right-short fs-5 ms-2"
+											></i
+										></a>
+									</p>
+									<div
+										class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
+									>
+										<span
+											class="input-group-text bg-white border-brown"
+											id="basic-addon2"
+											>Sort By</span
+										>
+										<select
+											class="form-select w-fit border-brown"
+											aria-label="Sort by"
+										>
+											<option selected>Popularity</option>
+											<option>Relevance</option>
+											<option>Name</option>
+										</select>
+									</div>
+								</h2>
+
+								<div class="row row-cols-2 row-cols-lg-4 gy-4">
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center c-rounded-1 overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/more.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-business.html"
+													>YSL Trading</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Marketing Agency
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center c-rounded-1 overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/more.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-business.html"
+													>YSL Trading</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Marketing Agency
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user3.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center c-rounded-1 overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/more.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-business.html"
+													>YSL Trading</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Marketing Agency
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center c-rounded-1 overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/more.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-business.html"
+													>YSL Trading</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Marketing Agency
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/img/5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="tab-pane position-relative"
+							id="tab-3"
+							role="tabpanel"
+							aria-labelledby="3"
+						>
+							<div>
+								<h2
+									class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
+								>
+									<p class="p-0 m-0 me-2 text-start">
+										Crème Chefs
+										<a
+											href="signup.html "
+											class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
+											>Join iNc<i
+												class="bi bi-arrow-right-short fs-5 ms-2"
+											></i
+										></a>
+									</p>
+									<div
+										class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
+									>
+										<span
+											class="input-group-text bg-white border-brown"
+											id="basic-addon2"
+											>Sort By</span
+										>
+										<select
+											class="form-select w-fit border-brown"
+											aria-label="Sort by"
+										>
+											<option selected>Popularity</option>
+											<option>Relevance</option>
+											<option>Name</option>
+										</select>
+									</div>
+								</h2>
+
+								<div class="row row-cols-2 row-cols-lg-4 gy-4">
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Pastry Chef
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">Chef</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user3.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>Meat Specialist</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">Chef</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user3.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>Meat Specialist</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="tab-pane position-relative"
+							id="tab-4"
+							role="tabpanel"
+							aria-labelledby="4"
+						>
+							<div>
+								<h2
+									class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
+								>
+									<p class="p-0 m-0 me-2 text-start">
+										Crème Restaurants
+										<a
+											href="signup.html "
+											class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
+											>Join iNc<i
+												class="bi bi-arrow-right-short fs-5 ms-2"
+											></i
+										></a>
+									</p>
+									<div
+										class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
+									>
+										<span
+											class="input-group-text bg-white border-brown"
+											id="basic-addon2"
+											>Sort By</span
+										>
+										<select
+											class="form-select w-fit border-brown"
+											aria-label="Sort by"
+										>
+											<option selected>Popularity</option>
+											<option>Relevance</option>
+											<option>Name</option>
+										</select>
+									</div>
+								</h2>
+
+								<div class="row row-cols-2 row-cols-lg-4 gy-4">
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center c-rounded-1 overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/more.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-business.html"
+													>YSL Trading</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Marketing Agency
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center c-rounded-1 overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/more.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-business.html"
+													>YSL Trading</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Marketing Agency
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center c-rounded-1 overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/more.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-business.html"
+													>YSL Trading</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Marketing Agency
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="tab-pane position-relative"
+							id="tab-5"
+							role="tabpanel"
+							aria-labelledby="5"
+						>
+							<div>
+								<h2
+									class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
+								>
+									<p class="p-0 m-0 me-2 text-start">
+										Sports
+										<a
+											href="signup.html "
+											class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
+											>Join iNc<i
+												class="bi bi-arrow-right-short fs-5 ms-2"
+											></i
+										></a>
+									</p>
+
+									<div
+										class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
+									>
+										<span
+											class="input-group-text bg-white border-brown"
+											id="basic-addon2"
+											>Sort By</span
+										>
+										<select
+											class="form-select w-fit border-brown"
+											aria-label="Sort by"
+										>
+											<option selected>Popularity</option>
+											<option>Relevance</option>
+											<option>Name</option>
+										</select>
+									</div>
+								</h2>
+
+								<div class="row row-cols-2 row-cols-lg-4 gy-4">
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user3.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user4.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/img/5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="tab-pane position-relative"
+							id="tab-6"
+							role="tabpanel"
+							aria-labelledby="6"
+						>
+							<div>
+								<h2
+									class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
+								>
+									<p class="p-0 m-0 me-2 text-start">
+										Craft/Skill
+										<a
+											href="signup.html "
+											class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
+											>Join iNc<i
+												class="bi bi-arrow-right-short fs-5 ms-2"
+											></i
+										></a>
+									</p>
+									<div
+										class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
+									>
+										<span
+											class="input-group-text bg-white border-brown"
+											id="basic-addon2"
+											>Sort By</span
+										>
+										<select
+											class="form-select w-fit border-brown"
+											aria-label="Sort by"
+										>
+											<option selected>Popularity</option>
+											<option>Relevance</option>
+											<option>Name</option>
+										</select>
+									</div>
+								</h2>
+
+								<div class="row row-cols-2 row-cols-lg-4 gy-4">
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user3.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user4.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/img/5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="tab-pane position-relative"
+							id="tab-7"
+							role="tabpanel"
+							aria-labelledby="7"
+						>
+							<div>
+								<h2
+									class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
+								>
+									<p class="p-0 m-0 me-2 text-start">
+										Coin (Business)
+										<a
+											href="signup.html "
+											class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
+											>Join iNc<i
+												class="bi bi-arrow-right-short fs-5 ms-2"
+											></i
+										></a>
+									</p>
+									<div
+										class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
+									>
+										<span
+											class="input-group-text bg-white border-brown"
+											id="basic-addon2"
+											>Sort By</span
+										>
+										<select
+											class="form-select w-fit border-brown"
+											aria-label="Sort by"
+										>
+											<option selected>Popularity</option>
+											<option>Relevance</option>
+											<option>Name</option>
+										</select>
+									</div>
+								</h2>
+
+								<div class="row row-cols-2 row-cols-lg-4 gy-4">
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user3.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user4.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/img/5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="tab-pane position-relative"
+							id="tab-8"
+							role="tabpanel"
+							aria-labelledby="8"
+						>
+							<div>
+								<h2
+									class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
+								>
+									<p class="p-0 m-0 me-2 text-start">
+										Thrift (Fashion)
+										<a
+											href="signup.html "
+											class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
+											>Join iNc<i
+												class="bi bi-arrow-right-short fs-5 ms-2"
+											></i
+										></a>
+									</p>
+									<div
+										class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
+									>
+										<span
+											class="input-group-text bg-white border-brown"
+											id="basic-addon2"
+											>Sort By</span
+										>
+										<select
+											class="form-select w-fit border-brown"
+											aria-label="Sort by"
+										>
+											<option selected>Popularity</option>
+											<option>Relevance</option>
+											<option>Name</option>
+										</select>
+									</div>
+								</h2>
+
+								<div class="row row-cols-2 row-cols-lg-4 gy-4">
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user3.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user4.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/img/5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="tab-pane position-relative"
+							id="tab-9"
+							role="tabpanel"
+							aria-labelledby="9"
+						>
+							<div>
+								<h2
+									class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
+								>
+									<p class="p-0 m-0 me-2 text-start">
+										Edu-Cation
+										<a
+											href="signup.html "
+											class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
+											>Join iNc<i
+												class="bi bi-arrow-right-short fs-5 ms-2"
+											></i
+										></a>
+									</p>
+									<div
+										class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
+									>
+										<span
+											class="input-group-text bg-white border-brown"
+											id="basic-addon2"
+											>Sort By</span
+										>
+										<select
+											class="form-select w-fit border-brown"
+											aria-label="Sort by"
+										>
+											<option selected>Popularity</option>
+											<option>Relevance</option>
+											<option>Name</option>
+										</select>
+									</div>
+								</h2>
+
+								<div class="row row-cols-2 row-cols-lg-4 gy-4">
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user3.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user4.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/img/5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="tab-pane position-relative"
+							id="tab-10"
+							role="tabpanel"
+							aria-labelledby="10"
+						>
+							<div>
+								<h2
+									class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
+								>
+									<p class="p-0 m-0 me-2 text-start">
+										Creatives & Artists
+										<a
+											href="signup.html "
+											class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
+											>Join iNc<i
+												class="bi bi-arrow-right-short fs-5 ms-2"
+											></i
+										></a>
+									</p>
+									<div
+										class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
+									>
+										<span
+											class="input-group-text bg-white border-brown"
+											id="basic-addon2"
+											>Sort By</span
+										>
+										<select
+											class="form-select w-fit border-brown"
+											aria-label="Sort by"
+										>
+											<option selected>Popularity</option>
+											<option>Relevance</option>
+											<option>Name</option>
+										</select>
+									</div>
+								</h2>
+
+								<div class="row row-cols-2 row-cols-lg-4 gy-4">
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user3.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user4.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/img/5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="tab-pane position-relative"
+							id="tab-11"
+							role="tabpanel"
+							aria-labelledby="11"
+						>
+							<div>
+								<h2
+									class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
+								>
+									<p class="p-0 m-0 me-2 text-start">
+										Recording Labels | Artists &amp;
+										Repertoire/Booking Agents
+										<a
+											href="signup.html "
+											class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
+											>Join iNc<i
+												class="bi bi-arrow-right-short fs-5 ms-2"
+											></i
+										></a>
+									</p>
+									<div
+										class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
+									>
+										<span
+											class="input-group-text bg-white border-brown"
+											id="basic-addon2"
+											>Sort By</span
+										>
+										<select
+											class="form-select w-fit border-brown"
+											aria-label="Sort by"
+										>
+											<option selected>Popularity</option>
+											<option>Relevance</option>
+											<option>Name</option>
+										</select>
+									</div>
+								</h2>
+
+								<div class="row row-cols-2 row-cols-lg-4 gy-4">
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user3.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user4.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/img/5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="tab-pane position-relative"
+							id="tab-12"
+							role="tabpanel"
+							aria-labelledby="12"
+						>
+							<div>
+								<h2
+									class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
+								>
+									<p class="p-0 m-0 me-2 text-start">
+										NGOs/Sponsorships &amp; Funds
+										<a
+											href="signup.html "
+											class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
+											>Join iNc<i
+												class="bi bi-arrow-right-short fs-5 ms-2"
+											></i
+										></a>
+									</p>
+									<div
+										class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
+									>
+										<span
+											class="input-group-text bg-white border-brown"
+											id="basic-addon2"
+											>Sort By</span
+										>
+										<select
+											class="form-select w-fit border-brown"
+											aria-label="Sort by"
+										>
+											<option selected>Popularity</option>
+											<option>Relevance</option>
+											<option>Name</option>
+										</select>
+									</div>
+								</h2>
+
+								<div class="row row-cols-2 row-cols-lg-4 gy-4">
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user3.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user4.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/img/5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="tab-pane position-relative"
+							id="tab-13"
+							role="tabpanel"
+							aria-labelledby="13"
+						>
+							<div>
+								<h2
+									class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
+								>
+									<p class="p-0 m-0 me-2 text-start">
+										Creative Hubs/Studios &amp; Co-working
+										spaces
+										<a
+											href="signup.html "
+											class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
+											>Join iNc<i
+												class="bi bi-arrow-right-short fs-5 ms-2"
+											></i
+										></a>
+									</p>
+									<div
+										class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
+									>
+										<span
+											class="input-group-text bg-white border-brown"
+											id="basic-addon2"
+											>Sort By</span
+										>
+										<select
+											class="form-select w-fit border-brown"
+											aria-label="Sort by"
+										>
+											<option selected>Popularity</option>
+											<option>Relevance</option>
+											<option>Name</option>
+										</select>
+									</div>
+								</h2>
+
+								<div class="row row-cols-2 row-cols-lg-4 gy-4">
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user3.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user4.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/img/5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="tab-pane position-relative"
+							id="tab-14"
+							role="tabpanel"
+							aria-labelledby="14"
+						>
+							<div>
+								<h2
+									class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
+								>
+									<p class="p-0 m-0 me-2 text-start">
+										Air Bnbs, Hotels &amp; Resorts
+										<a
+											href="signup.html "
+											class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
+											>Join iNc<i
+												class="bi bi-arrow-right-short fs-5 ms-2"
+											></i
+										></a>
+									</p>
+									<div
+										class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
+									>
+										<span
+											class="input-group-text bg-white border-brown"
+											id="basic-addon2"
+											>Sort By</span
+										>
+										<select
+											class="form-select w-fit border-brown"
+											aria-label="Sort by"
+										>
+											<option selected>Popularity</option>
+											<option>Relevance</option>
+											<option>Name</option>
+										</select>
+									</div>
+								</h2>
+
+								<div class="row row-cols-2 row-cols-lg-4 gy-4">
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user3.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user4.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/img/5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="tab-pane position-relative"
+							id="tab-15"
+							role="tabpanel"
+							aria-labelledby="15"
+						>
+							<div>
+								<h2
+									class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
+								>
+									<p class="p-0 m-0 me-2 text-start">
+										Hospitals/Medical Specialists &amp;
+										facilities
+										<a
+											href="signup.html "
+											class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
+											>Join iNc<i
+												class="bi bi-arrow-right-short fs-5 ms-2"
+											></i
+										></a>
+									</p>
+									<div
+										class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
+									>
+										<span
+											class="input-group-text bg-white border-brown"
+											id="basic-addon2"
+											>Sort By</span
+										>
+										<select
+											class="form-select w-fit border-brown"
+											aria-label="Sort by"
+										>
+											<option selected>Popularity</option>
+											<option>Relevance</option>
+											<option>Name</option>
+										</select>
+									</div>
+								</h2>
+
+								<div class="row row-cols-2 row-cols-lg-4 gy-4">
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user2.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user3.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user4.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/images/user5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+
+									<div class="col p-1">
+										<div
+											class="text-center p-3 shadow c-rounded-3"
+										>
+											<div
+												style="
+													width: 6rem;
+													height: 6rem;
+												"
+												class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
+											>
+												<img
+													src="assets/img/5.jpg"
+													class="w-100"
+												/>
+											</div>
+											<h5 class="text-center my-2">
+												<a href="account-person.html"
+													>John Doe</a
+												>
+											</h5>
+
+											<p class="text-center my-1">
+												Financial Advisor
+											</p>
+
+											<p class="text-center my-1">
+												<i
+													class="bi bi-geo-alt me-2"
+												></i
+												>Harare
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<nav class="col-12 mx-auto w-fit mt-5" aria-label="...">
+						<ul class="pagination">
+							<li class="page-item disabled">
+								<span class="page-link">Previous</span>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">1</a>
+							</li>
+							<li class="page-item active" aria-current="page">
+								<span class="page-link">2</span>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">3</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">Next</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</main>
+
+		<!-- <main class="container my-5">
 			<div class="row my-lg-5">
 				<div class="col-lg-7">
 					<div class="shadow-lg p-3 p-md-5 c-rounded-2">
@@ -348,7 +5673,7 @@
 							People
 
 							<div
-								class="input-group border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
+								class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
 							>
 								<span
 									class="input-group-text bg-white border-brown"
@@ -366,9 +5691,7 @@
 							</div>
 						</h2>
 
-						<div
-							class="row row-cols-2 row-cols-lg-3 gy-4 justify-content-around"
-						>
+						<div class="row row-cols-2 row-cols-lg-auto gy-4">
 							<div class="col p-1">
 								<div class="text-center p-3 shadow c-rounded-3">
 									<div
@@ -683,36 +6006,15 @@
 					</div>
 				</div>
 			</div>
-		</main>
-
-		<!-- <div class="container">
-			<nav class="mx-auto w-fit" aria-label="...">
-				<ul class="pagination">
-					<li class="page-item disabled">
-						<span class="page-link">Previous</span>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">1</a>
-					</li>
-					<li class="page-item active" aria-current="page">
-						<span class="page-link">2</span>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">3</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">Next</a>
-					</li>
-				</ul>
-			</nav>
-		</div> -->
+		</main> -->
 
 		<section>
 			<footer
 				class="d-flex container flex-wrap justify-content-between align-items-center py-5 px-3"
 			>
 				<div class="col-md-4 d-flex align-items-center">
-					<span class="text-muted">&copy; 2022 Gum.Inc</span>
+					<span class="text-muted">&copy; 2022 Gum.iNc</span>
+					<a href="partner.html" class="ms-3">Partner With Us</a>
 				</div>
 
 				<ul
@@ -753,14 +6055,14 @@
 			</div>
 		</div>
 
-		<!-- <div
+		<div
 			class="fixed-top top-0 bottom-0 start-0 end-0 bg-white d-none text-center flex-column justify-content-center align-items-center gap-2 mobile-barrier"
 		>
 			<h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
 			<h1 class="p-4">
 				Please view on desktop. Site is not mobile ready
 			</h1>
-		</div> -->
+		</div>
 
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"

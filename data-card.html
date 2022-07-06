@@ -7,7 +7,7 @@
 			name="viewport"
 			content="width=device-width | initial-scale=1.0"
 		/>
-		<title>Gum.Inc</title>
+		<title>Gum.iNc</title>
 
 		<!-- Google Fonts -->
 		<link
@@ -102,6 +102,123 @@
 	</style>
 
 	<body class="p-0 position-relative">
+		<div class="custom-modals">
+			<!--Location Modal -->
+			<button
+				style="top: 80px; right: 0; z-index: 5"
+				type="button"
+				class="btn m-2 rounded-pill px-3 shadow border-0 btn-success position-fixed"
+				data-bs-toggle="modal"
+				data-bs-target="#locationModal"
+			>
+				Location<i class="bi bi-caret-down fs-5 ms-2"></i>
+			</button>
+
+			<div
+				class="modal fade"
+				id="locationModal"
+				data-bs-backdrop="static"
+				data-bs-keyboard="false"
+				tabindex="-1"
+				aria-labelledby="locationModalLabel"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="locationModalLabel">
+								Change Access Location
+							</h5>
+
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+							></button>
+						</div>
+
+						<div class="modal-body">
+							<a
+								href=""
+								class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2"
+							>
+								Local - Zimbabwe<i
+									class="bi bi-check-circle fs-5 ms-2"
+								></i>
+							</a>
+
+							<a
+								href=""
+								class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2"
+							>
+								Global
+							</a>
+
+							<div class="dropdown">
+								<button
+									class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2 dropdown-toggle"
+									type="button"
+									id="coTrigger"
+									data-bs-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									Continent
+								</button>
+
+								<div
+									class="dropdown-menu"
+									aria-labelledby="coTrigger"
+								>
+									<a class="dropdown-item" href="#">Africa</a>
+									<a class="dropdown-item" href="#">Europe</a>
+									<a class="dropdown-item" href="#">Asia</a>
+									<a class="dropdown-item" href="#"
+										>Astralia</a
+									>
+									<a class="dropdown-item" href="#"
+										>North America</a
+									>
+									<a class="dropdown-item" href="#"
+										>South America</a
+									>
+								</div>
+							</div>
+
+							<div class="dropdown">
+								<button
+									class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2 dropdown-toggle"
+									type="button"
+									id="counTrigger"
+									data-bs-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									Country
+								</button>
+
+								<div
+									class="dropdown-menu"
+									aria-labelledby="counTrigger"
+								>
+									<a class="dropdown-item" href="#"
+										>Argentina</a
+									>
+									<a class="dropdown-item" href="#">Brasil</a>
+									<a class="dropdown-item" href="#">France</a>
+									<a class="dropdown-item" href="#">France</a>
+									<a class="dropdown-item" href="#"
+										>And So Forth...</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div id="offcanvases">
 			<div
 				class="offcanvas offcanvas-start"
@@ -125,7 +242,7 @@
 				<div class="offcanvas-body">
 					<div class="text-center mb-4">
 						<span class="text-gray p-2 fw-bold display-5 p-0 fs-2"
-							>Gum.Inc<i class="bi bi-circle-fill ms-2"></i>
+							>Gum.iNc<i class="bi bi-circle-fill ms-2"></i>
 						</span>
 					</div>
 
@@ -165,7 +282,7 @@
 				</button>
 
 				<a href="index.html" class="navbar-brand text-dark p-0 fs-2"
-					>Gum.Inc</a
+					>Gum.iNc</a
 				>
 
 				<a
@@ -649,7 +766,8 @@ Input any other details you wish to include</textarea
 				class="d-flex container flex-wrap justify-content-between align-items-center py-5 px-3"
 			>
 				<div class="col-md-4 d-flex align-items-center">
-					<span class="text-muted">&copy; 2022 Gum.Inc</span>
+					<span class="text-muted">&copy; 2022 Gum.iNc</span>
+					<a href="partner.html" class="ms-3">Partner With Us</a>
 				</div>
 
 				<ul
@@ -699,14 +817,14 @@ Input any other details you wish to include</textarea
 			>
 		</div>
 
-		<!-- <div
+		<div
 			class="fixed-top top-0 bottom-0 start-0 end-0 bg-white d-none text-center flex-column justify-content-center align-items-center gap-2 mobile-barrier"
 		>
 			<h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
 			<h1 class="p-4">
 				Please view on desktop. Site is not mobile ready
 			</h1>
-		</div> -->
+		</div>
 
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
