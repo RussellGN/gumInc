@@ -51,3 +51,45 @@ if (addToCartToastTrigger) {
 		toast.show();
 	});
 }
+
+var saveIncToastTrigger = document.getElementById("saveIncToastBtn");
+var saveIncToast = document.getElementById("saveIncToast");
+var requestAudienceToastTrigger = document.getElementById(
+	"requestAudienceToastBtn"
+);
+var requestAudienceToast = document.getElementById("requestAudienceToast");
+let saveIncOptions = document.querySelectorAll(".saveIncOption");
+
+saveIncOptions.forEach((btn) => {
+	btn.addEventListener("click", () => {
+		var toast = new bootstrap.Toast(saveIncToast);
+
+		toast.show();
+	});
+});
+
+if (saveIncToastTrigger) {
+	saveIncToastTrigger.addEventListener("click", function () {
+		var toast = new bootstrap.Toast(saveIncToast);
+
+		toast.show();
+	});
+}
+if (requestAudienceToastTrigger) {
+	requestAudienceToastTrigger.addEventListener("click", function () {
+		var toast = new bootstrap.Toast(requestAudienceToast);
+
+		toast.show();
+	});
+}
+
+let startConnecting = document.querySelector("#start-connecting");
+let connectSearch = document.querySelector("#connect-search");
+
+startConnecting.addEventListener("click", () => {
+	connectSearch.focus();
+	connectSearch.parentElement.style.transform = "scale(1.05)";
+	setTimeout(() => {
+		connectSearch.parentElement.style.transform = "scale(1)";
+	}, 500);
+});

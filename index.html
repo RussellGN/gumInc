@@ -8,34 +8,21 @@
 			content="width=device-width | initial-scale=1.0"
 		/>
 		<title>Gum.iNc</title>
-
-		<!-- Google Fonts -->
+		
 		<link
-			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-			rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet"
 		/>
-		<!-- <link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css"
-			integrity="sha512-303pOWiYlJMbneUN488MYlBISx7PqX8Lo/lllysH56eKO8nWIMEMGRHvkZzfXYrHj4j4j5NtBuWmgPnkLlzFCg=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/> -->
+		
 		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-			integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+		crossorigin="anonymous"
 		/>
-
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-			crossorigin="anonymous"
-		/>
-
+		
+		<link rel="stylesheet" href="./assets/fontawsome/css/all.min.css">
+		
 		<link
 			rel="stylesheet"
 			href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
@@ -43,54 +30,6 @@
 
 		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
-
-	<style>
-		.hero-bg-1 {
-			background: linear-gradient(
-					to top right,
-					rgba(103, 95, 95, 0.7),
-					rgba(77, 73, 73, 0.9)
-				),
-				url(assets/images/directory3.jpg) center no-repeat;
-			background-size: cover;
-		}
-		.hero-bg-2 {
-			background: linear-gradient(
-					to top right,
-					rgba(103, 95, 95, 0.7),
-					rgba(77, 73, 73, 0.9)
-				),
-				url(assets/images/business-cards2.jpg) center no-repeat;
-			background-size: cover;
-		}
-		.hero-bg-3 {
-			background: linear-gradient(
-					to top right,
-					rgba(103, 95, 95, 0.7),
-					rgba(77, 73, 73, 0.9)
-				),
-				url(assets/images/profiling.jpg) center no-repeat;
-			background-size: cover;
-		}
-		.hero-bg-4 {
-			background: linear-gradient(
-					to top right,
-					rgba(103, 95, 95, 0.7),
-					rgba(77, 73, 73, 0.9)
-				),
-				url(assets/images/directory2.jpg) center no-repeat;
-			background-size: cover;
-		}
-		.hero-bg-5 {
-			background: linear-gradient(
-					to top right,
-					rgba(103, 95, 95, 0.7),
-					rgba(77, 73, 73, 0.9)
-				),
-				url(assets/img/2.jpg) center no-repeat;
-			background-size: cover;
-		}
-	</style>
 
 	<body
 		class="p-1 p-lg-0 pt-5 d-flex flex-column justify-content-center"
@@ -106,7 +45,7 @@
 				data-bs-toggle="modal"
 				data-bs-target="#locationModal"
 			>
-				Location<i class="bi bi-caret-down fs-5 ms-2"></i>
+				Gum.iNc International<i class="bi bi-caret-down-fill fs-5 ms-2"></i>
 			</button>
 
 			<div
@@ -119,10 +58,10 @@
 				aria-hidden="true"
 			>
 				<div class="modal-dialog modal-dialog-centered">
-					<div class="modal-content">
+					<div class="modal-content c-rounded-2 p-5">
 						<div class="modal-header">
 							<h5 class="modal-title" id="locationModalLabel">
-								Change Access  Location
+								Which Version of the Gum.iNc <br> would you like to view?
 							</h5>
 
 							<button
@@ -134,33 +73,39 @@
 						</div>
 
 						<div class="modal-body">
-							<a
-								href=""
-								class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2"
-							>
-								Local - Zimbabwe<i
-									class="bi bi-check-circle fs-5 ms-2"
-								></i>
-							</a>
+							<div class="d-flex justify-content-between align-items-center"> 	
+								<a	
+									class="col-8 btn btn-primary text-start border c-rounded-1 mb-2 p-2"
+								>
+									Gum.Inc International
+								</a>
 
-							<a
-								href=""
-								class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2"
-							>
-								Global
-							</a>
+								<span class="text-success d-inline-block">selected<i class="fas fa-check-circle ms-3"></i>
+								</span>
 
-							<div class="dropdown">
+							</div>
+
+							<div class="d-flex">
+								<a
+									class="col-8 btn text-start  btn-primary border c-rounded-1 mb-2 p-2"
+								>
+									Gum.iNc Local - Zimbabwe
+								</a>
+							</div>
+
+							<div class="dropdown d-flex justify-content-between align-items-center">
 								<button
-									class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2 dropdown-toggle"
+									class="col-8 btn text-start btn-primary disabled border c-rounded-1 mb-2 p-2 dropdown-toggle"
 									type="button"
 									id="coTrigger"
 									data-bs-toggle="dropdown"
 									aria-haspopup="true"
 									aria-expanded="false"
 								>
-									Continent
+								Gum.iNc Continental 
 								</button>
+
+								<span class="text-warning d-inline-block">pro<i class="fas fa-crown ms-3"></i></span>
 
 								<div
 									class="dropdown-menu"
@@ -181,17 +126,19 @@
 								</div>
 							</div>
 
-							<div class="dropdown">
+							<div class="dropdown d-flex justify-content-between align-items-center">
 								<button
-									class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2 dropdown-toggle"
+									class="col-8 btn text-start btn-primary disabled border c-rounded-1 mb-2 p-2 dropdown-toggle"
 									type="button"
 									id="counTrigger"
 									data-bs-toggle="dropdown"
 									aria-haspopup="true"
 									aria-expanded="false"
 								>
-									Country
+								Gum.iNc National
 								</button>
+
+								<span class="text-warning d-inline-block">pro<i class="fas fa-crown ms-3"></i></span>
 
 								<div
 									class="dropdown-menu"
@@ -295,6 +242,9 @@
 					>
 					<a href="directory.html" class="nav-link rounded-pill px-2 py-1"
 						>Directory</a
+					>
+					<a href="connect.html" class="nav-link rounded-pill px-2 py-1"
+						>Inc.Connect</a
 					>
 					<a href="store.html" class="nav-link rounded-pill px-2 py-1"
 						>Store</a
@@ -633,7 +583,7 @@
 			>
 				<div class="col-md-4 d-flex align-items-center">
 						<span class="text-muted">&copy; 2022 Gum.iNc</span>
-					<a href="partner.html" class="ms-3">Partner With Us</a>
+					<a href="partner.html" class="btn btn-success px-3 rounded-pill ms-3">Partner With Us</a>
 
 				</div>
 
@@ -666,46 +616,23 @@
 		</section>
 
 		<div id="preloader">
-			<div
-				class="d-flex h-100 w-100 align-items-center justify-content-center"
-			>
-				<div class="spinner-border text-dark" role="status">
-					<span class="visually-hidden">Loading...</span>
-				</div>
+			<div class="spinner-border" role="status">
+				<span class="visually-hidden">Loading...</span>
 			</div>
 		</div>
 		
-		<!-- <div
-			class="fixed-top top-0 bottom-0 start-0 end-0 bg-white d-none text-center flex-column justify-content-center align-items-center gap-2 mobile-barrier"
-		>
+		<div class="mobile-barrier">
 			<h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
-			<h1 class="p-4">
-				Please view on desktop. Site is not mobile ready
-			</h1>
-		</div> -->
-
-
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-			integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		></script>
-
-		<script src="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"></script>
+			<h2 class="p-4">
+				Please view on desktop. Site is not mobile ready.
+			</h2>
+		</div>
 
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 			crossorigin="anonymous"
 		></script>
-
-		<!-- <script
-			src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js"
-			integrity="sha512-Hvn3pvXhhG39kmZ8ue3K8hw8obT4rfLXHE5n+IWNCMkR6oV3cfkQNUQqVvX3fNJO/JtFeo/MfLmqp5bqAT+8qg=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		></script> -->
 
 		<script src="assets/js/main.js"></script>
 		<script src="assets/js/custom.js"></script>
