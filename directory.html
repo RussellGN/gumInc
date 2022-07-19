@@ -1,215 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
+		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta
-			name="viewport"
-			content="width=device-width | initial-scale=1.0"
-		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Gum.iNc</title>
 
-		<!-- Google Fonts -->
 		<link
 			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
 			rel="stylesheet"
 		/>
 		<link
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css"
-			integrity="sha512-303pOWiYlJMbneUN488MYlBISx7PqX8Lo/lllysH56eKO8nWIMEMGRHvkZzfXYrHj4j4j5NtBuWmgPnkLlzFCg=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
+			href="./assets/vendor/bootstrap-icons/bootstrap-icons.css"
 		/>
 		<link
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-			integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
+			href="./assets/vendor/fontawsome/css/all.min.css"
 		/>
-
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-			crossorigin="anonymous"
-		/>
-
 		<link
 			rel="stylesheet"
-			href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+			href="./assets/vendor/swiper/swiper-bundle.min.css"
 		/>
-		<link rel="stylesheet" href="/assets/fontawsome/css/all.min.css" />
+		<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
 
-		<link rel="stylesheet" href="assets/css/style.css" />
+		<!-- scripts -->
+		<script
+			defer
+			src="./assets/vendor/swiper/swiper-bundle.min.js"
+		></script>
+		<script
+			defer
+			src="./assets/vendor/bootstrap/bootstrap.bundle.js"
+		></script>
+
+		<script defer src="./assets/js/directory.js"></script>
+		<script defer src="./assets/js/custom.js"></script>
 	</head>
 
 	<body
 		class="p-1 p-lg-0 pt-5 position-relative d-flex flex-column justify-content-center"
-		style="min-height: 100vh"
 	>
-		<div class="custom-modals">
-			<!--Location Modal -->
-			<button
-				style="top: 80px; right: 0; z-index: 5"
-				type="button"
-				class="btn m-2 rounded-pill px-3 shadow border-0 btn-success position-fixed"
-				data-bs-toggle="modal"
-				data-bs-target="#locationModal"
-			>
-				Location<i class="bi bi-caret-down fs-5 ms-2"></i>
-			</button>
+		<div id="invisible-elements">
+			<div class="custom-modals">
+				<!--Location Modal -->
 
-			<div
-				class="modal fade"
-				id="locationModal"
-				data-bs-backdrop="static"
-				data-bs-keyboard="false"
-				tabindex="-1"
-				aria-labelledby="locationModalLabel"
-				aria-hidden="true"
-			>
-				<div class="modal-dialog modal-dialog-centered">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="locationModalLabel">
-								Change Access Location
-							</h5>
+				<div
+					class="modal fade"
+					id="locationModal"
+					data-bs-backdrop="static"
+					data-bs-keyboard="false"
+					tabindex="-1"
+					aria-labelledby="locationModalLabel"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content c-rounded-2 p-5">
+							<div class="modal-header">
+								<h5 class="modal-title" id="locationModalLabel">
+									Gum.iNc Access
+								</h5>
 
-							<button
-								type="button"
-								class="btn-close"
-								data-bs-dismiss="modal"
-								aria-label="Close"
-							></button>
-						</div>
-
-						<div class="modal-body">
-							<a
-								href=""
-								class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2"
-							>
-								Local - Zimbabwe<i
-									class="bi bi-check-circle fs-5 ms-2"
-								></i>
-							</a>
-
-							<a
-								href=""
-								class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2"
-							>
-								Global
-							</a>
-
-							<div class="dropdown">
 								<button
-									class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2 dropdown-toggle"
 									type="button"
-									id="coTrigger"
-									data-bs-toggle="dropdown"
-									aria-haspopup="true"
-									aria-expanded="false"
-								>
-									Continent
-								</button>
-
-								<div
-									class="dropdown-menu"
-									aria-labelledby="coTrigger"
-								>
-									<a class="dropdown-item" href="#">Africa</a>
-									<a class="dropdown-item" href="#">Europe</a>
-									<a class="dropdown-item" href="#">Asia</a>
-									<a class="dropdown-item" href="#"
-										>Astralia</a
-									>
-									<a class="dropdown-item" href="#"
-										>North America</a
-									>
-									<a class="dropdown-item" href="#"
-										>South America</a
-									>
-								</div>
+									class="btn-close"
+									data-bs-dismiss="modal"
+									aria-label="Close"
+								></button>
 							</div>
 
-							<div class="dropdown">
-								<button
-									class="btn w-100 d-block text-start btn-secondary border c-rounded-1 mb-2 p-2 dropdown-toggle"
-									type="button"
-									id="counTrigger"
-									data-bs-toggle="dropdown"
-									aria-haspopup="true"
-									aria-expanded="false"
+							<div class="modal-body">
+								<div
+									class="d-flex justify-content-between align-items-center"
 								>
-									Country
-								</button>
+									<a
+										class="col-8 btn btn-primary text-start border c-rounded-1 mb-2 p-2"
+									>
+										Gum.Inc Local - Zimbabwe
+									</a>
+
+									<span class="text-success d-inline-block"
+										>selected<i
+											class="fas fa-check-circle ms-3"
+										></i>
+									</span>
+								</div>
 
 								<div
-									class="dropdown-menu"
-									aria-labelledby="counTrigger"
+									class="dropdown d-flex justify-content-between align-items-center"
 								>
-									<a class="dropdown-item" href="#"
-										>Argentina</a
+									<button
+										class="col-8 btn text-start btn-primary disabled border c-rounded-1 mb-2 p-2 dropdown-toggle"
+										type="button"
+										id="counTrigger"
+										data-bs-toggle="dropdown"
+										aria-haspopup="true"
+										aria-expanded="false"
 									>
-									<a class="dropdown-item" href="#">Brasil</a>
-									<a class="dropdown-item" href="#">France</a>
-									<a class="dropdown-item" href="#">France</a>
-									<a class="dropdown-item" href="#"
-										>And So Forth...</a
+										Gum.iNc Regional
+									</button>
+
+									<span class="text-warning d-inline-block"
+										>pro<i class="fas fa-crown ms-3"></i
+									></span>
+
+									<div
+										class="dropdown-menu"
+										aria-labelledby="counTrigger"
 									>
+										<a class="dropdown-item" href="#"
+											>Argentina</a
+										>
+										<a class="dropdown-item" href="#"
+											>Brasil</a
+										>
+										<a class="dropdown-item" href="#"
+											>France</a
+										>
+										<a class="dropdown-item" href="#"
+											>France</a
+										>
+										<a class="dropdown-item" href="#"
+											>And So Forth...</a
+										>
+									</div>
+								</div>
+
+								<div
+									class="dropdown d-flex justify-content-between align-items-center"
+								>
+									<button
+										class="col-8 btn text-start btn-primary disabled border c-rounded-1 mb-2 p-2 dropdown-toggle"
+										type="button"
+										id="coTrigger"
+										data-bs-toggle="dropdown"
+										aria-haspopup="true"
+										aria-expanded="false"
+									>
+										Gum.iNc Continental
+									</button>
+
+									<span class="text-warning d-inline-block"
+										>pro<i class="fas fa-crown ms-3"></i
+									></span>
+
+									<div
+										class="dropdown-menu"
+										aria-labelledby="coTrigger"
+									>
+										<a class="dropdown-item" href="#"
+											>Africa</a
+										>
+										<a class="dropdown-item" href="#"
+											>Europe</a
+										>
+										<a class="dropdown-item" href="#"
+											>Asia</a
+										>
+										<a class="dropdown-item" href="#"
+											>Astralia</a
+										>
+										<a class="dropdown-item" href="#"
+											>North America</a
+										>
+										<a class="dropdown-item" href="#"
+											>South America</a
+										>
+									</div>
+								</div>
+
+								<div
+									class="d-flex justify-content-between align-items-center"
+								>
+									<a
+										class="col-8 disabled btn text-start btn-primary border c-rounded-1 mb-2 p-2"
+									>
+										Gum.iNc International
+									</a>
+
+									<span class="text-warning d-inline-block"
+										>pro<i class="fas fa-crown ms-3"></i
+									></span>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<div id="offcanvases">
-			<div
-				class="offcanvas offcanvas-start"
-				tabindex="-1"
-				id="mobileNavOffcanvas"
-				aria-labelledby="mobileNavOffcanvasLabel"
-			>
-				<div class="offcanvas-header">
-					<h5 id="mobileNavOffcanvasLabel"></h5>
+			<div id="popovers">
+				<button type="button" class="d-none" id="saveIncToastBtn">
+					save inc
+				</button>
 
-					<button
-						type="button"
-						class="btn text-gray"
-						data-bs-dismiss="offcanvas"
-						aria-label="Close"
+				<div
+					class="position-fixed bottom-0 end-0 p-3"
+					style="z-index: 11"
+				>
+					<div
+						id="saveIncToast"
+						class="toast text-white bg-success"
+						role="alert"
+						aria-live="assertive"
+						aria-atomic="true"
 					>
-						<i class="bi bi-x-circle fs-1"></i>
-					</button>
-				</div>
-
-				<div class="offcanvas-body">
-					<div class="text-center mb-4">
-						<span class="text-gray p-2 fw-bold display-5 p-0 fs-2"
-							>Gum.iNc<i class="bi bi-circle-fill ms-2"></i>
-						</span>
-					</div>
-
-					<div class="d-flex flex-column">
-						<a class="mobile-link p-3" href="index.html">Home</a>
-						<a class="mobile-link p-3" href="directory.html"
-							>Directory
-						</a>
-						<a class="mobile-link p-3" href="store.html">Store</a>
-						<a
-							class="mobile-link p-3"
-							href="directories-and-almanacs.html"
-							>Almanacs & Directories</a
-						>
-						<a class="mobile-link p-3" href="about.html"> About </a>
-						<a class="mobile-link p-3" href="account.html"
-							>Account</a
-						>
+						<div class="toast-body">
+							<div class="d-flex align-items-center">
+								<i class="bi bi-check fs-2 me-2"></i>
+								<span class="me-2">
+									Listing Saved! You can find it on the saved
+									Incs tab on you profile.</span
+								>
+								<button
+									type="button"
+									class="btn-close me-2 ms-auto"
+									data-bs-dismiss="toast"
+									aria-label="Close"
+								></button>
+							</div>
+						</div>
 					</div>
 				</div>
+
+				<div
+					class="position-fixed bottom-0 end-0 p-3"
+					style="z-index: 11"
+				>
+					<div
+						id="requestAudienceToast"
+						class="toast text-white bg-success"
+						role="alert"
+						aria-live="assertive"
+						aria-atomic="true"
+					>
+						<div class="toast-body">
+							<div class="d-flex align-items-center">
+								<i class="bi bi-send-check fs-2 me-2"></i>
+								<span class="me-2">
+									Requested! You'll Be notified of a response
+									in your notifications.</span
+								>
+								<button
+									type="button"
+									class="btn-close me-2 ms-auto"
+									data-bs-dismiss="toast"
+									aria-label="Close"
+								></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="offcanvases">
+				<div
+					class="offcanvas offcanvas-start"
+					tabindex="-1"
+					id="mobileNavOffcanvas"
+					aria-labelledby="mobileNavOffcanvasLabel"
+				>
+					<div class="offcanvas-header">
+						<h5 id="mobileNavOffcanvasLabel"></h5>
+
+						<button
+							type="button"
+							class="btn text-gray"
+							data-bs-dismiss="offcanvas"
+							aria-label="Close"
+						>
+							<i class="bi bi-x-circle fs-1"></i>
+						</button>
+					</div>
+
+					<div class="offcanvas-body">
+						<div class="text-center mb-4">
+							<span
+								class="text-gray p-2 fw-bold display-5 p-0 fs-2"
+								>Gum.iNc<i class="bi bi-circle-fill ms-2"></i>
+							</span>
+						</div>
+
+						<div class="d-flex flex-column">
+							<a class="mobile-link p-3" href="index.html"
+								>Home</a
+							>
+							<a class="mobile-link p-3" href="directory.html"
+								>Directory
+							</a>
+							<a class="mobile-link p-3" href="store.html"
+								>Store</a
+							>
+							<a
+								class="mobile-link p-3"
+								href="directories-and-almanacs.html"
+								>Almanacs & Directories</a
+							>
+							<a class="mobile-link p-3" href="about.html">
+								About
+							</a>
+							<a class="mobile-link p-3" href="account.html"
+								>Account</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="preloader">
+				<div class="spinner-border" role="status">
+					<span class="visually-hidden">Loading...</span>
+				</div>
+			</div>
+
+			<div class="mobile-barrier">
+				<h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
+				<h2 class="p-4">
+					Please view on desktop. Site is not mobile ready.
+				</h2>
 			</div>
 		</div>
 
@@ -244,8 +352,13 @@
 					>
 					<a
 						href="directory.html"
-						class="nav-link rounded-pill px-2 py-1 active"
+						class="nav-link rounded-pill active px-2 py-1"
 						>Directory</a
+					>
+					<a
+						href="connect.html"
+						class="nav-link rounded-pill px-2 py-1"
+						>Inc Connect</a
 					>
 					<a href="store.html" class="nav-link rounded-pill px-2 py-1"
 						>Store</a
@@ -381,6 +494,43 @@
 						<i class="fas fa-first-aid fs-5 me-2"></i
 						>Hospitals/Medical Specialists &amp; facilities
 					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container mt-5">
+			<div
+				class="d-flex justify-content-between border-bottom border-top border-2 align-items-center mt-5 p-4"
+			>
+				<h5 class="col me-3 text-success">
+					<i class="bi bi-info-circle fs5 me-2"></i> Your access is
+					limited to People & Businesses under Gum.iNc - Zimbabwe.
+					Change/upgrade your access to view more!
+				</h5>
+
+				<div class="col-auto">
+					<button
+						type="button"
+						class="btn me-2 rounded-pill px-3 shadow border-0 btn-success"
+						data-bs-toggle="modal"
+						data-bs-target="#locationModal"
+					>
+						Gum.iNc Local - Zim<i
+							class="bi bi-caret-down-fill fs-5 ms-2"
+						></i>
+					</button>
+
+					<a
+						href="login.html"
+						class="btn btn-primary px-3 rounded-pill me-2"
+						>Login</a
+					>
+
+					<a
+						href="signup.html"
+						class="btn btn-success px-3 rounded-pill me-2"
+						>Join!</a
+					>
 				</div>
 			</div>
 		</div>
@@ -5663,422 +5813,50 @@
 			</div>
 		</main>
 
-		<!-- <main class="container my-5">
-			<div class="row my-lg-5">
-				<div class="col-lg-7">
-					<div class="shadow-lg p-3 p-md-5 c-rounded-2">
-						<h2
-							class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between"
-						>
-							People
-
-							<div
-								class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
-							>
-								<span
-									class="input-group-text bg-white border-brown"
-									id="basic-addon2"
-									>Sort By</span
-								>
-								<select
-									class="form-select w-fit border-brown"
-									aria-label="Sort by"
-								>
-									<option selected>Popularity</option>
-									<option>Relevance</option>
-									<option>Name</option>
-								</select>
-							</div>
-						</h2>
-
-						<div class="row row-cols-2 row-cols-lg-auto gy-4">
-							<div class="col p-1">
-								<div class="text-center p-3 shadow c-rounded-3">
-									<div
-										style="width: 6rem; height: 6rem"
-										class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
-									>
-										<img
-											src="assets/images/user.jpg"
-											class="w-100"
-										/>
-									</div>
-
-									<h5 class="text-center my-2">
-										<a href="account-person.html"
-											>John Doe</a
-										>
-									</h5>
-
-									<p class="text-center my-1">
-										Financial Advisor
-									</p>
-
-									<p class="text-center my-1">
-										<i class="bi bi-geo-alt me-2"></i>Harare
-									</p>
-								</div>
-							</div>
-
-							<div class="col p-1">
-								<div class="text-center p-3 shadow c-rounded-3">
-									<div
-										style="width: 6rem; height: 6rem"
-										class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
-									>
-										<img
-											src="assets/images/user2.jpg"
-											class="w-100"
-										/>
-									</div>
-									<h5 class="text-center my-2">
-										<a href="account-person.html"
-											>John Doe</a
-										>
-									</h5>
-
-									<p class="text-center my-1">
-										Financial Advisor
-									</p>
-
-									<p class="text-center my-1">
-										<i class="bi bi-geo-alt me-2"></i>Harare
-									</p>
-								</div>
-							</div>
-
-							<div class="col p-1">
-								<div class="text-center p-3 shadow c-rounded-3">
-									<div
-										style="width: 6rem; height: 6rem"
-										class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
-									>
-										<img
-											src="assets/images/user3.jpg"
-											class="w-100"
-										/>
-									</div>
-
-									<h5 class="text-center my-2">
-										<a href="account-person.html"
-											>John Doe</a
-										>
-									</h5>
-
-									<p class="text-center my-1">
-										Financial Advisor
-									</p>
-
-									<p class="text-center my-1">
-										<i class="bi bi-geo-alt me-2"></i>Harare
-									</p>
-								</div>
-							</div>
-
-							<div class="col p-1">
-								<div class="text-center p-3 shadow c-rounded-3">
-									<div
-										style="width: 6rem; height: 6rem"
-										class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
-									>
-										<img
-											src="assets/images/user4.jpg"
-											class="w-100"
-										/>
-									</div>
-
-									<h5 class="text-center my-2">
-										<a href="account-person.html"
-											>John Doe</a
-										>
-									</h5>
-
-									<p class="text-center my-1">
-										Financial Advisor
-									</p>
-
-									<p class="text-center my-1">
-										<i class="bi bi-geo-alt me-2"></i>Harare
-									</p>
-								</div>
-							</div>
-
-							<div class="col p-1">
-								<div class="text-center p-3 shadow c-rounded-3">
-									<div
-										style="width: 6rem; height: 6rem"
-										class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
-									>
-										<img
-											src="assets/images/user5.jpg"
-											class="w-100"
-										/>
-									</div>
-									<h5 class="text-center my-2">
-										<a href="account-person.html"
-											>John Doe</a
-										>
-									</h5>
-
-									<p class="text-center my-1">
-										Financial Advisor
-									</p>
-
-									<p class="text-center my-1">
-										<i class="bi bi-geo-alt me-2"></i>Harare
-									</p>
-								</div>
-							</div>
-
-							<div class="col p-1">
-								<div class="text-center p-3 shadow c-rounded-3">
-									<div
-										style="width: 6rem; height: 6rem"
-										class="d-flex bg-dark justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
-									>
-										<img
-											src="assets/img/5.jpg"
-											class="w-100"
-										/>
-									</div>
-									<h5 class="text-center my-2">
-										<a href="account-person.html"
-											>John Doe</a
-										>
-									</h5>
-
-									<p class="text-center my-1">
-										Financial Advisor
-									</p>
-
-									<p class="text-center my-1">
-										<i class="bi bi-geo-alt me-2"></i>Harare
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<nav class="col-12 mx-auto w-fit mt-5" aria-label="...">
-							<ul class="pagination">
-								<li class="page-item disabled">
-									<span class="page-link">Previous</span>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">1</a>
-								</li>
-								<li
-									class="page-item active"
-									aria-current="page"
-								>
-									<span class="page-link">2</span>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">3</a>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">Next</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-
-				<div class="col-lg mt-5 m-lg-0">
-					<div class="shadow-lg p-3 p-md-4 c-rounded-2">
-						<h2 class="text-center">Companies & Organizations</h2>
-
-						<div
-							class="row row-cols-auto gap-2 gy-4 p-2 p-md-4 justify-content-around"
-						>
-							<div class="col-12">
-								<div
-									class="row d-flex justify-content-around gap-2 p-4 shadow c-rounded-2"
-								>
-									<div
-										class="col-4 p-0 d-flex align-items-center"
-									>
-										<img
-											src="assets/images/more.jpg"
-											class="w-100 c-rounded-1"
-										/>
-									</div>
-
-									<div class="col">
-										<h5 class="my-2">
-											<a href="account-business.html">
-												YSL Trading Pvt</a
-											>
-										</h5>
-
-										<p class="my-1">Digital solutions</p>
-
-										<p class="my-1">
-											<i class="bi bi-geo-alt me-2"></i
-											>Harare
-										</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-12">
-								<div
-									class="row d-flex justify-content-around gap-2 p-4 shadow c-rounded-2"
-								>
-									<div
-										class="col-4 p-0 d-flex align-items-center"
-									>
-										<img
-											src="assets/images/business-cards.jpg"
-											class="w-100 c-rounded-1"
-										/>
-									</div>
-
-									<div class="col">
-										<h5 class="my-2">
-											<a href="account-business.html">
-												J's Printing</a
-											>
-										</h5>
-
-										<p class="my-1">Book Printing</p>
-
-										<p class="my-1">
-											<i class="bi bi-geo-alt me-2"></i
-											>Vic Falls
-										</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-12">
-								<div
-									class="row d-flex justify-content-around gap-2 p-4 shadow c-rounded-2"
-								>
-									<div
-										class="col-4 p-0 d-flex align-items-center"
-									>
-										<img
-											src="assets/images/book.jpg"
-											class="w-100 c-rounded-1"
-										/>
-									</div>
-
-									<div class="col">
-										<h5 class="my-2">
-											<a href="account-business.html">
-												Harare City Library</a
-											>
-										</h5>
-
-										<p class="my-1">Library</p>
-
-										<p class="my-1">
-											<i class="bi bi-geo-alt me-2"></i
-											>Harare
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<nav class="col-12 mx-auto w-fit mt-5" aria-label="...">
-							<ul class="pagination">
-								<li class="page-item disabled">
-									<span class="page-link">Previous</span>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">1</a>
-								</li>
-								<li
-									class="page-item active"
-									aria-current="page"
-								>
-									<span class="page-link">2</span>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">3</a>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">Next</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</main> -->
-
-		<section>
-			<footer
-				class="d-flex container flex-wrap justify-content-between align-items-center py-5 px-3"
-			>
-				<div class="col-md-4 d-flex align-items-center">
-					<span class="text-muted">&copy; 2022 Gum.iNc</span>
-					<a href="partner.html" class="ms-3">Partner With Us</a>
-				</div>
-
-				<ul
-					class="nav col-md-4 justify-content-end fs-4 list-unstyled d-flex"
-				>
-					<li class="ms-3">
-						<a class="text-muted" href="#"
-							><i class="bi bi-twitter"></i
-						></a>
-					</li>
-					<li class="ms-3">
-						<a class="text-muted" href="#"
-							><i class="bi bi-instagram"></i
-						></a>
-					</li>
-					<li class="ms-3">
-						<a class="text-muted" href="#"
-							><i class="bi bi-facebook"></i
-						></a>
-					</li>
-
-					<li class="ms-3">
-						<a class="text-muted" href="#"
-							><i class="bi bi-whatsapp"></i
-						></a>
-					</li>
-				</ul>
-			</footer>
-		</section>
-
-		<div id="preloader">
-			<div
-				class="d-flex h-100 w-100 align-items-center justify-content-center"
-			>
-				<div class="spinner-border text-dark" role="status">
-					<span class="visually-hidden">Loading...</span>
-				</div>
-			</div>
-		</div>
-
-		<!-- <div
-			class="fixed-top top-0 bottom-0 start-0 end-0 bg-white d-none text-center flex-column justify-content-center align-items-center gap-2 mobile-barrier"
+		<footer
+			class="d-flex container flex-wrap justify-content-between align-items-center py-5 px-3"
 		>
-			<h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
-			<h1 class="p-4">
-				Please view on desktop. Site is not mobile ready
-			</h1>
-		</div> -->
+			<div class="col d-flex align-items-center">
+				<span class="text-muted"
+					>&copy; 2022 Gum.iNc. All Rights Reserved</span
+				>
+				<a
+					href="partner.html"
+					class="btn btn-success px-3 rounded-pill ms-3"
+					>Partner With Us</a
+				>
+			</div>
 
-		<script src="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"></script>
+			<ul
+				class="nav col-md-4 justify-content-end fs-4 list-unstyled d-flex"
+			>
+				<li class="ms-3">
+					<a
+						class="text-muted"
+						href="https://www.twitter.com"
+						target="_blank"
+						><i class="bi bi-twitter"></i
+					></a>
+				</li>
 
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-			crossorigin="anonymous"
-		></script>
+				<li class="ms-3">
+					<a
+						class="text-muted"
+						href="https://www.instagram.com"
+						target="_blank"
+						><i class="bi bi-instagram"></i
+					></a>
+				</li>
 
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js"
-			integrity="sha512-Hvn3pvXhhG39kmZ8ue3K8hw8obT4rfLXHE5n+IWNCMkR6oV3cfkQNUQqVvX3fNJO/JtFeo/MfLmqp5bqAT+8qg=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		></script>
-		<script src="assets/js/directory.js"></script>
-		<script src="assets/js/custom.js"></script>
+				<li class="ms-3">
+					<a
+						class="text-muted"
+						href="https://www.facebook.com"
+						target="_blank"
+						><i class="bi bi-facebook"></i
+					></a>
+				</li>
+			</ul>
+		</footer>
 	</body>
 </html>

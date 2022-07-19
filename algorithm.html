@@ -3,25 +3,27 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
 		<title>Gum.iNc</title>
 
 		<link
 			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
 			rel="stylesheet"
 		/>
+
 		<link
 			rel="stylesheet"
 			href="./assets/vendor/bootstrap-icons/bootstrap-icons.css"
 		/>
-		<link
-			rel="stylesheet"
-			href="./assets/vendor/fontawsome/css/all.min.css"
-		/>
-		<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css" />
-		<link rel="stylesheet" href="./assets/css/style.css" />
 
-		<!-- scripts -->
+		<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css" />
+
+		<link rel="stylesheet" href="./assets/css/forkeeps.css" />
+
+		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<script
 			defer
@@ -30,6 +32,13 @@
 
 		<script defer src="./assets/js/main.js"></script>
 		<script defer src="./assets/js/custom.js"></script>
+
+		<!-------------------------------------------------------------------------------------->
+
+		<!-- chart scripts -->
+		<script defer src="./assets/vendor/chart.js/Chart.min.js"></script>
+		<script defer src="./assets/js/demo/chart-area-demo.js"></script>
+		<script defer src="./assets/js/demo/chart-pie-demo.js"></script>
 	</head>
 
 	<body class="pt-5">
@@ -434,7 +443,7 @@
 							<div class="border-bottom">
 								<a
 									href="./account.html"
-									class="btn w-100 nav-accord-active text-start p-3"
+									class="btn w-100 text-start p-3"
 								>
 									<i class="bi bi-person me-2 fs-5"></i>My
 									Details
@@ -444,7 +453,7 @@
 							<div class="border-bottom">
 								<a
 									href="./algorithm.html"
-									class="btn w-100 text-start p-3"
+									class="btn w-100 nav-accord-active text-start p-3"
 								>
 									<i
 										class="bi bi-bar-chart-line fs-5 me-2"
@@ -806,155 +815,344 @@
 							</a>
 						</div>
 
-						<div class="col px-4 border-end border-2">
+						<div class="col px-4">
 							<div
-								class="bg-dark mx-auto d-flex justify-content-center align-items-center rounded-circle overflow-hidden"
-								style="
-									width: 10rem;
-									height: 10rem;
-									border: solid 10px rgb(163, 168, 173);
-								"
+								class="d-flex align-items-center justify-content-between mb-4"
 							>
-								<img
-									src="assets/img/undraw_profile.svg"
-									class="w-100"
-								/>
+								<h2 class="m-0">Account Statistics</h2>
+
+								<a class="btn btn-success rounded-pill px-3">
+									<i class="bi bi-download me-2"></i>Generate
+									Report
+								</a>
 							</div>
 
-							<h2 class="text-center my-2">John Doe</h2>
-
-							<p class="lead text-center my-2">
-								Financial Advisor
-							</p>
-
-							<p class="text-center px-3 px-lg-0 my-2">
-								<i class="bi bi-clock mx-2"></i>Mon - Thu, 9am -
-								5pm |<i class="bi bi-briefcase mx-2"></i
-								>Financial Advisory |<i
-									class="bi bi-geo-alt mx-2"
-								></i
-								>Harare, Zimbabwe
-							</p>
-
-							<div
-								class="row row-cols p-3 justify-content-center"
-							>
-								<div
-									class="col-12 bg-light border c-rounded-2 mb-2 p-4"
-								>
-									<h5>
-										<i class="bi bi-info-circle me-2"></i
-										>Bio
-									</h5>
-									<p>
-										Lorem ipsum dolor, sit amet consectetur
-										adipisicing elit. Rem, molestiae et quam
-										distinctio magni quos autem eius
-										consequuntur velit qui laudantium
-										delectus. Nihil
-									</p>
-								</div>
-
-								<div
-									class="col-7 me-2 col-lg bg-light border c-rounded-2 p-4"
-								>
-									<p>
-										<i class="bi bi-telephone fs-5 me-2"></i
-										>+263 77566832
-									</p>
-
-									<p>
-										<i
-											class="bi bi-link-45deg fs-5 me-2"
-										></i
-										><a href="">www.johnDoe.com.zw</a>
-									</p>
-
-									<p>
-										<i class="bi bi-twitter me-2 fs-5"></i
-										><a href="">@john_doe</a>
-									</p>
-
-									<p>
-										<i class="bi bi-instagram me-2 fs-5"></i
-										><a href="">@john_doe</a>
-									</p>
-								</div>
-
-								<div
-									class="col col-lg bg-light border c-rounded-2 p-4"
-								>
-									<h5>
-										<i class="bi bi-geo-alt me-2"></i
-										>Location
-									</h5>
-
+							<div class="row row-cols-4 mb-4">
+								<div class="col mb-4">
 									<div
-										class="w-100 c-rounded-1 overflow-hidden bg-gray"
+										class="shadow h-100 c-rounded-1 d-flex justify-content-between align-items-center p-4"
 									>
-										<iframe
-											src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.048860360313!2d-2.402101873046882!3d53.53904180000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487ba8a0a3e37291%3A0x502a44f8cb49203a!2sOuter%20Space%20Storage%20Centres!5e0!3m2!1sen!2szw!4v1653838105899!5m2!1sen!2szw"
-											frameborder="0"
-											class="border-0 w-100 h-100 d-block"
-											allowfullscreen
-										></iframe>
+										<div class="me-2">
+											<div
+												class="text-success text-uppercase mb-1"
+											>
+												Contact Value
+											</div>
+
+											<div class="h5 mb-0">$100,000</div>
+										</div>
+
+										<div>
+											<i
+												class="bi bi-currency-dollar text-success fs-2"
+											></i>
+										</div>
+									</div>
+								</div>
+
+								<div class="col mb-4">
+									<div
+										class="shadow h-100 c-rounded-1 d-flex justify-content-between align-items-center p-4"
+									>
+										<div class="me-2">
+											<div
+												class="text-success text-uppercase mb-1"
+											>
+												Earnings
+											</div>
+
+											<div class="h5 mb-0">$40,000</div>
+										</div>
+
+										<div>
+											<i
+												class="bi bi-coin text-success fs-2"
+											></i>
+										</div>
+									</div>
+								</div>
+
+								<div class="col mb-4">
+									<div
+										class="shadow h-100 c-rounded-1 d-flex justify-content-between align-items-center p-4"
+									>
+										<div class="me-2">
+											<div
+												class="text-success text-uppercase mb-1"
+											>
+												Search Appearances
+											</div>
+
+											<div class="h5 mb-0">12,000</div>
+										</div>
+
+										<div>
+											<i
+												class="bi bi-search text-success fs-2"
+											></i>
+										</div>
+									</div>
+								</div>
+
+								<div class="col mb-4">
+									<div
+										class="shadow h-100 c-rounded-1 d-flex justify-content-between align-items-center p-4"
+									>
+										<div class="me-2">
+											<div
+												class="text-success text-uppercase mb-1"
+											>
+												Profile Views
+											</div>
+
+											<div class="h5 mb-0">400</div>
+										</div>
+
+										<div>
+											<i
+												class="bi bi-eye text-success fs-2"
+											></i>
+										</div>
+									</div>
+								</div>
+
+								<div class="col mb-4">
+									<div
+										class="shadow h-100 c-rounded-1 d-flex justify-content-between align-items-center p-4"
+									>
+										<div class="me-2">
+											<div
+												class="text-success text-uppercase mb-1"
+											>
+												Bookmarked
+											</div>
+
+											<div class="h5 mb-0">30 Times</div>
+										</div>
+
+										<div>
+											<i
+												class="bi bi-bookmark-star text-success fs-2"
+											></i>
+										</div>
+									</div>
+								</div>
+
+								<div class="col mb-4">
+									<div
+										class="shadow h-100 c-rounded-1 d-flex justify-content-between align-items-center p-4"
+									>
+										<div class="me-2">
+											<div
+												class="text-success text-uppercase mb-1"
+											>
+												Linked Acounts
+											</div>
+
+											<div class="h5 mb-0">2</div>
+										</div>
+
+										<div>
+											<i
+												class="bi bi-cloud-check text-success fs-2"
+											></i>
+										</div>
+									</div>
+								</div>
+
+								<div class="col mb-4">
+									<div
+										class="shadow h-100 c-rounded-1 d-flex justify-content-between align-items-center p-4"
+									>
+										<div class="me-2">
+											<div
+												class="text-success text-uppercase mb-1"
+											>
+												Mentions
+											</div>
+
+											<div class="h5 mb-0">20</div>
+										</div>
+
+										<div>
+											<i
+												class="bi bi-chat-quote text-success fs-2"
+											></i>
+										</div>
+									</div>
+								</div>
+
+								<div class="col mb-4">
+									<div
+										class="shadow h-100 c-rounded-1 d-flex justify-content-between align-items-center p-4"
+									>
+										<div class="me-2">
+											<div
+												class="text-success text-uppercase mb-1"
+											>
+												Unique Viewers
+											</div>
+
+											<div class="h5 mb-0">8</div>
+										</div>
+
+										<div>
+											<i
+												class="bi bi-star text-success fs-2"
+											></i>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
 
-						<div
-							class="col-5 px-4"
-							style="position: sticky; top: 100px"
-						>
-							<h4 class="border-bottom border-2 pb-2 text-center">
-								My iNc
-							</h4>
+							<div class="row">
+								<div class="col-xl-8 col-lg-7">
+									<div class="card shadow mb-4">
+										<div
+											class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+										>
+											<h6 class="m-0 text-success">
+												Earnings Overview
+											</h6>
 
-							<div class="py-2 d-flex">
-								<i class="bi bi-chevron-double-right me-2"></i>
-								<p class="p-0 m-0 fw-bold">
-									Financial Advisor Available In And Around
-									Harare
-								</p>
-							</div>
+											<div class="dropdown">
+												<button
+													class="btn"
+													type="button"
+													id="dropdownMenuButton1"
+													data-bs-toggle="dropdown"
+													aria-expanded="false"
+												>
+													<i
+														class="bi bi-three-dots-vertical"
+													></i>
+												</button>
 
-							<div class="py-2 d-flex">
-								<i class="bi bi-chevron-double-right me-2"></i>
-								<p class="p-0 m-0">
-									Lorem ipsum dolor sit amet consectetur
-									adipisicing elit. Voluptates, aut! Lorem
-									ipsum dolor sit amet consectetur adipisicing
-									elit. Voluptates, aut!
-								</p>
-							</div>
+												<ul
+													class="dropdown-menu"
+													aria-labelledby="dropdownMenuButton1"
+												>
+													<li>
+														<a
+															class="dropdown-item"
+															href="#"
+															>Action</a
+														>
+													</li>
+													<li>
+														<a
+															class="dropdown-item"
+															href="#"
+															>Another action</a
+														>
+													</li>
+													<li>
+														<a
+															class="dropdown-item"
+															href="#"
+															>Something else
+															here</a
+														>
+													</li>
+												</ul>
+											</div>
+										</div>
 
-							<div class="py-2 d-flex">
-								<i class="bi bi-chevron-double-right me-2"></i>
-								<p class="p-0 m-0">
-									Lorem ipsum dolor sit amet consectetur
-									adipisicing elit. Voluptates, aut! Lorem
-									ipsum Voluptates, aut!
-								</p>
-							</div>
+										<div class="card-body">
+											<div class="chart-area">
+												<canvas
+													id="myAreaChart"
+												></canvas>
+											</div>
+										</div>
+									</div>
+								</div>
 
-							<div class="py-2 d-flex">
-								<i class="bi bi-clock me-2"></i>
-								<p class="p-0 m-0">Mon - Thu, 9am - 5pm</p>
-							</div>
+								<div class="col-xl-4 col-lg-5">
+									<div class="card shadow mb-4">
+										<div
+											class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+										>
+											<h6 class="m-0 text-success">
+												Profile Visiter Demograpic
+											</h6>
 
-							<div class="py-2 d-flex">
-								<i class="bi bi-currency-dollar me-2"></i>
-								<p class="p-0 m-0">USD 12/Hour</p>
-							</div>
+											<div class="dropdown">
+												<button
+													class="btn"
+													type="button"
+													id="dropdownMenuButton1"
+													data-bs-toggle="dropdown"
+													aria-expanded="false"
+												>
+													<i
+														class="bi bi-three-dots-vertical"
+													></i>
+												</button>
 
-							<div class="py-2 mt-2 text-center">
-								<button
-									id="requestAudienceToastBtn"
-									class="btn btn-success rounded-pill btn-lg"
-								>
-									<i class="bi bi-pencil me-2"></i>Edit
-								</button>
+												<ul
+													class="dropdown-menu"
+													aria-labelledby="dropdownMenuButton1"
+												>
+													<li>
+														<a
+															class="dropdown-item"
+															href="#"
+															>Action</a
+														>
+													</li>
+													<li>
+														<a
+															class="dropdown-item"
+															href="#"
+															>Another action</a
+														>
+													</li>
+													<li>
+														<a
+															class="dropdown-item"
+															href="#"
+															>Something else
+															here</a
+														>
+													</li>
+												</ul>
+											</div>
+										</div>
+
+										<div class="card-body">
+											<div class="chart-pie pt-4 pb-2">
+												<canvas
+													id="myPieChart"
+												></canvas>
+											</div>
+
+											<div class="mt-4 text-center small">
+												<span class="me-2">
+													<i
+														class="bi bi-circle-fill text-primary"
+													></i>
+													Local
+												</span>
+												<br />
+												<span class="me-2">
+													<i
+														class="bi bi-circle-fill text-success"
+													></i>
+													Regional
+												</span>
+												<br />
+
+												<span class="me-2">
+													<i
+														class="bi bi-circle-fill text-info"
+													></i>
+													International
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

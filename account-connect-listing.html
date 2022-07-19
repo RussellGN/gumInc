@@ -1,48 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
+		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta
-			name="viewport"
-			content="width=device-width | initial-scale=1.0"
-		/>
-
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Gum.iNc</title>
 
 		<link
 			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
 			rel="stylesheet"
 		/>
-
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-			crossorigin="anonymous"
-		/>
-
 		<link
 			rel="stylesheet"
-			href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+			href="./assets/vendor/bootstrap-icons/bootstrap-icons.css"
 		/>
+		<link
+			rel="stylesheet"
+			href="./assets/vendor/fontawsome/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
 
-		<link rel="stylesheet" href="assets/css/style.css" />
+		<!-- scripts -->
 
 		<script
 			defer
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-			crossorigin="anonymous"
+			src="./assets/vendor/bootstrap/bootstrap.bundle.js"
 		></script>
 
-		<script defer src="assets/js/main.js"></script>
-		<script defer src="assets/js/custom.js"></script>
+		<script defer src="./assets/js/main.js"></script>
+		<script defer src="./assets/js/custom.js"></script>
 	</head>
 
 	<body class="position-relative pt-5" style="min-height: 100vh">
 		<div id="invisible-elements">
+			<div class="custom-modals">
+				<!--Location Modal -->
+
+				<div
+					class="modal fade"
+					id="locationModal"
+					data-bs-backdrop="static"
+					data-bs-keyboard="false"
+					tabindex="-1"
+					aria-labelledby="locationModalLabel"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content c-rounded-2 p-5">
+							<div class="modal-header">
+								<h5 class="modal-title" id="locationModalLabel">
+									Gum.iNc Access
+								</h5>
+
+								<button
+									type="button"
+									class="btn-close"
+									data-bs-dismiss="modal"
+									aria-label="Close"
+								></button>
+							</div>
+
+							<div class="modal-body">
+								<div
+									class="d-flex justify-content-between align-items-center"
+								>
+									<a
+										class="col-8 btn btn-primary text-start border c-rounded-1 mb-2 p-2"
+									>
+										Gum.Inc Local - Zimbabwe
+									</a>
+
+									<span class="text-success d-inline-block"
+										>selected<i
+											class="fas fa-check-circle ms-3"
+										></i>
+									</span>
+								</div>
+
+								<div
+									class="dropdown d-flex justify-content-between align-items-center"
+								>
+									<button
+										class="col-8 btn text-start btn-primary disabled border c-rounded-1 mb-2 p-2 dropdown-toggle"
+										type="button"
+										id="counTrigger"
+										data-bs-toggle="dropdown"
+										aria-haspopup="true"
+										aria-expanded="false"
+									>
+										Gum.iNc Regional
+									</button>
+
+									<span class="text-warning d-inline-block"
+										>pro<i class="fas fa-crown ms-3"></i
+									></span>
+
+									<div
+										class="dropdown-menu"
+										aria-labelledby="counTrigger"
+									>
+										<a class="dropdown-item" href="#"
+											>Argentina</a
+										>
+										<a class="dropdown-item" href="#"
+											>Brasil</a
+										>
+										<a class="dropdown-item" href="#"
+											>France</a
+										>
+										<a class="dropdown-item" href="#"
+											>France</a
+										>
+										<a class="dropdown-item" href="#"
+											>And So Forth...</a
+										>
+									</div>
+								</div>
+
+								<div
+									class="dropdown d-flex justify-content-between align-items-center"
+								>
+									<button
+										class="col-8 btn text-start btn-primary disabled border c-rounded-1 mb-2 p-2 dropdown-toggle"
+										type="button"
+										id="coTrigger"
+										data-bs-toggle="dropdown"
+										aria-haspopup="true"
+										aria-expanded="false"
+									>
+										Gum.iNc Continental
+									</button>
+
+									<span class="text-warning d-inline-block"
+										>pro<i class="fas fa-crown ms-3"></i
+									></span>
+
+									<div
+										class="dropdown-menu"
+										aria-labelledby="coTrigger"
+									>
+										<a class="dropdown-item" href="#"
+											>Africa</a
+										>
+										<a class="dropdown-item" href="#"
+											>Europe</a
+										>
+										<a class="dropdown-item" href="#"
+											>Asia</a
+										>
+										<a class="dropdown-item" href="#"
+											>Astralia</a
+										>
+										<a class="dropdown-item" href="#"
+											>North America</a
+										>
+										<a class="dropdown-item" href="#"
+											>South America</a
+										>
+									</div>
+								</div>
+
+								<div
+									class="d-flex justify-content-between align-items-center"
+								>
+									<a
+										class="col-8 disabled btn text-start btn-primary border c-rounded-1 mb-2 p-2"
+									>
+										Gum.iNc International
+									</a>
+
+									<span class="text-warning d-inline-block"
+										>pro<i class="fas fa-crown ms-3"></i
+									></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div id="popovers">
+				<button type="button" class="d-none" id="addToCartToastBtn">
+					Add To Cart
+				</button>
+
+				<div
+					class="position-fixed bottom-0 end-0 p-3"
+					style="z-index: 11"
+				>
+					<div
+						id="addToCartToast"
+						class="toast text-white bg-primary"
+						role="alert"
+						aria-live="assertive"
+						aria-atomic="true"
+					>
+						<div class="toast-body">
+							<div class="d-flex align-items-center">
+								Added!
+								<button
+									type="button"
+									class="btn-close me-2 ms-auto"
+									data-bs-dismiss="toast"
+									aria-label="Close"
+								></button>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<button type="button" class="d-none" id="saveIncToastBtn">
 					save inc
 				</button>
@@ -383,8 +550,14 @@
 					</div>
 				</div>
 
-				<div class="col-5 p-5 c-rounded-3 shadow position-relative">
-					<div class="sticky-top" style="top: 120px !important">
+				<div class="col-5 p-5 c-rounded-3 shadow">
+					<div
+						style="
+							position: sticky;
+							z-index: 1;
+							top: 120px !important;
+						"
+					>
 						<h3 class="border-bottom border-3 pb-2">
 							Financial Advisor Available In And Around Harare
 						</h3>

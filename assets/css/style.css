@@ -3,6 +3,12 @@
 	header {
 		background-color: white !important;
 	}
+	body {
+		color: #585a5d;
+	}
+	.no-arrow::after {
+		content: none !important;
+	}
 }
 
 /* offcanvases */
@@ -106,6 +112,12 @@
 
 /* bootstrap overides and custom classes */
 @media screen {
+	#accountNavAccordion a.btn:hover:not(.nav-accord-active) {
+		background-color: whitesmoke !important	;
+	}
+	.nav-accord-active {
+		background-color: #ced4da !important;
+	}
 	.btn-primary {
 		background: #712d24 !important;
 		transition: all 0.3s;
@@ -155,6 +167,52 @@
 	}
 	.cursor-pointer {
 		cursor: pointer !important;
+	}
+	.toast.bg-primary {
+		background: #712d24 !important;
+	}
+	.text-inherit {
+		color: inherit !important;
+	}
+
+	@media screen and (min-width: 992px) {
+		.c-rounded-lg-0 {
+			border-radius: 0 !important;
+		}
+		.w-lg-50 {
+			width: 50% !important;
+		}
+	}
+	@media screen and (min-width: 576px) {
+		.c-rounded-md-0 {
+			border-radius: 0 !important;
+		}
+	}
+	.w-100px {
+		width: 100px;
+	}
+	.w-200px {
+		width: 200px;
+	}
+	.w-300px {
+		width: 300px;
+	}
+	.w-400px {
+		width: 400px;
+	}
+	.white-space-nowrap {
+		overflow: hidden !important;
+		white-space: nowrap !important;
+		text-overflow: ellipsis !important;
+	}
+	.text-a-link-blue {
+		color: #0d6efd !important;
+	}
+	.transition-03 {
+		transition: all 0.3s;
+	}
+	.text-gray {
+		color: gray !important;
 	}
 }
 
@@ -273,9 +331,6 @@
 		top: 100px;
 	}
 }
-.text-gray {
-	color: gray !important ;
-}
 /* alamancs and directories section */
 @media screen {
 	.business-card-listing {
@@ -316,7 +371,7 @@
 		background-size: cover;
 	}
 }
-
+/* payment carousel */
 @media screen {
 	#paymentCarousel .carousel-control-prev,
 	#paymentCarousel .carousel-control-next {
@@ -329,31 +384,7 @@
 		height: fit-content;
 	}
 }
-.toast.bg-primary {
-	background: #712d24 !important;
-}
-.text-inherit {
-	color: inherit !important;
-}
 
-@media screen and (min-width: 992px) {
-	.c-rounded-lg-0 {
-		border-radius: 0 !important;
-	}
-	.w-lg-50 {
-		width: 50% !important;
-	}
-}
-@media screen and (min-width: 576px) {
-	.c-rounded-md-0 {
-		border-radius: 0 !important;
-	}
-}
-.white-space-nowrap {
-	overflow: hidden !important;
-	white-space: nowrap !important;
-	text-overflow: ellipsis !important;
-}
 /* diectory book tab */
 @media screen {
 	#bookTab .nav-link {
@@ -378,43 +409,37 @@
 		background: #712d24;
 	}
 }
-.text-a-link-blue {
-	color: #0d6efd !important;
-}
-.transition-03 {
-	transition: all 0.3s;
-}
 
-/* #ced4da;
-    --bs-gray-500: #adb5bd;
-    --bs-gray-600: #6c757d; */
-.popular-searches .btn-secondary {
-	color: #212529;
-	background-color: #e9ecef;
-	border: 1px solid #ced4da;
-}
-.popular-searches .btn-secondary:hover {
-	background-color: #d1dbe6;
-}
-.connect-suggestions .btn-secondary {
-	color: #212529 !important;
-	background-color: #e9ecef !important;
-	border: 1px solid #ced4da !important;
-}
-.connect-suggestions .btn-secondary:hover {
-	box-shadow: 1px 1px 10px #ced4da;
-}
-.message-right,
-.message-left {
-	width: fit-content;
-	padding: 1rem;
-	max-width: 45%;
-	margin-bottom: 1rem;
-	background-color: #f8f9fa;
-	border: 1px solid #ced4da;
-	border-radius: 20px 20px 20px 0;
-}
-.message-right {
-	margin-left: auto;
-	border-radius: 20px 20px 0 20px;
+/* inc connect */
+@media screen {
+	.popular-searches .btn-secondary {
+		color: #212529;
+		background-color: #e9ecef;
+		border: 1px solid #ced4da;
+	}
+	.popular-searches .btn-secondary:hover {
+		background-color: #d1dbe6;
+	}
+	.connect-suggestions .btn-secondary {
+		color: #212529 !important;
+		background-color: #e9ecef !important;
+		border: 1px solid #ced4da !important;
+	}
+	.connect-suggestions .btn-secondary:hover {
+		box-shadow: 1px 1px 10px #ced4da;
+	}
+	.message-right,
+	.message-left {
+		width: fit-content;
+		padding: 1rem;
+		max-width: 45%;
+		margin-bottom: 1rem;
+		background-color: #f8f9fa;
+		border: 1px solid #ced4da;
+		border-radius: 20px 20px 20px 0;
+	}
+	.message-right {
+		margin-left: auto;
+		border-radius: 20px 20px 0 20px;
+	}
 }

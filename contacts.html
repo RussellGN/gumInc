@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Gum.iNc</title>
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="./assets/vendor/bootstrap-icons/bootstrap-icons.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./assets/vendor/fontawsome/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+
+		<!-- scripts -->
+
+		<script
+			defer
+			src="./assets/vendor/bootstrap/bootstrap.bundle.js"
+		></script>
+
+		<script defer src="./assets/js/main.js"></script>
+		<script defer src="./assets/js/custom.js"></script>
+	</head>
+
+	<style>
+		#contactsTab1 .nav-link {
+			color: inherit !important;
+			border-radius: 20px 20px 0 0;
+		}
+		#contactsTab1 .nav-link.active {
+			background: #712d24 !important;
+			color: white !important;
+		}
+		#contactsTab1 .nav-link:hover:not(.active) {
+			color: #be5345 !important;
+		}
+	</style>
+	<body class="pt-5">
+		<div id="invisible-elements">
+			<div class="custom-modals">
+				<!--Location Modal -->
+
+				<div
+					class="modal fade"
+					id="locationModal"
+					data-bs-backdrop="static"
+					data-bs-keyboard="false"
+					tabindex="-1"
+					aria-labelledby="locationModalLabel"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content c-rounded-2 p-5">
+							<div class="modal-header">
+								<h5 class="modal-title" id="locationModalLabel">
+									Gum.iNc Access
+								</h5>
+
+								<button
+									type="button"
+									class="btn-close"
+									data-bs-dismiss="modal"
+									aria-label="Close"
+								></button>
+							</div>
+
+							<div class="modal-body">
+								<div
+									class="d-flex justify-content-between align-items-center"
+								>
+									<a
+										class="col-8 btn btn-primary text-start border c-rounded-1 mb-2 p-2"
+									>
+										Gum.Inc Local - Zimbabwe
+									</a>
+
+									<span class="text-success d-inline-block"
+										>selected<i
+											class="fas fa-check-circle ms-3"
+										></i>
+									</span>
+								</div>
+
+								<div
+									class="dropdown d-flex justify-content-between align-items-center"
+								>
+									<button
+										class="col-8 btn text-start btn-primary disabled border c-rounded-1 mb-2 p-2 dropdown-toggle"
+										type="button"
+										id="counTrigger"
+										data-bs-toggle="dropdown"
+										aria-haspopup="true"
+										aria-expanded="false"
+									>
+										Gum.iNc Regional
+									</button>
+
+									<span class="text-warning d-inline-block"
+										>pro<i class="fas fa-crown ms-3"></i
+									></span>
+
+									<div
+										class="dropdown-menu"
+										aria-labelledby="counTrigger"
+									>
+										<a class="dropdown-item" href="#"
+											>Argentina</a
+										>
+										<a class="dropdown-item" href="#"
+											>Brasil</a
+										>
+										<a class="dropdown-item" href="#"
+											>France</a
+										>
+										<a class="dropdown-item" href="#"
+											>France</a
+										>
+										<a class="dropdown-item" href="#"
+											>And So Forth...</a
+										>
+									</div>
+								</div>
+
+								<div
+									class="dropdown d-flex justify-content-between align-items-center"
+								>
+									<button
+										class="col-8 btn text-start btn-primary disabled border c-rounded-1 mb-2 p-2 dropdown-toggle"
+										type="button"
+										id="coTrigger"
+										data-bs-toggle="dropdown"
+										aria-haspopup="true"
+										aria-expanded="false"
+									>
+										Gum.iNc Continental
+									</button>
+
+									<span class="text-warning d-inline-block"
+										>pro<i class="fas fa-crown ms-3"></i
+									></span>
+
+									<div
+										class="dropdown-menu"
+										aria-labelledby="coTrigger"
+									>
+										<a class="dropdown-item" href="#"
+											>Africa</a
+										>
+										<a class="dropdown-item" href="#"
+											>Europe</a
+										>
+										<a class="dropdown-item" href="#"
+											>Asia</a
+										>
+										<a class="dropdown-item" href="#"
+											>Astralia</a
+										>
+										<a class="dropdown-item" href="#"
+											>North America</a
+										>
+										<a class="dropdown-item" href="#"
+											>South America</a
+										>
+									</div>
+								</div>
+
+								<div
+									class="d-flex justify-content-between align-items-center"
+								>
+									<a
+										class="col-8 disabled btn text-start btn-primary border c-rounded-1 mb-2 p-2"
+									>
+										Gum.iNc International
+									</a>
+
+									<span class="text-warning d-inline-block"
+										>pro<i class="fas fa-crown ms-3"></i
+									></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="popovers">
+				<button type="button" class="d-none" id="addToCartToastBtn">
+					Add To Cart
+				</button>
+
+				<div
+					class="position-fixed bottom-0 end-0 p-3"
+					style="z-index: 11"
+				>
+					<div
+						id="addToCartToast"
+						class="toast text-white bg-primary"
+						role="alert"
+						aria-live="assertive"
+						aria-atomic="true"
+					>
+						<div class="toast-body">
+							<div class="d-flex align-items-center">
+								Added!
+								<button
+									type="button"
+									class="btn-close me-2 ms-auto"
+									data-bs-dismiss="toast"
+									aria-label="Close"
+								></button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<button type="button" class="d-none" id="saveIncToastBtn">
+					save inc
+				</button>
+
+				<div
+					class="position-fixed bottom-0 end-0 p-3"
+					style="z-index: 11"
+				>
+					<div
+						id="saveIncToast"
+						class="toast text-white bg-success"
+						role="alert"
+						aria-live="assertive"
+						aria-atomic="true"
+					>
+						<div class="toast-body">
+							<div class="d-flex align-items-center">
+								<i class="bi bi-check fs-2 me-2"></i>
+								<span class="me-2">
+									Listing Saved! You can find it on the saved
+									Incs tab on you profile.</span
+								>
+								<button
+									type="button"
+									class="btn-close me-2 ms-auto"
+									data-bs-dismiss="toast"
+									aria-label="Close"
+								></button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="position-fixed bottom-0 end-0 p-3"
+					style="z-index: 11"
+				>
+					<div
+						id="requestAudienceToast"
+						class="toast text-white bg-success"
+						role="alert"
+						aria-live="assertive"
+						aria-atomic="true"
+					>
+						<div class="toast-body">
+							<div class="d-flex align-items-center">
+								<i class="bi bi-send-check fs-2 me-2"></i>
+								<span class="me-2">
+									Requested! You'll Be notified of a response
+									in your notifications.</span
+								>
+								<button
+									type="button"
+									class="btn-close me-2 ms-auto"
+									data-bs-dismiss="toast"
+									aria-label="Close"
+								></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="offcanvases">
+				<div
+					class="offcanvas offcanvas-start"
+					tabindex="-1"
+					id="mobileNavOffcanvas"
+					aria-labelledby="mobileNavOffcanvasLabel"
+				>
+					<div class="offcanvas-header">
+						<h5 id="mobileNavOffcanvasLabel"></h5>
+
+						<button
+							type="button"
+							class="btn text-gray"
+							data-bs-dismiss="offcanvas"
+							aria-label="Close"
+						>
+							<i class="bi bi-x-circle fs-1"></i>
+						</button>
+					</div>
+
+					<div class="offcanvas-body">
+						<div class="text-center mb-4">
+							<span
+								class="text-gray p-2 fw-bold display-5 p-0 fs-2"
+								>Gum.iNc<i class="bi bi-circle-fill ms-2"></i>
+							</span>
+						</div>
+
+						<div class="d-flex flex-column">
+							<a class="mobile-link p-3" href="index.html"
+								>Home</a
+							>
+							<a class="mobile-link p-3" href="directory.html"
+								>Directory
+							</a>
+							<a class="mobile-link p-3" href="store.html"
+								>Store</a
+							>
+							<a
+								class="mobile-link p-3"
+								href="directories-and-almanacs.html"
+								>Almanacs & Directories</a
+							>
+							<a class="mobile-link p-3" href="about.html">
+								About
+							</a>
+							<a class="mobile-link p-3" href="account.html"
+								>Account</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="preloader">
+				<div class="spinner-border" role="status">
+					<span class="visually-hidden">Loading...</span>
+				</div>
+			</div>
+
+			<div class="mobile-barrier">
+				<h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
+				<h2 class="p-4">
+					Please view on desktop. Site is not mobile ready.
+				</h2>
+			</div>
+		</div>
+
+		<header id="header" class="p-2 px-4 px-md-2 pt-md-2 fixed-top">
+			<div
+				class="container-xxl d-flex justify-content-between align-items-center justify-content-md-around"
+			>
+				<button
+					class="btn p-0 d-md-none nav-link"
+					id="nav-toggle"
+					type="button"
+					data-bs-toggle="offcanvas"
+					data-bs-target="#mobileNavOffcanvas"
+					aria-controls="mobileNavOffcanvas"
+				>
+					<i class="bi bi-list fs-2"></i>
+				</button>
+
+				<a href="index.html" class="navbar-brand text-dark p-0 fs-2"
+					>Gum.iNc</a
+				>
+
+				<a
+					class="btn order-last btn-primary rounded-circle d-lg-none"
+					href="cart.html"
+					><i class="bi bi-cart4"></i
+				></a>
+
+				<div class="d-md-flex d-none p-0">
+					<a href="index.html" class="nav-link rounded-pill px-2 py-1"
+						>Home</a
+					>
+					<a
+						href="directory.html"
+						class="nav-link rounded-pill px-2 py-1"
+						>Directory</a
+					>
+					<a
+						href="connect.html"
+						class="nav-link rounded-pill px-2 py-1"
+						>Inc Connect</a
+					>
+					<a href="store.html" class="nav-link rounded-pill px-2 py-1"
+						>Store</a
+					>
+					<a
+						href="directories-and-almanacs.html"
+						class="nav-link rounded-pill px-2 py-1"
+						>Almanacs & Directories</a
+					>
+					<a href="about.html" class="nav-link rounded-pill px-2 py-1"
+						>About</a
+					>
+					<a
+						href="account.html"
+						class="nav-link rounded-pill px-2 py-1 active"
+						>Account</a
+					>
+					<a
+						href="cart.html"
+						class="nav-link border rounded-circle px-2 ms-2 py-1"
+						><i class="bi bi-cart4"></i
+					></a>
+				</div>
+			</div>
+		</header>
+
+		<main class="container pt-4 my-5" style="max-width: 1300px !important">
+			<div class="row justify-content-around">
+				<div class="col-3 me-2">
+					<div class="my-sidebar shadow px-2 py-4 c-rounded-2">
+						<div class="mb-3">
+							<div
+								class="bg-dark mx-auto d-flex justify-content-center align-items-center rounded-circle overflow-hidden"
+								style="
+									width: 6rem;
+									height: 6rem;
+									border: solid 10px rgb(170, 178, 181);
+								"
+							>
+								<img
+									src="./assets/img/undraw_profile.svg"
+									class="w-100"
+								/>
+							</div>
+
+							<h3 class="text-center my-2">John Doe</h3>
+						</div>
+
+						<div
+							class="accordion accordion-flush"
+							id="accountNavAccordion"
+						>
+							<div class="border-bottom">
+								<a
+									href="./account.html"
+									class="btn w-100 text-start p-3"
+								>
+									<i class="bi bi-person me-2 fs-5"></i>My
+									Details
+								</a>
+							</div>
+
+							<div class="border-bottom">
+								<a
+									href="./algorithm.html"
+									class="btn w-100 text-start p-3"
+								>
+									<i
+										class="bi bi-bar-chart-line fs-5 me-2"
+									></i
+									>Algorithm
+								</a>
+							</div>
+
+							<div class="border-bottom">
+								<a
+									href="my-incs.html"
+									class="btn w-100 text-start p-3"
+								>
+									<i class="bi bi-people fs-5 me-2"></i>My
+									iNcs
+								</a>
+							</div>
+
+							<div class="border-bottom">
+								<a
+									href="./contacts.html"
+									class="btn w-100 nav-accord-active text-start p-3"
+								>
+									<i class="bi bi-person-badge fs-5 me-2"></i
+									>Contacts & Business Cards
+								</a>
+							</div>
+
+							<div class="accordion-item">
+								<h2
+									class="accordion-header"
+									id="flush-heading1"
+								>
+									<button
+										class="accordion-button collapsed"
+										type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#flush-collapse1"
+										aria-expanded="false"
+										aria-controls="flush-collapse1"
+									>
+										<i
+											class="bi bi-currency-dollar fs-5 me-2"
+										></i
+										>Monetization
+									</button>
+								</h2>
+
+								<div
+									id="flush-collapse1"
+									class="accordion-collapse collapse"
+									aria-labelledby="flush-heading1"
+									data-bs-parent="#accountNavAccordion"
+								>
+									<div class="accordion-body">
+										<div class="border-bottom">
+											<a
+												href="option.html"
+												class="btn w-100 text-start p-3"
+											>
+												<i
+													class="bi bi-bar-chart-line fs-5 me-2"
+												></i
+												>option
+											</a>
+										</div>
+
+										<div class="border-bottom">
+											<a
+												href="option.html"
+												class="btn w-100 text-start p-3"
+											>
+												<i
+													class="bi bi-bar-chart-line fs-5 me-2"
+												></i
+												>option
+											</a>
+										</div>
+
+										<div class="border-bottom">
+											<a
+												href="option.html"
+												class="btn w-100 text-start p-3"
+											>
+												<i
+													class="bi bi-bar-chart-line fs-5 me-2"
+												></i
+												>option
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="border-bottom">
+								<a
+									href="my-dirs.html"
+									class="btn w-100 text-start p-3"
+								>
+									<i class="bi bi-book fs-5 me-2"></i>My
+									Directories
+								</a>
+							</div>
+
+							<div class="border-bottom">
+								<a
+									href="my-subs.html"
+									class="btn w-100 text-start p-3"
+								>
+									<i class="bi bi-calendar-date fs-5 me-2"></i
+									>My Subscriptions
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div
+						class="row shadow justify-content-around border c-rounded-2 px-3 py-2"
+					>
+						<div
+							class="col-12 position-relative p-3 pe-5 mb-4 d-flex"
+						>
+							<div class="dropdown me-4">
+								<a
+									class="btn btn-primary rounded-circle position-relative"
+									href="#"
+									id="alertsDropdown"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									<i class="bi bi-bell"></i>
+									<span
+										class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"
+									>
+										99+
+									</span>
+								</a>
+
+								<div
+									class="dropdown-menu shadow mt-3 p-0"
+									aria-labelledby="alertsDropdown"
+								>
+									<h6
+										class="dropdown-header bg-brown text-white"
+									>
+										Notifications
+									</h6>
+
+									<a
+										class="dropdown-item d-flex align-items-center border-bottom"
+									>
+										<div class="me-3 p-2 c-rounded-1">
+											<i
+												class="bi bi-file-earmark-font fs-4"
+											></i>
+										</div>
+
+										<div>
+											<p class="p-0 m-0 fw-bold">
+												A new monthly report is ready to
+												download!
+											</p>
+											<small class="text-gray">
+												December 12, 2019
+											</small>
+										</div>
+									</a>
+
+									<a
+										class="dropdown-item d-flex align-items-center border-bottom"
+									>
+										<div class="me-3 p-2 c-rounded-1">
+											<i class="bi bi-coin fs-4"></i>
+										</div>
+
+										<div>
+											<p class="p-0 m-0">
+												$290.29 has been deposited into
+												your account!
+											</p>
+
+											<small class="text-gray">
+												December 7, 2019
+											</small>
+										</div>
+									</a>
+
+									<a
+										class="dropdown-item d-flex align-items-center border-bottom"
+									>
+										<div class="me-3 p-2 c-rounded-1">
+											<i
+												class="bi bi-exclamation-triangle fs-4"
+											></i>
+										</div>
+
+										<div>
+											<p class="p-0 m-0">
+												Spending Alert: We've noticed
+												unusually high spending for your
+												account.
+											</p>
+											<small class="text-gray">
+												December 2, 2019
+											</small>
+										</div>
+									</a>
+								</div>
+							</div>
+
+							<div class="dropdown me-4">
+								<a
+									class="btn btn-primary rounded-circle position-relative"
+									href="#"
+									id="messagesDropdown"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									<i class="bi bi-envelope"></i>
+									<span
+										class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"
+									>
+										99+
+									</span>
+								</a>
+
+								<div
+									style="max-width: 600px"
+									class="dropdown-menu p-0 shadow mt-3"
+									aria-labelledby="messagesDropdown"
+								>
+									<h6
+										class="dropdown-header bg-brown text-white"
+									>
+										Message Center
+									</h6>
+
+									<a
+										class="dropdown-item border-bottom d-flex align-items-center"
+										href="message.html"
+									>
+										<div class="dropdown-list-image me-3">
+											<img
+												style="
+													width: 2rem;
+													height: 2rem;
+												"
+												class="rounded-circle border"
+												src="./assets/img/undraw_profile_2.svg"
+											/>
+										</div>
+
+										<div>
+											<p
+												class="m-0 p-0 fw-bold white-space-nowrap w-400px"
+											>
+												Lorem ipsum dolor sit amet
+												consectetur, adipisicing elit.
+												Nobis quod impedit voluptatem
+												dolorum in obcaecati fugit
+												deserunt non dolor eos!
+											</p>
+
+											<small class="text-gray">
+												john Ken · 58m
+											</small>
+										</div>
+									</a>
+
+									<a
+										class="dropdown-item border-bottom d-flex align-items-center"
+										href="message.html"
+									>
+										<div class="dropdown-list-image me-3">
+											<img
+												style="
+													width: 2rem;
+													height: 2rem;
+												"
+												class="rounded-circle border"
+												src="./assets/img/undraw_profile_2.svg"
+											/>
+										</div>
+
+										<div>
+											<p
+												class="m-0 p-0 white-space-nowrap w-400px"
+											>
+												Lorem ipsum dolor sit amet
+												consectetur, adipisicing elit.
+												Nobis quod impedit voluptatem
+												dolorum in obcaecati fugit
+												deserunt non dolor eos!
+											</p>
+
+											<small class="text-gray">
+												john Ken · 58m
+											</small>
+										</div>
+									</a>
+
+									<a
+										class="dropdown-item border-bottom d-flex align-items-center"
+										href="message.html"
+									>
+										<div class="dropdown-list-image me-3">
+											<img
+												style="
+													width: 2rem;
+													height: 2rem;
+												"
+												class="rounded-circle border"
+												src="./assets/img/undraw_profile_2.svg"
+											/>
+										</div>
+
+										<div>
+											<p
+												class="m-0 p-0 white-space-nowrap w-400px"
+											>
+												Lorem ipsum dolor sit amet
+												consectetur, adipisicing elit.
+												Nobis quod impedit voluptatem
+												dolorum in obcaecati fugit
+												deserunt non dolor eos!
+											</p>
+
+											<small class="text-gray">
+												john Ken · 58m
+											</small>
+										</div>
+									</a>
+
+									<a
+										class="dropdown-item pb-2 text-center text-gray"
+										href="message.html"
+										><small>Read More Messages</small></a
+									>
+								</div>
+							</div>
+
+							<a
+								class="btn btn-primary rounded-pill ms-auto position-relative"
+								href="#"
+								id="alertsDropdown"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								<i class="bi bi-box-arrow-in-right me-2"></i
+								>logout
+							</a>
+						</div>
+
+						<div class="col px-4 pb-5">
+							<ul
+								class="nav nav-tabs"
+								id="contactsTab1"
+								role="tablist"
+							>
+								<li class="nav-item" role="presentation">
+									<button
+										class="nav-link active"
+										id="c1"
+										data-bs-toggle="tab"
+										data-bs-target="#c1-tab"
+										type="button"
+										role="tab"
+										aria-controls="c1-tab"
+										aria-selected="true"
+									>
+										Contact Manager
+									</button>
+								</li>
+
+								<li class="nav-item" role="presentation">
+									<button
+										class="nav-link"
+										id="c2"
+										data-bs-toggle="tab"
+										data-bs-target="#c2-tab"
+										type="button"
+										role="tab"
+										aria-controls="c2-tab"
+										aria-selected="false"
+									>
+										My Contacts
+									</button>
+								</li>
+
+								<li class="nav-item" role="presentation">
+									<button
+										class="nav-link"
+										id="c3"
+										data-bs-toggle="tab"
+										data-bs-target="#c3-tab"
+										type="button"
+										role="tab"
+										aria-controls="c3-tab"
+										aria-selected="false"
+									>
+										Business cards
+									</button>
+								</li>
+							</ul>
+
+							<div class="py-5 tab-content">
+								<div
+									class="tab-pane active"
+									id="c1-tab"
+									role="tabpanel"
+								>
+									<div class="">
+										<div
+											class="row align-items-center g-5 py-5"
+										>
+											<div
+												class="col-10 col-sm-8 col-lg-6"
+											>
+												<img
+													src="/assets/images/cm0.png"
+													class="d-block mx-lg-auto img-fluid"
+													alt="Bootstrap Themes"
+													width="700"
+													height="500"
+													loading="lazy"
+												/>
+											</div>
+
+											<div class="col-lg-6 text-center">
+												<h2 class="mb-3 text-gray">
+													How It Works
+												</h2>
+
+												<p class="lead">
+													Lorem ipsum dolor, sit amet
+													consectetur adipisicing
+													elit. Aspernatur fugiat
+													provident debitis, est
+													ratione facilis, amet
+													molestias nesciunt
+												</p>
+											</div>
+										</div>
+
+										<div
+											class="row flex-lg-row-reverse align-items-center g-5 py-5"
+										>
+											<div
+												class="col-10 col-sm-8 col-lg-6"
+											>
+												<img
+													src="/assets/images/Screenshot1.png"
+													class="d-block c-rounded-1 mx-lg-auto shadow-lg border img-fluid"
+													alt="Bootstrap Themes"
+													width="700"
+													height="500"
+													loading="lazy"
+												/>
+											</div>
+
+											<div class="col-lg-6 text-center">
+												<h3 class="mb-2 text-gray">
+													<i class="bi bi-apple"></i>
+													<i
+														class="bi bi-instagram"
+													></i>
+													<i class="bi bi-google"></i>
+												</h3>
+
+												<h2 class="mb-3 text-gray">
+													Sync Across Accounts
+												</h2>
+
+												<p class="lead">
+													We connect multiple accounts
+													or sources to create a
+													unified address book for
+													you. Get up-to-date contact
+													information that syncs
+													across multiple accounts and
+													devices automatically.
+												</p>
+											</div>
+										</div>
+
+										<div
+											class="row align-items-center g-5 py-5"
+										>
+											<div
+												class="col-10 col-sm-8 col-lg-6"
+											>
+												<img
+													src="/assets/images/Screenshot2.png"
+													class="d-block c-rounded-1 shadow-lg border mx-lg-auto img-fluid"
+													alt="Bootstrap Themes"
+													width="700"
+													height="500"
+													loading="lazy"
+												/>
+											</div>
+
+											<div class="col-lg-6 text-center">
+												<h3 class="mb-2 text-gray">
+													<i class="bi bi-clock"></i>
+												</h3>
+
+												<h2 class="mb-3 text-gray">
+													Stay Up-To-Date
+												</h2>
+
+												<p class="lead">
+													We let you know what contact
+													information may be
+													out-of-date. Automated scans
+													ensure you always have the
+													most accurate information.
+												</p>
+											</div>
+										</div>
+
+										<div class="row">
+											<div
+												class="px-4 py-5 my-5 col-md-6 text-gray text-center"
+											>
+												<h3>
+													<i class="bi bi-front"></i>
+												</h3>
+												<h1>
+													Eliminate <br />
+													Duplicates
+												</h1>
+												<p class="lead mb-4">
+													We detect duplicates and
+													updates for frustration-free
+													contact management. Merge
+													duplicates to create a
+													unified address book across
+													multiple accounts and
+													devices.
+												</p>
+											</div>
+
+											<div
+												class="px-4 py-5 my-5 col-md-6 text-gray text-center"
+											>
+												<h3>
+													<i class="bi bi-globe"></i>
+												</h3>
+												<h1>
+													Access Contacts Anywhere
+												</h1>
+												<p class="lead mb-4">
+													Our app is available across
+													Web, iOS, Android, Chrome &
+													Mac, ensuring contacts are
+													synced, up-to-date, and
+													available wherever you are.
+													Access and manage your
+													contacts anytime, anywhere.
+												</p>
+											</div>
+										</div>
+
+										<div
+											class="row flex-lg-row-reverse align-items-center g-5 py-5"
+										>
+											<div
+												class="col-10 col-sm-8 col-lg-6"
+											>
+												<img
+													src="/assets/images/cm3.jpg"
+													class="d-block c-rounded-1 mx-lg-auto shadow-lg border img-fluid"
+													alt="Bootstrap Themes"
+													width="700"
+													height="500"
+													loading="lazy"
+												/>
+											</div>
+
+											<div class="col-lg-6 text-center">
+												<h3 class="mb-2 text-gray">
+													<i class="bi bi-camera"></i>
+												</h3>
+
+												<h2 class="mb-3 text-gray">
+													Scan & Save Business Cards
+												</h2>
+
+												<p class="lead">
+													We transcribe business cards
+													and double-verify them
+													before adding them as new
+													contacts in your address
+													book. Scan and save business
+													cards on-the-go using our
+													mobile app or upload them in
+													bulk using the web app.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div
+									class="tab-pane"
+									id="c2-tab"
+									role="tabpanel"
+								>
+									<div class="row">
+										<h3
+											class="mb-3 d-flex justify-content-between align-items-center"
+										>
+											<span> My Contacts</span>
+
+											<!-- Button trigger modal -->
+											<button
+												type="button"
+												class="btn fs-5 btn-primary rounded-pill px-3"
+												data-bs-toggle="modal"
+												data-bs-target="#staticBackdrop"
+											>
+												sync<i
+													class="bi bi-cloud-upload ms-2"
+												></i>
+											</button>
+
+											<!-- Modal -->
+											<div
+												class="modal fade"
+												id="staticBackdrop"
+												data-bs-backdrop="static"
+												data-bs-keyboard="false"
+												tabindex="-1"
+												aria-labelledby="staticBackdropLabel"
+												aria-hidden="true"
+											>
+												<div
+													class="modal-dialog modal-dialog-centered"
+												>
+													<div
+														class="modal-content p-4 c-rounded-2"
+													>
+														<div
+															class="modal-header"
+														>
+															<h5
+																class="modal-title"
+																id="staticBackdropLabel"
+															>
+																Sync With
+															</h5>
+
+															<button
+																type="button"
+																class="btn-close fs-5"
+																data-bs-dismiss="modal"
+																aria-label="Close"
+															></button>
+														</div>
+
+														<div
+															class="modal-body px-5"
+														>
+															<button
+																class="btn btn-outline-dark mb-2 rounded-pill w-100"
+															>
+																<i
+																	class="bi bi-telephone fs-5 me-2"
+																>
+																</i
+																>Phonebook
+															</button>
+
+															<button
+																class="btn btn-outline-dark mb-2 rounded-pill w-100"
+															>
+																<i
+																	class="bi bi-google fs-5 me-2"
+																>
+																</i
+																>Google
+															</button>
+
+															<button
+																class="btn btn-outline-dark mb-2 rounded-pill w-100"
+															>
+																<i
+																	class="bi bi-apple fs-5 me-2"
+																>
+																</i
+																>Apple
+															</button>
+
+															<button
+																class="btn btn-outline-dark mb-2 rounded-pill w-100"
+															>
+																<i
+																	class="bi bi-facebook fs-5 me-2"
+																>
+																</i
+																>Facebook
+															</button>
+
+															<button
+																class="btn btn-outline-dark mb-2 rounded-pill w-100"
+															>
+																<i
+																	class="bi bi-twitter fs-5 me-2"
+																>
+																</i
+																>Whatsapp
+															</button>
+
+															<button
+																class="btn btn-outline-dark mb-2 rounded-pill w-100"
+															>
+																<i
+																	class="fab fa-yahoo fs-5 me-2"
+																>
+																</i
+																>Yahoo
+															</button>
+
+															<button
+																class="btn btn-outline-dark mb-2 rounded-pill w-100"
+															>
+																<i
+																	class="bi bi-instagram fs-5 me-2"
+																>
+																</i
+																>Instagram
+															</button>
+
+															<button
+																class="btn btn-outline-dark mb-2 rounded-pill w-100"
+															>
+																<i
+																	class="bi bi-twitter fs-5 me-2"
+																>
+																</i
+																>Twitter
+															</button>
+
+															<button
+																class="btn btn-outline-dark mb-2 rounded-pill w-100"
+															>
+																<i
+																	class="bi bi-cloud-upload fs-5 me-2"
+																>
+																</i
+																>Add Other
+															</button>
+														</div>
+
+														<!-- <div
+															class="modal-footer"
+														>
+															<button
+																type="button"
+																class="btn btn-secondary"
+																data-bs-dismiss="modal"
+															>
+																Close
+															</button>
+															<button
+																type="button"
+																class="btn btn-primary"
+															>
+																Understood
+															</button>
+														</div> -->
+													</div>
+												</div>
+											</div>
+
+											<!-- <div class="ms- 2 dropdown open">
+												<button
+													class="btn text-a-link-blue d-flex flex-nowrap fs-5"
+													type="button"
+													id="triggerId11"
+													data-bs-toggle="dropdown"
+													aria-haspopup="true"
+													aria-expanded="false"
+												>
+													sync<i
+														class="bi bi-caret-down-fill ms-2"
+													></i>
+												</button>
+
+												<div
+													class="dropdown-menu"
+													aria-labelledby="triggerId11"
+												>
+													<button
+														class="dropdown-item"
+														href="#"
+													>
+														Sync With Phonebook
+													</button>
+
+													<button
+														class="dropdown-item"
+														href="#"
+													>
+														Sync With Google
+													</button>
+
+													<button
+														class="dropdown-item"
+														href="#"
+													>
+														Sync With iCloud
+													</button>
+
+													<button
+														class="dropdown-item"
+														href="#"
+													>
+														Sync With Instagram
+													</button>
+
+													<button
+														class="dropdown-item"
+														href="#"
+													>
+														Sync With Facebook
+													</button>
+												</div>
+											</div> -->
+										</h3>
+
+										<div class="col-4">
+											<div
+												class="p-3 ps-0 d-flex flex-column align-items-center"
+											>
+												<input
+													type="search"
+													class="form-control rounded-pill p-3 my-2"
+													placeholder="Search Contacts"
+												/>
+
+												<div
+													class="d-flex w-100 bg-light c-rounded-2 my-2 p-2 align-items-center"
+												>
+													<div
+														style="
+															width: 50px;
+															height: 50px;
+														"
+														class="me-3 d-flex border align-items-center bg-dark rounded-circle overflow-hidden border"
+													>
+														<img
+															src="assets/images/user2.jpg"
+															class="w-100"
+														/>
+													</div>
+
+													<div>
+														<p class="p-0 m-0">
+															<b>John Doe</b>
+														</p>
+													</div>
+
+													<div
+														class="dropdown open ms-auto"
+													>
+														<button
+															class="btn text-a-link-blue p-0 fs-5"
+															type="button"
+															id="triggerId21"
+															data-bs-toggle="dropdown"
+															aria-haspopup="true"
+															aria-expanded="false"
+														>
+															<i
+																class="bi bi-three-dots-vertical"
+															></i>
+														</button>
+
+														<div
+															class="dropdown-menu"
+															aria-labelledby="triggerId21"
+														>
+															<button
+																class="dropdown-item"
+																href="#"
+															>
+																Edit
+															</button>
+															<button
+																class="dropdown-item"
+																href="#"
+															>
+																Delete
+															</button>
+														</div>
+													</div>
+												</div>
+
+												<div
+													class="d-flex w-100 bg-light c-rounded-2 my-2 p-2 align-items-center"
+												>
+													<div
+														style="
+															width: 50px;
+															height: 50px;
+														"
+														class="me-3 d-flex border align-items-center bg-dark rounded-circle overflow-hidden border"
+													>
+														<img
+															src="assets/images/user2.jpg"
+															class="w-100"
+														/>
+													</div>
+
+													<div>
+														<p class="p-0 m-0">
+															<b>John Doe</b>
+														</p>
+													</div>
+
+													<div
+														class="dropdown open ms-auto"
+													>
+														<button
+															class="btn text-a-link-blue p-0 fs-5"
+															type="button"
+															id="triggerId22"
+															data-bs-toggle="dropdown"
+															aria-haspopup="true"
+															aria-expanded="false"
+														>
+															<i
+																class="bi bi-three-dots-vertical"
+															></i>
+														</button>
+
+														<div
+															class="dropdown-menu"
+															aria-labelledby="triggerId22"
+														>
+															<button
+																class="dropdown-item"
+																href="#"
+															>
+																Edit
+															</button>
+															<button
+																class="dropdown-item"
+																href="#"
+															>
+																Delete
+															</button>
+														</div>
+													</div>
+												</div>
+
+												<div
+													class="d-flex w-100 bg-light c-rounded-2 my-2 p-2 align-items-center"
+												>
+													<div
+														style="
+															width: 50px;
+															height: 50px;
+														"
+														class="me-3 d-flex border align-items-center bg-dark rounded-circle overflow-hidden border"
+													>
+														<img
+															src="assets/images/user2.jpg"
+															class="w-100"
+														/>
+													</div>
+
+													<div>
+														<p class="p-0 m-0">
+															<b>John Doe</b>
+														</p>
+													</div>
+
+													<div
+														class="dropdown open ms-auto"
+													>
+														<button
+															class="btn text-a-link-blue p-0 fs-5"
+															type="button"
+															id="triggerId23"
+															data-bs-toggle="dropdown"
+															aria-haspopup="true"
+															aria-expanded="false"
+														>
+															<i
+																class="bi bi-three-dots-vertical"
+															></i>
+														</button>
+
+														<div
+															class="dropdown-menu"
+															aria-labelledby="triggerId23"
+														>
+															<button
+																class="dropdown-item"
+																href="#"
+															>
+																Edit
+															</button>
+															<button
+																class="dropdown-item"
+																href="#"
+															>
+																Delete
+															</button>
+														</div>
+													</div>
+												</div>
+
+												<div
+													class="d-flex w-100 bg-light c-rounded-2 my-2 p-2 align-items-center"
+												>
+													<div
+														style="
+															width: 50px;
+															height: 50px;
+														"
+														class="me-3 d-flex border align-items-center bg-dark rounded-circle overflow-hidden border"
+													>
+														<img
+															src="assets/images/user2.jpg"
+															class="w-100"
+														/>
+													</div>
+
+													<div>
+														<p class="p-0 m-0">
+															<b>John Doe</b>
+														</p>
+													</div>
+
+													<div
+														class="dropdown open ms-auto"
+													>
+														<button
+															class="btn text-a-link-blue p-0 fs-5"
+															type="button"
+															id="triggerId24"
+															data-bs-toggle="dropdown"
+															aria-haspopup="true"
+															aria-expanded="false"
+														>
+															<i
+																class="bi bi-three-dots-vertical"
+															></i>
+														</button>
+
+														<div
+															class="dropdown-menu"
+															aria-labelledby="triggerId24"
+														>
+															<button
+																class="dropdown-item"
+																href="#"
+															>
+																Edit
+															</button>
+															<button
+																class="dropdown-item"
+																href="#"
+															>
+																Delete
+															</button>
+														</div>
+													</div>
+												</div>
+
+												<div
+													class="d-flex w-100 bg-light c-rounded-2 my-2 p-2 align-items-center"
+												>
+													<div
+														style="
+															width: 50px;
+															height: 50px;
+														"
+														class="me-3 d-flex border align-items-center bg-dark rounded-circle overflow-hidden border"
+													>
+														<img
+															src="assets/images/user2.jpg"
+															class="w-100"
+														/>
+													</div>
+
+													<div>
+														<p class="p-0 m-0">
+															<b>John Doe</b>
+														</p>
+													</div>
+
+													<div
+														class="dropdown open ms-auto"
+													>
+														<button
+															class="btn text-a-link-blue p-0 fs-5"
+															type="button"
+															id="triggerId25"
+															data-bs-toggle="dropdown"
+															aria-haspopup="true"
+															aria-expanded="false"
+														>
+															<i
+																class="bi bi-three-dots-vertical"
+															></i>
+														</button>
+
+														<div
+															class="dropdown-menu"
+															aria-labelledby="triggerId25"
+														>
+															<button
+																class="dropdown-item"
+																href="#"
+															>
+																Edit
+															</button>
+															<button
+																class="dropdown-item"
+																href="#"
+															>
+																Delete
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div
+											class="col bg-light c-rounded-2 py-3 position-relative"
+										>
+											<div
+												class="bg-dark mx-auto d-flex justify-content-center shadow align-items-center rounded-circle overflow-hidden"
+												style="
+													width: 6rem;
+													height: 6rem;
+													border: solid 4px gray;
+												"
+											>
+												<img
+													src="assets/img/5.jpg"
+													class="w-100"
+												/>
+											</div>
+
+											<h2 class="text-center my-2">
+												John Doe
+											</h2>
+
+											<p class="lead text-center my-2">
+												Financial Advisor
+											</p>
+
+											<!-- <p
+												class="text-center px-3 px-lg-0 my-2"
+											>
+												<i
+													class="bi bi-clock fs-5 mx-2"
+												></i
+												>Mon - Thu, 9am - 5pm |<i
+													class="bi bi-briefcase fs-5 mx-2"
+												></i
+												>Financial Advisory |<i
+													class="bi bi-geo-alt fs-5 mx-2"
+												></i
+												>Harare, Zimbabwe
+											</p> -->
+
+											<!-- <div
+												class="position-absolute top-0 end-0 w-fit"
+											>
+												<div
+													class="d-flex justify-content-center"
+												>
+
+													<div class="dropdown open">
+														<button
+															class="btn p-0 fs-5"
+															type="button"
+															id="triggerId2"
+															data-bs-toggle="dropdown"
+															aria-haspopup="true"
+															aria-expanded="false"
+														>
+															<i
+																class="bi bi-three-dots-vertical"
+															></i>
+														</button>
+
+														<div
+															class="dropdown-menu"
+															aria-labelledby="triggerId2"
+														>
+															<button
+																class="dropdown-item"
+																href="#"
+															>
+																Edit
+															</button>
+															<button
+																class="dropdown-item"
+																href="#"
+															>
+																Delete
+															</button>
+														</div>
+													</div>
+												</div>
+											</div> -->
+
+											<div
+												class="row row-cols p-3 justify-content-center gap-3"
+											>
+												<div
+													class="col-12 mb-2 mb-lg-0 col-lg p-4"
+												>
+													<!-- <p>
+														<i
+															class="bi bi-geo-alt me-2 fs-4"
+														></i
+														>Harare, Belvedere
+													</p> -->
+													<p>
+														<i
+															class="bi bi-telephone me-2 fs-4"
+														></i
+														>+263 77566832
+													</p>
+													<p>
+														<i
+															class="bi bi-briefcase me-2 fs-4"
+														></i
+														>CABS Bank
+													</p>
+													<!-- <div class="d-flex">
+														<a href="">
+															<i
+																class="bi bi-link-45deg me-2 fs-4"
+															></i
+														></a>
+														<a href="">
+															<i
+																class="bi bi-twitter me-2 fs-4"
+															></i
+														></a>
+														<a href="">
+															<i
+																class="bi bi-instagram me-2 fs-4"
+															></i
+														></a>
+													</div> -->
+												</div>
+
+												<div class="col-12 col-lg p-4">
+													<p>
+														<i
+															class="bi bi-geo-alt me-2 fs-4"
+														></i
+														>544 NT Belvedere,
+														Harare
+													</p>
+													<!-- <h5>
+														<i
+															class="bi bi-geo-alt me-2 fs-4"
+														></i
+														>Location
+													</h5>
+													<div
+														class="w-100 c-rounded-1 overflow-hidden bg-gray"
+													>
+														<iframe
+															src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.048860360313!2d-2.402101873046882!3d53.53904180000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487ba8a0a3e37291%3A0x502a44f8cb49203a!2sOuter%20Space%20Storage%20Centres!5e0!3m2!1sen!2szw!4v1653838105899!5m2!1sen!2szw"
+															frameborder="0"
+															class="border-0 w-100 h-100 d-block"
+															allowfullscreen
+														></iframe>
+													</div> -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div
+									class="tab-pane"
+									id="c3-tab"
+									role="tabpanel"
+								>
+									<div>
+										<h2
+											class="border-bottom d-flex justify-content-between align-items-center pb-2"
+										>
+											<span>Business Cards</span>
+
+											<button
+												onclick="this.nextElementSibling.click()"
+												class="btn btn-primary rounded-pill fs-5 px-3"
+											>
+												scan<i
+													class="bi bi-camera fs-5 ms-2"
+												></i>
+											</button>
+
+											<input type="file" class="d-none" />
+
+											<!-- <div
+												class="d-flex justify-content-center"
+											>
+												<div class="dropdown open">
+													<button
+														class="btn p-0 fs-5"
+														type="button"
+														id="triggerId3"
+														data-bs-toggle="dropdown"
+														aria-haspopup="true"
+														aria-expanded="false"
+													>
+														<i
+															class="bi bi-three-dots-vertical"
+														></i>
+													</button>
+
+													<div
+														class="dropdown-menu"
+														aria-labelledby="triggerId3"
+													>
+														<button
+															class="dropdown-item"
+															href="#"
+														>
+															Delete
+														</button>
+														<button
+															class="dropdown-item"
+															href="#"
+														>
+															Scan
+														</button>
+													</div>
+												</div>
+											</div> -->
+										</h2>
+
+										<div class="py-3 gy-3 row row-cols-3">
+											<div
+												class="col d-flex align-items-center"
+											>
+												<div class="card">
+													<img
+														class="card-img-top"
+														src="assets/images/cm33.jpg"
+													/>
+
+													<div class="card-body">
+														<h4
+															class="card-title d-flex justify-content-between"
+														>
+															Sarah Abrams
+															<a href=""
+																><i
+																	class="bi bi-trash fs-5 ms-2"
+																></i
+															></a>
+														</h4>
+														<p class="card-text">
+															Head of Marketing
+															<br />
+															sarah@acme.com
+															<br />
+															+263 77884545
+														</p>
+													</div>
+												</div>
+											</div>
+
+											<div
+												class="col d-flex align-items-center"
+											>
+												<div class="card">
+													<img
+														class="card-img-top"
+														src="assets/images/cm33.jpg"
+													/>
+
+													<div class="card-body">
+														<h4
+															class="card-title d-flex justify-content-between"
+														>
+															Sarah Abrams
+															<a href=""
+																><i
+																	class="bi bi-trash fs-5 ms-2"
+																></i
+															></a>
+														</h4>
+														<p class="card-text">
+															Head of Marketing
+															<br />
+															sarah@acme.com
+															<br />
+															+263 77884545
+														</p>
+													</div>
+												</div>
+											</div>
+
+											<div
+												class="col d-flex align-items-center"
+											>
+												<div class="card">
+													<img
+														class="card-img-top"
+														src="assets/images/cm33.jpg"
+													/>
+
+													<div class="card-body">
+														<h4
+															class="card-title d-flex justify-content-between"
+														>
+															Sarah Abrams
+															<a href=""
+																><i
+																	class="bi bi-trash fs-5 ms-2"
+																></i
+															></a>
+														</h4>
+														<p class="card-text">
+															Head of Marketing
+															<br />
+															sarah@acme.com
+															<br />
+															+263 77884545
+														</p>
+													</div>
+												</div>
+											</div>
+
+											<div
+												class="col d-flex align-items-center"
+											>
+												<div class="card">
+													<img
+														class="card-img-top"
+														src="assets/images/cm33.jpg"
+													/>
+
+													<div class="card-body">
+														<h4
+															class="card-title d-flex justify-content-between"
+														>
+															Sarah Abrams
+															<a href=""
+																><i
+																	class="bi bi-trash fs-5 ms-2"
+																></i
+															></a>
+														</h4>
+														<p class="card-text">
+															Head of Marketing
+															<br />
+															sarah@acme.com
+															<br />
+															+263 77884545
+														</p>
+													</div>
+												</div>
+											</div>
+
+											<div
+												class="col d-flex align-items-center"
+											>
+												<div class="card">
+													<img
+														class="card-img-top"
+														src="assets/images/cm33.jpg"
+													/>
+
+													<div class="card-body">
+														<h4
+															class="card-title d-flex justify-content-between"
+														>
+															Sarah Abrams
+															<a href=""
+																><i
+																	class="bi bi-trash fs-5 ms-2"
+																></i
+															></a>
+														</h4>
+														<p class="card-text">
+															Head of Marketing
+															<br />
+															sarah@acme.com
+															<br />
+															+263 77884545
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer
+			class="d-flex container flex-wrap justify-content-between align-items-center py-5 px-3"
+		>
+			<div class="col d-flex align-items-center">
+				<span class="text-muted"
+					>&copy; 2022 Gum.iNc. All Rights Reserved</span
+				>
+				<a
+					href="partner.html"
+					class="btn btn-success px-3 rounded-pill ms-3"
+					>Partner With Us</a
+				>
+			</div>
+
+			<ul
+				class="nav col-md-4 justify-content-end fs-4 list-unstyled d-flex"
+			>
+				<li class="ms-3">
+					<a
+						class="text-muted"
+						href="https://www.twitter.com"
+						target="_blank"
+						><i class="bi bi-twitter"></i
+					></a>
+				</li>
+
+				<li class="ms-3">
+					<a
+						class="text-muted"
+						href="https://www.instagram.com"
+						target="_blank"
+						><i class="bi bi-instagram"></i
+					></a>
+				</li>
+
+				<li class="ms-3">
+					<a
+						class="text-muted"
+						href="https://www.facebook.com"
+						target="_blank"
+						><i class="bi bi-facebook"></i
+					></a>
+				</li>
+			</ul>
+		</footer>
+	</body>
+</html>
