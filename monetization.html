@@ -25,8 +25,6 @@
 
 		<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css" />
 
-		<link rel="stylesheet" href="./assets/css/forkeeps.css" />
-
 		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<script
@@ -36,14 +34,24 @@
 
 		<script defer src="./assets/js/main.js"></script>
 		<script defer src="./assets/js/custom.js"></script>
-
-		<!-------------------------------------------------------------------------------------->
-
-		<!-- chart scripts -->
-		<script defer src="./assets/vendor/chart.js/Chart.min.js"></script>
-		<script defer src="./assets/js/demo/chart-area-demo.js"></script>
-		<script defer src="./assets/js/demo/chart-pie-demo.js"></script>
 	</head>
+
+	<style>
+		#monetizationTab .nav-link {
+			border-radius: 20px 20px 0 0;
+		}
+		#monetizationTab .nav-link {
+			color: inherit;
+			border-top-width: medium;
+		}
+		#monetizationTab .nav-link.active {
+			background-color: whitesmoke;
+		}
+		#accordion1 .accordion-body {
+			background-color: whitesmoke;
+			padding-bottom: 3rem !important	;
+		}
+	</style>
 
 	<body class="pt-5">
 		<div id="invisible-elements">
@@ -457,7 +465,7 @@
 							<div class="border-bottom">
 								<a
 									href="./algorithm.html"
-									class="btn w-100 nav-accord-active text-start p-3"
+									class="btn w-100 text-start p-3"
 								>
 									<i
 										class="bi bi-bar-chart-line fs-5 me-2"
@@ -486,7 +494,19 @@
 								</a>
 							</div>
 
-							<div class="accordion-item">
+							<div class="border-bottom">
+								<a
+									href="./monetization.html"
+									class="btn w-100 nav-accord-active text-start p-3"
+								>
+									<i
+										class="bi bi-currency-dollar fs-5 me-2"
+									></i
+									>Monetization
+								</a>
+							</div>
+
+							<!-- <div class="accordion-item">
 								<h2
 									class="accordion-header"
 									id="flush-heading1"
@@ -550,7 +570,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 
 							<div class="border-bottom">
 								<a
@@ -819,340 +839,621 @@
 							</a>
 						</div>
 
-						<div class="col px-4">
-							<div
-								class="d-flex align-items-center justify-content-between mb-4"
+						<div class="col">
+							<ul
+								class="nav nav-tabs"
+								id="monetizationTab"
+								role="tablist"
 							>
-								<h2 class="m-0">Account Statistics</h2>
-
-								<a class="btn btn-success rounded-pill px-3">
-									<i class="bi bi-download me-2"></i>Generate
-									Report
-								</a>
-							</div>
-
-							<div class="row row-cols-4 mb-4">
-								<div class="col mb-4">
-									<div
-										class="shadow h-100 c-rounded-1 d-flex justify-content-between align-items-center p-4"
+								<li class="nav-item" role="presentation">
+									<button
+										class="nav-link active"
+										id="toggle1"
+										data-bs-toggle="tab"
+										data-bs-target="#tab1"
+										type="button"
+										role="tab"
+										aria-controls="tab1"
+										aria-selected="true"
 									>
-										<div class="me-2">
-											<div
-												class="text-success text-uppercase mb-1"
+										Security Clearence<i
+											class="bi bi-exclamation-triangle ms-2"
+										></i>
+									</button>
+								</li>
+
+								<li class="nav-item" role="presentation">
+									<button
+										class="nav-link"
+										id="toggle2"
+										data-bs-toggle="tab"
+										data-bs-target="#tab2"
+										type="button"
+										role="tab"
+										aria-controls="tab2"
+										aria-selected="false"
+									>
+										Monetization
+									</button>
+								</li>
+
+								<li class="nav-item" role="presentation">
+									<button
+										class="nav-link"
+										id="toggle3"
+										data-bs-toggle="tab"
+										data-bs-target="#tab3"
+										type="button"
+										role="tab"
+										aria-controls="tab3"
+										aria-selected="false"
+									>
+										Wallets & Transfers
+									</button>
+								</li>
+							</ul>
+
+							<div
+								style="min-height: 60vh !important"
+								class="tab-content p-5"
+							>
+								<div
+									class="tab-pane"
+									id="tab1"
+									role="tabpanel"
+									aria-labelledby="toggle1"
+								>
+									<form
+										class="col-6 shadow p-4 c-rounded-1 mx-auto"
+									>
+										<div class="mb-3 text-center">
+											<i class="bi bi-lock fs-1"></i>
+											<p class="text-success">
+												Enter Your Pin To Proceed
+											</p>
+										</div>
+
+										<div class="form-floating my-4">
+											<input
+												type="text"
+												value="******"
+												class="form-control"
+												placeholder="Access PIN ***"
+											/>
+											<label>Access PIN ***</label>
+										</div>
+
+										<div class="text-center">
+											<button
+												type="submit"
+												class="btn btn-success rounded-pill"
 											>
-												Contact Value
-											</div>
-
-											<div class="h5 mb-0">$100,000</div>
+												Proceed
+											</button>
 										</div>
-
-										<div>
-											<i
-												class="bi bi-currency-dollar text-success fs-2"
-											></i>
-										</div>
-									</div>
+									</form>
 								</div>
 
-								<div class="col mb-4">
+								<div
+									class="tab-pane active"
+									id="tab2"
+									role="tabpanel"
+									aria-labelledby="toggle2"
+								>
 									<div
-										class="shadow h-100 c-rounded-1 d-flex justify-content-between align-items-center p-4"
+										class="accordion accordion-flush c-rounded-2 shadow p-4"
+										id="accordion1"
 									>
-										<div class="me-2">
-											<div
-												class="text-success text-uppercase mb-1"
+										<div class="accordion-item">
+											<h2
+												class="accordion-header"
+												id="flush-heading1"
 											>
-												Earnings
-											</div>
-
-											<div class="h5 mb-0">$40,000</div>
-										</div>
-
-										<div>
-											<i
-												class="bi bi-coin text-success fs-2"
-											></i>
-										</div>
-									</div>
-								</div>
-
-								<div class="col mb-4">
-									<div
-										class="shadow h-100 c-rounded-1 d-flex justify-content-between align-items-center p-4"
-									>
-										<div class="me-2">
-											<div
-												class="text-success text-uppercase mb-1"
-											>
-												Search Appearances
-											</div>
-
-											<div class="h5 mb-0">12,000</div>
-										</div>
-
-										<div>
-											<i
-												class="bi bi-search text-success fs-2"
-											></i>
-										</div>
-									</div>
-								</div>
-
-								<div class="col mb-4">
-									<div
-										class="shadow h-100 c-rounded-1 d-flex justify-content-between align-items-center p-4"
-									>
-										<div class="me-2">
-											<div
-												class="text-success text-uppercase mb-1"
-											>
-												Profile Views
-											</div>
-
-											<div class="h5 mb-0">400</div>
-										</div>
-
-										<div>
-											<i
-												class="bi bi-eye text-success fs-2"
-											></i>
-										</div>
-									</div>
-								</div>
-
-								<div class="col mb-4">
-									<div
-										class="shadow h-100 c-rounded-1 d-flex justify-content-between align-items-center p-4"
-									>
-										<div class="me-2">
-											<div
-												class="text-success text-uppercase mb-1"
-											>
-												Bookmarked
-											</div>
-
-											<div class="h5 mb-0">30 Times</div>
-										</div>
-
-										<div>
-											<i
-												class="bi bi-bookmark-star text-success fs-2"
-											></i>
-										</div>
-									</div>
-								</div>
-
-								<div class="col mb-4">
-									<div
-										class="shadow h-100 c-rounded-1 d-flex justify-content-between align-items-center p-4"
-									>
-										<div class="me-2">
-											<div
-												class="text-success text-uppercase mb-1"
-											>
-												Linked Acounts
-											</div>
-
-											<div class="h5 mb-0">2</div>
-										</div>
-
-										<div>
-											<i
-												class="bi bi-cloud-check text-success fs-2"
-											></i>
-										</div>
-									</div>
-								</div>
-
-								<div class="col mb-4">
-									<div
-										class="shadow h-100 c-rounded-1 d-flex justify-content-between align-items-center p-4"
-									>
-										<div class="me-2">
-											<div
-												class="text-success text-uppercase mb-1"
-											>
-												Mentions
-											</div>
-
-											<div class="h5 mb-0">20</div>
-										</div>
-
-										<div>
-											<i
-												class="bi bi-chat-quote text-success fs-2"
-											></i>
-										</div>
-									</div>
-								</div>
-
-								<div class="col mb-4">
-									<div
-										class="shadow h-100 c-rounded-1 d-flex justify-content-between align-items-center p-4"
-									>
-										<div class="me-2">
-											<div
-												class="text-success text-uppercase mb-1"
-											>
-												Unique Viewers
-											</div>
-
-											<div class="h5 mb-0">8</div>
-										</div>
-
-										<div>
-											<i
-												class="bi bi-star text-success fs-2"
-											></i>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-xl-8 col-lg-7">
-									<div class="card shadow mb-4">
-										<div
-											class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
-										>
-											<h6 class="m-0 text-success">
-												Earnings Overview
-											</h6>
-
-											<div class="dropdown">
 												<button
-													class="btn"
+													class="accordion-button collapsed"
 													type="button"
-													id="dropdownMenuButton1"
-													data-bs-toggle="dropdown"
-													aria-expanded="false"
+													data-bs-toggle="collapse"
+													data-bs-target="#flush-collapse1"
+													aria-expanded="true"
+													aria-controls="flush-collapse1"
 												>
-													<i
-														class="bi bi-three-dots-vertical"
-													></i>
+													Invest in your Gum.iNc
+													account
 												</button>
+											</h2>
 
-												<ul
-													class="dropdown-menu"
-													aria-labelledby="dropdownMenuButton1"
-												>
-													<li>
-														<a
-															class="dropdown-item"
-															href="#"
-															>Action</a
-														>
-													</li>
-													<li>
-														<a
-															class="dropdown-item"
-															href="#"
-															>Another action</a
-														>
-													</li>
-													<li>
-														<a
-															class="dropdown-item"
-															href="#"
-															>Something else
-															here</a
-														>
-													</li>
-												</ul>
+											<div
+												id="flush-collapse1"
+												class="accordion-collapse collapse"
+												aria-labelledby="flush-heading1"
+												data-bs-parent="#accordion1"
+											>
+												<div class="accordion-body">
+													This is the first item's
+													accordion body.
+												</div>
 											</div>
 										</div>
 
-										<div class="card-body">
-											<div class="chart-area">
-												<canvas
-													id="myAreaChart"
-												></canvas>
+										<div class="accordion-item">
+											<h2
+												class="accordion-header"
+												id="flush-heading2"
+											>
+												<button
+													class="accordion-button collapsed"
+													type="button"
+													data-bs-toggle="collapse"
+													data-bs-target="#flush-collapse2"
+													aria-expanded="true"
+													aria-controls="flush-collapse2"
+												>
+													Every 100 people that access
+													your Gum.iNc you earn $30 C
+												</button>
+											</h2>
+
+											<div
+												id="flush-collapse2"
+												class="accordion-collapse collapse"
+												aria-labelledby="flush-heading2"
+												data-bs-parent="#accordion1"
+											>
+												<div class="accordion-body">
+													This is the first item's
+													accordion body.
+												</div>
+											</div>
+										</div>
+
+										<div class="accordion-item">
+											<h2
+												class="accordion-header"
+												id="flush-heading3"
+											>
+												<button
+													class="accordion-button collapsed"
+													type="button"
+													data-bs-toggle="collapse"
+													data-bs-target="#flush-collapse3"
+													aria-expanded="true"
+													aria-controls="flush-collapse3"
+												>
+													Earn as a Gum.iNc sales
+													agent and Sales
+													representative and earn
+												</button>
+											</h2>
+
+											<div
+												id="flush-collapse3"
+												class="accordion-collapse collapse"
+												aria-labelledby="flush-heading3"
+												data-bs-parent="#accordion1"
+											>
+												<div class="accordion-body">
+													This is the first item's
+													accordion body.
+												</div>
+											</div>
+										</div>
+
+										<div class="accordion-item">
+											<h2
+												class="accordion-header"
+												id="flush-heading4"
+											>
+												<button
+													class="accordion-button collapsed"
+													type="button"
+													data-bs-toggle="collapse"
+													data-bs-target="#flush-collapse4"
+													aria-expanded="true"
+													aria-controls="flush-collapse4"
+												>
+													Suggest / Subscribe a
+													colleague and earn
+												</button>
+											</h2>
+
+											<div
+												id="flush-collapse4"
+												class="accordion-collapse collapse"
+												aria-labelledby="flush-heading4"
+												data-bs-parent="#accordion1"
+											>
+												<div class="accordion-body">
+													This is the first item's
+													accordion body.
+												</div>
+											</div>
+										</div>
+
+										<div class="accordion-item">
+											<h2
+												class="accordion-header"
+												id="flush-heading5"
+											>
+												<button
+													class="accordion-button collapsed"
+													type="button"
+													data-bs-toggle="collapse"
+													data-bs-target="#flush-collapse5"
+													aria-expanded="true"
+													aria-controls="flush-collapse5"
+												>
+													Earn by being a utility
+													creative or Utility
+													subscriber
+												</button>
+											</h2>
+
+											<div
+												id="flush-collapse5"
+												class="accordion-collapse collapse"
+												aria-labelledby="flush-heading5"
+												data-bs-parent="#accordion1"
+											>
+												<div class="accordion-body">
+													This is the first item's
+													accordion body.
+												</div>
+											</div>
+										</div>
+
+										<div class="accordion-item">
+											<h2
+												class="accordion-header"
+												id="flush-heading6"
+											>
+												<button
+													class="accordion-button collapsed"
+													type="button"
+													data-bs-toggle="collapse"
+													data-bs-target="#flush-collapse6"
+													aria-expanded="true"
+													aria-controls="flush-collapse6"
+												>
+													Manage someone’s Gum.iNc and
+													earn- using our algorithm
+													and statistic evaluation
+													contact trading platform
+												</button>
+											</h2>
+
+											<div
+												id="flush-collapse6"
+												class="accordion-collapse collapse"
+												aria-labelledby="flush-heading6"
+												data-bs-parent="#accordion1"
+											>
+												<div class="accordion-body">
+													This is the first item's
+													accordion body.
+												</div>
+											</div>
+										</div>
+
+										<div class="accordion-item">
+											<h2
+												class="accordion-header"
+												id="flush-heading7"
+											>
+												<button
+													class="accordion-button collapsed"
+													type="button"
+													data-bs-toggle="collapse"
+													data-bs-target="#flush-collapse7"
+													aria-expanded="true"
+													aria-controls="flush-collapse7"
+												>
+													Store almanacs and
+													directories and earn as
+													shelf life agent by
+													collecting our Almanac and
+													directory Catalog quarterly,
+													monthly or yearly
+												</button>
+											</h2>
+
+											<div
+												id="flush-collapse7"
+												class="accordion-collapse collapse"
+												aria-labelledby="flush-heading7"
+												data-bs-parent="#accordion1"
+											>
+												<div class="accordion-body">
+													This is the first item's
+													accordion body.
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 
-								<div class="col-xl-4 col-lg-5">
-									<div class="card shadow mb-4">
-										<div
-											class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
-										>
-											<h6 class="m-0 text-success">
-												Demograpic
-											</h6>
+								<div
+									class="tab-pane"
+									id="tab3"
+									role="tabpanel"
+									aria-labelledby="toggle3"
+								>
+									<div class="row row-cols-2 mb-4">
+										<div class="col mb-4">
+											<div
+												class="h5 mb-5 shadow c-rounded-1 d-flex"
+											>
+												<div class="bg-light m-0 p-4">
+													Gum.iNc Wallet
+												</div>
 
-											<div class="dropdown">
-												<button
-													class="btn"
-													type="button"
-													id="dropdownMenuButton1"
-													data-bs-toggle="dropdown"
-													aria-expanded="false"
+												<div
+													class="p-4 text-center text-success m-0"
 												>
-													<i
-														class="bi bi-three-dots-vertical"
-													></i>
-												</button>
+													USD 567.00
+												</div>
+											</div>
 
-												<ul
-													class="dropdown-menu"
-													aria-labelledby="dropdownMenuButton1"
+											<div class="c-rounded-1 shadow">
+												<h5
+													class="p-3 bg-light d-flex justify-content-between align-items-center border-bottom"
 												>
-													<li>
-														<a
-															class="dropdown-item"
-															href="#"
-															>Action</a
+													Recent Transfers
+													<button
+														class="btn text-a-link-blue"
+													>
+														Send Money<i
+															class="bi bi-arrow-right ms-2"
+														></i>
+													</button>
+												</h5>
+
+												<div class="p-2">
+													<div
+														class="border p-2 c-rounded-1 d-flex align-items-center mb-3"
+													>
+														<div
+															style="
+																width: 50px;
+																height: 50px;
+															"
+															class="overflow-hidden me-3 border rounded-circle"
 														>
-													</li>
-													<li>
-														<a
-															class="dropdown-item"
-															href="#"
-															>Another action</a
+															<img
+																src="./assets/img/undraw_profile_1.svg"
+																class="w-100"
+															/>
+														</div>
+
+														<div>
+															<p
+																class="text-success p-0 m-0"
+															>
+																USD 600
+																<i
+																	class="bi bi-arrow-right mx-1"
+																></i>
+																<b> Joe Doe</b>
+															</p>
+															<small
+																class="text-gray"
+																><i
+																	class="bi bi-clock me-2"
+																></i
+																>23 Feb</small
+															>
+														</div>
+													</div>
+													<div
+														class="border p-2 c-rounded-1 d-flex align-items-center mb-3"
+													>
+														<div
+															style="
+																width: 50px;
+																height: 50px;
+															"
+															class="overflow-hidden me-3 border rounded-circle"
 														>
-													</li>
-													<li>
-														<a
-															class="dropdown-item"
-															href="#"
-															>Something else
-															here</a
+															<img
+																src="./assets/img/undraw_profile_1.svg"
+																class="w-100"
+															/>
+														</div>
+
+														<div>
+															<p
+																class="text-success p-0 m-0"
+															>
+																USD 600
+																<i
+																	class="bi bi-arrow-right mx-1"
+																></i>
+																<b> Joe Doe</b>
+															</p>
+															<small
+																class="text-gray"
+																><i
+																	class="bi bi-clock me-2"
+																></i
+																>23 Feb</small
+															>
+														</div>
+													</div>
+													<div
+														class="border p-2 c-rounded-1 d-flex align-items-center mb-3"
+													>
+														<div
+															style="
+																width: 50px;
+																height: 50px;
+															"
+															class="overflow-hidden me-3 border rounded-circle"
 														>
-													</li>
-												</ul>
+															<img
+																src="./assets/img/undraw_profile_1.svg"
+																class="w-100"
+															/>
+														</div>
+
+														<div>
+															<p
+																class="text-success p-0 m-0"
+															>
+																USD 600
+																<i
+																	class="bi bi-arrow-right mx-1"
+																></i>
+																<b> Joe Doe</b>
+															</p>
+															<small
+																class="text-gray"
+																><i
+																	class="bi bi-clock me-2"
+																></i
+																>23 Feb</small
+															>
+														</div>
+													</div>
+													<div
+														class="border p-2 c-rounded-1 d-flex align-items-center mb-3"
+													>
+														<div
+															style="
+																width: 50px;
+																height: 50px;
+															"
+															class="overflow-hidden me-3 border rounded-circle"
+														>
+															<img
+																src="./assets/img/undraw_profile_1.svg"
+																class="w-100"
+															/>
+														</div>
+
+														<div>
+															<p
+																class="text-success p-0 m-0"
+															>
+																USD 600
+																<i
+																	class="bi bi-arrow-right mx-1"
+																></i>
+																<b> Joe Doe</b>
+															</p>
+															<small
+																class="text-gray"
+																><i
+																	class="bi bi-clock me-2"
+																></i
+																>23 Feb</small
+															>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
 
-										<div class="card-body">
-											<div class="chart-pie pt-4 pb-2">
-												<canvas
-													id="myPieChart"
-												></canvas>
-											</div>
+										<div class="col">
+											<div
+												class="c-rounded-1 shadow h-100"
+											>
+												<h5
+													class="p-3 bg-light d-flex justify-content-between align-items-center border-bottom"
+												>
+													Bank Cards
+													<button
+														class="btn text-a-link-blue"
+													>
+														<i
+															class="bi bi-plus-circle fs-5"
+														></i>
+													</button>
+												</h5>
 
-											<div class="mt-4 text-center small">
-												<span class="me-2">
-													<i
-														class="bi bi-circle-fill text-primary"
-													></i>
-													Local
-												</span>
-												<br />
-												<span class="me-2">
-													<i
-														class="bi bi-circle-fill text-success"
-													></i>
-													Regional
-												</span>
-												<br />
+												<div class="p-2">
+													<div
+														class="border p-2 c-rounded-1 d-flex align-items-center mb-3"
+													>
+														<img
+															src="./assets/img/payment-method.png"
+															class="border me-3 c-rounded-1"
+															width="80"
+														/>
 
-												<span class="me-2">
-													<i
-														class="bi bi-circle-fill text-info"
-													></i>
-													International
-												</span>
+														<div>
+															<b>VISA</b>
+														</div>
+
+														<div
+															class="dropdown ms-auto"
+														>
+															<button
+																class="btn"
+																type="button"
+																id="triggerId"
+																data-bs-toggle="dropdown"
+																aria-haspopup="true"
+																aria-expanded="false"
+															>
+																<i
+																	class="bi bi-three-dots-vertical fs-5"
+																></i>
+															</button>
+
+															<div
+																class="dropdown-menu dropdown-menu-end"
+																aria-labelledby="triggerId"
+															>
+																<a
+																	class="dropdown-item"
+																	href="#"
+																	>Remove</a
+																>
+															</div>
+														</div>
+													</div>
+
+													<div
+														class="border p-2 c-rounded-1 d-flex align-items-center mb-3"
+													>
+														<img
+															src="./assets/img/payment-method.png"
+															class="border me-3 c-rounded-1"
+															width="80"
+														/>
+
+														<div>
+															<b>VISA</b>
+														</div>
+
+														<div
+															class="dropdown ms-auto"
+														>
+															<button
+																class="btn"
+																type="button"
+																id="triggerId"
+																data-bs-toggle="dropdown"
+																aria-haspopup="true"
+																aria-expanded="false"
+															>
+																<i
+																	class="bi bi-three-dots-vertical fs-5"
+																></i>
+															</button>
+
+															<div
+																class="dropdown-menu dropdown-menu-end"
+																aria-labelledby="triggerId"
+															>
+																<a
+																	class="dropdown-item"
+																	href="#"
+																	>Remove</a
+																>
+															</div>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
