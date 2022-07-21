@@ -32,8 +32,65 @@
 		<script defer src="./assets/js/custom.js"></script>
 	</head>
 
+	<style>
+		.carousel-control-next,
+		.carousel-control-prev {
+			position: absolute;
+			top: initial !important;
+			bottom: 50% !important;
+			width: fit-content !important	;
+			padding: 0.3rem !important;
+			border-radius: 100%;
+			opacity: 1 !important;
+			transition: all 0.3s;
+			background-color: #712d24 !important;
+		}
+		.increase-hover-opacity {
+			opacity: 0.5;
+			transition: opacity 0.3s;
+		}
+		.increase-hover-opacity:hover,
+		.increase-hover-opacity:focus {
+			opacity: 1;
+		}
+
+		.h-80-px {
+			height: 80px;
+		}
+		.h-120-px {
+			height: 120px;
+		}
+	</style>
+
+	<style>
+		@media screen {
+			.tabs .nav-link {
+				/* margin: 0 0.5rem; */
+				height: 3rem;
+				width: 3rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 100%;
+				color: #fff !important;
+				background-color: rgba(113, 45, 36, 0.5);
+				border: solid !important;
+				cursor: pointer;
+			}
+
+			.tabs .nav-link:hover {
+				border-color: #712d24 !important;
+			}
+			.tabs .nav-link.active {
+				background: #712d24 !important;
+				color: #fff !important;
+				border-color: #712d24 !important;
+			}
+		}
+	</style>
+
 	<body
-		class="p-0 position-relative pt-5 d-flex flex-column justify-content-center"
+		class="p-0 pt-5 position-relative d-flex flex-column justify-content-center"
 		style="min-height: 100vh"
 	>
 		<div id="invisible-elements">
@@ -184,6 +241,35 @@
 			</div>
 
 			<div id="popovers">
+				<button type="button" class="d-none" id="addToCartToastBtn">
+					Add To Cart
+				</button>
+
+				<div
+					class="position-fixed bottom-0 end-0 p-3"
+					style="z-index: 11"
+				>
+					<div
+						id="addToCartToast"
+						class="toast text-white bg-primary"
+						role="alert"
+						aria-live="assertive"
+						aria-atomic="true"
+					>
+						<div class="toast-body">
+							<div class="d-flex align-items-center">
+								Added!
+								<button
+									type="button"
+									class="btn-close me-2 ms-auto"
+									data-bs-dismiss="toast"
+									aria-label="Close"
+								></button>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<button type="button" class="d-none" id="saveIncToastBtn">
 					save inc
 				</button>
@@ -346,7 +432,7 @@
 					>
 					<a
 						href="directory.html"
-						class="nav-link rounded-pill active px-2 py-1"
+						class="nav-link rounded-pill px-2 py-1 active"
 						>Directory</a
 					>
 					<a
@@ -379,156 +465,212 @@
 			</div>
 		</header>
 
-		<main class="container my-5 position-relative">
-			<div>
-				<a
-					href="./directory.html"
-					class="btn btn-primary px-4 rounded-pill"
-					>Back To Directory
-					<i class="bi bi-box-arrow-left ms-2 fs-5"></i
-				></a>
-			</div>
+		<main class="my-5 container shadow-lg c-rounded-3 p-4 p-md-5 tabs">
+			<form class="my-5 row justify-content-around">
+				<h4 class="text-success mb-4">
+					<i class="bi bi-info-circle me-2"></i>3. Please Enter The
+					Following Details
+				</h4>
 
-			<div class="row mt-5 justify-content-around">
-				<div class="c-rounded-3 shadow p-5">
-					<div>
-						<div
-							class="bg-dark mx-auto d-flex justify-content-center shadow-lg align-items-center rounded-circle overflow-hidden"
-							style="
-								width: 9rem;
-								height: 9rem;
-								border: solid 10px rgb(182, 187, 193);
-							"
-						>
-							<img src="assets/images/user5.jpg" class="w-100" />
-						</div>
-
-						<h2 class="text-center my-2">John Doe</h2>
-
-						<p class="lead text-center my-2">Financial Advisor</p>
-
-						<div
-							class="text-center d-flex flex-wrap justify-content-center my-2"
-						>
-							<p class="p-0 m-0 mb-2 d-none d-lg-block">
-								<i class="bi bi-briefcase mx-2"></i>Coin
-								(Business)
-								<span class="d-none d-lg-inline">|</span>
-							</p>
-
-							<p class="p-0 m-0 mb-2">
-								<i
-									class="bi bi-star-fill text-warning ms-1"
-								></i>
-								<i
-									class="bi bi-star-fill text-warning ms-1"
-								></i>
-								<i
-									class="bi bi-star-fill text-warning ms-1"
-								></i>
-								<i
-									class="bi bi-star-fill text-warning ms-1"
-								></i>
-								<i class="bi bi-star text-warning ms-1"></i>
-								<span class="d-none d-lg-inline">|</span>
-							</p>
-
-							<p><i class="bi bi-geo-alt mx-2"></i>Harare</p>
-						</div>
-
-						<div class="p-2 text-center my-2">
-							<a
-								href="message.html"
-								class="btn btn-outline-success mx-1"
-								>Message<i class="bi bi-envelope fs-5 ms-2"></i
-							></a>
-
-							<button
-								type="button"
-								class="saveIncOption btn btn-outline-success"
-							>
-								Save Inc<i
-									class="bi bi-bookmark-star-fill fs-5 ms-2"
-								></i>
-							</button>
-						</div>
+				<div class="col-md-6">
+					<div class="form-floating mb-3">
+						<input
+							type="text"
+							class="form-control"
+							placeholder="Entry Field"
+							value="field value"
+						/>
+						<label>Entry Field</label>
 					</div>
 
-					<div class="row row-cols-2 p-3 justify-content-center">
-						<div class="col-12 p-2">
-							<div class="bg-light border c-rounded-2 p-4">
-								<h5>
-									<i class="bi bi-info-circle me-2 fs-4"></i
-									>Bio
-								</h5>
+					<div class="form-floating mb-3">
+						<input
+							type="text"
+							class="form-control"
+							placeholder="Entry Field"
+							value="field value"
+						/>
+						<label>Entry Field</label>
+					</div>
 
-								<p>
-									Lorem ipsum dolor, sit amet consectetur
-									adipisicing elit. Rem, molestiae et quam
-									distinctio magni quos autem eius
-									consequuntur velit qui laudantium delectus.
-									Nihil
-								</p>
-							</div>
+					<div class="mb-3">
+						<label for="about" class="form-label d-block p-2"
+							>About Field</label
+						>
+						<textarea class="form-control" id="about" rows="4">
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, quisquam!</textarea
+						>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="form-floating mb-3">
+						<input
+							type="text"
+							class="form-control"
+							placeholder="Entry Field"
+							value="field value"
+						/>
+						<label>Entry Field</label>
+					</div>
+
+					<div class="form-floating mb-3">
+						<input
+							type="text"
+							class="form-control"
+							placeholder="Entry Field"
+							value="field value"
+						/>
+						<label>Entry Field</label>
+					</div>
+
+					<p class="text-success mb-3">
+						<i class="bi bi-info-circle"></i>
+						Image Upload Fields.
+					</p>
+
+					<div
+						class="row row-cols-4 mx-1 d-flex gap-3 fs-1 text-white flex-nowrap overflowx-scroll"
+					>
+						<div
+							class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
+						>
+							<img
+								class="d-none position-absolute top-50 start-50 w-100 translate-middle"
+								src="#"
+							/>
+							<i
+								onclick="clickNext(this)"
+								class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
+							></i>
+							<input
+								type="file"
+								name="image1"
+								onchange="previewImg(this)"
+								class="d-none"
+								accept="image/*"
+							/>
 						</div>
 
-						<div class="col p-2">
-							<div class="bg-light border c-rounded-2 p-4">
-								<p>
-									<i class="bi bi-telephone me-2 fs-4"></i
-									>+263 77566832
-								</p>
-
-								<p>
-									<i class="bi bi-link-45deg me-2 fs-4"></i
-									><a
-										target="_blank"
-										href="https://www.google.com"
-										>www.johnDoe.com.zw</a
-									>
-								</p>
-
-								<p>
-									<i class="bi bi-twitter me-2 fs-4"></i
-									><a
-										target="_blank"
-										href="https://www.twitter.com"
-										>@john_doe</a
-									>
-								</p>
-
-								<p>
-									<i class="bi bi-instagram me-2 fs-4"></i
-									><a
-										target="_blank"
-										href="https://www.instagram.com"
-										>@john_doe</a
-									>
-								</p>
-							</div>
+						<div
+							class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
+						>
+							<img
+								class="d-none position-absolute top-50 start-50 w-100 translate-middle"
+								src="#"
+							/>
+							<i
+								onclick="clickNext(this)"
+								class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
+							></i>
+							<input
+								type="file"
+								name="image2"
+								onchange="previewImg(this)"
+								class="d-none"
+								accept="image/*"
+							/>
 						</div>
 
-						<div class="col p-2">
-							<div class="bg-light border c-rounded-2 p-4">
-								<h5>
-									<i class="bi bi-geo-alt me-2 fs-4"></i
-									>Location
-								</h5>
-								<div
-									class="w-100 c-rounded-1 overflow-hidden bg-gray"
-								>
-									<iframe
-										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.048860360313!2d-2.402101873046882!3d53.53904180000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487ba8a0a3e37291%3A0x502a44f8cb49203a!2sOuter%20Space%20Storage%20Centres!5e0!3m2!1sen!2szw!4v1653838105899!5m2!1sen!2szw"
-										frameborder="0"
-										class="border-0 w-100 h-100 d-block"
-										allowfullscreen
-									></iframe>
-								</div>
-							</div>
+						<div
+							class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
+						>
+							<img
+								class="d-none position-absolute top-50 start-50 w-100 translate-middle"
+								src="#"
+							/>
+							<i
+								onclick="clickNext(this)"
+								class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
+							></i>
+							<input
+								type="file"
+								name="image3"
+								onchange="previewImg(this)"
+								class="d-none"
+								accept="image/*"
+							/>
+						</div>
+
+						<div
+							class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
+						>
+							<img
+								class="d-none position-absolute top-50 start-50 w-100 translate-middle"
+								src="#"
+							/>
+							<i
+								onclick="clickNext(this)"
+								class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
+							></i>
+							<input
+								type="file"
+								name="image4"
+								onchange="previewImg(this)"
+								class="d-none"
+								accept="image/*"
+							/>
+						</div>
+
+						<div
+							class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
+						>
+							<img
+								class="d-none position-absolute top-50 start-50 w-100 translate-middle"
+								src="#"
+							/>
+							<i
+								onclick="clickNext(this)"
+								class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
+							></i>
+							<input
+								type="file"
+								name="image5"
+								onchange="previewImg(this)"
+								class="d-none"
+								accept="image/*"
+							/>
+						</div>
+
+						<div
+							class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
+						>
+							<img
+								class="d-none position-absolute top-50 start-50 w-100 translate-middle"
+								src="#"
+							/>
+							<i
+								onclick="clickNext(this)"
+								class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
+							></i>
+							<input
+								type="file"
+								name="image6"
+								onchange="previewImg(this)"
+								class="d-none"
+								accept="image/*"
+							/>
 						</div>
 					</div>
 				</div>
-			</div>
+
+				<div class="text-center">
+					<button
+						onclick="document.getElementById('tab5Toggler').click()"
+						class="btn m-2 btn-primary rounded-pill px-3"
+						type="button"
+					>
+						Proceed
+					</button>
+
+					<button
+						class="btn btn-outline-dark rounded-pill px-3"
+						type="reset"
+					>
+						Reset
+					</button>
+				</div>
+			</form>
 		</main>
 
 		<footer

@@ -214,6 +214,14 @@
 	.text-gray {
 		color: gray !important;
 	}
+	@media (min-width: 1300px) {
+		.container-lg,
+		.container-md,
+		.container-sm,
+		.container {
+			max-width: 1300px;
+		}
+	}
 }
 
 /* home page */
