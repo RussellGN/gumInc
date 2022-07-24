@@ -825,7 +825,7 @@
 
 							<div class="py-5 tab-content">
 								<div
-									class="tab-pane active"
+									class="tab-pane"
 									id="c1-tab"
 									role="tabpanel"
 								>
@@ -1018,157 +1018,171 @@
 								</div>
 
 								<div
-									class="tab-pane"
+									class="tab-pane active"
 									id="c2-tab"
 									role="tabpanel"
 								>
 									<div class="row">
-										<h3
+										<div
 											class="mb-3 d-flex justify-content-between align-items-center"
 										>
-											<span> My Contacts</span>
+											<h3>My Contacts</h3>
 
-											<!-- Button trigger modal -->
-											<button
-												type="button"
-												class="btn fs-5 btn-primary rounded-pill px-3"
-												data-bs-toggle="modal"
-												data-bs-target="#staticBackdrop"
-											>
-												sync<i
-													class="bi bi-cloud-upload ms-2"
-												></i>
-											</button>
+											<div>
+												<!-- storage trigger  -->
+												<button
+													type="button"
+													class="btn fs-5 me-3 btn-outline-success dropdown-toggle px-3 rounded-pill"
+													data-bs-toggle="modal"
+													data-bs-target="#storageModal"
+												>
+													<i
+														class="bi bi-cloud-fill me-2"
+													></i
+													>storage - 4.5/5 GB free
+												</button>
 
-											<!-- Modal -->
-											<div
-												class="modal fade"
-												id="staticBackdrop"
-												data-bs-backdrop="static"
-												data-bs-keyboard="false"
-												tabindex="-1"
-												aria-labelledby="staticBackdropLabel"
-												aria-hidden="true"
-											>
+												<!--storage Modal -->
 												<div
-													class="modal-dialog modal-dialog-centered"
+													class="modal fade"
+													id="storageModal"
+													data-bs-backdrop="static"
+													data-bs-keyboard="false"
+													tabindex="-1"
+													aria-labelledby="storageModalLabel"
+													aria-hidden="true"
 												>
 													<div
-														class="modal-content p-4 c-rounded-2"
+														style="
+															max-width: 800px !important;
+														"
+														class="modal-dialog modal-dialog-centered"
 													>
 														<div
-															class="modal-header"
+															class="modal-content p-4 c-rounded-2"
 														>
-															<h5
-																class="modal-title"
-																id="staticBackdropLabel"
+															<div
+																class="modal-header"
 															>
-																Sync With
-															</h5>
-
-															<button
-																type="button"
-																class="btn-close fs-5"
-																data-bs-dismiss="modal"
-																aria-label="Close"
-															></button>
-														</div>
-
-														<div
-															class="modal-body px-5"
-														>
-															<button
-																class="btn btn-outline-dark mb-2 rounded-pill w-100"
-															>
-																<i
-																	class="bi bi-telephone fs-5 me-2"
+																<h5
+																	class="modal-title flex-fill text-center"
+																	id="storageModalLabel"
 																>
-																</i
-																>Phonebook
-															</button>
+																	Upgrade
+																	Storage
+																</h5>
 
-															<button
-																class="btn btn-outline-dark mb-2 rounded-pill w-100"
+																<button
+																	type="button"
+																	class="btn-close fs-5"
+																	data-bs-dismiss="modal"
+																	aria-label="Close"
+																></button>
+															</div>
+
+															<div
+																class="modal-body px-5"
 															>
-																<i
-																	class="bi bi-google fs-5 me-2"
+																<div
+																	class="row row-cols text-center justify-content-around py-5"
 																>
-																</i
-																>Google
-															</button>
+																	<div
+																		class="col"
+																	>
+																		<div
+																			class="c-rounded-1 shadow p-3 d-flex flex-column align-items-center justify-content-around h-100"
+																		>
+																			<div>
+																				<i
+																					class="bi bi-cloud fs-1"
+																				></i>
+																			</div>
 
-															<button
-																class="btn btn-outline-dark mb-2 rounded-pill w-100"
-															>
-																<i
-																	class="bi bi-apple fs-5 me-2"
-																>
-																</i
-																>Apple
-															</button>
+																			<p>
+																				5
+																				GB
+																				-
+																				Contacts
+																				&
+																				Business
+																				cards
+																			</p>
 
-															<button
-																class="btn btn-outline-dark mb-2 rounded-pill w-100"
-															>
-																<i
-																	class="bi bi-facebook fs-5 me-2"
-																>
-																</i
-																>Facebook
-															</button>
+																			<button
+																				class="btn border rounded-pill bg-light px-3"
+																			>
+																				Free
+																			</button>
+																		</div>
+																	</div>
 
-															<button
-																class="btn btn-outline-dark mb-2 rounded-pill w-100"
-															>
-																<i
-																	class="bi bi-twitter fs-5 me-2"
-																>
-																</i
-																>Whatsapp
-															</button>
+																	<div
+																		class="col"
+																	>
+																		<div
+																			class="c-rounded-1 shadow p-3 d-flex flex-column align-items-center justify-content-around h-100"
+																		>
+																			<div>
+																				<i
+																					class="bi bi-clouds-fill fs-1"
+																				></i>
+																			</div>
 
-															<button
-																class="btn btn-outline-dark mb-2 rounded-pill w-100"
-															>
-																<i
-																	class="fab fa-yahoo fs-5 me-2"
-																>
-																</i
-																>Yahoo
-															</button>
+																			<p>
+																				50
+																				GB
+																				-
+																				Contacts
+																				&
+																				Business
+																				cards
+																			</p>
 
-															<button
-																class="btn btn-outline-dark mb-2 rounded-pill w-100"
-															>
-																<i
-																	class="bi bi-instagram fs-5 me-2"
-																>
-																</i
-																>Instagram
-															</button>
+																			<button
+																				class="btn btn-success rounded-pill px-3"
+																			>
+																				$
+																				10
+																				Annualy
+																			</button>
+																		</div>
+																	</div>
 
-															<button
-																class="btn btn-outline-dark mb-2 rounded-pill w-100"
-															>
-																<i
-																	class="bi bi-twitter fs-5 me-2"
-																>
-																</i
-																>Twitter
-															</button>
+																	<div
+																		class="col"
+																	>
+																		<div
+																			class="c-rounded-1 shadow p-3 d-flex flex-column align-items-center justify-content-around h-100"
+																		>
+																			<div>
+																				<i
+																					class="bi bi-cloud-fill fs-1"
+																				></i>
+																			</div>
 
-															<button
-																class="btn btn-outline-dark mb-2 rounded-pill w-100"
-															>
-																<i
-																	class="bi bi-cloud-upload fs-5 me-2"
-																>
-																</i
-																>Add Other
-															</button>
-														</div>
+																			<p>
+																				10
+																				GB
+																				-
+																				Contacts
+																				&
+																				Business
+																				cards
+																			</p>
 
-														<!-- <div
+																			<button
+																				class="btn btn-outline-success rounded-pill px-3"
+																			>
+																				$
+																				5.99
+																				Annually
+																			</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<!-- <div
 															class="modal-footer"
 														>
 															<button
@@ -1185,65 +1199,172 @@
 																Understood
 															</button>
 														</div> -->
+														</div>
 													</div>
 												</div>
-											</div>
 
-											<!-- <div class="ms- 2 dropdown open">
+												<!--  sync Button-->
 												<button
-													class="btn text-a-link-blue d-flex flex-nowrap fs-5"
 													type="button"
-													id="triggerId11"
-													data-bs-toggle="dropdown"
-													aria-haspopup="true"
-													aria-expanded="false"
+													class="btn fs-5 btn-primary rounded-pill px-3"
+													data-bs-toggle="modal"
+													data-bs-target="#staticBackdrop"
 												>
 													sync<i
-														class="bi bi-caret-down-fill ms-2"
+														class="bi bi-cloud-upload ms-2"
 													></i>
 												</button>
 
+												<!-- sync Modal -->
 												<div
-													class="dropdown-menu"
-													aria-labelledby="triggerId11"
+													class="modal fade"
+													id="staticBackdrop"
+													data-bs-backdrop="static"
+													data-bs-keyboard="false"
+													tabindex="-1"
+													aria-labelledby="staticBackdropLabel"
+													aria-hidden="true"
 												>
-													<button
-														class="dropdown-item"
-														href="#"
+													<div
+														class="modal-dialog modal-dialog-centered"
 													>
-														Sync With Phonebook
-													</button>
+														<div
+															class="modal-content p-4 c-rounded-2"
+														>
+															<div
+																class="modal-header"
+															>
+																<h5
+																	class="modal-title"
+																	id="staticBackdropLabel"
+																>
+																	Sync With
+																</h5>
 
-													<button
-														class="dropdown-item"
-														href="#"
-													>
-														Sync With Google
-													</button>
+																<button
+																	type="button"
+																	class="btn-close fs-5"
+																	data-bs-dismiss="modal"
+																	aria-label="Close"
+																></button>
+															</div>
 
-													<button
-														class="dropdown-item"
-														href="#"
-													>
-														Sync With iCloud
-													</button>
+															<div
+																class="modal-body px-5"
+															>
+																<button
+																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
+																>
+																	<i
+																		class="bi bi-telephone fs-5 me-2"
+																	>
+																	</i
+																	>Phonebook
+																</button>
 
-													<button
-														class="dropdown-item"
-														href="#"
-													>
-														Sync With Instagram
-													</button>
+																<button
+																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
+																>
+																	<i
+																		class="bi bi-google fs-5 me-2"
+																	>
+																	</i
+																	>Google
+																</button>
 
-													<button
-														class="dropdown-item"
-														href="#"
-													>
-														Sync With Facebook
-													</button>
+																<button
+																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
+																>
+																	<i
+																		class="bi bi-apple fs-5 me-2"
+																	>
+																	</i
+																	>Apple
+																</button>
+
+																<button
+																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
+																>
+																	<i
+																		class="bi bi-facebook fs-5 me-2"
+																	>
+																	</i
+																	>Facebook
+																</button>
+
+																<button
+																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
+																>
+																	<i
+																		class="bi bi-twitter fs-5 me-2"
+																	>
+																	</i
+																	>Whatsapp
+																</button>
+
+																<button
+																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
+																>
+																	<i
+																		class="fab fa-yahoo fs-5 me-2"
+																	>
+																	</i
+																	>Yahoo
+																</button>
+
+																<button
+																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
+																>
+																	<i
+																		class="bi bi-instagram fs-5 me-2"
+																	>
+																	</i
+																	>Instagram
+																</button>
+
+																<button
+																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
+																>
+																	<i
+																		class="bi bi-twitter fs-5 me-2"
+																	>
+																	</i
+																	>Twitter
+																</button>
+
+																<button
+																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
+																>
+																	<i
+																		class="bi bi-cloud-upload fs-5 me-2"
+																	>
+																	</i
+																	>Add Other
+																</button>
+															</div>
+
+															<!-- <div
+															class="modal-footer"
+														>
+															<button
+																type="button"
+																class="btn btn-secondary"
+																data-bs-dismiss="modal"
+															>
+																Close
+															</button>
+															<button
+																type="button"
+																class="btn btn-primary"
+															>
+																Understood
+															</button>
+														</div> -->
+														</div>
+													</div>
 												</div>
-											</div> -->
-										</h3>
+											</div>
+										</div>
 
 										<div class="col-4">
 											<div

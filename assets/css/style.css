@@ -450,4 +450,13 @@
 		margin-left: auto;
 		border-radius: 20px 20px 0 20px;
 	}
+	.saveIncOption {
+		border: solid thin transparent;
+	}
+	.saveIncOption img {
+		width: 30px;
+	}
+	.saveIncOption:hover {
+		border-color: gray;
+	}
 }
