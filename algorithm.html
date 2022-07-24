@@ -25,8 +25,6 @@
 
 		<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css" />
 
-		<link rel="stylesheet" href="./assets/css/forkeeps.css" />
-
 		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<script
@@ -37,13 +35,343 @@
 		<script defer src="./assets/js/main.js"></script>
 		<script defer src="./assets/js/custom.js"></script>
 
-		<!-------------------------------------------------------------------------------------->
-
 		<!-- chart scripts -->
+
 		<script defer src="./assets/vendor/chart.js/Chart.min.js"></script>
 		<script defer src="./assets/js/demo/chart-area-demo.js"></script>
 		<script defer src="./assets/js/demo/chart-pie-demo.js"></script>
 	</head>
+
+	<style>
+		/* charts */
+		@media screen {
+			.chart-area {
+				position: relative;
+				height: 10rem;
+				width: 100%;
+			}
+			@media (min-width: 768px) {
+				.chart-area {
+					height: 20rem;
+				}
+			}
+			.chart-bar {
+				position: relative;
+				height: 10rem;
+				width: 100%;
+			}
+			@media (min-width: 768px) {
+				.chart-bar {
+					height: 20rem;
+				}
+			}
+			.chart-pie {
+				position: relative;
+				height: 15rem;
+				width: 100%;
+			}
+			@media (min-width: 768px) {
+				.chart-pie {
+					height: calc(20rem - 43px) !important;
+				}
+			}
+		}
+
+		/* to do with charts */
+		@media screen {
+			.error {
+				color: #5a5c69;
+				font-size: 7rem;
+				position: relative;
+				line-height: 1;
+				width: 12.5rem;
+			}
+			@-webkit-keyframes noise-anim {
+				0% {
+					clip: rect(49px, 9999px, 40px, 0);
+				}
+				5% {
+					clip: rect(75px, 9999px, 72px, 0);
+				}
+				10% {
+					clip: rect(97px, 9999px, 93px, 0);
+				}
+				15% {
+					clip: rect(15px, 9999px, 9px, 0);
+				}
+				20% {
+					clip: rect(14px, 9999px, 92px, 0);
+				}
+				25% {
+					clip: rect(18px, 9999px, 94px, 0);
+				}
+				30% {
+					clip: rect(17px, 9999px, 20px, 0);
+				}
+				35% {
+					clip: rect(71px, 9999px, 59px, 0);
+				}
+				40% {
+					clip: rect(42px, 9999px, 84px, 0);
+				}
+				45% {
+					clip: rect(56px, 9999px, 25px, 0);
+				}
+				50% {
+					clip: rect(46px, 9999px, 14px, 0);
+				}
+				55% {
+					clip: rect(47px, 9999px, 1px, 0);
+				}
+				60% {
+					clip: rect(64px, 9999px, 58px, 0);
+				}
+				65% {
+					clip: rect(89px, 9999px, 92px, 0);
+				}
+				70% {
+					clip: rect(56px, 9999px, 39px, 0);
+				}
+				75% {
+					clip: rect(80px, 9999px, 71px, 0);
+				}
+				80% {
+					clip: rect(8px, 9999px, 13px, 0);
+				}
+				85% {
+					clip: rect(66px, 9999px, 68px, 0);
+				}
+				90% {
+					clip: rect(68px, 9999px, 4px, 0);
+				}
+				95% {
+					clip: rect(56px, 9999px, 14px, 0);
+				}
+				100% {
+					clip: rect(28px, 9999px, 53px, 0);
+				}
+			}
+			@keyframes noise-anim {
+				0% {
+					clip: rect(49px, 9999px, 40px, 0);
+				}
+				5% {
+					clip: rect(75px, 9999px, 72px, 0);
+				}
+				10% {
+					clip: rect(97px, 9999px, 93px, 0);
+				}
+				15% {
+					clip: rect(15px, 9999px, 9px, 0);
+				}
+				20% {
+					clip: rect(14px, 9999px, 92px, 0);
+				}
+				25% {
+					clip: rect(18px, 9999px, 94px, 0);
+				}
+				30% {
+					clip: rect(17px, 9999px, 20px, 0);
+				}
+				35% {
+					clip: rect(71px, 9999px, 59px, 0);
+				}
+				40% {
+					clip: rect(42px, 9999px, 84px, 0);
+				}
+				45% {
+					clip: rect(56px, 9999px, 25px, 0);
+				}
+				50% {
+					clip: rect(46px, 9999px, 14px, 0);
+				}
+				55% {
+					clip: rect(47px, 9999px, 1px, 0);
+				}
+				60% {
+					clip: rect(64px, 9999px, 58px, 0);
+				}
+				65% {
+					clip: rect(89px, 9999px, 92px, 0);
+				}
+				70% {
+					clip: rect(56px, 9999px, 39px, 0);
+				}
+				75% {
+					clip: rect(80px, 9999px, 71px, 0);
+				}
+				80% {
+					clip: rect(8px, 9999px, 13px, 0);
+				}
+				85% {
+					clip: rect(66px, 9999px, 68px, 0);
+				}
+				90% {
+					clip: rect(68px, 9999px, 4px, 0);
+				}
+				95% {
+					clip: rect(56px, 9999px, 14px, 0);
+				}
+				100% {
+					clip: rect(28px, 9999px, 53px, 0);
+				}
+			}
+			.error:after {
+				content: attr(data-text);
+				position: absolute;
+				left: 2px;
+				text-shadow: -1px 0 #e74a3b;
+				top: 0;
+				color: #5a5c69;
+				background: #f8f9fc;
+				overflow: hidden;
+				clip: rect(0, 900px, 0, 0);
+				animation: noise-anim 2s infinite linear alternate-reverse;
+			}
+			@-webkit-keyframes noise-anim-2 {
+				0% {
+					clip: rect(16px, 9999px, 10px, 0);
+				}
+				5% {
+					clip: rect(22px, 9999px, 29px, 0);
+				}
+				10% {
+					clip: rect(6px, 9999px, 68px, 0);
+				}
+				15% {
+					clip: rect(85px, 9999px, 95px, 0);
+				}
+				20% {
+					clip: rect(65px, 9999px, 91px, 0);
+				}
+				25% {
+					clip: rect(93px, 9999px, 68px, 0);
+				}
+				30% {
+					clip: rect(10px, 9999px, 27px, 0);
+				}
+				35% {
+					clip: rect(37px, 9999px, 25px, 0);
+				}
+				40% {
+					clip: rect(12px, 9999px, 23px, 0);
+				}
+				45% {
+					clip: rect(40px, 9999px, 18px, 0);
+				}
+				50% {
+					clip: rect(19px, 9999px, 71px, 0);
+				}
+				55% {
+					clip: rect(2px, 9999px, 35px, 0);
+				}
+				60% {
+					clip: rect(16px, 9999px, 69px, 0);
+				}
+				65% {
+					clip: rect(8px, 9999px, 65px, 0);
+				}
+				70% {
+					clip: rect(30px, 9999px, 57px, 0);
+				}
+				75% {
+					clip: rect(14px, 9999px, 4px, 0);
+				}
+				80% {
+					clip: rect(39px, 9999px, 30px, 0);
+				}
+				85% {
+					clip: rect(22px, 9999px, 35px, 0);
+				}
+				90% {
+					clip: rect(58px, 9999px, 71px, 0);
+				}
+				95% {
+					clip: rect(34px, 9999px, 90px, 0);
+				}
+				100% {
+					clip: rect(67px, 9999px, 68px, 0);
+				}
+			}
+			@keyframes noise-anim-2 {
+				0% {
+					clip: rect(16px, 9999px, 10px, 0);
+				}
+				5% {
+					clip: rect(22px, 9999px, 29px, 0);
+				}
+				10% {
+					clip: rect(6px, 9999px, 68px, 0);
+				}
+				15% {
+					clip: rect(85px, 9999px, 95px, 0);
+				}
+				20% {
+					clip: rect(65px, 9999px, 91px, 0);
+				}
+				25% {
+					clip: rect(93px, 9999px, 68px, 0);
+				}
+				30% {
+					clip: rect(10px, 9999px, 27px, 0);
+				}
+				35% {
+					clip: rect(37px, 9999px, 25px, 0);
+				}
+				40% {
+					clip: rect(12px, 9999px, 23px, 0);
+				}
+				45% {
+					clip: rect(40px, 9999px, 18px, 0);
+				}
+				50% {
+					clip: rect(19px, 9999px, 71px, 0);
+				}
+				55% {
+					clip: rect(2px, 9999px, 35px, 0);
+				}
+				60% {
+					clip: rect(16px, 9999px, 69px, 0);
+				}
+				65% {
+					clip: rect(8px, 9999px, 65px, 0);
+				}
+				70% {
+					clip: rect(30px, 9999px, 57px, 0);
+				}
+				75% {
+					clip: rect(14px, 9999px, 4px, 0);
+				}
+				80% {
+					clip: rect(39px, 9999px, 30px, 0);
+				}
+				85% {
+					clip: rect(22px, 9999px, 35px, 0);
+				}
+				90% {
+					clip: rect(58px, 9999px, 71px, 0);
+				}
+				95% {
+					clip: rect(34px, 9999px, 90px, 0);
+				}
+				100% {
+					clip: rect(67px, 9999px, 68px, 0);
+				}
+			}
+			.error:before {
+				content: attr(data-text);
+				position: absolute;
+				left: -2px;
+				text-shadow: 1px 0 #4e73df;
+				top: 0;
+				color: #5a5c69;
+				background: #f8f9fc;
+				overflow: hidden;
+				clip: rect(0, 900px, 0, 0);
+				animation: noise-anim-2 3s infinite linear alternate-reverse;
+			}
+		}
+	</style>
 
 	<body class="pt-5">
 		<div id="invisible-elements">
@@ -315,13 +643,13 @@
 						</div>
 
 						<div class="d-flex flex-column">
-							<a class="mobile-link p-3" href="index.html"
+							<a class="mobile-link p-3" href="./index.html"
 								>Home</a
 							>
 							<a class="mobile-link p-3" href="directory.html"
 								>Directory
 							</a>
-							<a class="mobile-link p-3" href="store.html"
+							<a class="mobile-link p-3" href="./store.html"
 								>Store</a
 							>
 							<a
@@ -329,10 +657,10 @@
 								href="directories-and-almanacs.html"
 								>Almanacs & Directories</a
 							>
-							<a class="mobile-link p-3" href="about.html">
+							<a class="mobile-link p-3" href="./about.html">
 								About
 							</a>
-							<a class="mobile-link p-3" href="account.html"
+							<a class="mobile-link p-3" href="./account.html"
 								>Account</a
 							>
 						</div>
@@ -369,18 +697,20 @@
 					<i class="bi bi-list fs-2"></i>
 				</button>
 
-				<a href="index.html" class="navbar-brand text-dark p-0 fs-2"
+				<a href="./index.html" class="navbar-brand text-dark p-0 fs-2"
 					>Gum.iNc</a
 				>
 
 				<a
 					class="btn order-last btn-primary rounded-circle d-lg-none"
-					href="cart.html"
+					href="./cart.html"
 					><i class="bi bi-cart4"></i
 				></a>
 
 				<div class="d-md-flex d-none p-0">
-					<a href="index.html" class="nav-link rounded-pill px-2 py-1"
+					<a
+						href="./index.html"
+						class="nav-link rounded-pill px-2 py-1"
 						>Home</a
 					>
 					<a
@@ -389,11 +719,13 @@
 						>Directory</a
 					>
 					<a
-						href="connect.html"
+						href="./connect.html"
 						class="nav-link rounded-pill px-2 py-1"
 						>Inc Connect</a
 					>
-					<a href="store.html" class="nav-link rounded-pill px-2 py-1"
+					<a
+						href="./store.html"
+						class="nav-link rounded-pill px-2 py-1"
 						>Store</a
 					>
 					<a
@@ -401,16 +733,18 @@
 						class="nav-link rounded-pill px-2 py-1"
 						>Almanacs & Directories</a
 					>
-					<a href="about.html" class="nav-link rounded-pill px-2 py-1"
+					<a
+						href="./about.html"
+						class="nav-link rounded-pill px-2 py-1"
 						>About</a
 					>
 					<a
-						href="account.html"
+						href="./account.html"
 						class="nav-link rounded-pill px-2 py-1 active"
 						>Account</a
 					>
 					<a
-						href="cart.html"
+						href="./cart.html"
 						class="nav-link border rounded-circle px-2 ms-2 py-1"
 						><i class="bi bi-cart4"></i
 					></a>
@@ -468,7 +802,7 @@
 
 							<div class="border-bottom">
 								<a
-									href="my-incs.html"
+									href="./my-incs.html"
 									class="btn w-100 text-start p-3"
 								>
 									<i class="bi bi-people fs-5 me-2"></i>My
@@ -500,7 +834,7 @@
 
 							<div class="border-bottom">
 								<a
-									href="my-dirs.html"
+									href="./my-dirs.html"
 									class="btn w-100 text-start p-3"
 								>
 									<i class="bi bi-book fs-5 me-2"></i>My
@@ -510,7 +844,7 @@
 
 							<div class="border-bottom">
 								<a
-									href="my-subs.html"
+									href="./my-subs.html"
 									class="btn w-100 text-start p-3"
 								>
 									<i class="bi bi-calendar-date fs-5 me-2"></i
@@ -649,7 +983,7 @@
 
 									<a
 										class="dropdown-item border-bottom d-flex align-items-center"
-										href="message.html"
+										href="./message.html"
 									>
 										<div class="dropdown-list-image me-3">
 											<img
@@ -681,7 +1015,7 @@
 
 									<a
 										class="dropdown-item border-bottom d-flex align-items-center"
-										href="message.html"
+										href="./message.html"
 									>
 										<div class="dropdown-list-image me-3">
 											<img
@@ -713,7 +1047,7 @@
 
 									<a
 										class="dropdown-item border-bottom d-flex align-items-center"
-										href="message.html"
+										href="./message.html"
 									>
 										<div class="dropdown-list-image me-3">
 											<img
@@ -745,7 +1079,7 @@
 
 									<a
 										class="dropdown-item pb-2 text-center text-gray"
-										href="message.html"
+										href="./message.html"
 										><small>Read More Messages</small></a
 									>
 								</div>
@@ -1118,7 +1452,7 @@
 					>&copy; 2022 Gum.iNc. All Rights Reserved</span
 				>
 				<a
-					href="partner.html"
+					href="./partner.html"
 					class="btn btn-success px-3 rounded-pill ms-3"
 					>Partner With Us</a
 				>

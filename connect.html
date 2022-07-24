@@ -32,6 +32,18 @@
 		<script defer src="./assets/js/custom.js"></script>
 	</head>
 
+	<style>
+		.saveIncOption {
+			border: solid thin transparent;
+		}
+		.saveIncOption img {
+			width: 30px;
+		}
+		.saveIncOption:hover {
+			border-color: gray;
+		}
+	</style>
+
 	<body
 		class="p-1 p-lg-0 pt-5 d-flex flex-column justify-content-center"
 		style="min-height: 100vh"
@@ -305,13 +317,13 @@
 						</div>
 
 						<div class="d-flex flex-column">
-							<a class="mobile-link p-3" href="index.html"
+							<a class="mobile-link p-3" href="./index.html"
 								>Home</a
 							>
 							<a class="mobile-link p-3" href="directory.html"
 								>Directory
 							</a>
-							<a class="mobile-link p-3" href="store.html"
+							<a class="mobile-link p-3" href="./store.html"
 								>Store</a
 							>
 							<a
@@ -319,10 +331,10 @@
 								href="directories-and-almanacs.html"
 								>Almanacs & Directories</a
 							>
-							<a class="mobile-link p-3" href="about.html">
+							<a class="mobile-link p-3" href="./about.html">
 								About
 							</a>
-							<a class="mobile-link p-3" href="account.html"
+							<a class="mobile-link p-3" href="./account.html"
 								>Account</a
 							>
 						</div>
@@ -359,18 +371,20 @@
 					<i class="bi bi-list fs-2"></i>
 				</button>
 
-				<a href="index.html" class="navbar-brand text-dark p-0 fs-2"
+				<a href="./index.html" class="navbar-brand text-dark p-0 fs-2"
 					>Gum.iNc</a
 				>
 
 				<a
 					class="btn order-last btn-primary rounded-circle d-lg-none"
-					href="cart.html"
+					href="./cart.html"
 					><i class="bi bi-cart4"></i
 				></a>
 
 				<div class="d-md-flex d-none p-0">
-					<a href="index.html" class="nav-link rounded-pill px-2 py-1"
+					<a
+						href="./index.html"
+						class="nav-link rounded-pill px-2 py-1"
 						>Home</a
 					>
 					<a
@@ -379,11 +393,13 @@
 						>Directory</a
 					>
 					<a
-						href="connect.html"
+						href="./connect.html"
 						class="nav-link rounded-pill px-2 py-1 active"
 						>Inc Connect</a
 					>
-					<a href="store.html" class="nav-link rounded-pill px-2 py-1"
+					<a
+						href="./store.html"
+						class="nav-link rounded-pill px-2 py-1"
 						>Store</a
 					>
 					<a
@@ -391,16 +407,18 @@
 						class="nav-link rounded-pill px-2 py-1"
 						>Almanacs & Directories</a
 					>
-					<a href="about.html" class="nav-link rounded-pill px-2 py-1"
+					<a
+						href="./about.html"
+						class="nav-link rounded-pill px-2 py-1"
 						>About</a
 					>
 					<a
-						href="account.html"
+						href="./account.html"
 						class="nav-link rounded-pill px-2 py-1"
 						>Account</a
 					>
 					<a
-						href="cart.html"
+						href="./cart.html"
 						class="nav-link border rounded-circle px-2 ms-2 py-1"
 						><i class="bi bi-cart4"></i
 					></a>
@@ -470,13 +488,13 @@
 
 				<div class="col-auto">
 					<a
-						href="login.html"
+						href="./login.html"
 						class="btn btn-primary px-3 rounded-pill me-2"
 						>Login</a
 					>
 
 					<a
-						href="signup.html"
+						href="./signup.html"
 						class="btn btn-success px-3 rounded-pill me-2"
 						>Join!</a
 					>
@@ -541,7 +559,7 @@
 					<p class="p-0 m-0 me-2 text-start">
 						Graphic Design
 						<a
-							href="more-connects.html"
+							href="./more-connects.html"
 							class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
 							>See all<i
 								class="bi bi-arrow-right-short fs-5 ms-2"
@@ -572,7 +590,7 @@
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
-								<a href="account-connect-listing.html">
+								<a href="./account-connect-listing.html">
 									Graphic and UI/UX Design
 								</a>
 							</h5>
@@ -583,7 +601,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="assets/images/more.jpg"
+										src="./assets/images/more.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -611,14 +629,12 @@
 									adipisicing elit. Laborum officia
 									necessitatibus.
 								</p>
-
 								<div>
-									<button
-										class="saveIncOption btn btn-outline-dark border-0 rounded-circle"
-									>
-										<i
-											class="bi bi-bookmark-star-fill fs-4"
-										></i>
+									<button class="saveIncOption btn">
+										<img
+											src="./assets/img/ink.svg"
+											width="35"
+										/>
 									</button>
 								</div>
 							</div>
@@ -628,7 +644,7 @@
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
-								<a href="account-connect-listing.html">
+								<a href="./account-connect-listing.html">
 									Graphic and UI/UX Design
 								</a>
 							</h5>
@@ -638,7 +654,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="assets/images/more.jpg"
+										src="./assets/images/more.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -668,12 +684,11 @@
 								</p>
 
 								<div>
-									<button
-										class="saveIncOption btn btn-outline-dark border-0 rounded-circle"
-									>
-										<i
-											class="bi bi-bookmark-star-fill fs-4"
-										></i>
+									<button class="saveIncOption btn">
+										<img
+											src="./assets/img/ink.svg"
+											width="35"
+										/>
 									</button>
 								</div>
 							</div>
@@ -683,7 +698,7 @@
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
-								<a href="account-connect-listing.html">
+								<a href="./account-connect-listing.html">
 									Graphic and UI/UX Design
 								</a>
 							</h5>
@@ -693,7 +708,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="assets/images/more.jpg"
+										src="./assets/images/more.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -723,12 +738,11 @@
 								</p>
 
 								<div>
-									<button
-										class="saveIncOption btn btn-outline-dark border-0 rounded-circle"
-									>
-										<i
-											class="bi bi-bookmark-star-fill fs-4"
-										></i>
+									<button class="saveIncOption btn">
+										<img
+											src="./assets/img/ink.svg"
+											width="35"
+										/>
 									</button>
 								</div>
 							</div>
@@ -738,7 +752,7 @@
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
-								<a href="account-connect-listing.html">
+								<a href="./account-connect-listing.html">
 									Graphic and UI/UX Design
 								</a>
 							</h5>
@@ -748,7 +762,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="assets/images/more.jpg"
+										src="./assets/images/more.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -778,12 +792,11 @@
 								</p>
 
 								<div>
-									<button
-										class="saveIncOption btn btn-outline-dark border-0 rounded-circle"
-									>
-										<i
-											class="bi bi-bookmark-star-fill fs-4"
-										></i>
+									<button class="saveIncOption btn">
+										<img
+											src="./assets/img/ink.svg"
+											width="35"
+										/>
 									</button>
 								</div>
 							</div>
@@ -793,7 +806,7 @@
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
-								<a href="account-connect-listing.html">
+								<a href="./account-connect-listing.html">
 									Graphic and UI/UX Design
 								</a>
 							</h5>
@@ -803,7 +816,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="assets/images/more.jpg"
+										src="./assets/images/more.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -833,12 +846,11 @@
 								</p>
 
 								<div>
-									<button
-										class="saveIncOption btn btn-outline-dark border-0 rounded-circle"
-									>
-										<i
-											class="bi bi-bookmark-star-fill fs-4"
-										></i>
+									<button class="saveIncOption btn">
+										<img
+											src="./assets/img/ink.svg"
+											width="35"
+										/>
 									</button>
 								</div>
 							</div>
@@ -848,7 +860,7 @@
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
-								<a href="account-connect-listing.html">
+								<a href="./account-connect-listing.html">
 									Graphic and UI/UX Design
 								</a>
 							</h5>
@@ -858,7 +870,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="assets/images/more.jpg"
+										src="./assets/images/more.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -888,12 +900,11 @@
 								</p>
 
 								<div>
-									<button
-										class="saveIncOption btn btn-outline-dark border-0 rounded-circle"
-									>
-										<i
-											class="bi bi-bookmark-star-fill fs-4"
-										></i>
+									<button class="saveIncOption btn">
+										<img
+											src="./assets/img/ink.svg"
+											width="35"
+										/>
 									</button>
 								</div>
 							</div>
@@ -909,7 +920,7 @@
 					<p class="p-0 m-0 me-2 text-start">
 						Advisory Services
 						<a
-							href="more-connects.html"
+							href="./more-connects.html"
 							class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
 							>See all<i
 								class="bi bi-arrow-right-short fs-5 ms-2"
@@ -940,7 +951,7 @@
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
-								<a href="account-connect-listing.html">
+								<a href="./account-connect-listing.html">
 									Financial Advisory
 								</a>
 							</h5>
@@ -951,7 +962,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="assets/images/user4.jpg"
+										src="./assets/images/user4.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -982,12 +993,11 @@
 								</p>
 
 								<div>
-									<button
-										class="saveIncOption btn btn-outline-dark border-0 rounded-circle"
-									>
-										<i
-											class="bi bi-bookmark-star-fill fs-4"
-										></i>
+									<button class="saveIncOption btn">
+										<img
+											src="./assets/img/ink.svg"
+											width="35"
+										/>
 									</button>
 								</div>
 							</div>
@@ -997,7 +1007,7 @@
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
-								<a href="account-connect-listing.html">
+								<a href="./account-connect-listing.html">
 									Financial Advisory
 								</a>
 							</h5>
@@ -1008,7 +1018,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="assets/images/user4.jpg"
+										src="./assets/images/user4.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -1039,12 +1049,11 @@
 								</p>
 
 								<div>
-									<button
-										class="saveIncOption btn btn-outline-dark border-0 rounded-circle"
-									>
-										<i
-											class="bi bi-bookmark-star-fill fs-4"
-										></i>
+									<button class="saveIncOption btn">
+										<img
+											src="./assets/img/ink.svg"
+											width="35"
+										/>
 									</button>
 								</div>
 							</div>
@@ -1054,7 +1063,7 @@
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
-								<a href="account-connect-listing.html">
+								<a href="./account-connect-listing.html">
 									Financial Advisory
 								</a>
 							</h5>
@@ -1065,7 +1074,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="assets/images/user4.jpg"
+										src="./assets/images/user4.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -1096,12 +1105,11 @@
 								</p>
 
 								<div>
-									<button
-										class="saveIncOption btn btn-outline-dark border-0 rounded-circle"
-									>
-										<i
-											class="bi bi-bookmark-star-fill fs-4"
-										></i>
+									<button class="saveIncOption btn">
+										<img
+											src="./assets/img/ink.svg"
+											width="35"
+										/>
 									</button>
 								</div>
 							</div>
@@ -1111,7 +1119,7 @@
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
-								<a href="account-connect-listing.html">
+								<a href="./account-connect-listing.html">
 									Financial Advisory
 								</a>
 							</h5>
@@ -1122,7 +1130,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="assets/images/user4.jpg"
+										src="./assets/images/user4.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -1153,12 +1161,11 @@
 								</p>
 
 								<div>
-									<button
-										class="saveIncOption btn btn-outline-dark border-0 rounded-circle"
-									>
-										<i
-											class="bi bi-bookmark-star-fill fs-4"
-										></i>
+									<button class="saveIncOption btn">
+										<img
+											src="./assets/img/ink.svg"
+											width="35"
+										/>
 									</button>
 								</div>
 							</div>
@@ -1168,7 +1175,7 @@
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
-								<a href="account-connect-listing.html">
+								<a href="./account-connect-listing.html">
 									Financial Advisory
 								</a>
 							</h5>
@@ -1179,7 +1186,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="assets/images/user4.jpg"
+										src="./assets/images/user4.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -1210,12 +1217,11 @@
 								</p>
 
 								<div>
-									<button
-										class="saveIncOption btn btn-outline-dark border-0 rounded-circle"
-									>
-										<i
-											class="bi bi-bookmark-star-fill fs-4"
-										></i>
+									<button class="saveIncOption btn">
+										<img
+											src="./assets/img/ink.svg"
+											width="35"
+										/>
 									</button>
 								</div>
 							</div>
@@ -1231,7 +1237,7 @@
 					<p class="p-0 m-0 me-2 text-start">
 						Graphic Design
 						<a
-							href="more-connects.html"
+							href="./more-connects.html"
 							class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
 							>See all<i
 								class="bi bi-arrow-right-short fs-5 ms-2"
@@ -1262,7 +1268,7 @@
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
-								<a href="account-connect-listing.html">
+								<a href="./account-connect-listing.html">
 									Graphic and UI/UX Design
 								</a>
 							</h5>
@@ -1272,7 +1278,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="assets/images/more.jpg"
+										src="./assets/images/more.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -1302,12 +1308,11 @@
 								</p>
 
 								<div>
-									<button
-										class="saveIncOption btn btn-outline-dark border-0 rounded-circle"
-									>
-										<i
-											class="bi bi-bookmark-star-fill fs-4"
-										></i>
+									<button class="saveIncOption btn">
+										<img
+											src="./assets/img/ink.svg"
+											width="35"
+										/>
 									</button>
 								</div>
 							</div>
@@ -1317,7 +1322,7 @@
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
-								<a href="account-connect-listing.html">
+								<a href="./account-connect-listing.html">
 									Graphic and UI/UX Design
 								</a>
 							</h5>
@@ -1327,7 +1332,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="assets/images/more.jpg"
+										src="./assets/images/more.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -1357,12 +1362,11 @@
 								</p>
 
 								<div>
-									<button
-										class="saveIncOption btn btn-outline-dark border-0 rounded-circle"
-									>
-										<i
-											class="bi bi-bookmark-star-fill fs-4"
-										></i>
+									<button class="saveIncOption btn">
+										<img
+											src="./assets/img/ink.svg"
+											width="35"
+										/>
 									</button>
 								</div>
 							</div>
@@ -1372,7 +1376,7 @@
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
-								<a href="account-connect-listing.html">
+								<a href="./account-connect-listing.html">
 									Graphic and UI/UX Design
 								</a>
 							</h5>
@@ -1382,7 +1386,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="assets/images/more.jpg"
+										src="./assets/images/more.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -1412,12 +1416,11 @@
 								</p>
 
 								<div>
-									<button
-										class="saveIncOption btn btn-outline-dark border-0 rounded-circle"
-									>
-										<i
-											class="bi bi-bookmark-star-fill fs-4"
-										></i>
+									<button class="saveIncOption btn">
+										<img
+											src="./assets/img/ink.svg"
+											width="35"
+										/>
 									</button>
 								</div>
 							</div>
@@ -1427,7 +1430,7 @@
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
-								<a href="account-connect-listing.html">
+								<a href="./account-connect-listing.html">
 									Graphic and UI/UX Design
 								</a>
 							</h5>
@@ -1437,7 +1440,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="assets/images/more.jpg"
+										src="./assets/images/more.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -1467,12 +1470,11 @@
 								</p>
 
 								<div>
-									<button
-										class="saveIncOption btn btn-outline-dark border-0 rounded-circle"
-									>
-										<i
-											class="bi bi-bookmark-star-fill fs-4"
-										></i>
+									<button class="saveIncOption btn">
+										<img
+											src="./assets/img/ink.svg"
+											width="35"
+										/>
 									</button>
 								</div>
 							</div>
@@ -1482,7 +1484,7 @@
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
-								<a href="account-connect-listing.html">
+								<a href="./account-connect-listing.html">
 									Graphic and UI/UX Design
 								</a>
 							</h5>
@@ -1492,7 +1494,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="assets/images/more.jpg"
+										src="./assets/images/more.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -1522,12 +1524,11 @@
 								</p>
 
 								<div>
-									<button
-										class="saveIncOption btn btn-outline-dark border-0 rounded-circle"
-									>
-										<i
-											class="bi bi-bookmark-star-fill fs-4"
-										></i>
+									<button class="saveIncOption btn">
+										<img
+											src="./assets/img/ink.svg"
+											width="35"
+										/>
 									</button>
 								</div>
 							</div>
@@ -1537,7 +1538,7 @@
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
-								<a href="account-connect-listing.html">
+								<a href="./account-connect-listing.html">
 									Graphic and UI/UX Design
 								</a>
 							</h5>
@@ -1547,7 +1548,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="assets/images/more.jpg"
+										src="./assets/images/more.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -1577,12 +1578,11 @@
 								</p>
 
 								<div>
-									<button
-										class="saveIncOption btn btn-outline-dark border-0 rounded-circle"
-									>
-										<i
-											class="bi bi-bookmark-star-fill fs-4"
-										></i>
+									<button class="saveIncOption btn">
+										<img
+											src="./assets/img/ink.svg"
+											width="35"
+										/>
 									</button>
 								</div>
 							</div>
@@ -1620,7 +1620,7 @@
 					>&copy; 2022 Gum.iNc. All Rights Reserved</span
 				>
 				<a
-					href="partner.html"
+					href="./partner.html"
 					class="btn btn-success px-3 rounded-pill ms-3"
 					>Partner With Us</a
 				>
