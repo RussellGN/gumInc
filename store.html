@@ -18,28 +18,24 @@
 			rel="stylesheet"
 			href="./assets/vendor/fontawsome/css/all.min.css"
 		/>
-		<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css" />
+		<link
+			rel="stylesheet"
+			href="./assets/vendor/custom-bootstrap/css/custom.min.css"
+		/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<!-- scripts -->
 
 		<script
 			defer
-			src="./assets/vendor/bootstrap/bootstrap.bundle.js"
+			src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"
 		></script>
 
 		<script defer src="./assets/js/main.js"></script>
 		<script defer src="./assets/js/custom.js"></script>
 	</head>
 
-	<style>
-		mark {
-			background-color: rgba(0, 0, 0, 0.3);
-			color: white;
-		}
-	</style>
-
-	<body class="p-0 position-relative">
+	<body>
 		<div id="invisible-elements">
 			<div class="custom-modals">
 				<!--Location Modal -->
@@ -188,10 +184,6 @@
 			</div>
 
 			<div id="popovers">
-				<button type="button" class="d-none" id="addToCartToastBtn">
-					Add To Cart
-				</button>
-
 				<div
 					class="position-fixed bottom-0 end-0 p-3"
 					style="z-index: 11"
@@ -206,68 +198,6 @@
 						<div class="toast-body">
 							<div class="d-flex align-items-center">
 								Added!
-								<button
-									type="button"
-									class="btn-close me-2 ms-auto"
-									data-bs-dismiss="toast"
-									aria-label="Close"
-								></button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<button type="button" class="d-none" id="saveIncToastBtn">
-					save inc
-				</button>
-
-				<div
-					class="position-fixed bottom-0 end-0 p-3"
-					style="z-index: 11"
-				>
-					<div
-						id="saveIncToast"
-						class="toast text-white bg-success"
-						role="alert"
-						aria-live="assertive"
-						aria-atomic="true"
-					>
-						<div class="toast-body">
-							<div class="d-flex align-items-center">
-								<i class="bi bi-check fs-2 me-2"></i>
-								<span class="me-2">
-									Listing Saved! You can find it on the saved
-									Incs tab on you profile.</span
-								>
-								<button
-									type="button"
-									class="btn-close me-2 ms-auto"
-									data-bs-dismiss="toast"
-									aria-label="Close"
-								></button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div
-					class="position-fixed bottom-0 end-0 p-3"
-					style="z-index: 11"
-				>
-					<div
-						id="requestAudienceToast"
-						class="toast text-white bg-success"
-						role="alert"
-						aria-live="assertive"
-						aria-atomic="true"
-					>
-						<div class="toast-body">
-							<div class="d-flex align-items-center">
-								<i class="bi bi-send-check fs-2 me-2"></i>
-								<span class="me-2">
-									Requested! You'll Be notified of a response
-									in your notifications.</span
-								>
 								<button
 									type="button"
 									class="btn-close me-2 ms-auto"
@@ -312,8 +242,11 @@
 							<a class="mobile-link p-3" href="./index.html"
 								>Home</a
 							>
-							<a class="mobile-link p-3" href="directory.html"
+							<a class="mobile-link p-3" href="./directory.html"
 								>Directory
+							</a>
+							<a class="mobile-link p-3" href="./connect.html"
+								>Inc Connect
 							</a>
 							<a class="mobile-link p-3" href="./store.html"
 								>Store</a
@@ -348,82 +281,56 @@
 			</div>
 		</div>
 
-		<header id="header" class="p-2 px-4 px-md-2 pt-md-2 fixed-top">
-			<div
-				class="container-xxl d-flex justify-content-between align-items-center justify-content-md-around"
-			>
-				<button
-					class="btn p-0 d-md-none nav-link"
-					id="nav-toggle"
-					type="button"
-					data-bs-toggle="offcanvas"
-					data-bs-target="#mobileNavOffcanvas"
-					aria-controls="mobileNavOffcanvas"
-				>
-					<i class="bi bi-list fs-2"></i>
-				</button>
+		<header id="header">
+			<div class="container">
+				<div class="d-flex justify-content-between align-items-center">
+					<button
+						class="nav-link btn border-0 p-0 d-lg-none"
+						id="nav-toggle"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#mobileNavOffcanvas"
+						aria-controls="mobileNavOffcanvas"
+					>
+						<i class="bi bi-list fs-4"></i>
+					</button>
 
-				<a href="./index.html" class="navbar-brand text-dark p-0 fs-2"
-					>Gum.iNc</a
-				>
-
-				<a
-					class="btn order-last btn-primary rounded-circle d-lg-none"
-					href="./cart.html"
-					><i class="bi bi-cart4"></i
-				></a>
-
-				<div class="d-md-flex d-none p-0">
 					<a
 						href="./index.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Home</a
-					>
-					<a
-						href="directory.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Directory</a
-					>
-					<a
-						href="./connect.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Inc Connect</a
-					>
-					<a
-						href="./store.html"
-						class="nav-link rounded-pill px-2 py-1 active"
-						>Store</a
-					>
-					<a
-						href="directories-and-almanacs.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Almanacs & Directories</a
-					>
-					<a
-						href="./about.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>About</a
-					>
-					<a
-						href="./account.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Account</a
-					>
-					<a
-						href="./cart.html"
-						class="nav-link border rounded-circle px-2 ms-2 py-1"
+						class="navbar-brand fw-bold text-primary fs-3"
+						><img
+							src="./assets/logos and stuff/logo (44).jpg"
+							class="gum-logo rounded-pill"
+					/></a>
+
+					<a class="nav-link order-last d-lg-none" href="./cart.html"
 						><i class="bi bi-cart4"></i
 					></a>
+
+					<div class="d-lg-flex d-none">
+						<a href="./index.html" class="nav-link">Home</a>
+						<a href="directory.html" class="nav-link">Directory</a>
+						<a href="./connect.html" class="nav-link"
+							>Inc Connect</a
+						>
+						<a href="./store.html" class="nav-link active">Store</a>
+						<a href="directories-and-almanacs.html" class="nav-link"
+							>Almanacs & Directories</a
+						>
+						<a href="./about.html" class="nav-link">About</a>
+						<a href="./account.html" class="nav-link">Account</a>
+						<a href="./cart.html" class="nav-link"
+							><i class="bi bi-cart4"></i
+						></a>
+					</div>
 				</div>
 			</div>
 		</header>
 
 		<main class="p-md-5 pt-5 container">
-			<section
-				class="container w-fit rounded-pill border border-3 text-gray text-center p-2 px-5 my-5"
-			>
+			<section class="top-section">
 				<h2>
-					<i class="bi bi-bag me-2"></i> Store
+					<i class="bi bi-bag-fill me-2 text-primary"></i> Store
 					<span class="d-none d-lg-inline"
 						>- Browse Products & Services</span
 					>
@@ -431,12 +338,9 @@
 			</section>
 
 			<section class="my-5">
-				<div
-					id="almanacs-and-directories"
-					class="container p-2 p-md-5 py-4 mb-5 shadow-lg c-rounded-3"
-				>
+				<div class="p-md-5 mb-5 shadow-lg c-rounded-2">
 					<div
-						class="pb-2 px-3 border-bottom border-4 d-flex justify-content-between align-items-center"
+						class="p-3 border-bottom border-4 d-flex justify-content-between align-items-center"
 					>
 						<h2>
 							Almanacs & <br class="d-md-none" />
@@ -446,769 +350,205 @@
 						<a
 							href="./books.html"
 							class="btn btn-primary rounded-pill px-3"
-							>See All<i class="bi bi-arrow-right-short ms-2"></i
+							>See All<i class="bi bi-arrow-right ms-2"></i
 						></a>
 					</div>
 
-					<div
-						class="row row-cols-2 px-2 row-cols-lg-4 justify-content-around"
-					>
-						<div class="col my-3 d-flex p-1">
-							<div class="border shadow w-100 c-rounded-1">
-								<p
-									class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-								>
-									Upcoming Events by the Gum.iNc &reg;
-								</p>
+					<div class="row row-cols-2 row-cols-lg-4 p-3">
+						<div class="col d-flex p-2">
+							<div class="book">
+								<p class="book-title">Upcoming Events</p>
 
-								<div
-									style="max-height: 200px"
-									class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-								>
-									<img
-										src="./assets/img/images.jpeg"
-										class="w-100"
-									/>
-									<span
-										class="bg-success text-white p-2 position-absolute top-0 end-0"
-										style="border-radius: 0 0 0 10px"
-										>almanac</span
+								<div class="book-cover-holder">
+									<button
+										class="add-to-cart-btn btn btn-success d-md-none btn-sm"
 									>
+										<i class="bi bi-cart-plus"></i>
+									</button>
+									<img
+										src="./assets/logos and stuff/book-upcoming.jpg"
+									/>
 								</div>
-
-								<p class="p-3 m-0 d-none d-md-block">
-									Lorem ipsum, dolor sit amet consectetur
-									adipisicing elit.
-								</p>
 
 								<div
-									class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+									class="d-none d-md-flex p-3 align-items-center justify-content-between"
 								>
-									<div>$150.00</div>
+									<p class="book-description m-0 pe-3">
+										Lorem ipsum dolor sit amet consectetur
+										adipisicing elit. Vero, soluta?
+									</p>
 
-									<div class="dropdown open">
-										<button
-											class="btn fs-4"
-											type="button"
-											id="triggerId"
-											data-bs-toggle="dropdown"
-											aria-haspopup="true"
-											aria-expanded="false"
-										>
-											<i
-												class="bi bi-three-dots-vertical"
-											></i>
-										</button>
-
-										<div
-											class="dropdown-menu"
-											aria-labelledby="triggerId"
-										>
-											<a
-												class="dropdown-item"
-												href="./view-book.html"
-											>
-												View
-											</a>
-											<button
-												type="button"
-												class="dropdown-item"
-												onclick="document.getElementById('addToCartToastBtn').click()"
-											>
-												Add to cart
-											</button>
-										</div>
-									</div>
-								</div>
-
-								<div class="px-3 d-none d-md-block">
-									<span class="me-3"> $150.00</span
-									><span> 12 feb</span>
-								</div>
-
-								<div class="px-3 pb-3 d-none d-md-block">
-									<a
-										class="mt-2 btn btn-outline-dark rounded-pill px-3"
-										>View</a
-									><button
-										onclick="document.getElementById('addToCartToastBtn').click()"
-										class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+									<button
+										class="add-to-cart-btn btn btn-outline-success"
 									>
 										<i class="bi bi-cart-plus"></i>
 									</button>
 								</div>
-							</div>
-						</div>
 
-						<div class="col my-3 d-flex p-1">
-							<div class="border shadow w-100 c-rounded-1">
-								<p
-									class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-								>
-									Gummy Pages (Yellow Pages) by the Gum.iNc
-									&reg;
-								</p>
-
-								<div
-									style="max-height: 200px"
-									class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-								>
-									<img
-										src="./assets/img/images.jpeg"
-										class="w-100"
-									/>
-									<span
-										class="bg-success text-white p-2 position-absolute top-0 end-0"
-										style="border-radius: 0 0 0 10px"
-										>almanac</span
-									>
-								</div>
-
-								<p class="p-3 m-0 d-none d-md-block">
-									Lorem ipsum, dolor sit amet consectetur
-									adipisicing elit.
-								</p>
-
-								<div
-									class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
-								>
-									<div>$150.00</div>
-
-									<div class="dropdown open">
-										<button
-											class="btn fs-4"
-											type="button"
-											id="triggerId"
-											data-bs-toggle="dropdown"
-											aria-haspopup="true"
-											aria-expanded="false"
-										>
-											<i
-												class="bi bi-three-dots-vertical"
-											></i>
-										</button>
-
-										<div
-											class="dropdown-menu"
-											aria-labelledby="triggerId"
-										>
-											<a
-												class="dropdown-item"
-												href="./view-book.html"
-											>
-												View
-											</a>
-											<button
-												type="button"
-												class="dropdown-item"
-												onclick="document.getElementById('addToCartToastBtn').click()"
-											>
-												Add to cart
-											</button>
-										</div>
-									</div>
-								</div>
-
-								<div class="px-3 d-none d-md-block">
-									<span class="me-3"> $150.00</span
-									><span> 12 feb</span>
-								</div>
-
-								<div class="px-3 pb-3 d-none d-md-block">
-									<a
-										class="mt-2 btn btn-outline-dark rounded-pill px-3"
-										>View</a
-									><button
-										onclick="document.getElementById('addToCartToastBtn').click()"
-										class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
-									>
-										<i class="bi bi-cart-plus"></i>
-									</button>
-								</div>
-							</div>
-						</div>
-
-						<div class="col my-3 d-flex p-1">
-							<div class="border shadow w-100 c-rounded-1">
-								<p
-									class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-								>
-									Creme Chefs by the Gum.iNc &reg;
-								</p>
-
-								<div
-									style="max-height: 200px"
-									class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-								>
-									<img
-										src="./assets/img/images.jpeg"
-										class="w-100"
-									/>
-									<span
-										class="bg-success text-white p-2 position-absolute top-0 end-0"
-										style="border-radius: 0 0 0 10px"
-										>almanac</span
-									>
-								</div>
-
-								<p class="p-3 m-0 d-none d-md-block">
-									Lorem ipsum, dolor sit amet consectetur
-									adipisicing elit.
-								</p>
-
-								<div
-									class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
-								>
-									<div>$150.00</div>
-
-									<div class="dropdown open">
-										<button
-											class="btn fs-4"
-											type="button"
-											id="triggerId"
-											data-bs-toggle="dropdown"
-											aria-haspopup="true"
-											aria-expanded="false"
-										>
-											<i
-												class="bi bi-three-dots-vertical"
-											></i>
-										</button>
-
-										<div
-											class="dropdown-menu"
-											aria-labelledby="triggerId"
-										>
-											<a
-												class="dropdown-item"
-												href="./view-book.html"
-											>
-												View
-											</a>
-											<button
-												type="button"
-												class="dropdown-item"
-												onclick="document.getElementById('addToCartToastBtn').click()"
-											>
-												Add to cart
-											</button>
-										</div>
-									</div>
-								</div>
-
-								<div class="px-3 d-none d-md-block">
-									<span class="me-3"> $150.00</span
-									><span> 12 feb</span>
-								</div>
-
-								<div class="px-3 pb-3 d-none d-md-block">
-									<a
-										class="mt-2 btn btn-outline-dark rounded-pill px-3"
-										>View</a
-									><button
-										onclick="document.getElementById('addToCartToastBtn').click()"
-										class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
-									>
-										<i class="bi bi-cart-plus"></i>
-									</button>
-								</div>
-							</div>
-						</div>
-
-						<div class="col my-3 d-flex p-1">
-							<div class="border shadow w-100 c-rounded-1">
-								<p
-									class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-								>
-									Creme Restaurants by the Gum.iNc &reg;
-								</p>
-
-								<div
-									style="max-height: 200px"
-									class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-								>
-									<img
-										src="./assets/img/images.jpeg"
-										class="w-100"
-									/>
-									<span
-										class="bg-success text-white p-2 position-absolute top-0 end-0"
-										style="border-radius: 0 0 0 10px"
-										>almanac</span
-									>
-								</div>
-
-								<p class="p-3 m-0 d-none d-md-block">
-									Lorem ipsum, dolor sit amet consectetur
-									adipisicing elit.
-								</p>
-
-								<div
-									class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
-								>
-									<div>$150.00</div>
-
-									<div class="dropdown open">
-										<button
-											class="btn fs-4"
-											type="button"
-											id="triggerId"
-											data-bs-toggle="dropdown"
-											aria-haspopup="true"
-											aria-expanded="false"
-										>
-											<i
-												class="bi bi-three-dots-vertical"
-											></i>
-										</button>
-
-										<div
-											class="dropdown-menu"
-											aria-labelledby="triggerId"
-										>
-											<a
-												class="dropdown-item"
-												href="./view-book.html"
-											>
-												View
-											</a>
-											<button
-												type="button"
-												class="dropdown-item"
-												onclick="document.getElementById('addToCartToastBtn').click()"
-											>
-												Add to cart
-											</button>
-										</div>
-									</div>
-								</div>
-
-								<div class="px-3 d-none d-md-block">
-									<span class="me-3"> $150.00</span
-									><span> 12 feb</span>
-								</div>
-
-								<div class="px-3 pb-3 d-none d-md-block">
-									<a
-										class="mt-2 btn btn-outline-dark rounded-pill px-3"
-										>View</a
-									><button
-										onclick="document.getElementById('addToCartToastBtn').click()"
-										class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
-									>
-										<i class="bi bi-cart-plus"></i>
-									</button>
-								</div>
-							</div>
-						</div>
-
-						<!-- <div class="col my-3 d-flex p-1">
-							<div class="border shadow w-100 c-rounded-1">
-								<p
-									class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-								>
-									Gummy Pages
-								</p>
-
-								<div
-									style="max-height: 200px"
-									class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-								>
-									<img
-										src="./assets/img/images.jpeg"
-										class="w-100"
-									/>
-									<span
-										class="bg-success text-white p-2 position-absolute top-0 end-0"
-										style="border-radius: 0 0 0 10px"
-										>almanac</span
-									>
-								</div>
-
-								<p class="p-3 m-0 d-none d-md-block">
-									Lorem ipsum, dolor sit amet consectetur
-									adipisicing elit.
-								</p>
-
-								<div
-									class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
-								>
-									<div>$150.00</div>
-
-									<div class="dropdown open">
-										<button
-											class="btn fs-4"
-											type="button"
-											id="triggerId"
-											data-bs-toggle="dropdown"
-											aria-haspopup="true"
-											aria-expanded="false"
-										>
-											<i
-												class="bi bi-three-dots-vertical"
-											></i>
-										</button>
-
-										<div
-											class="dropdown-menu"
-											aria-labelledby="triggerId"
-										>
-											<a
-												class="dropdown-item"
-												href="./view-book.html"
-											>
-												View
-											</a>
-											<button
-												type="button"
-												class="dropdown-item"
-												onclick="document.getElementById('addToCartToastBtn').click()"
-											>
-												Add to cart
-											</button>
-										</div>
-									</div>
-								</div>
-
-								<div class="px-3 d-none d-md-block">
-									<span class="me-3"> $150.00</span
-									><span> 12 feb</span>
-								</div>
-
-								<div class="px-3 pb-3 d-none d-md-block">
-									<a
-										href="./view-book.html"
-										class="mt-2 btn btn-outline-dark rounded-pill px-3"
-										>View</a
-									><button
-										onclick="document.getElementById('addToCartToastBtn').click()"
-										class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
-									>
-										<i class="bi bi-cart-plus"></i>
-									</button>
-								</div>
-							</div>
-						</div>
-
-						<div class="col my-3 d-flex p-1">
-							<div class="border shadow w-100 c-rounded-1">
-								<p
-									class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-								>
-									Gummy Pages
-								</p>
-
-								<div
-									style="max-height: 200px"
-									class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-								>
-									<img
-										src="./assets/img/images.jpeg"
-										class="w-100"
-									/>
-									<span
-										class="bg-success text-white p-2 position-absolute top-0 end-0"
-										style="border-radius: 0 0 0 10px"
-										>almanac</span
-									>
-								</div>
-
-								<p class="p-3 m-0 d-none d-md-block">
-									Lorem ipsum, dolor sit amet consectetur
-									adipisicing elit.
-								</p>
-
-								<div
-									class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
-								>
-									<div>$150.00</div>
-
-									<div class="dropdown open">
-										<button
-											class="btn fs-4"
-											type="button"
-											id="triggerId"
-											data-bs-toggle="dropdown"
-											aria-haspopup="true"
-											aria-expanded="false"
-										>
-											<i
-												class="bi bi-three-dots-vertical"
-											></i>
-										</button>
-
-										<div
-											class="dropdown-menu"
-											aria-labelledby="triggerId"
-										>
-											<a
-												class="dropdown-item"
-												href="./view-book.html"
-											>
-												View
-											</a>
-											<button
-												type="button"
-												class="dropdown-item"
-												onclick="document.getElementById('addToCartToastBtn').click()"
-											>
-												Add to cart
-											</button>
-										</div>
-									</div>
-								</div>
-
-								<div class="px-3 d-none d-md-block">
-									<span class="me-3"> $150.00</span
-									><span> 12 feb</span>
-								</div>
-
-								<div class="px-3 pb-3 d-none d-md-block">
-									<a
-										href="./view-book.html"
-										class="mt-2 btn btn-outline-dark rounded-pill px-3"
-										>View</a
-									><button
-										onclick="document.getElementById('addToCartToastBtn').click()"
-										class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
-									>
-										<i class="bi bi-cart-plus"></i>
-									</button>
-								</div>
-							</div>
-						</div>
-
-						<div class="col my-3 d-flex p-1">
-							<div class="border shadow w-100 c-rounded-1">
-								<p
-									class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-								>
-									Gummy Pages
-								</p>
-
-								<div
-									style="max-height: 200px"
-									class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-								>
-									<img
-										src="./assets/img/images.jpeg"
-										class="w-100"
-									/>
-									<span
-										class="bg-success text-white p-2 position-absolute top-0 end-0"
-										style="border-radius: 0 0 0 10px"
-										>almanac</span
-									>
-								</div>
-
-								<p class="p-3 m-0 d-none d-md-block">
-									Lorem ipsum, dolor sit amet consectetur
-									adipisicing elit.
-								</p>
-
-								<div
-									class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
-								>
-									<div>$150.00</div>
-
-									<div class="dropdown open">
-										<button
-											class="btn fs-4"
-											type="button"
-											id="triggerId"
-											data-bs-toggle="dropdown"
-											aria-haspopup="true"
-											aria-expanded="false"
-										>
-											<i
-												class="bi bi-three-dots-vertical"
-											></i>
-										</button>
-
-										<div
-											class="dropdown-menu"
-											aria-labelledby="triggerId"
-										>
-											<a
-												class="dropdown-item"
-												href="./view-book.html"
-											>
-												View
-											</a>
-											<button
-												type="button"
-												class="dropdown-item"
-												onclick="document.getElementById('addToCartToastBtn').click()"
-											>
-												Add to cart
-											</button>
-										</div>
-									</div>
-								</div>
-
-								<div class="px-3 d-none d-md-block">
-									<span class="me-3"> $150.00</span
-									><span> 12 feb</span>
-								</div>
-
-								<div class="px-3 pb-3 d-none d-md-block">
-									<a
-										href="./view-book.html"
-										class="mt-2 btn btn-outline-dark rounded-pill px-3"
-										>View</a
-									><button
-										onclick="document.getElementById('addToCartToastBtn').click()"
-										class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
-									>
-										<i class="bi bi-cart-plus"></i>
-									</button>
-								</div>
-							</div>
-						</div>
-
-						<div class="col my-3 d-flex p-1">
-							<div class="border shadow w-100 c-rounded-1">
-								<p
-									class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-								>
-									Gummy Pages
-								</p>
-
-								<div
-									style="max-height: 200px"
-									class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-								>
-									<img
-										src="./assets/img/images.jpeg"
-										class="w-100"
-									/>
-									<span
-										class="bg-success text-white p-2 position-absolute top-0 end-0"
-										style="border-radius: 0 0 0 10px"
-										>almanac</span
-									>
-								</div>
-
-								<p class="p-3 m-0 d-none d-md-block">
-									Lorem ipsum, dolor sit amet consectetur
-									adipisicing elit.
-								</p>
-
-								<div
-									class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
-								>
-									<div>$150.00</div>
-
-									<div class="dropdown open">
-										<button
-											class="btn fs-4"
-											type="button"
-											id="triggerId"
-											data-bs-toggle="dropdown"
-											aria-haspopup="true"
-											aria-expanded="false"
-										>
-											<i
-												class="bi bi-three-dots-vertical"
-											></i>
-										</button>
-
-										<div
-											class="dropdown-menu"
-											aria-labelledby="triggerId"
-										>
-											<a
-												class="dropdown-item"
-												href="./view-book.html"
-											>
-												View
-											</a>
-											<button
-												type="button"
-												class="dropdown-item"
-												onclick="document.getElementById('addToCartToastBtn').click()"
-											>
-												Add to cart
-											</button>
-										</div>
-									</div>
-								</div>
-
-								<div class="px-3 d-none d-md-block">
-									<span class="me-3"> $150.00</span
-									><span> 12 feb</span>
-								</div>
-
-								<div class="px-3 pb-3 d-none d-md-block">
-									<a
-										href="./view-book.html"
-										class="mt-2 btn btn-outline-dark rounded-pill px-3"
-										>View</a
-									><button
-										onclick="document.getElementById('addToCartToastBtn').click()"
-										class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
-									>
-										<i class="bi bi-cart-plus"></i>
-									</button>
-								</div>
-							</div>
-						</div> -->
-					</div>
-				</div>
-
-				<div
-					id="business-cards"
-					class="container text-center text-md-start text-white mb-5 shadow-lg c-rounded-3 p-2 p-md-5"
-				>
-					<div class="row">
-						<div class="col-md-7 col-lg-5 py-5">
-							<h2 class="mb-3">Business Cards</h2>
-
-							<p class="lead">
-								<mark class="d-md-none"
-									>Lorem ipsum dolor, sit amet consectetur
-									adipisicing elit. Doloremque sint id
-									voluptas deserunt error hic sit facere! Iure
-									quos, optio, repellat voluptate</mark
-								>
-								<span class="d-none d-md-inline"
-									>Lorem ipsum dolor, sit amet consectetur
-									adipisicing elit. Doloremque sint id
-									voluptas deserunt error hic sit facere! Iure
-									quos, optio, repellat voluptate</span
-								>
-								<br />
 								<a
-									href="./business-cards.html"
-									class="btn btn-light border-0 rounded-pill px-3 mt-4 me-3"
-									>Get Started</a
+									href="./view-book.html"
+									class="view-book-link"
 								>
-							</p>
+								</a>
+							</div>
+						</div>
+
+						<div class="col d-flex p-2">
+							<div class="book">
+								<p class="book-title">
+									Gummy Pages (Yellow Pages)
+								</p>
+
+								<div class="book-cover-holder">
+									<button
+										class="add-to-cart-btn btn btn-success d-md-none btn-sm"
+									>
+										<i class="bi bi-cart-plus"></i>
+									</button>
+									<img
+										src="./assets/logos and stuff/book-gummy-pages.jpg"
+									/>
+								</div>
+
+								<div
+									class="d-none d-md-flex p-3 align-items-center justify-content-between"
+								>
+									<p class="book-description m-0 pe-3">
+										Lorem ipsum dolor sit amet consectetur
+										adipisicing elit. Vero, soluta?
+									</p>
+
+									<button
+										class="add-to-cart-btn btn btn-outline-success"
+									>
+										<i class="bi bi-cart-plus"></i>
+									</button>
+								</div>
+
+								<a
+									href="./view-book.html"
+									class="view-book-link"
+								>
+								</a>
+							</div>
+						</div>
+
+						<div class="col d-flex p-2">
+							<div class="book">
+								<p class="book-title">Creme Chefs</p>
+
+								<div class="book-cover-holder">
+									<button
+										class="add-to-cart-btn btn btn-success d-md-none btn-sm"
+									>
+										<i class="bi bi-cart-plus"></i>
+									</button>
+									<img
+										src="./assets/logos and stuff/book-food.jpg"
+									/>
+								</div>
+
+								<div
+									class="d-none d-md-flex p-3 align-items-center justify-content-between"
+								>
+									<p class="book-description m-0 pe-3">
+										Lorem ipsum dolor sit amet consectetur
+										adipisicing elit. Vero, soluta?
+									</p>
+
+									<button
+										class="add-to-cart-btn btn btn-outline-success"
+									>
+										<i class="bi bi-cart-plus"></i>
+									</button>
+								</div>
+
+								<a
+									href="./view-book.html"
+									class="view-book-link"
+								>
+								</a>
+							</div>
+						</div>
+
+						<div class="col d-flex p-2">
+							<div class="book">
+								<p class="book-title">Creme Restaurants</p>
+
+								<div class="book-cover-holder">
+									<button
+										class="add-to-cart-btn btn btn-success d-md-none btn-sm"
+									>
+										<i class="bi bi-cart-plus"></i>
+									</button>
+									<img
+										src="./assets/logos and stuff/book-food.jpg"
+									/>
+								</div>
+
+								<div
+									class="d-none d-md-flex p-3 align-items-center justify-content-between"
+								>
+									<p class="book-description m-0 pe-3">
+										Lorem ipsum dolor sit amet consectetur
+										adipisicing elit. Vero, soluta?
+									</p>
+
+									<button
+										class="add-to-cart-btn btn btn-outline-success"
+									>
+										<i class="bi bi-cart-plus"></i>
+									</button>
+								</div>
+
+								<a
+									href="./view-book.html"
+									class="view-book-link"
+								>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
 
 				<div
-					class="container p-4 px-3 p-md-5 bg-white mb-5 shadow-lg c-rounded-3"
+					class="business-cards text-center text-lg-start text-white mb-5 shadow-lg c-rounded-2 p-2 p-md-5"
 				>
+					<div class="col-lg-5 py-5">
+						<h2 class="mb-3">Business Cards</h2>
+
+						<div class="lead">
+							<mark
+								>Lorem ipsum dolor, sit amet consectetur
+								adipisicing elit. Doloremque sint id voluptas
+								deserunt error hic sit facere! Iure quos, optio,
+								repellat voluptate</mark
+							>
+							<br />
+							<a
+								href="./business-cards.html"
+								class="btn btn-success rounded-pill px-3 mt-4"
+								>Get Started</a
+							>
+						</div>
+					</div>
+				</div>
+
+				<div class="p-3 p-md-5 mb-5 shadow-lg c-rounded-2">
 					<div class="row align-items-center justify-content-around">
 						<div class="col-lg-4">
-							<div
-								class="overflow-hidden border border-4 c-rounded-2"
-							>
+							<div class="overflow-hidden border c-rounded-2">
 								<img
 									src="./assets/images/profiling.jpg"
-									class="w-100"
+									class="w-100 c-rounded-2"
 								/>
 							</div>
 						</div>
 
-						<div class="col-lg-7 text-center text-lg-start">
-							<h2 class="mt-4 mt-lg-0">
-								One Pager Power By The Grape Surgery
-							</h2>
+						<div class="col-lg-7 p-3 text-center text-lg-start">
+							<h2>One Pager Power By The Grape Surgery</h2>
 
-							<p class="col-lg-10 lead">
+							<p class="col-lg-8 lead">
 								Lorem ipsum dolor sit amet consectetur
 								adipisicing elit. Dignissimos possimus velit
 								ipsam rem praesentium, incidunt sint commodi
@@ -1225,11 +565,91 @@
 				</div>
 
 				<div
-					id="gum-ink-package"
-					class="container shadow-lg c-rounded-3 px-3 px-lg-0 text-center text-lg-start py-5"
+					class="gum-ink-package mb-5 text-white p-3 pb-5 p-lg-5 shadow-lg c-rounded-2"
 				>
 					<div class="row justify-content-around align-items-center">
-						<div class="col-lg-5 text-white">
+						<div class="col-lg-5 p-2 p-lg-5 order-lg-2">
+							<div
+								id="generalCarousel1"
+								class="carousel slide general-carousel"
+								data-bs-ride="carousel"
+							>
+								<ol class="carousel-indicators">
+									<li
+										data-bs-target="#generalCarousel1"
+										data-bs-slide-to="0"
+										class="active"
+										aria-current="true"
+										aria-label="First slide"
+									></li>
+									<li
+										data-bs-target="#generalCarousel1"
+										data-bs-slide-to="1"
+										aria-label="Second slide"
+									></li>
+									<li
+										data-bs-target="#generalCarousel1"
+										data-bs-slide-to="2"
+										aria-label="Third slide"
+									></li>
+									<li
+										data-bs-target="#generalCarousel1"
+										data-bs-slide-to="3"
+										aria-label="Fourth slide"
+									></li>
+								</ol>
+
+								<div class="carousel-inner" role="listbox">
+									<div class="carousel-item active">
+										<div>
+											<img
+												src="./assets/images/background.jpg"
+											/>
+											<h2>
+												<span> profiling </span>
+											</h2>
+										</div>
+									</div>
+
+									<div class="carousel-item">
+										<div>
+											<img
+												src="./assets/images/background.jpg"
+											/>
+											<h2>
+												<span> Business Cards </span>
+											</h2>
+										</div>
+									</div>
+
+									<div class="carousel-item">
+										<div>
+											<img
+												src="./assets/images/background.jpg"
+											/>
+											<h2>
+												<span> Access Card </span>
+											</h2>
+										</div>
+									</div>
+
+									<div class="carousel-item">
+										<div>
+											<img
+												src="./assets/images/background.jpg"
+											/>
+											<h2>
+												<span> And More! </span>
+											</h2>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="col-lg-6 text-center text-lg-start order-lg-1"
+						>
 							<h2 class="mb-3">
 								<i class="bi bi-stars me-2"></i>The Gum.iNc
 								Package<i class="bi bi-stars ms-2"></i>
@@ -1246,70 +666,18 @@
 								enim?
 							</p>
 
-							<p>
+							<div>
 								<a
 									href="./gum-inc-bundle.html"
-									class="btn btn-light rounded-pill px-3"
+									class="btn btn-success rounded-pill px-3"
 									>Get Started</a
 								>
-							</p>
-						</div>
-
-						<div class="col-lg-4">
-							<div
-								id="carouselId"
-								class="shadow-lg p-3 bg-white c-rounded-3 carousel slide"
-								data-bs-ride="carousel"
-							>
-								<div class="carousel-inner" role="listbox">
-									<div class="carousel-item p-3 active">
-										<div
-											class="bg-white text-center w-100 c-rounded-2 p-4 border border-2"
-										>
-											<div class="mb-2 fs-1 text-brown">
-												<i
-													class="bi bi-file-earmark-text-fill"
-												></i>
-											</div>
-
-											<h5>CV/Resume</h5>
-										</div>
-									</div>
-
-									<div class="carousel-item p-3">
-										<div
-											class="bg-white text-center w-100 c-rounded-2 p-4 border border-2"
-										>
-											<div class="mb-2 fs-1 text-brown">
-												<i
-													class="bi bi-file-earmark-text-fill"
-												></i>
-											</div>
-
-											<h5>Profiling</h5>
-										</div>
-									</div>
-
-									<div class="carousel-item p-3">
-										<div
-											class="bg-white text-center w-100 c-rounded-2 p-4 border border-2"
-										>
-											<div class="mb-2 fs-1 text-brown">
-												<i
-													class="bi bi-file-earmark-text-fill"
-												></i>
-											</div>
-
-											<h5>Creative Card</h5>
-										</div>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="container px-3 my-5 shadow-lg c-rounded-3 py-5">
+				<div class="p-3 p-md-5 shadow-lg c-rounded-2">
 					<div class="row align-items-center justify-content-around">
 						<div class="col-lg-4">
 							<div>
@@ -1321,33 +689,34 @@
 						</div>
 
 						<div class="col-lg-7 text-center text-lg-start">
-							<h2>Gum.iNc Access Card</h2>
+							<div>
+								<h2>Gum.iNc Access Card</h2>
 
-							<p class="col-lg-10 lead">
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Dignissimos possimus velit
-								ipsam rem praesentium, incidunt sint commodi
-								sunt laborum
-								<br />
-								<a
-									href="data-card.html	"
-									class="btn btn-primary rounded-pill mt-3 px-3"
-									>Get Started</a
-								>
-							</p>
+								<p class="col-lg-10 lead">
+									Lorem ipsum dolor sit amet consectetur
+									adipisicing elit. Dignissimos possimus velit
+									ipsam rem praesentium, incidunt sint commodi
+									sunt laborum
+									<br />
+									<a
+										href="data-card.html	"
+										class="btn btn-primary rounded-pill mt-3 px-3"
+										>Get Started</a
+									>
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 		</main>
 
-		<footer
-			class="d-flex container flex-wrap justify-content-between align-items-center py-5 px-3"
-		>
-			<div class="col d-flex align-items-center">
-				<span class="text-muted"
-					>&copy; 2022 Gum.iNc. All Rights Reserved</span
-				>
+		<footer class="container d-lg-flex justify-content-between p-5">
+			<div class="text-center">
+				<p class="d-lg-inline">
+					&copy; 2022 Gum.iNc. All Rights Reserved
+				</p>
+
 				<a
 					href="./partner.html"
 					class="btn btn-success px-3 rounded-pill ms-3"
@@ -1355,36 +724,28 @@
 				>
 			</div>
 
-			<ul
-				class="nav col-md-4 justify-content-end fs-4 list-unstyled d-flex"
-			>
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.twitter.com"
-						target="_blank"
-						><i class="bi bi-twitter"></i
-					></a>
-				</li>
+			<div class="text-center mt-3 mt-lg-0">
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.twitter.com"
+					target="_blank"
+					><i class="bi bi-twitter"></i
+				></a>
 
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.instagram.com"
-						target="_blank"
-						><i class="bi bi-instagram"></i
-					></a>
-				</li>
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.instagram.com"
+					target="_blank"
+					><i class="bi bi-instagram"></i
+				></a>
 
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.facebook.com"
-						target="_blank"
-						><i class="bi bi-facebook"></i
-					></a>
-				</li>
-			</ul>
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.facebook.com"
+					target="_blank"
+					><i class="bi bi-facebook"></i
+				></a>
+			</div>
 		</footer>
 	</body>
 </html>

@@ -4,15 +4,11 @@ This is the template for a website, Gum.iNc.
 
 ## Status...24 july 2022
 
-The template is currently not mobile responsive and **should only be viewed on desktop**.
-Although mobile responsiveness is the whole point of bootstrap, I decided to focus
-on getting the template structure sorted before making it responsive..this also
-goes for the styling, although there are hints of it here and there...anyways
-I'm still to properly work on the template's styling.
+The template nearly complete, only a few details to iron out
 
 ## Technologies used
 
-**HTML5, CSS3, JavaScript (ES6) and Bootstrap 5 only**
+**HTML5, CSS3, JavaScript(ES6), Bootstrap 5 and SCSS**
 
 ## Dependancies
 
@@ -25,9 +21,9 @@ and to avoid going back and forth between html and css files
 
 ## To be done
 
-1. make the about page more lively
-2. make the template mobile responsive
-3. work on the styling
+1. work gum package page
+1. work data card page
+1. work event page
 
 ## How to view the template
 

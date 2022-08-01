@@ -18,21 +18,24 @@
 			rel="stylesheet"
 			href="./assets/vendor/fontawsome/css/all.min.css"
 		/>
-		<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css" />
+		<link
+			rel="stylesheet"
+			href="./assets/vendor/custom-bootstrap/css/custom.min.css"
+		/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<!-- scripts -->
 
 		<script
 			defer
-			src="./assets/vendor/bootstrap/bootstrap.bundle.js"
+			src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"
 		></script>
 
 		<script defer src="./assets/js/main.js"></script>
 		<script defer src="./assets/js/custom.js"></script>
 	</head>
 
-	<body class="p-0 position-relative">
+	<body>
 		<div id="invisible-elements">
 			<div class="custom-modals">
 				<!--Location Modal -->
@@ -181,10 +184,6 @@
 			</div>
 
 			<div id="popovers">
-				<button type="button" class="d-none" id="addToCartToastBtn">
-					Add To Cart
-				</button>
-
 				<div
 					class="position-fixed bottom-0 end-0 p-3"
 					style="z-index: 11"
@@ -199,68 +198,6 @@
 						<div class="toast-body">
 							<div class="d-flex align-items-center">
 								Added!
-								<button
-									type="button"
-									class="btn-close me-2 ms-auto"
-									data-bs-dismiss="toast"
-									aria-label="Close"
-								></button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<button type="button" class="d-none" id="saveIncToastBtn">
-					save inc
-				</button>
-
-				<div
-					class="position-fixed bottom-0 end-0 p-3"
-					style="z-index: 11"
-				>
-					<div
-						id="saveIncToast"
-						class="toast text-white bg-success"
-						role="alert"
-						aria-live="assertive"
-						aria-atomic="true"
-					>
-						<div class="toast-body">
-							<div class="d-flex align-items-center">
-								<i class="bi bi-check fs-2 me-2"></i>
-								<span class="me-2">
-									Listing Saved! You can find it on the saved
-									Incs tab on you profile.</span
-								>
-								<button
-									type="button"
-									class="btn-close me-2 ms-auto"
-									data-bs-dismiss="toast"
-									aria-label="Close"
-								></button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div
-					class="position-fixed bottom-0 end-0 p-3"
-					style="z-index: 11"
-				>
-					<div
-						id="requestAudienceToast"
-						class="toast text-white bg-success"
-						role="alert"
-						aria-live="assertive"
-						aria-atomic="true"
-					>
-						<div class="toast-body">
-							<div class="d-flex align-items-center">
-								<i class="bi bi-send-check fs-2 me-2"></i>
-								<span class="me-2">
-									Requested! You'll Be notified of a response
-									in your notifications.</span
-								>
 								<button
 									type="button"
 									class="btn-close me-2 ms-auto"
@@ -305,8 +242,11 @@
 							<a class="mobile-link p-3" href="./index.html"
 								>Home</a
 							>
-							<a class="mobile-link p-3" href="directory.html"
+							<a class="mobile-link p-3" href="./directory.html"
 								>Directory
+							</a>
+							<a class="mobile-link p-3" href="./connect.html"
+								>Inc Connect
 							</a>
 							<a class="mobile-link p-3" href="./store.html"
 								>Store</a
@@ -341,152 +281,127 @@
 			</div>
 		</div>
 
-		<header id="header" class="p-2 px-4 px-md-2 pt-md-2 fixed-top">
-			<div
-				class="container-xxl d-flex justify-content-between align-items-center justify-content-md-around"
-			>
-				<button
-					class="btn p-0 d-md-none nav-link"
-					id="nav-toggle"
-					type="button"
-					data-bs-toggle="offcanvas"
-					data-bs-target="#mobileNavOffcanvas"
-					aria-controls="mobileNavOffcanvas"
-				>
-					<i class="bi bi-list fs-2"></i>
-				</button>
+		<header id="header">
+			<div class="container">
+				<div class="d-flex justify-content-between align-items-center">
+					<button
+						class="nav-link btn border-0 p-0 d-lg-none"
+						id="nav-toggle"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#mobileNavOffcanvas"
+						aria-controls="mobileNavOffcanvas"
+					>
+						<i class="bi bi-list fs-4"></i>
+					</button>
 
-				<a href="./index.html" class="navbar-brand text-dark p-0 fs-2"
-					>Gum.iNc</a
-				>
-
-				<a
-					class="btn order-last btn-primary rounded-circle d-lg-none"
-					href="./cart.html"
-					><i class="bi bi-cart4"></i
-				></a>
-
-				<div class="d-md-flex d-none p-0">
 					<a
 						href="./index.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Home</a
-					>
-					<a
-						href="directory.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Directory</a
-					>
-					<a
-						href="./connect.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Inc Connect</a
-					>
-					<a
-						href="./store.html"
-						class="nav-link rounded-pill px-2 py-1 active"
-						>Store</a
-					>
-					<a
-						href="directories-and-almanacs.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Almanacs & Directories</a
-					>
-					<a
-						href="./about.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>About</a
-					>
-					<a
-						href="./account.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Account</a
-					>
-					<a
-						href="./cart.html"
-						class="nav-link border rounded-circle px-2 ms-2 py-1"
+						class="navbar-brand fw-bold text-primary fs-3"
+						><img
+							src="./assets/logos and stuff/logo (44).jpg"
+							class="gum-logo rounded-pill"
+					/></a>
+
+					<a class="nav-link order-last d-lg-none" href="./cart.html"
 						><i class="bi bi-cart4"></i
 					></a>
+
+					<div class="d-lg-flex d-none">
+						<a href="./index.html" class="nav-link">Home</a>
+						<a href="directory.html" class="nav-link">Directory</a>
+						<a href="./connect.html" class="nav-link"
+							>Inc Connect</a
+						>
+						<a href="./store.html" class="nav-link active">Store</a>
+						<a href="directories-and-almanacs.html" class="nav-link"
+							>Almanacs & Directories</a
+						>
+						<a href="./about.html" class="nav-link">About</a>
+						<a href="./account.html" class="nav-link">Account</a>
+						<a href="./cart.html" class="nav-link"
+							><i class="bi bi-cart4"></i
+						></a>
+					</div>
 				</div>
 			</div>
 		</header>
 
-		<main class="container py-5">
-			<section class="my-5 container">
-				<div
-					class="p-4 p-md-5 d-flex flex-wrap flex-column flex-lg-row justify-content-around align-items-center shadow-lg c-rounded-3 gap-2"
-				>
-					<h2 class="pb-2 col-lg-12 border-bottom border-4 w-100">
-						Gummy Pages Directory <br />
-						<small class="text-success">/detailed view</small>
-					</h2>
-
-					<div
-						class="col-6 col-lg-3 shadow d-flex justify-content-center p-0 align-items-center overflow-hidden c-rounded-1 h-fit"
+		<main class="container py-5 mt-5">
+			<div
+				class="p-3 p-md-5 row justify-content-around align-items-center"
+			>
+				<div class="col-12 mb-4">
+					<h2
+						class="pb-3 text-center mx-auto border-bottom border-2 w-fit"
 					>
-						<img src="./assets/img/images.jpeg" class="w-100" />
-					</div>
+						<small class="text-success">detailed view/</small
+						><br class="d-lg-none" />
+						Gummy Pages Directory
+					</h2>
+				</div>
 
-					<div class="col-lg-5">
-						<div class="listing my-3 border-top border-3">
-							<p class="p-3 m-0">
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Facilis fuga inventore quod,
-								pariatur, rerum corrupti nisi rem eum optio quia
-								ipsam debitis aspernatur sint suscipit, impedit
-								sapiente soluta. Labore, corporis.
+				<div class="col-lg-3">
+					<div>
+						<img
+							src="./assets/logos and stuff/book-artists-creatives.jpg"
+							class="w-100 c-rounded-1 shadow"
+						/>
+					</div>
+				</div>
+
+				<div class="col-lg-5">
+					<div class="p-3 text-center text-lg-start">
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Facilis fuga inventore quod, pariatur, rerum
+							corrupti nisi rem eum optio quia ipsam debitis
+							aspernatur sint suscipit, impedit sapiente soluta.
+							Labore, corporis.
+						</p>
+
+						<div
+							class="d-flex flex-wrap justify-content-around align-items-center"
+						>
+							<p class="me-3 bg-light p-2">
+								<i class="bi bi-book-half me-2"></i>Events
+								Almanac
 							</p>
 
-							<div class="px-3 pb-3 d-flex flex-wrap">
-								<p
-									class="me-3 border border-2 p-2 rounded-pill"
-								>
-									<i class="bi bi-bank me-2"></i>Educational
-								</p>
+							<p class="me-3 bg-light p-2">
+								<i class="bi bi-currency-dollar me-2"></i>150.00
+							</p>
 
-								<p
-									class="me-3 border border-2 p-2 rounded-pill"
-								>
-									<i class="bi bi-currency-dollar me-1"></i
-									>150.00
-								</p>
+							<p class="me-3 bg-light p-2">
+								<i class="bi bi-calendar-date me-2"></i>12 Feb
+								Issue
+							</p>
+						</div>
 
-								<p
-									class="me-3 border border-2 p-2 rounded-pill"
-								>
-									<i class="bi bi-calendar-date me-1"></i>12
-									feb 22
-								</p>
-							</div>
+						<div class="mt-3 d-lg-flex align-items-center">
+							<button
+								class="add-to-cart-btn btn btn-primary m-1 rounded-pill w-100"
+							>
+								Add To Cart<i class="bi bi-cart-plus ms-2"></i>
+							</button>
 
-							<div class="p-4 pt-0 d-lg-flex align-items-center">
-								<button
-									onclick="document.getElementById('addToCartToastBtn').click()"
-									class="btn btn-primary m-1 rounded-pill w-100"
-								>
-									Add To Cart<i
-										class="bi bi-cart-plus ms-2"
-									></i>
-								</button>
-								<a
-									href="directories-and-almanacs.html"
-									class="btn btn-success m-1 rounded-pill w-100"
-									>Join Directory</a
-								>
-							</div>
+							<a
+								href="./join-inc.html"
+								class="btn btn-success m-1 rounded-pill"
+								>Join
+							</a>
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 		</main>
 
-		<footer
-			class="d-flex container flex-wrap justify-content-between align-items-center py-5 px-3"
-		>
-			<div class="col d-flex align-items-center">
-				<span class="text-muted"
-					>&copy; 2022 Gum.iNc. All Rights Reserved</span
-				>
+		<footer class="container d-lg-flex justify-content-between p-5">
+			<div class="text-center">
+				<p class="d-lg-inline">
+					&copy; 2022 Gum.iNc. All Rights Reserved
+				</p>
+
 				<a
 					href="./partner.html"
 					class="btn btn-success px-3 rounded-pill ms-3"
@@ -494,36 +409,28 @@
 				>
 			</div>
 
-			<ul
-				class="nav col-md-4 justify-content-end fs-4 list-unstyled d-flex"
-			>
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.twitter.com"
-						target="_blank"
-						><i class="bi bi-twitter"></i
-					></a>
-				</li>
+			<div class="text-center mt-3 mt-lg-0">
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.twitter.com"
+					target="_blank"
+					><i class="bi bi-twitter"></i
+				></a>
 
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.instagram.com"
-						target="_blank"
-						><i class="bi bi-instagram"></i
-					></a>
-				</li>
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.instagram.com"
+					target="_blank"
+					><i class="bi bi-instagram"></i
+				></a>
 
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.facebook.com"
-						target="_blank"
-						><i class="bi bi-facebook"></i
-					></a>
-				</li>
-			</ul>
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.facebook.com"
+					target="_blank"
+					><i class="bi bi-facebook"></i
+				></a>
+			</div>
 		</footer>
 	</body>
 </html>

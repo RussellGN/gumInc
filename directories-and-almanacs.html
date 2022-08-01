@@ -18,81 +18,24 @@
 			rel="stylesheet"
 			href="./assets/vendor/fontawsome/css/all.min.css"
 		/>
-		<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css" />
+		<link
+			rel="stylesheet"
+			href="./assets/vendor/custom-bootstrap/css/custom.min.css"
+		/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<!-- scripts -->
 
 		<script
 			defer
-			src="./assets/vendor/bootstrap/bootstrap.bundle.js"
+			src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"
 		></script>
 
 		<script defer src="./assets/js/main.js"></script>
 		<script defer src="./assets/js/custom.js"></script>
 	</head>
 
-	<style>
-		.carousel-control-next,
-		.carousel-control-prev {
-			position: absolute;
-			top: initial !important;
-			bottom: 50% !important;
-			width: fit-content !important	;
-			padding: 0.3rem !important;
-			border-radius: 100%;
-			opacity: 1 !important;
-			transition: all 0.3s;
-			background-color: #712d24 !important;
-		}
-		.increase-hover-opacity {
-			opacity: 0.5;
-			transition: opacity 0.3s;
-		}
-		.increase-hover-opacity:hover,
-		.increase-hover-opacity:focus {
-			opacity: 1;
-		}
-
-		.h-80-px {
-			height: 80px;
-		}
-		.h-120-px {
-			height: 120px;
-		}
-	</style>
-
-	<style>
-		@media screen {
-			.tabs .nav-link {
-				/* margin: 0 0.5rem; */
-				height: 3rem;
-				width: 3rem;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				border-radius: 100%;
-				color: #fff !important;
-				background-color: rgba(113, 45, 36, 0.5);
-				border: solid !important;
-				cursor: pointer;
-			}
-
-			.tabs .nav-link:hover {
-				border-color: #712d24 !important;
-			}
-			.tabs .nav-link.active {
-				background: #712d24 !important;
-				color: #fff !important;
-				border-color: #712d24 !important;
-			}
-		}
-	</style>
-
-	<body
-		class="p-0 pt-5 position-relative d-flex flex-column justify-content-center"
-		style="min-height: 100vh"
-	>
+	<body>
 		<div id="invisible-elements">
 			<div class="custom-modals">
 				<!--Location Modal -->
@@ -365,8 +308,11 @@
 							<a class="mobile-link p-3" href="./index.html"
 								>Home</a
 							>
-							<a class="mobile-link p-3" href="directory.html"
+							<a class="mobile-link p-3" href="./directory.html"
 								>Directory
+							</a>
+							<a class="mobile-link p-3" href="./connect.html"
+								>Inc Connect
 							</a>
 							<a class="mobile-link p-3" href="./store.html"
 								>Store</a
@@ -401,795 +347,608 @@
 			</div>
 		</div>
 
-		<header id="header" class="p-2 px-4 px-md-2 pt-md-2 fixed-top">
-			<div
-				class="container-xxl d-flex justify-content-between align-items-center justify-content-md-around"
-			>
-				<button
-					class="btn p-0 d-md-none nav-link"
-					id="nav-toggle"
-					type="button"
-					data-bs-toggle="offcanvas"
-					data-bs-target="#mobileNavOffcanvas"
-					aria-controls="mobileNavOffcanvas"
-				>
-					<i class="bi bi-list fs-2"></i>
-				</button>
+		<header id="header">
+			<div class="container">
+				<div class="d-flex justify-content-between align-items-center">
+					<button
+						class="nav-link btn border-0 p-0 d-lg-none"
+						id="nav-toggle"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#mobileNavOffcanvas"
+						aria-controls="mobileNavOffcanvas"
+					>
+						<i class="bi bi-list fs-4"></i>
+					</button>
 
-				<a href="./index.html" class="navbar-brand text-dark p-0 fs-2"
-					>Gum.iNc</a
-				>
-
-				<a
-					class="btn order-last btn-primary rounded-circle d-lg-none"
-					href="./cart.html"
-					><i class="bi bi-cart4"></i
-				></a>
-
-				<div class="d-md-flex d-none p-0">
 					<a
 						href="./index.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Home</a
-					>
-					<a
-						href="directory.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Directory</a
-					>
-					<a
-						href="./connect.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Inc Connect</a
-					>
-					<a
-						href="./store.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Store</a
-					>
-					<a
-						href="directories-and-almanacs.html"
-						class="nav-link rounded-pill px-2 py-1 active"
-						>Almanacs & Directories</a
-					>
-					<a
-						href="./about.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>About</a
-					>
-					<a
-						href="./account.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Account</a
-					>
-					<a
-						href="./cart.html"
-						class="nav-link border rounded-circle px-2 ms-2 py-1"
+						class="navbar-brand fw-bold text-primary fs-3"
+						><img
+							src="./assets/logos and stuff/logo (44).jpg"
+							class="gum-logo rounded-pill"
+					/></a>
+
+					<a class="nav-link order-last d-lg-none" href="./cart.html"
 						><i class="bi bi-cart4"></i
 					></a>
+
+					<div class="d-lg-flex d-none">
+						<a href="./index.html" class="nav-link">Home</a>
+						<a href="directory.html" class="nav-link">Directory</a>
+						<a href="./connect.html" class="nav-link"
+							>Inc Connect</a
+						>
+						<a href="./store.html" class="nav-link">Store</a>
+						<a
+							href="directories-and-almanacs.html"
+							class="nav-link active"
+							>Almanacs & Directories</a
+						>
+						<a href="./about.html" class="nav-link">About</a>
+						<a href="./account.html" class="nav-link">Account</a>
+						<a href="./cart.html" class="nav-link"
+							><i class="bi bi-cart4"></i
+						></a>
+					</div>
 				</div>
 			</div>
 		</header>
 
-		<main class="my-5 container shadow-lg c-rounded-3 p-4 p-md-5 tabs">
-			<nav
-				class="nav nav-tabs d-flex justify-content-center border-0 fs-5 mb-2 gap-1 gap-md-2 flex-nowrap p-0"
-			>
-				<a
-					class="nav-link active"
-					data-bs-toggle="tab"
-					data-bs-target="#tab-1"
-					><i class="bi bi-info-circle"></i
-				></a>
-
-				<a
-					id="tab2Toggler"
-					class="nav-link"
-					data-bs-toggle="tab"
-					data-bs-target="#tab-2"
-					>1</a
+		<main class="my-5 pt-5 container">
+			<div class="shadow-lg c-rounded-3 p-4 p-md-5 guide-tabs">
+				<nav
+					class="nav nav-tabs justify-content-center border-0 mb-2 flex-nowrap"
 				>
+					<a
+						class="nav-link active"
+						data-bs-toggle="tab"
+						data-bs-target="#tab-1"
+						><i class="bi bi-info-circle"></i
+					></a>
 
-				<a
-					id="tab3Toggler"
-					class="nav-link"
-					data-bs-toggle="tab"
-					data-bs-target="#tab-3"
-					>2</a
-				>
-
-				<a
-					id="tab4Toggler"
-					class="nav-link"
-					data-bs-toggle="tab"
-					data-bs-target="#tab-4"
-					>3</a
-				>
-
-				<a
-					id="tab5Toggler"
-					class="nav-link"
-					data-bs-toggle="tab"
-					data-bs-target="#tab-5"
-					>4</a
-				>
-
-				<a
-					id="tab6Toggler"
-					class="nav-link"
-					data-bs-toggle="tab"
-					data-bs-target="#tab-6"
-					>5</a
-				>
-			</nav>
-
-			<div
-				style="min-height: 60vh"
-				class="tab-content border-top border-3 border-brown"
-			>
-				<div class="tab-pane active" id="tab-1">
-					<div
-						class="row my-5 align-items-center justify-content-around"
+					<a
+						id="tab2Toggler"
+						class="nav-link"
+						data-bs-toggle="tab"
+						data-bs-target="#tab-2"
+						>1</a
 					>
-						<div class="col-lg-7 text-lg-start order-2 order-lg-1">
-							<h2>
-								Feature In Our Hardcopy Directories And
-								Almanacs.
-							</h2>
 
-							<h5 class="text-success mb-4">
-								Extend your outreach. Register yourself/your
-								business to feature in upcoming editions of our
-								almanacs & directories.
-							</h5>
+					<a
+						id="tab3Toggler"
+						class="nav-link"
+						data-bs-toggle="tab"
+						data-bs-target="#tab-3"
+						>2</a
+					>
 
-							<p class="col-lg-10 lead">
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Dignissimos possimus velit
-								ipsam rem praesentium, incidunt sint commodi
-								sunt laborum
-								<br />
-								<button
-									onclick="document.getElementById('tab2Toggler').click()"
-									class="btn btn-primary rounded-pill mt-3 px-3"
-								>
-									Get Started
-								</button>
-							</p>
-						</div>
+					<a
+						id="tab4Toggler"
+						class="nav-link"
+						data-bs-toggle="tab"
+						data-bs-target="#tab-4"
+						>3</a
+					>
 
-						<div class="col-lg-4 order-1 order-lg-2 mb-5 mb-lg-0">
-							<div
-								class="border overflow-hidden c-rounded-2 shadow-lg"
-							>
-								<img
-									src="./assets/images/profiling.jpg"
-									class="w-100"
-								/>
-							</div>
-						</div>
-					</div>
-				</div>
+					<a
+						id="tab5Toggler"
+						class="nav-link"
+						data-bs-toggle="tab"
+						data-bs-target="#tab-5"
+						>4</a
+					>
+				</nav>
 
-				<div class="tab-pane" id="tab-2">
-					<div class="row my-5 justify-content-around">
-						<div class="col-lg-5">
-							<h4 class="text-success mb-3">
-								<i class="bi bi-info-circle me-2"></i>1. Before
-								We Begin, You'll Need An Account.
-							</h4>
-
-							<p class="lead">
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Tenetur autem sint accusamus
-								debitis quae laboriosam, labore natus error modi
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Tenetur autem sint accusamus
-							</p>
-						</div>
-
-						<div class="col-lg-4">
-							<form
-								class="c-rounded-2 py-5 shadow-lg overflow-hidden p-5 d-flex flex-column align-items-center"
-							>
-								<div class="form-floating mb-3">
-									<input
-										type="email"
-										class="form-control"
-										id="floatingInput"
-										placeholder="name@example.com"
-									/>
-									<label for="floatingInput"
-										>Email address</label
-									>
-								</div>
-
-								<div class="form-floating mb-3">
-									<input
-										type="password"
-										class="form-control"
-										id="floatingPassword"
-										placeholder="Password"
-									/>
-									<label for="floatingPassword"
-										>Password</label
-									>
-								</div>
-
-								<div
-									class="d-flex flex-column align-items-center gap-2"
-								>
-									<button
-										onclick="document.getElementById('tab3Toggler').click()"
-										class="btn btn-primary rounded-pill px-3"
-										type="button"
-									>
-										Login
-									</button>
-									<span class="text-center"
-										>- Dont have an account? -</span
-									>
-									<a
-										href="./signup.html"
-										class="btn btn-success rounded-pill px-3"
-										>Signup</a
-									>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-
-				<div class="tab-pane" id="tab-3">
-					<div class="row my-5 justify-content-around">
-						<div class="col-lg-8 px-4 bg-white pb-5">
-							<h4
-								class="pb-2 d-flex justify-content-between flex-wrap text-success"
-							>
-								<span
-									class="col-12 col-lg-auto text-center text-lg-start mb-3 mb-lg-0"
-									><i class="bi bi-info-circle me-2"></i>2.
-									Select Directory Or Almanac</span
-								>
-
-								<form
-									action=""
-									class="col-12 col-lg-auto mb-3 mb-lg-0"
-								>
-									<input
-										type="search"
-										class="form-control"
-										placeholder="Search..."
-									/>
-								</form>
-							</h4>
-
-							<div
-								id="carouselId"
-								class="carousel slide"
-								data-bs-ride="carousel"
-							>
-								<div class="carousel-inner" role="listbox">
-									<div class="carousel-item active px-3">
-										<div
-											class="row px-2 row-cols-2 row-cols-md-3 d-flex justify-content-center flex-nowrap"
-										>
-											<div class="col h-fit p-1">
-												<div
-													class="shadow d-flex justify-content-center p-0 align-items-center overflow-hidden c-rounded-1 position-relative"
-												>
-													<img
-														src="./assets/img/images.jpeg"
-														class="w-100"
-													/>
-													<p
-														class="position-absolute bottom-0 w-100 start-0 bg-dark p-2 d-flex justify-content-center text-white m-0"
-													>
-														Gummy Pages
-													</p>
-												</div>
-											</div>
-
-											<div class="col h-fit p-1">
-												<div
-													class="shadow d-flex justify-content-center p-0 align-items-center overflow-hidden c-rounded-1 position-relative"
-												>
-													<img
-														src="./assets/img/images.jpeg"
-														class="w-100"
-													/>
-													<p
-														class="position-absolute bottom-0 w-100 start-0 bg-dark p-2 d-flex justify-content-center text-white m-0"
-													>
-														Gummy Pages
-													</p>
-												</div>
-											</div>
-
-											<div
-												class="col h-fit p-1 d-none d-md-block"
-											>
-												<div
-													class="shadow d-flex justify-content-center p-0 align-items-center overflow-hidden c-rounded-1 position-relative"
-												>
-													<img
-														src="./assets/img/images.jpeg"
-														class="w-100"
-													/>
-													<p
-														class="position-absolute bottom-0 w-100 start-0 bg-dark p-2 d-flex justify-content-center text-white m-0"
-													>
-														Gummy Pages
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="carousel-item px-3">
-										<div
-											class="row px-2 row-cols-2 row-cols-md-3 d-flex justify-content-center flex-nowrap"
-										>
-											<div class="col h-fit p-1">
-												<div
-													class="shadow d-flex justify-content-center p-0 align-items-center overflow-hidden c-rounded-1 position-relative"
-												>
-													<img
-														src="./assets/img/images.jpeg"
-														class="w-100"
-													/>
-													<p
-														class="position-absolute bottom-0 w-100 start-0 bg-dark p-2 d-flex justify-content-center text-white m-0"
-													>
-														Gummy Pages
-													</p>
-												</div>
-											</div>
-
-											<div class="col h-fit p-1">
-												<div
-													class="shadow d-flex justify-content-center p-0 align-items-center overflow-hidden c-rounded-1 position-relative"
-												>
-													<img
-														src="./assets/img/images.jpeg"
-														class="w-100"
-													/>
-													<p
-														class="position-absolute bottom-0 w-100 start-0 bg-dark p-2 d-flex justify-content-center text-white m-0"
-													>
-														Gummy Pages
-													</p>
-												</div>
-											</div>
-
-											<div
-												class="col h-fit p-1 d-none d-md-block"
-											>
-												<div
-													class="shadow d-flex justify-content-center p-0 align-items-center overflow-hidden c-rounded-1 position-relative"
-												>
-													<img
-														src="./assets/img/images.jpeg"
-														class="w-100"
-													/>
-													<p
-														class="position-absolute bottom-0 w-100 start-0 bg-dark p-2 d-flex justify-content-center text-white m-0"
-													>
-														Gummy Pages
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="carousel-item px-3">
-										<div
-											class="row px-2 row-cols-2 row-cols-md-3 d-flex justify-content-center flex-nowrap"
-										>
-											<div class="col h-fit p-1">
-												<div
-													class="shadow d-flex justify-content-center p-0 align-items-center overflow-hidden c-rounded-1 position-relative"
-												>
-													<img
-														src="./assets/img/images.jpeg"
-														class="w-100"
-													/>
-													<p
-														class="position-absolute bottom-0 w-100 start-0 bg-dark p-2 d-flex justify-content-center text-white m-0"
-													>
-														Gummy Pages
-													</p>
-												</div>
-											</div>
-
-											<div class="col h-fit p-1">
-												<div
-													class="shadow d-flex justify-content-center p-0 align-items-center overflow-hidden c-rounded-1 position-relative"
-												>
-													<img
-														src="./assets/img/images.jpeg"
-														class="w-100"
-													/>
-													<p
-														class="position-absolute bottom-0 w-100 start-0 bg-dark p-2 d-flex justify-content-center text-white m-0"
-													>
-														Gummy Pages
-													</p>
-												</div>
-											</div>
-
-											<div
-												class="col h-fit p-1 d-none d-md-block"
-											>
-												<div
-													class="shadow d-flex justify-content-center p-0 align-items-center overflow-hidden c-rounded-1 position-relative"
-												>
-													<img
-														src="./assets/img/images.jpeg"
-														class="w-100"
-													/>
-													<p
-														class="position-absolute bottom-0 w-100 start-0 bg-dark p-2 d-flex justify-content-center text-white m-0"
-													>
-														Gummy Pages
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<button
-									class="carousel-control-prev bg-dark"
-									type="button"
-									data-bs-target="#carouselId"
-									data-bs-slide="prev"
-								>
-									<span
-										class="carousel-control-prev-icon"
-										aria-hidden="true"
-									></span>
-									<span class="visually-hidden"
-										>Previous</span
-									>
-								</button>
-
-								<button
-									class="carousel-control-next bg-dark"
-									type="button"
-									data-bs-target="#carouselId"
-									data-bs-slide="next"
-								>
-									<span
-										class="carousel-control-next-icon"
-										aria-hidden="true"
-									></span>
-									<span class="visually-hidden">Next</span>
-								</button>
-							</div>
-						</div>
-
+				<div
+					style="min-height: 60vh"
+					class="tab-content border-top border-2 border-primary"
+				>
+					<div class="tab-pane active" id="tab-1">
 						<div
-							class="col px-4 pb-5 d-flex text-center text-lg-start"
+							class="row my-5 align-items-center justify-content-around"
 						>
+							<div class="col-lg-6 order-2 order-lg-1">
+								<div class="text-center text-lg-start">
+									<h2>
+										Feature In Our Hardcopy Directories And
+										Almanacs.
+									</h2>
+
+									<h5 class="text-success mb-3">
+										Extend your outreach. Register
+										yourself/your business to feature in
+										upcoming editions of our almanacs &
+										directories.
+									</h5>
+
+									<p class="col-lg-10 lead">
+										Lorem ipsum dolor sit amet consectetur
+										adipisicing elit. Dignissimos possimus
+										velit ipsam rem praesentium, incidunt
+										sint commodi sunt laborum
+										<br />
+										<button
+											onclick="document.getElementById('tab2Toggler').click()"
+											class="btn btn-primary rounded-pill mt-3 px-3"
+										>
+											Get Started
+										</button>
+									</p>
+								</div>
+							</div>
+
 							<div
-								class="bg-white p-4 listing border shadow text-dark overflow-hidden c-rounded-1"
+								class="col-lg-4 order-1 order-lg-2 mb-5 mb-lg-0"
 							>
-								<p
-									class="py-2 text-center text-success border-bottom fw-bold border-2"
+								<div
+									class="border overflow-hidden c-rounded-2 shadow"
 								>
-									Gummy Pages
-								</p>
+									<img
+										src="./assets/images/profiling.jpg"
+										class="w-100"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
 
-								<p class="fw-bold">
-									<i class="bi bi-briefcase me-2"></i>General
-									Directory For all Proffesionals And
-									Businesses
-								</p>
+					<div class="tab-pane" id="tab-2">
+						<div class="row my-5 justify-content-around">
+							<div class="col-lg-5 text-center text-lg-start">
+								<h4 class="text-success mb-3">
+									1. Before We Begin, You'll Need An Account.
+								</h4>
 
-								<p class="m-0">
+								<p class="lead">
 									Lorem ipsum dolor sit amet consectetur
-									adipisicing elit. Facilis fuga inventore
-									suscipit, impedit sapiente soluta. Labore,
-									corporis.
+									adipisicing elit. Tenetur autem sint
+									accusamus debitis quae laboriosam, labore
+									natus error modi Lorem ipsum dolor sit amet
+									consectetur adipisicing elit. Tenetur autem
+									sint accusamus
 								</p>
+							</div>
 
-								<button
-									onclick="document.getElementById('tab4Toggler').click()"
-									class="btn btn-primary my-3 w-100 px-3 rounded-pill active"
-									id="home-tab"
-									data-bs-toggle="tab"
-									data-bs-target="#home"
-									type="button"
-									role="tab"
-									aria-controls="home"
-									aria-selected="true"
-								>
-									Select & Proceed
-								</button>
+							<div class="col-lg-4">
+								<form class="c-rounded-2 shadow p-4">
+									<div class="form-floating mb-3">
+										<input
+											type="email"
+											class="form-control"
+											id="floatingInput"
+											placeholder="name@example.com"
+										/>
+										<label for="floatingInput"
+											>Email address</label
+										>
+									</div>
+
+									<div class="form-floating mb-3">
+										<input
+											type="password"
+											class="form-control"
+											id="floatingPassword"
+											placeholder="Password"
+										/>
+										<label for="floatingPassword"
+											>Password</label
+										>
+									</div>
+
+									<div class="text-center">
+										<button
+											class="btn btn-primary rounded-pill mb-2 px-3"
+											type="submit"
+										>
+											Login
+										</button>
+
+										<a
+											href="./signup.html"
+											class="btn btn-success rounded-pill mb-2 px-3"
+											>Signup</a
+										>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="tab-pane" id="tab-4">
-					<form class="my-5 row justify-content-around">
-						<h4 class="text-success mb-4">
-							<i class="bi bi-info-circle me-2"></i>3. Gummy Pages
-							requires the following information
-						</h4>
+					<div class="tab-pane" id="tab-3">
+						<div class="row my-5 justify-content-around">
+							<div class="col-lg-8 px-4 pb-5">
+								<div>
+									<div class="pb-3 row">
+										<div class="col-lg-auto">
+											<h4 class="text-success">
+												2. Select Directory Or Almanac
+											</h4>
+										</div>
 
-						<div class="col-md-6">
-							<div class="form-floating mb-3">
-								<input
-									name="full-name"
-									type="text"
-									id="full-name"
-									class="form-control"
-									placeholder="Full Name"
-									value="Russell Gundani"
-								/>
-								<label for="full-name">Full Name</label>
-							</div>
+										<div class="col-lg">
+											<form>
+												<input
+													type="search"
+													class="form-control"
+													placeholder="Search..."
+												/>
+											</form>
+										</div>
+									</div>
 
-							<div class="form-floating mb-3">
-								<input
-									name="services"
-									type="text"
-									id="services"
-									class="form-control"
-									placeholder="Your Services"
-									value="Plumbing, House Works"
-								/>
-								<label for="services">Your Services</label>
-							</div>
+									<div
+										class="row row-cols-2 row-cols-lg-3 flex-nowrap overflowx-scroll p-2"
+									>
+										<div class="col p-2">
+											<div
+												class="d-flex position-relative justify-content-center overflow-hidden c-rounded-1"
+											>
+												<img
+													src="./assets//logos and stuff/book-artists-creatives.jpg"
+													class="w-100 c-rounded-1"
+												/>
+												<div
+													class="position-absolute bottom-0 end-0 start-0 py-1 px-2 bg-dark text-white text-center white-space-nowrap"
+												>
+													Gummy Pages
+												</div>
+											</div>
+										</div>
 
-							<div class="mb-3">
-								<label
-									for="about"
-									class="form-label d-block p-2"
-									>About</label
-								>
-								<textarea
-									class="form-control"
-									name="about"
-									id="about"
-									rows="4"
-								>
-A short description of yourself and your services</textarea
-								>
-							</div>
-						</div>
+										<div class="col p-2">
+											<div
+												class="d-flex position-relative justify-content-center overflow-hidden c-rounded-1"
+											>
+												<img
+													src="./assets//logos and stuff/book-artists-creatives.jpg"
+													class="w-100 c-rounded-1"
+												/>
+												<div
+													class="position-absolute bottom-0 end-0 start-0 py-1 px-2 bg-dark text-white text-center white-space-nowrap"
+												>
+													Gummy Pages
+												</div>
+											</div>
+										</div>
 
-						<div class="col-md-6">
-							<div class="form-floating mb-3">
-								<input
-									name="location"
-									type="text"
-									id="location"
-									class="form-control"
-									placeholder="Location"
-								/>
-								<label for="location">Location</label>
-							</div>
+										<div class="col p-2">
+											<div
+												class="d-flex position-relative justify-content-center overflow-hidden c-rounded-1"
+											>
+												<img
+													src="./assets//logos and stuff/book-artists-creatives.jpg"
+													class="w-100 c-rounded-1"
+												/>
+												<div
+													class="position-absolute bottom-0 end-0 start-0 py-1 px-2 bg-dark text-white text-center white-space-nowrap"
+												>
+													Gummy Pages
+												</div>
+											</div>
+										</div>
 
-							<div class="form-floating mb-3">
-								<input
-									name="phone"
-									type="number"
-									minlength="10"
-									maxlength="10"
-									id="phone"
-									class="form-control"
-									placeholder="Phone number"
-								/>
-								<label for="phone">Phone number</label>
-							</div>
+										<div class="col p-2">
+											<div
+												class="d-flex position-relative justify-content-center overflow-hidden c-rounded-1"
+											>
+												<img
+													src="./assets//logos and stuff/book-artists-creatives.jpg"
+													class="w-100 c-rounded-1"
+												/>
+												<div
+													class="position-absolute bottom-0 end-0 start-0 py-1 px-2 bg-dark text-white text-center white-space-nowrap"
+												>
+													Gummy Pages
+												</div>
+											</div>
+										</div>
 
-							<p class="text-success mb-3">
-								<i class="bi bi-info-circle"></i>
-								Upload images of yourself or your work. Upload
-								at least one image.
-							</p>
+										<div class="col p-2">
+											<div
+												class="d-flex position-relative justify-content-center overflow-hidden c-rounded-1"
+											>
+												<img
+													src="./assets//logos and stuff/book-artists-creatives.jpg"
+													class="w-100 c-rounded-1"
+												/>
+												<div
+													class="position-absolute bottom-0 end-0 start-0 py-1 px-2 bg-dark text-white text-center white-space-nowrap"
+												>
+													Gummy Pages
+												</div>
+											</div>
+										</div>
 
-							<div
-								class="row row-cols-4 mx-1 d-flex gap-3 fs-1 text-white flex-nowrap overflowx-scroll"
-							>
-								<div
-									class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
-								>
-									<img
-										class="d-none position-absolute top-50 start-50 w-100 translate-middle"
-										src="#"
-									/>
-									<i
-										onclick="clickNext(this)"
-										class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
-									></i>
-									<input
-										type="file"
-										name="image1"
-										onchange="previewImg(this)"
-										class="d-none"
-										accept="image/*"
-									/>
-								</div>
+										<div class="col p-2">
+											<div
+												class="d-flex position-relative justify-content-center overflow-hidden c-rounded-1"
+											>
+												<img
+													src="./assets//logos and stuff/book-artists-creatives.jpg"
+													class="w-100 c-rounded-1"
+												/>
+												<div
+													class="position-absolute bottom-0 end-0 start-0 py-1 px-2 bg-dark text-white text-center white-space-nowrap"
+												>
+													Gummy Pages
+												</div>
+											</div>
+										</div>
 
-								<div
-									class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
-								>
-									<img
-										class="d-none position-absolute top-50 start-50 w-100 translate-middle"
-										src="#"
-									/>
-									<i
-										onclick="clickNext(this)"
-										class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
-									></i>
-									<input
-										type="file"
-										name="image2"
-										onchange="previewImg(this)"
-										class="d-none"
-										accept="image/*"
-									/>
-								</div>
+										<div class="col p-2">
+											<div
+												class="d-flex position-relative justify-content-center overflow-hidden c-rounded-1"
+											>
+												<img
+													src="./assets//logos and stuff/book-artists-creatives.jpg"
+													class="w-100 c-rounded-1"
+												/>
+												<div
+													class="position-absolute bottom-0 end-0 start-0 py-1 px-2 bg-dark text-white text-center white-space-nowrap"
+												>
+													Gummy Pages
+												</div>
+											</div>
+										</div>
 
-								<div
-									class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
-								>
-									<img
-										class="d-none position-absolute top-50 start-50 w-100 translate-middle"
-										src="#"
-									/>
-									<i
-										onclick="clickNext(this)"
-										class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
-									></i>
-									<input
-										type="file"
-										name="image3"
-										onchange="previewImg(this)"
-										class="d-none"
-										accept="image/*"
-									/>
-								</div>
-
-								<div
-									class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
-								>
-									<img
-										class="d-none position-absolute top-50 start-50 w-100 translate-middle"
-										src="#"
-									/>
-									<i
-										onclick="clickNext(this)"
-										class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
-									></i>
-									<input
-										type="file"
-										name="image4"
-										onchange="previewImg(this)"
-										class="d-none"
-										accept="image/*"
-									/>
-								</div>
-
-								<div
-									class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
-								>
-									<img
-										class="d-none position-absolute top-50 start-50 w-100 translate-middle"
-										src="#"
-									/>
-									<i
-										onclick="clickNext(this)"
-										class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
-									></i>
-									<input
-										type="file"
-										name="image5"
-										onchange="previewImg(this)"
-										class="d-none"
-										accept="image/*"
-									/>
-								</div>
-
-								<div
-									class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
-								>
-									<img
-										class="d-none position-absolute top-50 start-50 w-100 translate-middle"
-										src="#"
-									/>
-									<i
-										onclick="clickNext(this)"
-										class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
-									></i>
-									<input
-										type="file"
-										name="image6"
-										onchange="previewImg(this)"
-										class="d-none"
-										accept="image/*"
-									/>
+										<div class="col p-2">
+											<div
+												class="d-flex position-relative justify-content-center overflow-hidden c-rounded-1"
+											>
+												<img
+													src="./assets//logos and stuff/book-artists-creatives.jpg"
+													class="w-100 c-rounded-1"
+												/>
+												<div
+													class="position-absolute bottom-0 end-0 start-0 py-1 px-2 bg-dark text-white text-center white-space-nowrap"
+												>
+													Gummy Pages
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="text-center">
-							<button
-								onclick="document.getElementById('tab5Toggler').click()"
-								class="btn m-2 btn-primary rounded-pill px-3"
-								type="button"
-							>
-								Proceed
-							</button>
+							<div class="col pb-5 d-flex">
+								<form class="p-4 shadow c-rounded-1">
+									<p
+										class="pb-2 text-center border-bottom fw-bold border-2"
+									>
+										Gummy Pages
+									</p>
 
-							<button
-								class="btn btn-outline-dark rounded-pill px-3"
-								type="reset"
-							>
-								Reset
-							</button>
-						</div>
-					</form>
-				</div>
+									<p>
+										Lorem ipsum dolor sit amet consectetur
+										adipisicing elit. Facilis fuga inventore
+										suscipit, impedit sapiente soluta.
+										Labore, corporis.
+									</p>
 
-				<div class="tab-pane" id="tab-5">
-					<div class="row my-5">
-						<h4 class="text-success mb-4 text-center">
-							<i class="bi bi-info-circle me-2"></i>4. Confirm
-							Preview. This is what your gummy page will look
-							like.
-						</h4>
-
-						<div class="col-12 col-lg-6 d-none d-lg-flex">
-							<div
-								class="shadow-lg border border-3 d-flex justify-content-center align-items-center p-5 w-100 c-rounded-3"
-							>
-								<h5 class="text-center">Preview Goes Here</h5>
+									<button
+										class="btn btn-primary my-3 w-100 rounded-pill"
+										type="submit"
+									>
+										Select & Proceed
+									</button>
+								</form>
 							</div>
-						</div>
-
-						<div
-							class="col-12 col-lg-6 d-flex"
-							style="height: 400px"
-						>
-							<div
-								class="shadow-lg border border-3 d-flex justify-content-center align-items-center p-5 w-100 c-rounded-3"
-							>
-								<h5>Preview Goes Here</h5>
-							</div>
-						</div>
-
-						<div class="text-center">
-							<button
-								onclick="document.getElementById('tab6Toggler').click()"
-								class="btn m-5 btn-primary rounded-pill px-3"
-								type="button"
-							>
-								Finish
-							</button>
 						</div>
 					</div>
-				</div>
 
-				<div class="tab-pane" id="tab-6">
-					<h5 class="text-success my-5 text-center">
-						Confirmation Message
-					</h5>
+					<div class="tab-pane" id="tab-4">
+						<form>
+							<div class="row my-5 justify-content-around">
+								<div class="col-12 mb-4">
+									<h5 class="text-success text-center">
+										<i class="bi bi-info-circle me-2"></i
+										>Enter The Following Details
+									</h5>
+								</div>
+
+								<div class="col-lg-6">
+									<div class="form-floating mb-3">
+										<input
+											type="text"
+											class="form-control"
+											placeholder="Entry Field"
+											value="field value"
+										/>
+										<label>Entry Field</label>
+									</div>
+
+									<div class="form-floating mb-3">
+										<input
+											type="text"
+											class="form-control"
+											placeholder="Entry Field"
+											value="field value"
+										/>
+										<label>Entry Field</label>
+									</div>
+
+									<div class="mb-3">
+										<label
+											for="about"
+											class="form-label d-block p-2"
+											>About Field</label
+										>
+										<textarea
+											class="form-control"
+											id="about"
+											rows="4"
+										>
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, quisquam!</textarea
+										>
+									</div>
+								</div>
+
+								<div class="col-lg-6">
+									<div class="form-floating mb-3">
+										<input
+											type="text"
+											class="form-control"
+											placeholder="Entry Field"
+											value="field value"
+										/>
+										<label>Entry Field</label>
+									</div>
+
+									<div class="form-floating mb-3">
+										<input
+											type="text"
+											class="form-control"
+											placeholder="Entry Field"
+											value="field value"
+										/>
+										<label>Entry Field</label>
+									</div>
+
+									<p class="text-success mb-3">
+										<i class="bi bi-images"></i>
+										Upload Images
+									</p>
+
+									<div
+										class="row row-cols-2 row-cols-md-3 row-cols-lg-4 p-3 pt-0 flex-nowrap overflowx-scroll"
+									>
+										<div class="col px-1">
+											<div class="image-upload-field">
+												<img
+													src=""
+													class="d-none img-fluid"
+												/>
+												<button type="button">
+													<i
+														class="bi bi-plus-circle"
+													></i>
+												</button>
+
+												<input
+													type="file"
+													class="d-none"
+													accept="image/*"
+												/>
+											</div>
+										</div>
+
+										<div class="col px-1">
+											<div class="image-upload-field">
+												<img
+													src=""
+													class="d-none img-fluid"
+												/>
+												<button type="button">
+													<i
+														class="bi bi-plus-circle"
+													></i>
+												</button>
+
+												<input
+													type="file"
+													class="d-none"
+													accept="image/*"
+												/>
+											</div>
+										</div>
+
+										<div class="col px-1">
+											<div class="image-upload-field">
+												<img
+													src=""
+													class="d-none img-fluid"
+												/>
+												<button type="button">
+													<i
+														class="bi bi-plus-circle"
+													></i>
+												</button>
+
+												<input
+													type="file"
+													class="d-none"
+													accept="image/*"
+												/>
+											</div>
+										</div>
+
+										<div class="col px-1">
+											<div class="image-upload-field">
+												<img
+													src=""
+													class="d-none img-fluid"
+												/>
+												<button type="button">
+													<i
+														class="bi bi-plus-circle"
+													></i>
+												</button>
+
+												<input
+													type="file"
+													class="d-none"
+													accept="image/*"
+												/>
+											</div>
+										</div>
+
+										<div class="col px-1">
+											<div class="image-upload-field">
+												<img
+													src=""
+													class="d-none img-fluid"
+												/>
+												<button type="button">
+													<i
+														class="bi bi-plus-circle"
+													></i>
+												</button>
+
+												<input
+													type="file"
+													class="d-none"
+													accept="image/*"
+												/>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-12 mt-3 text-center">
+									<button
+										class="btn btn-primary m-2 rounded-pill px-3"
+										type="submit"
+									>
+										Proceed
+									</button>
+
+									<a
+										class="btn btn-outline-dark rounded-pill px-3"
+										href="?"
+									>
+										Reset
+									</a>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div class="tab-pane" id="tab-5">
+						<h5 class="text-success my-5 text-center">
+							Confirmation Message
+						</h5>
+					</div>
 				</div>
 			</div>
 		</main>
 
-		<footer
-			class="d-flex container flex-wrap justify-content-between align-items-center py-5 px-3"
-		>
-			<div class="col d-flex align-items-center">
-				<span class="text-muted"
-					>&copy; 2022 Gum.iNc. All Rights Reserved</span
-				>
+		<footer class="container d-lg-flex justify-content-between p-5">
+			<div class="text-center">
+				<p class="d-lg-inline">
+					&copy; 2022 Gum.iNc. All Rights Reserved
+				</p>
+
 				<a
 					href="./partner.html"
 					class="btn btn-success px-3 rounded-pill ms-3"
@@ -1197,36 +956,28 @@ A short description of yourself and your services</textarea
 				>
 			</div>
 
-			<ul
-				class="nav col-md-4 justify-content-end fs-4 list-unstyled d-flex"
-			>
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.twitter.com"
-						target="_blank"
-						><i class="bi bi-twitter"></i
-					></a>
-				</li>
+			<div class="text-center mt-3 mt-lg-0">
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.twitter.com"
+					target="_blank"
+					><i class="bi bi-twitter"></i
+				></a>
 
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.instagram.com"
-						target="_blank"
-						><i class="bi bi-instagram"></i
-					></a>
-				</li>
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.instagram.com"
+					target="_blank"
+					><i class="bi bi-instagram"></i
+				></a>
 
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.facebook.com"
-						target="_blank"
-						><i class="bi bi-facebook"></i
-					></a>
-				</li>
-			</ul>
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.facebook.com"
+					target="_blank"
+					><i class="bi bi-facebook"></i
+				></a>
+			</div>
 		</footer>
 	</body>
 </html>

@@ -18,38 +18,88 @@
 			rel="stylesheet"
 			href="./assets/vendor/fontawsome/css/all.min.css"
 		/>
-		<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css" />
+		<link
+			rel="stylesheet"
+			href="./assets/vendor/custom-bootstrap/css/custom.min.css"
+		/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<!-- scripts -->
 
 		<script
 			defer
-			src="./assets/vendor/bootstrap/bootstrap.bundle.js"
+			src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"
 		></script>
 
 		<script defer src="./assets/js/main.js"></script>
 		<script defer src="./assets/js/custom.js"></script>
 	</head>
 
-	<style>
-		#contactsTab1 .nav-link {
-			border-radius: 20px 20px 0 0;
-		}
-		#contactsTab1 .nav-link {
-			color: inherit;
-			border-top-width: medium;
-		}
-		#contactsTab1 .nav-link.active {
-			background-color: whitesmoke;
-		}
-	</style>
-
-	<body class="pt-5">
+	<body class="position-relative pt-5" style="min-height: 100vh">
 		<div id="invisible-elements">
 			<div class="custom-modals">
-				<!--Location Modal -->
+				<!-- mobile contact viewer Modal -->
+				<div
+					class="modal fade"
+					id="mobileContactViewModal"
+					tabindex="-1"
+					aria-labelledby="mobileContactViewModalLabel"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content p-3">
+							<div class="modal-header justify-content-end">
+								<button
+									type="button"
+									class="btn-close fs-5"
+									data-bs-dismiss="modal"
+									aria-label="Close"
+								></button>
+							</div>
 
+							<div class="modal-body">
+								<div
+									class="bg-dark mx-auto d-flex justify-content-center shadow align-items-center rounded-circle overflow-hidden"
+									style="
+										width: 6rem;
+										height: 6rem;
+										border: solid 4px gray;
+									"
+								>
+									<img
+										src="./assets/img/5.jpg"
+										class="w-100"
+									/>
+								</div>
+
+								<h2 class="text-center my-2">John Doe</h2>
+
+								<p class="lead text-center my-2">
+									Financial Advisor
+								</p>
+
+								<div class="mt-4">
+									<p>
+										<i class="bi bi-telephone me-2"></i>+263
+										77566832
+									</p>
+
+									<p>
+										<i class="bi bi-briefcase me-2"></i>CABS
+										Bank
+									</p>
+
+									<p>
+										<i class="bi bi-geo-alt me-2"></i>544 NT
+										Belvedere, Harare
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--Location Modal -->
 				<div
 					class="modal fade"
 					id="locationModal"
@@ -286,6 +336,102 @@
 				</div>
 			</div>
 
+			<div
+				class="offcanvas offcanvas-start"
+				tabindex="-1"
+				id="accountNav"
+				aria-labelledby="accountNavLabel"
+			>
+				<div class="offcanvas-header justify-content-end">
+					<button
+						type="button"
+						class="btn-close text-reset"
+						data-bs-dismiss="offcanvas"
+						aria-label="Close"
+					></button>
+				</div>
+
+				<div class="offcanvas-body">
+					<div class="mb-3">
+						<div class="accountNav-dp">
+							<img src="./assets/img/undraw_profile.svg" />
+						</div>
+
+						<h3 class="text-center my-2">John Doe</h3>
+					</div>
+
+					<div>
+						<div class="border-bottom">
+							<a
+								href="./account.html"
+								class="btn w-100 text-start p-3"
+							>
+								<i class="bi bi-person me-2 fs-5"></i>My Details
+							</a>
+						</div>
+
+						<div class="border-bottom">
+							<a
+								href="./algorithm.html"
+								class="btn w-100 text-start p-3"
+							>
+								<i class="bi bi-bar-chart-line fs-5 me-2"></i
+								>Algorithm
+							</a>
+						</div>
+
+						<div class="border-bottom">
+							<a
+								href="./my-incs.html"
+								class="btn w-100 text-start p-3"
+							>
+								<i class="bi bi-people fs-5 me-2"></i>My iNcs
+							</a>
+						</div>
+
+						<div class="border-bottom">
+							<a
+								href="./contacts.html"
+								class="btn w-100 text-start active p-3"
+							>
+								<i class="bi bi-person-badge fs-5 me-2"></i
+								>Contacts & Business Cards
+							</a>
+						</div>
+
+						<div class="border-bottom">
+							<a
+								href="./monetization.html"
+								class="btn w-100 text-start p-3"
+							>
+								<i class="bi bi-currency-dollar fs-5 me-2"></i
+								>Monetization
+							</a>
+						</div>
+
+						<div class="border-bottom">
+							<a
+								href="./my-dirs.html"
+								class="btn w-100 text-start p-3"
+							>
+								<i class="bi bi-book fs-5 me-2"></i>My
+								Directories
+							</a>
+						</div>
+
+						<div class="border-bottom">
+							<a
+								href="./my-subs.html"
+								class="btn w-100 text-start p-3"
+							>
+								<i class="bi bi-calendar-date fs-5 me-2"></i>My
+								Subscriptions
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div id="offcanvases">
 				<div
 					class="offcanvas offcanvas-start"
@@ -318,8 +464,11 @@
 							<a class="mobile-link p-3" href="./index.html"
 								>Home</a
 							>
-							<a class="mobile-link p-3" href="directory.html"
+							<a class="mobile-link p-3" href="./directory.html"
 								>Directory
+							</a>
+							<a class="mobile-link p-3" href="./connect.html"
+								>Inc Connect
 							</a>
 							<a class="mobile-link p-3" href="./store.html"
 								>Store</a
@@ -354,1690 +503,1387 @@
 			</div>
 		</div>
 
-		<header id="header" class="p-2 px-4 px-md-2 pt-md-2 fixed-top">
-			<div
-				class="container-xxl d-flex justify-content-between align-items-center justify-content-md-around"
-			>
-				<button
-					class="btn p-0 d-md-none nav-link"
-					id="nav-toggle"
-					type="button"
-					data-bs-toggle="offcanvas"
-					data-bs-target="#mobileNavOffcanvas"
-					aria-controls="mobileNavOffcanvas"
-				>
-					<i class="bi bi-list fs-2"></i>
-				</button>
+		<header id="header">
+			<div class="container">
+				<div class="d-flex justify-content-between align-items-center">
+					<button
+						class="nav-link btn border-0 p-0 d-lg-none"
+						id="nav-toggle"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#mobileNavOffcanvas"
+						aria-controls="mobileNavOffcanvas"
+					>
+						<i class="bi bi-list fs-4"></i>
+					</button>
 
-				<a href="./index.html" class="navbar-brand text-dark p-0 fs-2"
-					>Gum.iNc</a
-				>
-
-				<a
-					class="btn order-last btn-primary rounded-circle d-lg-none"
-					href="./cart.html"
-					><i class="bi bi-cart4"></i
-				></a>
-
-				<div class="d-md-flex d-none p-0">
 					<a
 						href="./index.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Home</a
-					>
-					<a
-						href="directory.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Directory</a
-					>
-					<a
-						href="./connect.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Inc Connect</a
-					>
-					<a
-						href="./store.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Store</a
-					>
-					<a
-						href="directories-and-almanacs.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Almanacs & Directories</a
-					>
-					<a
-						href="./about.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>About</a
-					>
-					<a
-						href="./account.html"
-						class="nav-link rounded-pill px-2 py-1 active"
-						>Account</a
-					>
-					<a
-						href="./cart.html"
-						class="nav-link border rounded-circle px-2 ms-2 py-1"
+						class="navbar-brand fw-bold text-primary fs-3"
+						><img
+							src="./assets/logos and stuff/logo (44).jpg"
+							class="gum-logo rounded-pill"
+					/></a>
+
+					<a class="nav-link order-last d-lg-none" href="./cart.html"
 						><i class="bi bi-cart4"></i
 					></a>
+
+					<div class="d-lg-flex d-none">
+						<a href="./index.html" class="nav-link">Home</a>
+						<a href="directory.html" class="nav-link">Directory</a>
+						<a href="./connect.html" class="nav-link"
+							>Inc Connect</a
+						>
+						<a href="./store.html" class="nav-link">Store</a>
+						<a href="directories-and-almanacs.html" class="nav-link"
+							>Almanacs & Directories</a
+						>
+						<a href="./about.html" class="nav-link">About</a>
+						<a href="./account.html" class="nav-link active"
+							>Account</a
+						>
+						<a href="./cart.html" class="nav-link"
+							><i class="bi bi-cart4"></i
+						></a>
+					</div>
 				</div>
 			</div>
 		</header>
 
-		<main class="container pt-4 my-5">
-			<div class="row justify-content-around">
-				<div class="col-3 me-2">
-					<div class="my-sidebar shadow px-2 py-4 c-rounded-2">
-						<div class="mb-3">
-							<div
-								class="bg-dark mx-auto d-flex justify-content-center align-items-center rounded-circle overflow-hidden"
-								style="
-									width: 6rem;
-									height: 6rem;
-									border: solid 10px rgb(170, 178, 181);
-								"
-							>
-								<img
-									src="./assets/img/undraw_profile.svg"
-									class="w-100"
-								/>
+		<main class="container my-5">
+			<div
+				class="p-3 mb-4 d-flex align-items-center justify-content-center"
+			>
+				<button
+					class="btn btn-success rounded-pill px-3 me-4"
+					type="button"
+					data-bs-toggle="offcanvas"
+					data-bs-target="#accountNav"
+					aria-controls="accountNav"
+				>
+					<i class="bi bi-list fs-5 me-2"></i>Menu
+				</button>
+
+				<button
+					type="button"
+					class="d-lg-none me-4 btn btn-primary rounded-circle position-relative"
+					data-bs-toggle="modal"
+					data-bs-target="#mobileAlertsModal"
+				>
+					<i class="bi bi-bell"></i>
+					<span
+						class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"
+					>
+						99+
+					</span>
+				</button>
+
+				<div
+					class="modal fade"
+					id="mobileAlertsModal"
+					tabindex="-1"
+					aria-labelledby="mobileAlertsModalLabel"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header bg-success text-white">
+								<h6
+									class="modal-title"
+									id="mobileAlertsModalLabel"
+								>
+									Notifications
+								</h6>
+								<button
+									type="button"
+									class="btn-close fs-5"
+									data-bs-dismiss="modal"
+									aria-label="Close"
+								></button>
 							</div>
 
-							<h3 class="text-center my-2">John Doe</h3>
-						</div>
+							<div class="modal-body">
+								<div class="border-bottom">
+									<p
+										class="p-0 m-0 fw-bold white-space-nowrap"
+									>
+										A new monthly report is ready to
+										download!
+									</p>
+									<small class="text-gray">
+										December 12, 2019
+									</small>
+								</div>
 
-						<div
-							class="accordion accordion-flush"
-							id="accountNavAccordion"
-						>
-							<div class="border-bottom">
-								<a
-									href="./account.html"
-									class="btn w-100 text-start p-3"
-								>
-									<i class="bi bi-person me-2 fs-5"></i>My
-									Details
-								</a>
-							</div>
+								<div class="border-bottom">
+									<p class="p-0 m-0 white-space-nowrap">
+										$290.29 has been deposited into your
+										account!
+									</p>
 
-							<div class="border-bottom">
-								<a
-									href="./algorithm.html"
-									class="btn w-100 text-start p-3"
-								>
-									<i
-										class="bi bi-bar-chart-line fs-5 me-2"
-									></i
-									>Algorithm
-								</a>
-							</div>
+									<small class="text-gray">
+										December 7, 2019
+									</small>
+								</div>
 
-							<div class="border-bottom">
-								<a
-									href="./my-incs.html"
-									class="btn w-100 text-start p-3"
-								>
-									<i class="bi bi-people fs-5 me-2"></i>My
-									iNcs
-								</a>
-							</div>
-
-							<div class="border-bottom">
-								<a
-									href="./contacts.html"
-									class="btn w-100 nav-accord-active text-start p-3"
-								>
-									<i class="bi bi-person-badge fs-5 me-2"></i
-									>Contacts & Business Cards
-								</a>
-							</div>
-
-							<div class="border-bottom">
-								<a
-									href="./monetization.html"
-									class="btn w-100 text-start p-3"
-								>
-									<i
-										class="bi bi-currency-dollar fs-5 me-2"
-									></i
-									>Monetization
-								</a>
-							</div>
-
-							<div class="border-bottom">
-								<a
-									href="./my-dirs.html"
-									class="btn w-100 text-start p-3"
-								>
-									<i class="bi bi-book fs-5 me-2"></i>My
-									Directories
-								</a>
-							</div>
-
-							<div class="border-bottom">
-								<a
-									href="./my-subs.html"
-									class="btn w-100 text-start p-3"
-								>
-									<i class="bi bi-calendar-date fs-5 me-2"></i
-									>My Subscriptions
-								</a>
+								<div class="border-bottom">
+									<p class="p-0 m-0 white-space-nowrap">
+										Spending Alert: We've noticed unusually
+										high spending for your account.
+									</p>
+									<small class="text-gray">
+										December 2, 2019
+									</small>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="col">
-					<div
-						class="row shadow justify-content-around border c-rounded-2 px-3 py-2"
+				<a
+					class="d-lg-none btn btn-primary rounded-circle position-relative"
+					href="message.html"
+				>
+					<i class="bi bi-envelope"></i>
+					<span
+						class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"
 					>
-						<div
-							class="col-12 position-relative p-3 pe-5 mb-4 d-flex"
+						99+
+					</span>
+				</a>
+
+				<div class="d-none d-lg-block dropdown me-4">
+					<a
+						class="btn btn-primary rounded-circle position-relative"
+						href="#"
+						id="alertsDropdown"
+						role="button"
+						data-bs-toggle="dropdown"
+						aria-haspopup="true"
+						aria-expanded="false"
+					>
+						<i class="bi bi-bell"></i>
+						<span
+							class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"
 						>
-							<div class="dropdown me-4">
-								<a
-									class="btn btn-primary rounded-circle position-relative"
-									href="#"
-									id="alertsDropdown"
-									role="button"
-									data-bs-toggle="dropdown"
-									aria-haspopup="true"
-									aria-expanded="false"
-								>
-									<i class="bi bi-bell"></i>
-									<span
-										class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"
-									>
-										99+
-									</span>
-								</a>
+							99+
+						</span>
+					</a>
 
-								<div
-									class="dropdown-menu shadow mt-3 p-0"
-									aria-labelledby="alertsDropdown"
-								>
-									<h6
-										class="dropdown-header bg-brown text-white"
-									>
-										Notifications
-									</h6>
+					<div
+						style="max-width: 100vw"
+						class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start shadow mt-3 p-0"
+						aria-labelledby="alertsDropdown"
+					>
+						<h6 class="dropdown-header bg-success text-white">
+							Notifications
+						</h6>
 
-									<a
-										class="dropdown-item d-flex align-items-center border-bottom"
-									>
-										<div class="me-3 p-2 c-rounded-1">
-											<i
-												class="bi bi-file-earmark-font fs-4"
-											></i>
-										</div>
-
-										<div>
-											<p class="p-0 m-0 fw-bold">
-												A new monthly report is ready to
-												download!
-											</p>
-											<small class="text-gray">
-												December 12, 2019
-											</small>
-										</div>
-									</a>
-
-									<a
-										class="dropdown-item d-flex align-items-center border-bottom"
-									>
-										<div class="me-3 p-2 c-rounded-1">
-											<i class="bi bi-coin fs-4"></i>
-										</div>
-
-										<div>
-											<p class="p-0 m-0">
-												$290.29 has been deposited into
-												your account!
-											</p>
-
-											<small class="text-gray">
-												December 7, 2019
-											</small>
-										</div>
-									</a>
-
-									<a
-										class="dropdown-item d-flex align-items-center border-bottom"
-									>
-										<div class="me-3 p-2 c-rounded-1">
-											<i
-												class="bi bi-exclamation-triangle fs-4"
-											></i>
-										</div>
-
-										<div>
-											<p class="p-0 m-0">
-												Spending Alert: We've noticed
-												unusually high spending for your
-												account.
-											</p>
-											<small class="text-gray">
-												December 2, 2019
-											</small>
-										</div>
-									</a>
-								</div>
-							</div>
-
-							<div class="dropdown me-4">
-								<a
-									class="btn btn-primary rounded-circle position-relative"
-									href="#"
-									id="messagesDropdown"
-									role="button"
-									data-bs-toggle="dropdown"
-									aria-haspopup="true"
-									aria-expanded="false"
-								>
-									<i class="bi bi-envelope"></i>
-									<span
-										class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"
-									>
-										99+
-									</span>
-								</a>
-
-								<div
-									style="max-width: 600px"
-									class="dropdown-menu p-0 shadow mt-3"
-									aria-labelledby="messagesDropdown"
-								>
-									<h6
-										class="dropdown-header bg-brown text-white"
-									>
-										Message Center
-									</h6>
-
-									<a
-										class="dropdown-item border-bottom d-flex align-items-center"
-										href="./message.html"
-									>
-										<div class="dropdown-list-image me-3">
-											<img
-												style="
-													width: 2rem;
-													height: 2rem;
-												"
-												class="rounded-circle border"
-												src="./assets/img/undraw_profile_2.svg"
-											/>
-										</div>
-
-										<div>
-											<p
-												class="m-0 p-0 fw-bold white-space-nowrap w-400px"
-											>
-												Lorem ipsum dolor sit amet
-												consectetur, adipisicing elit.
-												Nobis quod impedit voluptatem
-												dolorum in obcaecati fugit
-												deserunt non dolor eos!
-											</p>
-
-											<small class="text-gray">
-												john Ken · 58m
-											</small>
-										</div>
-									</a>
-
-									<a
-										class="dropdown-item border-bottom d-flex align-items-center"
-										href="./message.html"
-									>
-										<div class="dropdown-list-image me-3">
-											<img
-												style="
-													width: 2rem;
-													height: 2rem;
-												"
-												class="rounded-circle border"
-												src="./assets/img/undraw_profile_2.svg"
-											/>
-										</div>
-
-										<div>
-											<p
-												class="m-0 p-0 white-space-nowrap w-400px"
-											>
-												Lorem ipsum dolor sit amet
-												consectetur, adipisicing elit.
-												Nobis quod impedit voluptatem
-												dolorum in obcaecati fugit
-												deserunt non dolor eos!
-											</p>
-
-											<small class="text-gray">
-												john Ken · 58m
-											</small>
-										</div>
-									</a>
-
-									<a
-										class="dropdown-item border-bottom d-flex align-items-center"
-										href="./message.html"
-									>
-										<div class="dropdown-list-image me-3">
-											<img
-												style="
-													width: 2rem;
-													height: 2rem;
-												"
-												class="rounded-circle border"
-												src="./assets/img/undraw_profile_2.svg"
-											/>
-										</div>
-
-										<div>
-											<p
-												class="m-0 p-0 white-space-nowrap w-400px"
-											>
-												Lorem ipsum dolor sit amet
-												consectetur, adipisicing elit.
-												Nobis quod impedit voluptatem
-												dolorum in obcaecati fugit
-												deserunt non dolor eos!
-											</p>
-
-											<small class="text-gray">
-												john Ken · 58m
-											</small>
-										</div>
-									</a>
-
-									<a
-										class="dropdown-item pb-2 text-center text-gray"
-										href="./message.html"
-										><small>Read More Messages</small></a
-									>
-								</div>
-							</div>
-
-							<a
-								class="btn btn-primary rounded-pill ms-auto position-relative"
-								href="#"
-								id="alertsDropdown"
-								role="button"
-								data-bs-toggle="dropdown"
-								aria-haspopup="true"
-								aria-expanded="false"
-							>
-								<i class="bi bi-box-arrow-in-right me-2"></i
-								>logout
-							</a>
+						<div class="dropdown-item border-bottom">
+							<p class="p-0 m-0 fw-bold white-space-nowrap">
+								A new monthly report is ready to download!
+							</p>
+							<small class="text-gray"> December 12, 2019 </small>
 						</div>
 
-						<div class="col px-4 pb-5">
-							<ul
-								class="nav nav-tabs"
-								id="contactsTab1"
-								role="tablist"
-							>
-								<li class="nav-item" role="presentation">
-									<button
-										class="nav-link active"
-										id="c1"
-										data-bs-toggle="tab"
-										data-bs-target="#c1-tab"
-										type="button"
-										role="tab"
-										aria-controls="c1-tab"
-										aria-selected="true"
-									>
-										Contact Manager
-									</button>
-								</li>
+						<div class="dropdown-item border-bottom">
+							<p class="p-0 m-0 white-space-nowrap">
+								$290.29 has been deposited into your account!
+							</p>
 
-								<li class="nav-item" role="presentation">
-									<button
-										class="nav-link"
-										id="c2"
-										data-bs-toggle="tab"
-										data-bs-target="#c2-tab"
-										type="button"
-										role="tab"
-										aria-controls="c2-tab"
-										aria-selected="false"
-									>
-										My Contacts
-									</button>
-								</li>
+							<small class="text-gray"> December 7, 2019 </small>
+						</div>
 
-								<li class="nav-item" role="presentation">
-									<button
-										class="nav-link"
-										id="c3"
-										data-bs-toggle="tab"
-										data-bs-target="#c3-tab"
-										type="button"
-										role="tab"
-										aria-controls="c3-tab"
-										aria-selected="false"
-									>
-										Business cards
-									</button>
-								</li>
-							</ul>
+						<div class="dropdown-item border-bottom">
+							<p class="p-0 m-0 white-space-nowrap">
+								Spending Alert: We've noticed unusually high
+								spending for your account.
+							</p>
+							<small class="text-gray"> December 2, 2019 </small>
+						</div>
+					</div>
+				</div>
 
-							<div class="py-5 tab-content">
-								<div
-									class="tab-pane active"
-									id="c1-tab"
-									role="tabpanel"
+				<div class="d-none d-lg-block dropdown me-4">
+					<a
+						class="d-none d-lg-block btn btn-primary rounded-circle position-relative"
+						href="#"
+						id="messagesDropdown"
+						role="button"
+						data-bs-toggle="dropdown"
+						aria-haspopup="true"
+						aria-expanded="false"
+					>
+						<i class="bi bi-envelope"></i>
+						<span
+							class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"
+						>
+							99+
+						</span>
+					</a>
+
+					<div
+						class="dropdown-menu shadow mt-3 p-0"
+						aria-labelledby="messagesDropdown"
+					>
+						<h6 class="dropdown-header bg-success text-white">
+							Message Center
+						</h6>
+
+						<div
+							class="dropdown-item border-bottom d-flex align-items-center"
+						>
+							<div class="dropdown-list-image-holder me-3">
+								<img src="./assets/img/undraw_profile_2.svg" />
+							</div>
+
+							<div>
+								<p
+									class="m-0 p-0 fw-bold white-space-nowrap w-400px"
 								>
-									<div class="">
+									Lorem ipsum dolor sit amet consectetur,
+									adipisicing elit. Nobis quod impedit
+									voluptatem dolorum in obcaecati fugit
+									deserunt non dolor eos!
+								</p>
+
+								<small class="text-gray">
+									john Ken · 58m
+								</small>
+							</div>
+						</div>
+
+						<div
+							class="dropdown-item border-bottom d-flex align-items-center"
+						>
+							<div class="dropdown-list-image-holder me-3">
+								<img src="./assets/img/undraw_profile_2.svg" />
+							</div>
+
+							<div>
+								<p
+									class="m-0 p-0 fw-bold white-space-nowrap w-400px"
+								>
+									Lorem ipsum dolor sit amet consectetur,
+									adipisicing elit. Nobis quod impedit
+									voluptatem dolorum in obcaecati fugit
+									deserunt non dolor eos!
+								</p>
+
+								<small class="text-gray">
+									john Ken · 58m
+								</small>
+							</div>
+						</div>
+
+						<a
+							class="dropdown-item pb-2 text-center text-gray"
+							href="./message.html"
+							><small>Read More Messages</small></a
+						>
+					</div>
+				</div>
+
+				<a
+					class="d-none d-md-block btn btn-primary rounded-pill ms-auto"
+					href="#"
+				>
+					<i class="bi bi-box-arrow-in-right me-2"></i>logout
+				</a>
+			</div>
+
+			<div class="p-4 p-md-5 shadow-lg c-rounded-2">
+				<ul
+					class="nav nav-tabs justify-content-around"
+					id="generalTabs"
+					role="tablist"
+				>
+					<li class="nav-item" role="presentation">
+						<button
+							class="nav-link active"
+							id="c1"
+							data-bs-toggle="tab"
+							data-bs-target="#c1-tab"
+							type="button"
+							role="tab"
+							aria-controls="c1-tab"
+							aria-selected="true"
+						>
+							<i class="bi bi-info-circle me-lg-2"></i
+							><span class="d-none d-lg-inline"
+								>Contact Manager</span
+							>
+						</button>
+					</li>
+
+					<li class="nav-item" role="presentation">
+						<button
+							class="nav-link"
+							id="c2"
+							data-bs-toggle="tab"
+							data-bs-target="#c2-tab"
+							type="button"
+							role="tab"
+							aria-controls="c2-tab"
+							aria-selected="false"
+						>
+							<i class="bi bi-person-badge me-lg-2"></i
+							><span class="d-none d-lg-inline">My Contacts</span>
+						</button>
+					</li>
+
+					<li class="nav-item" role="presentation">
+						<button
+							class="nav-link"
+							id="c3"
+							data-bs-toggle="tab"
+							data-bs-target="#c3-tab"
+							type="button"
+							role="tab"
+							aria-controls="c3-tab"
+							aria-selected="false"
+						>
+							<i class="bi bi-person-video2 me-lg-2"></i
+							><span class="d-none d-lg-inline"
+								>Business cards</span
+							>
+						</button>
+					</li>
+				</ul>
+
+				<div class="tab-content">
+					<div class="tab-pane active" id="c1-tab" role="tabpanel">
+						<div>
+							<div
+								class="row align-items-center justify-content-around g-5 py-5"
+							>
+								<div class="col-10 col-sm-8 col-lg-6">
+									<img
+										src="./assets/images/cm0.png"
+										class="d-block mx-lg-auto img-fluid"
+										width="700"
+										height="500"
+									/>
+								</div>
+
+								<div class="col-lg-6 text-center">
+									<h2 class="mb-3">How It Works</h2>
+
+									<p class="lead">
+										Lorem ipsum dolor, sit amet consectetur
+										adipisicing elit. Aspernatur fugiat
+										provident debitis, est ratione facilis,
+										amet molestias nesciunt
+									</p>
+								</div>
+							</div>
+
+							<div
+								class="row flex-lg-row-reverse justify-content-around align-items-center g-5 py-5"
+							>
+								<div class="col-10 col-sm-8 col-lg-6">
+									<img
+										src="./assets/images/Screenshot1.png"
+										class="d-block c-rounded-1 mx-lg-auto shadow-lg border img-fluid"
+										width="700"
+										height="500"
+										loading="lazy"
+									/>
+								</div>
+
+								<div class="col-lg-6 text-center">
+									<h3 class="mb-2">
+										<i class="bi bi-apple"></i>
+										<i class="bi bi-instagram"></i>
+										<i class="bi bi-google"></i>
+									</h3>
+
+									<h2 class="mb-3">Sync Across Accounts</h2>
+
+									<p class="lead">
+										We connect multiple accounts or sources
+										to create a unified address book for
+										you. Get up-to-date contact information
+										that syncs across multiple accounts and
+										devices automatically.
+									</p>
+								</div>
+							</div>
+
+							<div
+								class="row align-items-center justify-content-around g-5 py-5"
+							>
+								<div class="col-10 col-sm-8 col-lg-6">
+									<img
+										src="./assets/images/Screenshot2.png"
+										class="d-block c-rounded-1 shadow-lg border mx-lg-auto img-fluid"
+										width="700"
+										height="500"
+										loading="lazy"
+									/>
+								</div>
+
+								<div class="col-lg-6 text-center">
+									<h3 class="mb-2">
+										<i class="bi bi-clock"></i>
+									</h3>
+
+									<h2 class="mb-3">Stay Up-To-Date</h2>
+
+									<p class="lead">
+										We let you know what contact information
+										may be out-of-date. Automated scans
+										ensure you always have the most accurate
+										information.
+									</p>
+								</div>
+							</div>
+
+							<div
+								class="row align-items-center justify-content-around py-5 g-5"
+							>
+								<div class="col-lg-6 text-center">
+									<h3>
+										<i class="bi bi-front"></i>
+									</h3>
+									<h1>Eliminate Duplicates</h1>
+									<p class="lead mb-4">
+										We detect duplicates and updates for
+										frustration-free contact management.
+										Merge duplicates to create a unified
+										address book across multiple accounts
+										and devices.
+									</p>
+								</div>
+
+								<div class="col-lg-6 text-center">
+									<h3>
+										<i class="bi bi-globe"></i>
+									</h3>
+									<h1>Access Contacts Anywhere</h1>
+									<p class="lead mb-4">
+										Our app is available across Web, iOS,
+										Android, Chrome & Mac, ensuring contacts
+										are synced, up-to-date, and available
+										wherever you are. Access and manage your
+										contacts anytime, anywhere.
+									</p>
+								</div>
+							</div>
+
+							<div
+								class="row flex-lg-row-reverse justify-content-around align-items-center g-5 py-5"
+							>
+								<div class="col-10 col-sm-8 col-lg-6">
+									<img
+										src="./assets/images/cm3.jpg"
+										class="d-block c-rounded-1 mx-lg-auto shadow-lg border img-fluid"
+										width="700"
+										height="500"
+										loading="lazy"
+									/>
+								</div>
+
+								<div class="col-lg-6 text-center">
+									<h3 class="mb-2">
+										<i class="bi bi-camera"></i>
+									</h3>
+
+									<h2 class="mb-3">
+										Scan & Save Business Cards
+									</h2>
+
+									<p class="lead">
+										We transcribe business cards and
+										double-verify them before adding them as
+										new contacts in your address book. Scan
+										and save business cards on-the-go using
+										our mobile app or upload them in bulk
+										using the web app.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="c2-tab" role="tabpanel">
+						<div class="row py-4">
+							<div
+								class="mb-3 d-lg-flex justify-content-between align-items-center"
+							>
+								<h3 class="text-center mb-3 mb-lg-0">
+									My Contacts
+								</h3>
+
+								<div
+									class="d-flex justify-content-center align-items-center"
+								>
+									<button
+										type="button"
+										class="btn btn-outline-success me-3 dropdown-toggle px-3 rounded-pill"
+										data-bs-toggle="modal"
+										data-bs-target="#storageModal"
+									>
+										<i class="bi bi-cloud-fill me-2"></i
+										><span class="d-none d-lg-inline"
+											>storage -
+										</span>
+										4.5/5 GB
+										<span class="d-none d-lg-inline"
+											>free</span
+										>
+									</button>
+
+									<div
+										class="modal fade"
+										id="storageModal"
+										data-bs-backdrop="static"
+										data-bs-keyboard="false"
+										tabindex="-1"
+										aria-labelledby="storageModalLabel"
+										aria-hidden="true"
+									>
 										<div
-											class="row align-items-center g-5 py-5"
+											style="max-width: 800px !important"
+											class="modal-dialog modal-dialog-centered"
 										>
 											<div
-												class="col-10 col-sm-8 col-lg-6"
+												class="modal-content p-4 c-rounded-2"
 											>
-												<img
-													src="./assets/images/cm0.png"
-													class="d-block mx-lg-auto img-fluid"
-													width="700"
-													height="500"
-													loading="lazy"
-												/>
-											</div>
+												<div class="modal-header">
+													<h5
+														class="modal-title flex-fill text-center"
+														id="storageModalLabel"
+													>
+														Upgrade Storage
+													</h5>
 
-											<div class="col-lg-6 text-center">
-												<h2 class="mb-3 text-gray">
-													How It Works
-												</h2>
+													<button
+														type="button"
+														class="btn-close fs-5"
+														data-bs-dismiss="modal"
+														aria-label="Close"
+													></button>
+												</div>
 
-												<p class="lead">
-													Lorem ipsum dolor, sit amet
-													consectetur adipisicing
-													elit. Aspernatur fugiat
-													provident debitis, est
-													ratione facilis, amet
-													molestias nesciunt
-												</p>
+												<div
+													class="modal-body p-3 p-lg-5"
+												>
+													<div
+														class="row row-cols-1 row-cols-lg-3 g-4 text-center align-items-center justify-content-around"
+													>
+														<div class="col">
+															<div
+																class="c-rounded-1 shadow p-3 d-flex flex-column align-items-center justify-content-around h-100"
+															>
+																<div>
+																	<i
+																		class="bi bi-cloud fs-1"
+																	></i>
+																</div>
+
+																<p>
+																	5 GB -
+																	Contacts &
+																	Business
+																	cards
+																</p>
+
+																<button
+																	class="btn border rounded-pill bg-light px-3"
+																>
+																	Free
+																</button>
+															</div>
+														</div>
+
+														<div class="col">
+															<div
+																class="c-rounded-1 shadow p-3 d-flex flex-column align-items-center justify-content-around h-100"
+															>
+																<div>
+																	<i
+																		class="bi bi-clouds-fill fs-1"
+																	></i>
+																</div>
+
+																<p>
+																	50 GB -
+																	Contacts &
+																	Business
+																	cards
+																</p>
+
+																<button
+																	class="btn btn-success rounded-pill px-3"
+																>
+																	$ 10 Annualy
+																</button>
+															</div>
+														</div>
+
+														<div class="col">
+															<div
+																class="c-rounded-1 shadow p-3 d-flex flex-column align-items-center justify-content-around h-100"
+															>
+																<div>
+																	<i
+																		class="bi bi-cloud-fill fs-1"
+																	></i>
+																</div>
+
+																<p>
+																	10 GB -
+																	Contacts &
+																	Business
+																	cards
+																</p>
+
+																<button
+																	class="btn btn-outline-success rounded-pill px-3"
+																>
+																	$ 5.99
+																	Annually
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
+									</div>
 
+									<button
+										type="button"
+										class="btn btn-primary rounded-pill px-3"
+										data-bs-toggle="modal"
+										data-bs-target="#staticBackdrop"
+									>
+										sync<i
+											class="bi bi-cloud-upload ms-2"
+										></i>
+									</button>
+
+									<div
+										class="modal fade"
+										id="staticBackdrop"
+										data-bs-backdrop="static"
+										data-bs-keyboard="false"
+										tabindex="-1"
+										aria-labelledby="staticBackdropLabel"
+										aria-hidden="true"
+									>
 										<div
-											class="row flex-lg-row-reverse align-items-center g-5 py-5"
+											class="modal-dialog modal-dialog-centered"
 										>
 											<div
-												class="col-10 col-sm-8 col-lg-6"
+												class="modal-content p-4 c-rounded-2"
 											>
-												<img
-													src="./assets/images/Screenshot1.png"
-													class="d-block c-rounded-1 mx-lg-auto shadow-lg border img-fluid"
-													width="700"
-													height="500"
-													loading="lazy"
-												/>
-											</div>
+												<div class="modal-header">
+													<h5
+														class="modal-title"
+														id="staticBackdropLabel"
+													>
+														Sync With
+													</h5>
 
-											<div class="col-lg-6 text-center">
-												<h3 class="mb-2 text-gray">
-													<i class="bi bi-apple"></i>
-													<i
-														class="bi bi-instagram"
-													></i>
-													<i class="bi bi-google"></i>
-												</h3>
+													<button
+														type="button"
+														class="btn-close fs-5"
+														data-bs-dismiss="modal"
+														aria-label="Close"
+													></button>
+												</div>
 
-												<h2 class="mb-3 text-gray">
-													Sync Across Accounts
-												</h2>
+												<div class="modal-body">
+													<button
+														class="btn btn-outline-dark mb-2 rounded-pill w-100"
+													>
+														<i
+															class="bi bi-telephone fs-5 me-2"
+														>
+														</i
+														>Phonebook
+													</button>
 
-												<p class="lead">
-													We connect multiple accounts
-													or sources to create a
-													unified address book for
-													you. Get up-to-date contact
-													information that syncs
-													across multiple accounts and
-													devices automatically.
-												</p>
-											</div>
-										</div>
+													<button
+														class="btn btn-outline-dark mb-2 rounded-pill w-100"
+													>
+														<i
+															class="bi bi-google fs-5 me-2"
+														>
+														</i
+														>Google
+													</button>
 
-										<div
-											class="row align-items-center g-5 py-5"
-										>
-											<div
-												class="col-10 col-sm-8 col-lg-6"
-											>
-												<img
-													src="./assets/images/Screenshot2.png"
-													class="d-block c-rounded-1 shadow-lg border mx-lg-auto img-fluid"
-													width="700"
-													height="500"
-													loading="lazy"
-												/>
-											</div>
+													<button
+														class="btn btn-outline-dark mb-2 rounded-pill w-100"
+													>
+														<i
+															class="bi bi-apple fs-5 me-2"
+														>
+														</i
+														>Apple
+													</button>
 
-											<div class="col-lg-6 text-center">
-												<h3 class="mb-2 text-gray">
-													<i class="bi bi-clock"></i>
-												</h3>
+													<button
+														class="btn btn-outline-dark mb-2 rounded-pill w-100"
+													>
+														<i
+															class="bi bi-facebook fs-5 me-2"
+														>
+														</i
+														>Facebook
+													</button>
 
-												<h2 class="mb-3 text-gray">
-													Stay Up-To-Date
-												</h2>
+													<button
+														class="btn btn-outline-dark mb-2 rounded-pill w-100"
+													>
+														<i
+															class="bi bi-twitter fs-5 me-2"
+														>
+														</i
+														>Whatsapp
+													</button>
 
-												<p class="lead">
-													We let you know what contact
-													information may be
-													out-of-date. Automated scans
-													ensure you always have the
-													most accurate information.
-												</p>
-											</div>
-										</div>
+													<button
+														class="btn btn-outline-dark mb-2 rounded-pill w-100"
+													>
+														<i
+															class="fab fa-yahoo fs-5 me-2"
+														>
+														</i
+														>Yahoo
+													</button>
 
-										<div class="row">
-											<div
-												class="px-4 py-5 my-5 col-md-6 text-gray text-center"
-											>
-												<h3>
-													<i class="bi bi-front"></i>
-												</h3>
-												<h1>
-													Eliminate <br />
-													Duplicates
-												</h1>
-												<p class="lead mb-4">
-													We detect duplicates and
-													updates for frustration-free
-													contact management. Merge
-													duplicates to create a
-													unified address book across
-													multiple accounts and
-													devices.
-												</p>
-											</div>
+													<button
+														class="btn btn-outline-dark mb-2 rounded-pill w-100"
+													>
+														<i
+															class="bi bi-instagram fs-5 me-2"
+														>
+														</i
+														>Instagram
+													</button>
 
-											<div
-												class="px-4 py-5 my-5 col-md-6 text-gray text-center"
-											>
-												<h3>
-													<i class="bi bi-globe"></i>
-												</h3>
-												<h1>
-													Access Contacts Anywhere
-												</h1>
-												<p class="lead mb-4">
-													Our app is available across
-													Web, iOS, Android, Chrome &
-													Mac, ensuring contacts are
-													synced, up-to-date, and
-													available wherever you are.
-													Access and manage your
-													contacts anytime, anywhere.
-												</p>
-											</div>
-										</div>
+													<button
+														class="btn btn-outline-dark mb-2 rounded-pill w-100"
+													>
+														<i
+															class="bi bi-twitter fs-5 me-2"
+														>
+														</i
+														>Twitter
+													</button>
 
-										<div
-											class="row flex-lg-row-reverse align-items-center g-5 py-5"
-										>
-											<div
-												class="col-10 col-sm-8 col-lg-6"
-											>
-												<img
-													src="./assets/images/cm3.jpg"
-													class="d-block c-rounded-1 mx-lg-auto shadow-lg border img-fluid"
-													width="700"
-													height="500"
-													loading="lazy"
-												/>
-											</div>
-
-											<div class="col-lg-6 text-center">
-												<h3 class="mb-2 text-gray">
-													<i class="bi bi-camera"></i>
-												</h3>
-
-												<h2 class="mb-3 text-gray">
-													Scan & Save Business Cards
-												</h2>
-
-												<p class="lead">
-													We transcribe business cards
-													and double-verify them
-													before adding them as new
-													contacts in your address
-													book. Scan and save business
-													cards on-the-go using our
-													mobile app or upload them in
-													bulk using the web app.
-												</p>
+													<button
+														class="btn btn-outline-dark mb-2 rounded-pill w-100"
+													>
+														<i
+															class="bi bi-cloud-upload fs-5 me-2"
+														>
+														</i
+														>Add Other
+													</button>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
+							</div>
 
+							<div class="col-lg-4">
 								<div
-									class="tab-pane"
-									id="c2-tab"
-									role="tabpanel"
+									class="d-flex justify-content-center flex-column align-items-center"
 								>
-									<div class="row">
-										<div
-											class="mb-3 d-flex justify-content-between align-items-center"
-										>
-											<h3>My Contacts</h3>
+									<form>
+										<input
+											type="search"
+											class="form-control rounded-pill my-2"
+											placeholder="Search Contacts"
+										/>
+									</form>
 
-											<div>
-												<!-- storage trigger  -->
-												<button
-													type="button"
-													class="btn fs-5 me-3 btn-outline-success dropdown-toggle px-3 rounded-pill"
-													data-bs-toggle="modal"
-													data-bs-target="#storageModal"
-												>
-													<i
-														class="bi bi-cloud-fill me-2"
-													></i
-													>storage - 4.5/5 GB free
-												</button>
-
-												<!--storage Modal -->
-												<div
-													class="modal fade"
-													id="storageModal"
-													data-bs-backdrop="static"
-													data-bs-keyboard="false"
-													tabindex="-1"
-													aria-labelledby="storageModalLabel"
-													aria-hidden="true"
-												>
-													<div
-														style="
-															max-width: 800px !important;
-														"
-														class="modal-dialog modal-dialog-centered"
-													>
-														<div
-															class="modal-content p-4 c-rounded-2"
-														>
-															<div
-																class="modal-header"
-															>
-																<h5
-																	class="modal-title flex-fill text-center"
-																	id="storageModalLabel"
-																>
-																	Upgrade
-																	Storage
-																</h5>
-
-																<button
-																	type="button"
-																	class="btn-close fs-5"
-																	data-bs-dismiss="modal"
-																	aria-label="Close"
-																></button>
-															</div>
-
-															<div
-																class="modal-body px-5"
-															>
-																<div
-																	class="row row-cols text-center justify-content-around py-5"
-																>
-																	<div
-																		class="col"
-																	>
-																		<div
-																			class="c-rounded-1 shadow p-3 d-flex flex-column align-items-center justify-content-around h-100"
-																		>
-																			<div>
-																				<i
-																					class="bi bi-cloud fs-1"
-																				></i>
-																			</div>
-
-																			<p>
-																				5
-																				GB
-																				-
-																				Contacts
-																				&
-																				Business
-																				cards
-																			</p>
-
-																			<button
-																				class="btn border rounded-pill bg-light px-3"
-																			>
-																				Free
-																			</button>
-																		</div>
-																	</div>
-
-																	<div
-																		class="col"
-																	>
-																		<div
-																			class="c-rounded-1 shadow p-3 d-flex flex-column align-items-center justify-content-around h-100"
-																		>
-																			<div>
-																				<i
-																					class="bi bi-clouds-fill fs-1"
-																				></i>
-																			</div>
-
-																			<p>
-																				50
-																				GB
-																				-
-																				Contacts
-																				&
-																				Business
-																				cards
-																			</p>
-
-																			<button
-																				class="btn btn-success rounded-pill px-3"
-																			>
-																				$
-																				10
-																				Annualy
-																			</button>
-																		</div>
-																	</div>
-
-																	<div
-																		class="col"
-																	>
-																		<div
-																			class="c-rounded-1 shadow p-3 d-flex flex-column align-items-center justify-content-around h-100"
-																		>
-																			<div>
-																				<i
-																					class="bi bi-cloud-fill fs-1"
-																				></i>
-																			</div>
-
-																			<p>
-																				10
-																				GB
-																				-
-																				Contacts
-																				&
-																				Business
-																				cards
-																			</p>
-
-																			<button
-																				class="btn btn-outline-success rounded-pill px-3"
-																			>
-																				$
-																				5.99
-																				Annually
-																			</button>
-																		</div>
-																	</div>
-																</div>
-															</div>
-
-															<!-- <div
-															class="modal-footer"
-														>
-															<button
-																type="button"
-																class="btn btn-secondary"
-																data-bs-dismiss="modal"
-															>
-																Close
-															</button>
-															<button
-																type="button"
-																class="btn btn-primary"
-															>
-																Understood
-															</button>
-														</div> -->
-														</div>
-													</div>
-												</div>
-
-												<!--  sync Button-->
-												<button
-													type="button"
-													class="btn fs-5 btn-primary rounded-pill px-3"
-													data-bs-toggle="modal"
-													data-bs-target="#staticBackdrop"
-												>
-													sync<i
-														class="bi bi-cloud-upload ms-2"
-													></i>
-												</button>
-
-												<!-- sync Modal -->
-												<div
-													class="modal fade"
-													id="staticBackdrop"
-													data-bs-backdrop="static"
-													data-bs-keyboard="false"
-													tabindex="-1"
-													aria-labelledby="staticBackdropLabel"
-													aria-hidden="true"
-												>
-													<div
-														class="modal-dialog modal-dialog-centered"
-													>
-														<div
-															class="modal-content p-4 c-rounded-2"
-														>
-															<div
-																class="modal-header"
-															>
-																<h5
-																	class="modal-title"
-																	id="staticBackdropLabel"
-																>
-																	Sync With
-																</h5>
-
-																<button
-																	type="button"
-																	class="btn-close fs-5"
-																	data-bs-dismiss="modal"
-																	aria-label="Close"
-																></button>
-															</div>
-
-															<div
-																class="modal-body px-5"
-															>
-																<button
-																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
-																>
-																	<i
-																		class="bi bi-telephone fs-5 me-2"
-																	>
-																	</i
-																	>Phonebook
-																</button>
-
-																<button
-																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
-																>
-																	<i
-																		class="bi bi-google fs-5 me-2"
-																	>
-																	</i
-																	>Google
-																</button>
-
-																<button
-																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
-																>
-																	<i
-																		class="bi bi-apple fs-5 me-2"
-																	>
-																	</i
-																	>Apple
-																</button>
-
-																<button
-																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
-																>
-																	<i
-																		class="bi bi-facebook fs-5 me-2"
-																	>
-																	</i
-																	>Facebook
-																</button>
-
-																<button
-																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
-																>
-																	<i
-																		class="bi bi-twitter fs-5 me-2"
-																	>
-																	</i
-																	>Whatsapp
-																</button>
-
-																<button
-																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
-																>
-																	<i
-																		class="fab fa-yahoo fs-5 me-2"
-																	>
-																	</i
-																	>Yahoo
-																</button>
-
-																<button
-																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
-																>
-																	<i
-																		class="bi bi-instagram fs-5 me-2"
-																	>
-																	</i
-																	>Instagram
-																</button>
-
-																<button
-																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
-																>
-																	<i
-																		class="bi bi-twitter fs-5 me-2"
-																	>
-																	</i
-																	>Twitter
-																</button>
-
-																<button
-																	class="btn btn-outline-dark mb-2 rounded-pill w-100"
-																>
-																	<i
-																		class="bi bi-cloud-upload fs-5 me-2"
-																	>
-																	</i
-																	>Add Other
-																</button>
-															</div>
-
-															<!-- <div
-															class="modal-footer"
-														>
-															<button
-																type="button"
-																class="btn btn-secondary"
-																data-bs-dismiss="modal"
-															>
-																Close
-															</button>
-															<button
-																type="button"
-																class="btn btn-primary"
-															>
-																Understood
-															</button>
-														</div> -->
-														</div>
-													</div>
-												</div>
-											</div>
+									<div
+										class="cloud-contact bg-light position-relative"
+									>
+										<div class="cloud-contact-img-holder">
+											<img
+												src="./assets/img/undraw_profile.svg"
+											/>
 										</div>
 
-										<div class="col-4">
-											<div
-												class="p-3 ps-0 d-flex flex-column align-items-center"
+										<div class="cloud-contact-name fw-bold">
+											<a
+												href="#"
+												class="d-lg-none"
+												data-bs-toggle="modal"
+												data-bs-target="#mobileContactViewModal"
 											>
-												<input
-													type="search"
-													class="form-control rounded-pill p-3 my-2"
-													placeholder="Search Contacts"
-												/>
-
-												<div
-													class="d-flex w-100 bg-light c-rounded-2 my-2 p-2 align-items-center"
-												>
-													<div
-														style="
-															width: 50px;
-															height: 50px;
-														"
-														class="me-3 d-flex border align-items-center bg-dark rounded-circle overflow-hidden border"
-													>
-														<img
-															src="./assets/images/user2.jpg"
-															class="w-100"
-														/>
-													</div>
-
-													<div>
-														<p class="p-0 m-0">
-															<b>John Doe</b>
-														</p>
-													</div>
-
-													<div
-														class="dropdown open ms-auto"
-													>
-														<button
-															class="btn text-a-link-blue p-0 fs-5"
-															type="button"
-															id="triggerId21"
-															data-bs-toggle="dropdown"
-															aria-haspopup="true"
-															aria-expanded="false"
-														>
-															<i
-																class="bi bi-three-dots-vertical"
-															></i>
-														</button>
-
-														<div
-															class="dropdown-menu"
-															aria-labelledby="triggerId21"
-														>
-															<button
-																class="dropdown-item"
-																href="#"
-															>
-																Edit
-															</button>
-															<button
-																class="dropdown-item"
-																href="#"
-															>
-																Delete
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div
-													class="d-flex w-100 bg-light c-rounded-2 my-2 p-2 align-items-center"
-												>
-													<div
-														style="
-															width: 50px;
-															height: 50px;
-														"
-														class="me-3 d-flex border align-items-center bg-dark rounded-circle overflow-hidden border"
-													>
-														<img
-															src="./assets/images/user2.jpg"
-															class="w-100"
-														/>
-													</div>
-
-													<div>
-														<p class="p-0 m-0">
-															<b>John Doe</b>
-														</p>
-													</div>
-
-													<div
-														class="dropdown open ms-auto"
-													>
-														<button
-															class="btn text-a-link-blue p-0 fs-5"
-															type="button"
-															id="triggerId22"
-															data-bs-toggle="dropdown"
-															aria-haspopup="true"
-															aria-expanded="false"
-														>
-															<i
-																class="bi bi-three-dots-vertical"
-															></i>
-														</button>
-
-														<div
-															class="dropdown-menu"
-															aria-labelledby="triggerId22"
-														>
-															<button
-																class="dropdown-item"
-																href="#"
-															>
-																Edit
-															</button>
-															<button
-																class="dropdown-item"
-																href="#"
-															>
-																Delete
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div
-													class="d-flex w-100 bg-light c-rounded-2 my-2 p-2 align-items-center"
-												>
-													<div
-														style="
-															width: 50px;
-															height: 50px;
-														"
-														class="me-3 d-flex border align-items-center bg-dark rounded-circle overflow-hidden border"
-													>
-														<img
-															src="./assets/images/user2.jpg"
-															class="w-100"
-														/>
-													</div>
-
-													<div>
-														<p class="p-0 m-0">
-															<b>John Doe</b>
-														</p>
-													</div>
-
-													<div
-														class="dropdown open ms-auto"
-													>
-														<button
-															class="btn text-a-link-blue p-0 fs-5"
-															type="button"
-															id="triggerId23"
-															data-bs-toggle="dropdown"
-															aria-haspopup="true"
-															aria-expanded="false"
-														>
-															<i
-																class="bi bi-three-dots-vertical"
-															></i>
-														</button>
-
-														<div
-															class="dropdown-menu"
-															aria-labelledby="triggerId23"
-														>
-															<button
-																class="dropdown-item"
-																href="#"
-															>
-																Edit
-															</button>
-															<button
-																class="dropdown-item"
-																href="#"
-															>
-																Delete
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div
-													class="d-flex w-100 bg-light c-rounded-2 my-2 p-2 align-items-center"
-												>
-													<div
-														style="
-															width: 50px;
-															height: 50px;
-														"
-														class="me-3 d-flex border align-items-center bg-dark rounded-circle overflow-hidden border"
-													>
-														<img
-															src="./assets/images/user2.jpg"
-															class="w-100"
-														/>
-													</div>
-
-													<div>
-														<p class="p-0 m-0">
-															<b>John Doe</b>
-														</p>
-													</div>
-
-													<div
-														class="dropdown open ms-auto"
-													>
-														<button
-															class="btn text-a-link-blue p-0 fs-5"
-															type="button"
-															id="triggerId24"
-															data-bs-toggle="dropdown"
-															aria-haspopup="true"
-															aria-expanded="false"
-														>
-															<i
-																class="bi bi-three-dots-vertical"
-															></i>
-														</button>
-
-														<div
-															class="dropdown-menu"
-															aria-labelledby="triggerId24"
-														>
-															<button
-																class="dropdown-item"
-																href="#"
-															>
-																Edit
-															</button>
-															<button
-																class="dropdown-item"
-																href="#"
-															>
-																Delete
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div
-													class="d-flex w-100 bg-light c-rounded-2 my-2 p-2 align-items-center"
-												>
-													<div
-														style="
-															width: 50px;
-															height: 50px;
-														"
-														class="me-3 d-flex border align-items-center bg-dark rounded-circle overflow-hidden border"
-													>
-														<img
-															src="./assets/images/user2.jpg"
-															class="w-100"
-														/>
-													</div>
-
-													<div>
-														<p class="p-0 m-0">
-															<b>John Doe</b>
-														</p>
-													</div>
-
-													<div
-														class="dropdown open ms-auto"
-													>
-														<button
-															class="btn text-a-link-blue p-0 fs-5"
-															type="button"
-															id="triggerId25"
-															data-bs-toggle="dropdown"
-															aria-haspopup="true"
-															aria-expanded="false"
-														>
-															<i
-																class="bi bi-three-dots-vertical"
-															></i>
-														</button>
-
-														<div
-															class="dropdown-menu"
-															aria-labelledby="triggerId25"
-														>
-															<button
-																class="dropdown-item"
-																href="#"
-															>
-																Edit
-															</button>
-															<button
-																class="dropdown-item"
-																href="#"
-															>
-																Delete
-															</button>
-														</div>
-													</div>
-												</div>
-											</div>
+												John Doe </a
+											><span class="d-none d-lg-inline">
+												John Doe</span
+											>
 										</div>
 
-										<div
-											class="col bg-light c-rounded-2 py-3 position-relative"
-										>
-											<div
-												class="bg-dark mx-auto d-flex justify-content-center shadow align-items-center rounded-circle overflow-hidden"
-												style="
-													width: 6rem;
-													height: 6rem;
-													border: solid 4px gray;
-												"
-											>
-												<img
-													src="./assets/img/5.jpg"
-													class="w-100"
-												/>
-											</div>
-
-											<h2 class="text-center my-2">
-												John Doe
-											</h2>
-
-											<p class="lead text-center my-2">
-												Financial Advisor
-											</p>
-
-											<!-- <p
-												class="text-center px-3 px-lg-0 my-2"
+										<div class="dropdown open ms-auto">
+											<button
+												class="btn text-success p-0 fs-5"
+												type="button"
+												id="triggerId21"
+												data-bs-toggle="dropdown"
+												aria-haspopup="true"
+												aria-expanded="false"
 											>
 												<i
-													class="bi bi-clock fs-5 mx-2"
-												></i
-												>Mon - Thu, 9am - 5pm |<i
-													class="bi bi-briefcase fs-5 mx-2"
-												></i
-												>Financial Advisory |<i
-													class="bi bi-geo-alt fs-5 mx-2"
-												></i
-												>Harare, Zimbabwe
-											</p> -->
-
-											<!-- <div
-												class="position-absolute top-0 end-0 w-fit"
-											>
-												<div
-													class="d-flex justify-content-center"
-												>
-
-													<div class="dropdown open">
-														<button
-															class="btn p-0 fs-5"
-															type="button"
-															id="triggerId2"
-															data-bs-toggle="dropdown"
-															aria-haspopup="true"
-															aria-expanded="false"
-														>
-															<i
-																class="bi bi-three-dots-vertical"
-															></i>
-														</button>
-
-														<div
-															class="dropdown-menu"
-															aria-labelledby="triggerId2"
-														>
-															<button
-																class="dropdown-item"
-																href="#"
-															>
-																Edit
-															</button>
-															<button
-																class="dropdown-item"
-																href="#"
-															>
-																Delete
-															</button>
-														</div>
-													</div>
-												</div>
-											</div> -->
-
-											<div
-												class="row row-cols p-3 justify-content-center gap-3"
-											>
-												<div
-													class="col-12 mb-2 mb-lg-0 col-lg p-4"
-												>
-													<!-- <p>
-														<i
-															class="bi bi-geo-alt me-2 fs-4"
-														></i
-														>Harare, Belvedere
-													</p> -->
-													<p>
-														<i
-															class="bi bi-telephone me-2 fs-4"
-														></i
-														>+263 77566832
-													</p>
-													<p>
-														<i
-															class="bi bi-briefcase me-2 fs-4"
-														></i
-														>CABS Bank
-													</p>
-													<!-- <div class="d-flex">
-														<a href="">
-															<i
-																class="bi bi-link-45deg me-2 fs-4"
-															></i
-														></a>
-														<a href="">
-															<i
-																class="bi bi-twitter me-2 fs-4"
-															></i
-														></a>
-														<a href="">
-															<i
-																class="bi bi-instagram me-2 fs-4"
-															></i
-														></a>
-													</div> -->
-												</div>
-
-												<div class="col-12 col-lg p-4">
-													<p>
-														<i
-															class="bi bi-geo-alt me-2 fs-4"
-														></i
-														>544 NT Belvedere,
-														Harare
-													</p>
-													<!-- <h5>
-														<i
-															class="bi bi-geo-alt me-2 fs-4"
-														></i
-														>Location
-													</h5>
-													<div
-														class="w-100 c-rounded-1 overflow-hidden bg-gray"
-													>
-														<iframe
-															src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.048860360313!2d-2.402101873046882!3d53.53904180000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487ba8a0a3e37291%3A0x502a44f8cb49203a!2sOuter%20Space%20Storage%20Centres!5e0!3m2!1sen!2szw!4v1653838105899!5m2!1sen!2szw"
-															frameborder="0"
-															class="border-0 w-100 h-100 d-block"
-															allowfullscreen
-														></iframe>
-													</div> -->
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div
-									class="tab-pane"
-									id="c3-tab"
-									role="tabpanel"
-								>
-									<div>
-										<h2
-											class="border-bottom d-flex justify-content-between align-items-center pb-2"
-										>
-											<span>Business Cards</span>
-
-											<button
-												onclick="this.nextElementSibling.click()"
-												class="btn btn-primary rounded-pill fs-5 px-3"
-											>
-												scan<i
-													class="bi bi-camera fs-5 ms-2"
+													class="bi bi-three-dots-vertical"
 												></i>
 											</button>
 
-											<input type="file" class="d-none" />
-
-											<!-- <div
-												class="d-flex justify-content-center"
-											>
-												<div class="dropdown open">
-													<button
-														class="btn p-0 fs-5"
-														type="button"
-														id="triggerId3"
-														data-bs-toggle="dropdown"
-														aria-haspopup="true"
-														aria-expanded="false"
-													>
-														<i
-															class="bi bi-three-dots-vertical"
-														></i>
-													</button>
-
-													<div
-														class="dropdown-menu"
-														aria-labelledby="triggerId3"
-													>
-														<button
-															class="dropdown-item"
-															href="#"
-														>
-															Delete
-														</button>
-														<button
-															class="dropdown-item"
-															href="#"
-														>
-															Scan
-														</button>
-													</div>
-												</div>
-											</div> -->
-										</h2>
-
-										<div class="py-3 gy-3 row row-cols-3">
 											<div
-												class="col d-flex align-items-center"
+												class="dropdown-menu dropdown-menu-end"
+												aria-labelledby="triggerId21"
 											>
-												<div class="card">
-													<img
-														class="card-img-top"
-														src="./assets/images/cm33.jpg"
-													/>
+												<button
+													class="dropdown-item"
+													href="#"
+												>
+													Edit
+												</button>
 
-													<div class="card-body">
-														<h4
-															class="card-title d-flex justify-content-between"
-														>
-															Sarah Abrams
-															<a href=""
-																><i
-																	class="bi bi-trash fs-5 ms-2"
-																></i
-															></a>
-														</h4>
-														<p class="card-text">
-															Head of Marketing
-															<br />
-															sarah@acme.com
-															<br />
-															+263 77884545
-														</p>
-													</div>
-												</div>
+												<button
+													class="dropdown-item"
+													href="#"
+												>
+													Delete
+												</button>
 											</div>
+										</div>
+									</div>
+
+									<div
+										class="cloud-contact bg-light position-relative"
+									>
+										<div class="cloud-contact-img-holder">
+											<img
+												src="./assets/img/undraw_profile.svg"
+											/>
+										</div>
+
+										<div class="cloud-contact-name fw-bold">
+											<a
+												href="#"
+												class="d-lg-none"
+												data-bs-toggle="modal"
+												data-bs-target="#mobileContactViewModal"
+											>
+												John Doe </a
+											><span class="d-none d-lg-inline">
+												John Doe</span
+											>
+										</div>
+
+										<div class="dropdown open ms-auto">
+											<button
+												class="btn text-success p-0 fs-5"
+												type="button"
+												id="triggerId21"
+												data-bs-toggle="dropdown"
+												aria-haspopup="true"
+												aria-expanded="false"
+											>
+												<i
+													class="bi bi-three-dots-vertical"
+												></i>
+											</button>
 
 											<div
-												class="col d-flex align-items-center"
+												class="dropdown-menu dropdown-menu-end"
+												aria-labelledby="triggerId21"
 											>
-												<div class="card">
-													<img
-														class="card-img-top"
-														src="./assets/images/cm33.jpg"
-													/>
+												<button
+													class="dropdown-item"
+													href="#"
+												>
+													Edit
+												</button>
 
-													<div class="card-body">
-														<h4
-															class="card-title d-flex justify-content-between"
-														>
-															Sarah Abrams
-															<a href=""
-																><i
-																	class="bi bi-trash fs-5 ms-2"
-																></i
-															></a>
-														</h4>
-														<p class="card-text">
-															Head of Marketing
-															<br />
-															sarah@acme.com
-															<br />
-															+263 77884545
-														</p>
-													</div>
-												</div>
+												<button
+													class="dropdown-item"
+													href="#"
+												>
+													Delete
+												</button>
 											</div>
+										</div>
+									</div>
+
+									<div
+										class="cloud-contact bg-light position-relative"
+									>
+										<div class="cloud-contact-img-holder">
+											<img
+												src="./assets/img/undraw_profile.svg"
+											/>
+										</div>
+
+										<div class="cloud-contact-name fw-bold">
+											<a
+												href="#"
+												class="d-lg-none"
+												data-bs-toggle="modal"
+												data-bs-target="#mobileContactViewModal"
+											>
+												John Doe </a
+											><span class="d-none d-lg-inline">
+												John Doe</span
+											>
+										</div>
+
+										<div class="dropdown open ms-auto">
+											<button
+												class="btn text-success p-0 fs-5"
+												type="button"
+												id="triggerId21"
+												data-bs-toggle="dropdown"
+												aria-haspopup="true"
+												aria-expanded="false"
+											>
+												<i
+													class="bi bi-three-dots-vertical"
+												></i>
+											</button>
 
 											<div
-												class="col d-flex align-items-center"
+												class="dropdown-menu dropdown-menu-end"
+												aria-labelledby="triggerId21"
 											>
-												<div class="card">
-													<img
-														class="card-img-top"
-														src="./assets/images/cm33.jpg"
-													/>
+												<button
+													class="dropdown-item"
+													href="#"
+												>
+													Edit
+												</button>
 
-													<div class="card-body">
-														<h4
-															class="card-title d-flex justify-content-between"
-														>
-															Sarah Abrams
-															<a href=""
-																><i
-																	class="bi bi-trash fs-5 ms-2"
-																></i
-															></a>
-														</h4>
-														<p class="card-text">
-															Head of Marketing
-															<br />
-															sarah@acme.com
-															<br />
-															+263 77884545
-														</p>
-													</div>
-												</div>
+												<button
+													class="dropdown-item"
+													href="#"
+												>
+													Delete
+												</button>
 											</div>
+										</div>
+									</div>
+
+									<div
+										class="cloud-contact bg-light position-relative"
+									>
+										<div class="cloud-contact-img-holder">
+											<img
+												src="./assets/img/undraw_profile.svg"
+											/>
+										</div>
+
+										<div class="cloud-contact-name fw-bold">
+											<a
+												href="#"
+												class="d-lg-none"
+												data-bs-toggle="modal"
+												data-bs-target="#mobileContactViewModal"
+											>
+												John Doe </a
+											><span class="d-none d-lg-inline">
+												John Doe</span
+											>
+										</div>
+
+										<div class="dropdown open ms-auto">
+											<button
+												class="btn text-success p-0 fs-5"
+												type="button"
+												id="triggerId21"
+												data-bs-toggle="dropdown"
+												aria-haspopup="true"
+												aria-expanded="false"
+											>
+												<i
+													class="bi bi-three-dots-vertical"
+												></i>
+											</button>
 
 											<div
-												class="col d-flex align-items-center"
+												class="dropdown-menu dropdown-menu-end"
+												aria-labelledby="triggerId21"
 											>
-												<div class="card">
-													<img
-														class="card-img-top"
-														src="./assets/images/cm33.jpg"
-													/>
+												<button
+													class="dropdown-item"
+													href="#"
+												>
+													Edit
+												</button>
 
-													<div class="card-body">
-														<h4
-															class="card-title d-flex justify-content-between"
-														>
-															Sarah Abrams
-															<a href=""
-																><i
-																	class="bi bi-trash fs-5 ms-2"
-																></i
-															></a>
-														</h4>
-														<p class="card-text">
-															Head of Marketing
-															<br />
-															sarah@acme.com
-															<br />
-															+263 77884545
-														</p>
-													</div>
-												</div>
+												<button
+													class="dropdown-item"
+													href="#"
+												>
+													Delete
+												</button>
 											</div>
+										</div>
+									</div>
+
+									<div
+										class="cloud-contact bg-light position-relative"
+									>
+										<div class="cloud-contact-img-holder">
+											<img
+												src="./assets/img/undraw_profile.svg"
+											/>
+										</div>
+
+										<div class="cloud-contact-name fw-bold">
+											<a
+												href="#"
+												class="d-lg-none"
+												data-bs-toggle="modal"
+												data-bs-target="#mobileContactViewModal"
+											>
+												John Doe </a
+											><span class="d-none d-lg-inline">
+												John Doe</span
+											>
+										</div>
+
+										<div class="dropdown open ms-auto">
+											<button
+												class="btn text-success p-0 fs-5"
+												type="button"
+												id="triggerId21"
+												data-bs-toggle="dropdown"
+												aria-haspopup="true"
+												aria-expanded="false"
+											>
+												<i
+													class="bi bi-three-dots-vertical"
+												></i>
+											</button>
 
 											<div
-												class="col d-flex align-items-center"
+												class="dropdown-menu dropdown-menu-end"
+												aria-labelledby="triggerId21"
 											>
-												<div class="card">
-													<img
-														class="card-img-top"
-														src="./assets/images/cm33.jpg"
-													/>
+												<button
+													class="dropdown-item"
+													href="#"
+												>
+													Edit
+												</button>
 
-													<div class="card-body">
-														<h4
-															class="card-title d-flex justify-content-between"
-														>
-															Sarah Abrams
-															<a href=""
-																><i
-																	class="bi bi-trash fs-5 ms-2"
-																></i
-															></a>
-														</h4>
-														<p class="card-text">
-															Head of Marketing
-															<br />
-															sarah@acme.com
-															<br />
-															+263 77884545
-														</p>
-													</div>
-												</div>
+												<button
+													class="dropdown-item"
+													href="#"
+												>
+													Delete
+												</button>
 											</div>
+										</div>
+									</div>
+
+									<div
+										class="cloud-contact bg-light position-relative"
+									>
+										<div class="cloud-contact-img-holder">
+											<img
+												src="./assets/img/undraw_profile.svg"
+											/>
+										</div>
+
+										<div class="cloud-contact-name fw-bold">
+											<a
+												href="#"
+												class="d-lg-none"
+												data-bs-toggle="modal"
+												data-bs-target="#mobileContactViewModal"
+											>
+												John Doe </a
+											><span class="d-none d-lg-inline">
+												John Doe</span
+											>
+										</div>
+
+										<div class="dropdown open ms-auto">
+											<button
+												class="btn text-success p-0 fs-5"
+												type="button"
+												id="triggerId21"
+												data-bs-toggle="dropdown"
+												aria-haspopup="true"
+												aria-expanded="false"
+											>
+												<i
+													class="bi bi-three-dots-vertical"
+												></i>
+											</button>
+
+											<div
+												class="dropdown-menu dropdown-menu-end"
+												aria-labelledby="triggerId21"
+											>
+												<button
+													class="dropdown-item"
+													href="#"
+												>
+													Edit
+												</button>
+
+												<button
+													class="dropdown-item"
+													href="#"
+												>
+													Delete
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="d-none d-lg-block col-lg-8 bg-light c-rounded-1 py-3"
+							>
+								<div
+									class="bg-dark mx-auto d-flex justify-content-center shadow align-items-center rounded-circle overflow-hidden"
+									style="
+										width: 6rem;
+										height: 6rem;
+										border: solid 4px gray;
+									"
+								>
+									<img
+										src="./assets/img/undraw_profile.svg"
+										class="w-100"
+									/>
+								</div>
+
+								<h2 class="text-center my-2">John Doe</h2>
+
+								<p class="lead text-center my-2">
+									Financial Advisor
+								</p>
+
+								<div class="row p-3">
+									<div class="col-6 p-4">
+										<p>
+											<i
+												class="bi bi-telephone me-2 text-success fs-5"
+											></i
+											>+263 77566832
+										</p>
+
+										<p>
+											<i
+												class="bi bi-briefcase me-2 text-success fs-5"
+											></i
+											>CABS Bank
+										</p>
+									</div>
+
+									<div class="col-6 p-4">
+										<p>
+											<i
+												class="bi bi-geo-alt me-2 text-success fs-5"
+											></i
+											>544 NT Belvedere, Harare
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="c3-tab" role="tabpanel">
+						<div class="py-4">
+							<div
+								class="row align-items-center justify-content-between"
+							>
+								<div class="col">
+									<h2>Business Cards</h2>
+								</div>
+
+								<form class="col-auto">
+									<button
+										onclick="this.nextElementSibling.click()"
+										class="btn btn-primary rounded-pill px-3"
+									>
+										Scan<i class="bi bi-camera ms-2"></i>
+									</button>
+									<input
+										type="file"
+										class="d-none"
+										capture="user"
+										accept="image/*"
+									/>
+								</form>
+							</div>
+
+							<div class="py-3 row row-cols-1 row-cols-lg-3">
+								<div class="col p-2 d-flex">
+									<div class="card">
+										<img
+											class="card-img-top"
+											src="./assets/images/cm33.jpg"
+										/>
+
+										<div class="card-body">
+											<div
+												class="card-title d-flex justify-content-between"
+											>
+												<h4>Sarah Abrams</h4>
+
+												<button
+													type="button"
+													class="btn btn-danger"
+												>
+													<i class="bi bi-trash"></i>
+												</button>
+											</div>
+
+											<p class="card-text">
+												Head of Marketing
+												<br />
+												sarah@acme.com
+												<br />
+												+263 77884545
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col p-2 d-flex">
+									<div class="card">
+										<img
+											class="card-img-top"
+											src="./assets/images/cm33.jpg"
+										/>
+
+										<div class="card-body">
+											<div
+												class="card-title d-flex justify-content-between"
+											>
+												<h4>Sarah Abrams</h4>
+
+												<button
+													type="button"
+													class="btn btn-danger"
+												>
+													<i class="bi bi-trash"></i>
+												</button>
+											</div>
+
+											<p class="card-text">
+												Head of Marketing
+												<br />
+												sarah@acme.com
+												<br />
+												+263 77884545
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col p-2 d-flex">
+									<div class="card">
+										<img
+											class="card-img-top"
+											src="./assets/images/cm33.jpg"
+										/>
+
+										<div class="card-body">
+											<div
+												class="card-title d-flex justify-content-between"
+											>
+												<h4>Sarah Abrams</h4>
+
+												<button
+													type="button"
+													class="btn btn-danger"
+												>
+													<i class="bi bi-trash"></i>
+												</button>
+											</div>
+
+											<p class="card-text">
+												Head of Marketing
+												<br />
+												sarah@acme.com
+												<br />
+												+263 77884545
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col p-2 d-flex">
+									<div class="card">
+										<img
+											class="card-img-top"
+											src="./assets/images/cm33.jpg"
+										/>
+
+										<div class="card-body">
+											<div
+												class="card-title d-flex justify-content-between"
+											>
+												<h4>Sarah Abrams</h4>
+
+												<button
+													type="button"
+													class="btn btn-danger"
+												>
+													<i class="bi bi-trash"></i>
+												</button>
+											</div>
+
+											<p class="card-text">
+												Head of Marketing
+												<br />
+												sarah@acme.com
+												<br />
+												+263 77884545
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col p-2 d-flex">
+									<div class="card">
+										<img
+											class="card-img-top"
+											src="./assets/images/cm33.jpg"
+										/>
+
+										<div class="card-body">
+											<div
+												class="card-title d-flex justify-content-between"
+											>
+												<h4>Sarah Abrams</h4>
+
+												<button
+													type="button"
+													class="btn btn-danger"
+												>
+													<i class="bi bi-trash"></i>
+												</button>
+											</div>
+
+											<p class="card-text">
+												Head of Marketing
+												<br />
+												sarah@acme.com
+												<br />
+												+263 77884545
+											</p>
 										</div>
 									</div>
 								</div>
@@ -2048,13 +1894,12 @@
 			</div>
 		</main>
 
-		<footer
-			class="d-flex container flex-wrap justify-content-between align-items-center py-5 px-3"
-		>
-			<div class="col d-flex align-items-center">
-				<span class="text-muted"
-					>&copy; 2022 Gum.iNc. All Rights Reserved</span
-				>
+		<footer class="container d-lg-flex justify-content-between p-5">
+			<div class="text-center">
+				<p class="d-lg-inline">
+					&copy; 2022 Gum.iNc. All Rights Reserved
+				</p>
+
 				<a
 					href="./partner.html"
 					class="btn btn-success px-3 rounded-pill ms-3"
@@ -2062,36 +1907,28 @@
 				>
 			</div>
 
-			<ul
-				class="nav col-md-4 justify-content-end fs-4 list-unstyled d-flex"
-			>
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.twitter.com"
-						target="_blank"
-						><i class="bi bi-twitter"></i
-					></a>
-				</li>
+			<div class="text-center mt-3 mt-lg-0">
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.twitter.com"
+					target="_blank"
+					><i class="bi bi-twitter"></i
+				></a>
 
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.instagram.com"
-						target="_blank"
-						><i class="bi bi-instagram"></i
-					></a>
-				</li>
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.instagram.com"
+					target="_blank"
+					><i class="bi bi-instagram"></i
+				></a>
 
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.facebook.com"
-						target="_blank"
-						><i class="bi bi-facebook"></i
-					></a>
-				</li>
-			</ul>
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.facebook.com"
+					target="_blank"
+					><i class="bi bi-facebook"></i
+				></a>
+			</div>
 		</footer>
 	</body>
 </html>

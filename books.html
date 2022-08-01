@@ -18,21 +18,24 @@
 			rel="stylesheet"
 			href="./assets/vendor/fontawsome/css/all.min.css"
 		/>
-		<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css" />
+		<link
+			rel="stylesheet"
+			href="./assets/vendor/custom-bootstrap/css/custom.min.css"
+		/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<!-- scripts -->
 
 		<script
 			defer
-			src="./assets/vendor/bootstrap/bootstrap.bundle.js"
+			src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"
 		></script>
 
 		<script defer src="./assets/js/main.js"></script>
 		<script defer src="./assets/js/custom.js"></script>
 	</head>
 
-	<body class="p-0 position-relative">
+	<body>
 		<div id="invisible-elements">
 			<div class="custom-modals">
 				<!--Location Modal -->
@@ -181,10 +184,6 @@
 			</div>
 
 			<div id="popovers">
-				<button type="button" class="d-none" id="addToCartToastBtn">
-					Add To Cart
-				</button>
-
 				<div
 					class="position-fixed bottom-0 end-0 p-3"
 					style="z-index: 11"
@@ -199,68 +198,6 @@
 						<div class="toast-body">
 							<div class="d-flex align-items-center">
 								Added!
-								<button
-									type="button"
-									class="btn-close me-2 ms-auto"
-									data-bs-dismiss="toast"
-									aria-label="Close"
-								></button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<button type="button" class="d-none" id="saveIncToastBtn">
-					save inc
-				</button>
-
-				<div
-					class="position-fixed bottom-0 end-0 p-3"
-					style="z-index: 11"
-				>
-					<div
-						id="saveIncToast"
-						class="toast text-white bg-success"
-						role="alert"
-						aria-live="assertive"
-						aria-atomic="true"
-					>
-						<div class="toast-body">
-							<div class="d-flex align-items-center">
-								<i class="bi bi-check fs-2 me-2"></i>
-								<span class="me-2">
-									Listing Saved! You can find it on the saved
-									Incs tab on you profile.</span
-								>
-								<button
-									type="button"
-									class="btn-close me-2 ms-auto"
-									data-bs-dismiss="toast"
-									aria-label="Close"
-								></button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div
-					class="position-fixed bottom-0 end-0 p-3"
-					style="z-index: 11"
-				>
-					<div
-						id="requestAudienceToast"
-						class="toast text-white bg-success"
-						role="alert"
-						aria-live="assertive"
-						aria-atomic="true"
-					>
-						<div class="toast-body">
-							<div class="d-flex align-items-center">
-								<i class="bi bi-send-check fs-2 me-2"></i>
-								<span class="me-2">
-									Requested! You'll Be notified of a response
-									in your notifications.</span
-								>
 								<button
 									type="button"
 									class="btn-close me-2 ms-auto"
@@ -305,8 +242,11 @@
 							<a class="mobile-link p-3" href="./index.html"
 								>Home</a
 							>
-							<a class="mobile-link p-3" href="directory.html"
+							<a class="mobile-link p-3" href="./directory.html"
 								>Directory
+							</a>
+							<a class="mobile-link p-3" href="./connect.html"
+								>Inc Connect
 							</a>
 							<a class="mobile-link p-3" href="./store.html"
 								>Store</a
@@ -341,1557 +281,740 @@
 			</div>
 		</div>
 
-		<header id="header" class="p-2 px-4 px-md-2 pt-md-2 fixed-top">
-			<div
-				class="container-xxl d-flex justify-content-between align-items-center justify-content-md-around"
-			>
-				<button
-					class="btn p-0 d-md-none nav-link"
-					id="nav-toggle"
-					type="button"
-					data-bs-toggle="offcanvas"
-					data-bs-target="#mobileNavOffcanvas"
-					aria-controls="mobileNavOffcanvas"
-				>
-					<i class="bi bi-list fs-2"></i>
-				</button>
+		<header id="header">
+			<div class="container">
+				<div class="d-flex justify-content-between align-items-center">
+					<button
+						class="nav-link btn border-0 p-0 d-lg-none"
+						id="nav-toggle"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#mobileNavOffcanvas"
+						aria-controls="mobileNavOffcanvas"
+					>
+						<i class="bi bi-list fs-4"></i>
+					</button>
 
-				<a href="./index.html" class="navbar-brand text-dark p-0 fs-2"
-					>Gum.iNc</a
-				>
-
-				<a
-					class="btn order-last btn-primary rounded-circle d-lg-none"
-					href="./cart.html"
-					><i class="bi bi-cart4"></i
-				></a>
-
-				<div class="d-md-flex d-none p-0">
 					<a
 						href="./index.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Home</a
-					>
-					<a
-						href="directory.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Directory</a
-					>
-					<a
-						href="./connect.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Inc Connect</a
-					>
-					<a
-						href="./store.html"
-						class="nav-link active rounded-pill px-2 py-1"
-						>Store</a
-					>
-					<a
-						href="directories-and-almanacs.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Almanacs & Directories</a
-					>
-					<a
-						href="./about.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>About</a
-					>
-					<a
-						href="./account.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Account</a
-					>
-					<a
-						href="./cart.html"
-						class="nav-link border rounded-circle px-2 ms-2 py-1"
+						class="navbar-brand fw-bold text-primary fs-3"
+						><img
+							src="./assets/logos and stuff/logo (44).jpg"
+							class="gum-logo rounded-pill"
+					/></a>
+
+					<a class="nav-link order-last d-lg-none" href="./cart.html"
 						><i class="bi bi-cart4"></i
 					></a>
+
+					<div class="d-lg-flex d-none">
+						<a href="./index.html" class="nav-link">Home</a>
+						<a href="directory.html" class="nav-link">Directory</a>
+						<a href="./connect.html" class="nav-link"
+							>Inc Connect</a
+						>
+						<a href="./store.html" class="nav-link active">Store</a>
+						<a href="directories-and-almanacs.html" class="nav-link"
+							>Almanacs & Directories</a
+						>
+						<a href="./about.html" class="nav-link">About</a>
+						<a href="./account.html" class="nav-link">Account</a>
+						<a href="./cart.html" class="nav-link"
+							><i class="bi bi-cart4"></i
+						></a>
+					</div>
 				</div>
 			</div>
 		</header>
 
-		<main class="container py-5">
-			<section
-				class="container text-white justify-content-center align-items-center p-4 mt-5 my-lg-5 d-flex flex-column flex-md-row gap-3"
-			>
-				<div class="input-group input-group-lg mb-3 w-lg-50">
-					<button
-						type="submit"
-						class="input-group-text btn btn-outline-dark"
-						id="basic-addon2"
-					>
-						<i class="bi bi-search"></i>
-					</button>
-					<input
-						type="text"
-						class="form-control border border-brown"
-						placeholder="Search directories And Almanacs..."
-						aria-label="Search directories And Almanacs..."
-						aria-describedby="basic-addon2"
-					/>
+		<main class="container pt-5">
+			<section class="row justify-content-around p-3 p-md-5 my-5">
+				<div class="col-lg-8 mb-3 mb-lg-0">
+					<div class="input-group input-group-lg">
+						<button type="submit" class="btn btn-primary">
+							<i class="bi bi-search"></i>
+						</button>
+						<input
+							type="search"
+							class="form-control border-primary"
+							placeholder="Search directories And Almanacs..."
+						/>
+					</div>
 				</div>
 
-				<div class="input-group input-group-lg mb-3 w-fit">
-					<span
-						class="input-group-text bg-white border-brown"
-						id="basic-addon2"
-						>Sort By</span
-					>
-					<select
-						class="form-select border-brown"
-						aria-label="Sort by"
-					>
-						<option selected>Date</option>
-						<option value="1">Popularity</option>
-						<option value="2">Price</option>
-					</select>
+				<div class="col-lg-4">
+					<div class="input-group input-group-lg">
+						<span class="input-group-text bg-primary text-white"
+							>Sort By</span
+						>
+						<select class="form-select border-primary">
+							<option selected>Popularity</option>
+							<option>Price</option>
+						</select>
+					</div>
 				</div>
 			</section>
 
-			<section class="my-lg-5 container">
-				<div class="row gap-3">
-					<div
-						id="almanacs-and-directories"
-						class="col-lg-8 px-4 bg-white mb-5 shadow-lg c-rounded-3 py-5"
-					>
-						<h2
-							class="pb-2 border-bottom border-4 d-flex justify-content-between"
-						>
-							Directories & Almanacs
-						</h2>
+			<section class="row">
+				<div class="col-lg-8">
+					<div class="p-md-5 mb-5 shadow c-rounded-2">
+						<div class="p-3 border-bottom border-4">
+							<h2>Almanacs & Directories</h2>
+						</div>
 
-						<div
-							class="row row-cols-2 row-cols-lg-3 px-2 justify-content-around"
-						>
-							<div class="col my-3 d-flex p-1">
-								<div class="border shadow w-100 c-rounded-1">
-									<p
-										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-									>
-										Upcoming Events by the Gum.iNc &reg;
-									</p>
+						<div class="row row-cols-2 row-cols-lg-3 p-3">
+							<div class="col d-flex p-2">
+								<div class="book">
+									<p class="book-title">Upcoming Events</p>
 
-									<div
-										style="max-height: 200px"
-										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-									>
-										<img
-											src="./assets/img/images.jpeg"
-											class="w-100"
-										/>
-										<span
-											class="bg-success text-white p-2 position-absolute top-0 end-0"
-											style="border-radius: 0 0 0 10px"
-											>almanac</span
+									<div class="book-cover-holder">
+										<button
+											class="add-to-cart-btn btn btn-success d-md-none btn-sm"
 										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+										<img
+											src="./assets/logos and stuff/book-upcoming.jpg"
+										/>
 									</div>
-
-									<p class="p-3 m-0 d-none d-md-block">
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing elit.
-									</p>
 
 									<div
-										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+										class="d-none d-md-flex p-3 align-items-center justify-content-between"
 									>
-										<div>$150.00</div>
+										<p class="book-description m-0 pe-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Vero,
+											soluta?
+										</p>
 
-										<div class="dropdown open">
-											<button
-												class="btn fs-4"
-												type="button"
-												id="triggerId"
-												data-bs-toggle="dropdown"
-												aria-haspopup="true"
-												aria-expanded="false"
-											>
-												<i
-													class="bi bi-three-dots-vertical"
-												></i>
-											</button>
-
-											<div
-												class="dropdown-menu"
-												aria-labelledby="triggerId"
-											>
-												<a
-													class="dropdown-item"
-													href="./view-book.html"
-												>
-													View
-												</a>
-												<button
-													type="button"
-													class="dropdown-item"
-													onclick="document.getElementById('addToCartToastBtn').click()"
-												>
-													Add to cart
-												</button>
-											</div>
-										</div>
-									</div>
-
-									<div class="px-3 d-none d-md-block">
-										<span class="me-3"> $150.00</span
-										><span> 12 feb</span>
-									</div>
-
-									<div class="px-3 pb-3 d-none d-md-block">
-										<a
-											class="mt-2 btn btn-outline-dark rounded-pill px-3"
-											>View</a
-										><button
-											onclick="document.getElementById('addToCartToastBtn').click()"
-											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										<button
+											class="add-to-cart-btn btn btn-outline-success"
 										>
 											<i class="bi bi-cart-plus"></i>
 										</button>
 									</div>
+
+									<a
+										href="./view-book.html"
+										class="view-book-link"
+									>
+									</a>
 								</div>
 							</div>
 
-							<div class="col my-3 d-flex p-1">
-								<div class="border shadow w-100 c-rounded-1">
-									<p
-										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-									>
-										Gummy Pages (Yellow Pages) by the
-										Gum.iNc &reg;
+							<div class="col d-flex p-2">
+								<div class="book">
+									<p class="book-title">
+										Gummy Pages (Yellow Pages)
 									</p>
 
-									<div
-										style="max-height: 200px"
-										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-									>
-										<img
-											src="./assets/img/images.jpeg"
-											class="w-100"
-										/>
-										<span
-											class="bg-success text-white p-2 position-absolute top-0 end-0"
-											style="border-radius: 0 0 0 10px"
-											>almanac</span
+									<div class="book-cover-holder">
+										<button
+											class="add-to-cart-btn btn btn-success d-md-none btn-sm"
 										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+										<img
+											src="./assets/logos and stuff/book-gummy-pages.jpg"
+										/>
 									</div>
-
-									<p class="p-3 m-0 d-none d-md-block">
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing elit.
-									</p>
 
 									<div
-										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+										class="d-none d-md-flex p-3 align-items-center justify-content-between"
 									>
-										<div>$150.00</div>
+										<p class="book-description m-0 pe-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Vero,
+											soluta?
+										</p>
 
-										<div class="dropdown open">
-											<button
-												class="btn fs-4"
-												type="button"
-												id="triggerId"
-												data-bs-toggle="dropdown"
-												aria-haspopup="true"
-												aria-expanded="false"
-											>
-												<i
-													class="bi bi-three-dots-vertical"
-												></i>
-											</button>
-
-											<div
-												class="dropdown-menu"
-												aria-labelledby="triggerId"
-											>
-												<a
-													class="dropdown-item"
-													href="./view-book.html"
-												>
-													View
-												</a>
-												<button
-													type="button"
-													class="dropdown-item"
-													onclick="document.getElementById('addToCartToastBtn').click()"
-												>
-													Add to cart
-												</button>
-											</div>
-										</div>
-									</div>
-
-									<div class="px-3 d-none d-md-block">
-										<span class="me-3"> $150.00</span
-										><span> 12 feb</span>
-									</div>
-
-									<div class="px-3 pb-3 d-none d-md-block">
-										<a
-											class="mt-2 btn btn-outline-dark rounded-pill px-3"
-											>View</a
-										><button
-											onclick="document.getElementById('addToCartToastBtn').click()"
-											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										<button
+											class="add-to-cart-btn btn btn-outline-success"
 										>
 											<i class="bi bi-cart-plus"></i>
 										</button>
 									</div>
+
+									<a
+										href="./view-book.html"
+										class="view-book-link"
+									>
+									</a>
 								</div>
 							</div>
 
-							<div class="col my-3 d-flex p-1">
-								<div class="border shadow w-100 c-rounded-1">
-									<p
-										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-									>
-										Creme Chefs by the Gum.iNc &reg;
-									</p>
+							<div class="col d-flex p-2">
+								<div class="book">
+									<p class="book-title">Creme Chefs</p>
 
-									<div
-										style="max-height: 200px"
-										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-									>
-										<img
-											src="./assets/img/images.jpeg"
-											class="w-100"
-										/>
-										<span
-											class="bg-success text-white p-2 position-absolute top-0 end-0"
-											style="border-radius: 0 0 0 10px"
-											>almanac</span
+									<div class="book-cover-holder">
+										<button
+											class="add-to-cart-btn btn btn-success d-md-none btn-sm"
 										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+										<img
+											src="./assets/logos and stuff/book-food.jpg"
+										/>
 									</div>
-
-									<p class="p-3 m-0 d-none d-md-block">
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing elit.
-									</p>
 
 									<div
-										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+										class="d-none d-md-flex p-3 align-items-center justify-content-between"
 									>
-										<div>$150.00</div>
+										<p class="book-description m-0 pe-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Vero,
+											soluta?
+										</p>
 
-										<div class="dropdown open">
-											<button
-												class="btn fs-4"
-												type="button"
-												id="triggerId"
-												data-bs-toggle="dropdown"
-												aria-haspopup="true"
-												aria-expanded="false"
-											>
-												<i
-													class="bi bi-three-dots-vertical"
-												></i>
-											</button>
-
-											<div
-												class="dropdown-menu"
-												aria-labelledby="triggerId"
-											>
-												<a
-													class="dropdown-item"
-													href="./view-book.html"
-												>
-													View
-												</a>
-												<button
-													type="button"
-													class="dropdown-item"
-													onclick="document.getElementById('addToCartToastBtn').click()"
-												>
-													Add to cart
-												</button>
-											</div>
-										</div>
-									</div>
-
-									<div class="px-3 d-none d-md-block">
-										<span class="me-3"> $150.00</span
-										><span> 12 feb</span>
-									</div>
-
-									<div class="px-3 pb-3 d-none d-md-block">
-										<a
-											class="mt-2 btn btn-outline-dark rounded-pill px-3"
-											>View</a
-										><button
-											onclick="document.getElementById('addToCartToastBtn').click()"
-											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										<button
+											class="add-to-cart-btn btn btn-outline-success"
 										>
 											<i class="bi bi-cart-plus"></i>
 										</button>
 									</div>
+
+									<a
+										href="./view-book.html"
+										class="view-book-link"
+									>
+									</a>
 								</div>
 							</div>
 
-							<div class="col my-3 d-flex p-1">
-								<div class="border shadow w-100 c-rounded-1">
-									<p
-										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-									>
-										Creme Restaurants by the Gum.iNc &reg;
-									</p>
+							<div class="col d-flex p-2">
+								<div class="book">
+									<p class="book-title">Creme Restaurants</p>
 
-									<div
-										style="max-height: 200px"
-										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-									>
-										<img
-											src="./assets/img/images.jpeg"
-											class="w-100"
-										/>
-										<span
-											class="bg-success text-white p-2 position-absolute top-0 end-0"
-											style="border-radius: 0 0 0 10px"
-											>almanac</span
+									<div class="book-cover-holder">
+										<button
+											class="add-to-cart-btn btn btn-success d-md-none btn-sm"
 										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+										<img
+											src="./assets/logos and stuff/book-food.jpg"
+										/>
 									</div>
-
-									<p class="p-3 m-0 d-none d-md-block">
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing elit.
-									</p>
 
 									<div
-										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+										class="d-none d-md-flex p-3 align-items-center justify-content-between"
 									>
-										<div>$150.00</div>
+										<p class="book-description m-0 pe-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Vero,
+											soluta?
+										</p>
 
-										<div class="dropdown open">
-											<button
-												class="btn fs-4"
-												type="button"
-												id="triggerId"
-												data-bs-toggle="dropdown"
-												aria-haspopup="true"
-												aria-expanded="false"
-											>
-												<i
-													class="bi bi-three-dots-vertical"
-												></i>
-											</button>
-
-											<div
-												class="dropdown-menu"
-												aria-labelledby="triggerId"
-											>
-												<a
-													class="dropdown-item"
-													href="./view-book.html"
-												>
-													View
-												</a>
-												<button
-													type="button"
-													class="dropdown-item"
-													onclick="document.getElementById('addToCartToastBtn').click()"
-												>
-													Add to cart
-												</button>
-											</div>
-										</div>
-									</div>
-
-									<div class="px-3 d-none d-md-block">
-										<span class="me-3"> $150.00</span
-										><span> 12 feb</span>
-									</div>
-
-									<div class="px-3 pb-3 d-none d-md-block">
-										<a
-											class="mt-2 btn btn-outline-dark rounded-pill px-3"
-											>View</a
-										><button
-											onclick="document.getElementById('addToCartToastBtn').click()"
-											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										<button
+											class="add-to-cart-btn btn btn-outline-success"
 										>
 											<i class="bi bi-cart-plus"></i>
 										</button>
 									</div>
+
+									<a
+										href="./view-book.html"
+										class="view-book-link"
+									>
+									</a>
 								</div>
 							</div>
 
-							<div class="col my-3 d-flex p-1">
-								<div class="border shadow w-100 c-rounded-1">
-									<p
-										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-									>
-										Sports by the Gum.iNc &reg;
-									</p>
+							<div class="col d-flex p-2">
+								<div class="book">
+									<p class="book-title">Upcoming Events</p>
 
-									<div
-										style="max-height: 200px"
-										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-									>
-										<img
-											src="./assets/img/images.jpeg"
-											class="w-100"
-										/>
-										<span
-											class="bg-success text-white p-2 position-absolute top-0 end-0"
-											style="border-radius: 0 0 0 10px"
-											>almanac</span
+									<div class="book-cover-holder">
+										<button
+											class="add-to-cart-btn btn btn-success d-md-none btn-sm"
 										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+										<img
+											src="./assets/logos and stuff/book-upcoming.jpg"
+										/>
 									</div>
-
-									<p class="p-3 m-0 d-none d-md-block">
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing elit.
-									</p>
 
 									<div
-										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+										class="d-none d-md-flex p-3 align-items-center justify-content-between"
 									>
-										<div>$150.00</div>
+										<p class="book-description m-0 pe-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Vero,
+											soluta?
+										</p>
 
-										<div class="dropdown open">
-											<button
-												class="btn fs-4"
-												type="button"
-												id="triggerId"
-												data-bs-toggle="dropdown"
-												aria-haspopup="true"
-												aria-expanded="false"
-											>
-												<i
-													class="bi bi-three-dots-vertical"
-												></i>
-											</button>
-
-											<div
-												class="dropdown-menu"
-												aria-labelledby="triggerId"
-											>
-												<a
-													class="dropdown-item"
-													href="./view-book.html"
-												>
-													View
-												</a>
-												<button
-													type="button"
-													class="dropdown-item"
-													onclick="document.getElementById('addToCartToastBtn').click()"
-												>
-													Add to cart
-												</button>
-											</div>
-										</div>
-									</div>
-
-									<div class="px-3 d-none d-md-block">
-										<span class="me-3"> $150.00</span
-										><span> 12 feb</span>
-									</div>
-
-									<div class="px-3 pb-3 d-none d-md-block">
-										<a
-											class="mt-2 btn btn-outline-dark rounded-pill px-3"
-											>View</a
-										><button
-											onclick="document.getElementById('addToCartToastBtn').click()"
-											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										<button
+											class="add-to-cart-btn btn btn-outline-success"
 										>
 											<i class="bi bi-cart-plus"></i>
 										</button>
 									</div>
+
+									<a
+										href="./view-book.html"
+										class="view-book-link"
+									>
+									</a>
 								</div>
 							</div>
 
-							<div class="col my-3 d-flex p-1">
-								<div class="border shadow w-100 c-rounded-1">
-									<p
-										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-									>
-										Craft/Skill by the Gum.iNc &reg;
+							<div class="col d-flex p-2">
+								<div class="book">
+									<p class="book-title">
+										Gummy Pages (Yellow Pages)
 									</p>
 
-									<div
-										style="max-height: 200px"
-										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-									>
-										<img
-											src="./assets/img/images.jpeg"
-											class="w-100"
-										/>
-										<span
-											class="bg-success text-white p-2 position-absolute top-0 end-0"
-											style="border-radius: 0 0 0 10px"
-											>almanac</span
+									<div class="book-cover-holder">
+										<button
+											class="add-to-cart-btn btn btn-success d-md-none btn-sm"
 										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+										<img
+											src="./assets/logos and stuff/book-gummy-pages.jpg"
+										/>
 									</div>
-
-									<p class="p-3 m-0 d-none d-md-block">
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing elit.
-									</p>
 
 									<div
-										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+										class="d-none d-md-flex p-3 align-items-center justify-content-between"
 									>
-										<div>$150.00</div>
+										<p class="book-description m-0 pe-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Vero,
+											soluta?
+										</p>
 
-										<div class="dropdown open">
-											<button
-												class="btn fs-4"
-												type="button"
-												id="triggerId"
-												data-bs-toggle="dropdown"
-												aria-haspopup="true"
-												aria-expanded="false"
-											>
-												<i
-													class="bi bi-three-dots-vertical"
-												></i>
-											</button>
-
-											<div
-												class="dropdown-menu"
-												aria-labelledby="triggerId"
-											>
-												<a
-													class="dropdown-item"
-													href="./view-book.html"
-												>
-													View
-												</a>
-												<button
-													type="button"
-													class="dropdown-item"
-													onclick="document.getElementById('addToCartToastBtn').click()"
-												>
-													Add to cart
-												</button>
-											</div>
-										</div>
-									</div>
-
-									<div class="px-3 d-none d-md-block">
-										<span class="me-3"> $150.00</span
-										><span> 12 feb</span>
-									</div>
-
-									<div class="px-3 pb-3 d-none d-md-block">
-										<a
-											class="mt-2 btn btn-outline-dark rounded-pill px-3"
-											>View</a
-										><button
-											onclick="document.getElementById('addToCartToastBtn').click()"
-											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										<button
+											class="add-to-cart-btn btn btn-outline-success"
 										>
 											<i class="bi bi-cart-plus"></i>
 										</button>
 									</div>
+
+									<a
+										href="./view-book.html"
+										class="view-book-link"
+									>
+									</a>
 								</div>
 							</div>
 
-							<div class="col my-3 d-flex p-1">
-								<div class="border shadow w-100 c-rounded-1">
-									<p
-										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-									>
-										Coin (Business) by the Gum.iNc &reg;
-									</p>
+							<div class="col d-flex p-2">
+								<div class="book">
+									<p class="book-title">Creme Chefs</p>
 
-									<div
-										style="max-height: 200px"
-										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-									>
-										<img
-											src="./assets/img/images.jpeg"
-											class="w-100"
-										/>
-										<span
-											class="bg-success text-white p-2 position-absolute top-0 end-0"
-											style="border-radius: 0 0 0 10px"
-											>almanac</span
+									<div class="book-cover-holder">
+										<button
+											class="add-to-cart-btn btn btn-success d-md-none btn-sm"
 										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+										<img
+											src="./assets/logos and stuff/book-food.jpg"
+										/>
 									</div>
-
-									<p class="p-3 m-0 d-none d-md-block">
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing elit.
-									</p>
 
 									<div
-										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+										class="d-none d-md-flex p-3 align-items-center justify-content-between"
 									>
-										<div>$150.00</div>
+										<p class="book-description m-0 pe-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Vero,
+											soluta?
+										</p>
 
-										<div class="dropdown open">
-											<button
-												class="btn fs-4"
-												type="button"
-												id="triggerId"
-												data-bs-toggle="dropdown"
-												aria-haspopup="true"
-												aria-expanded="false"
-											>
-												<i
-													class="bi bi-three-dots-vertical"
-												></i>
-											</button>
-
-											<div
-												class="dropdown-menu"
-												aria-labelledby="triggerId"
-											>
-												<a
-													class="dropdown-item"
-													href="./view-book.html"
-												>
-													View
-												</a>
-												<button
-													type="button"
-													class="dropdown-item"
-													onclick="document.getElementById('addToCartToastBtn').click()"
-												>
-													Add to cart
-												</button>
-											</div>
-										</div>
-									</div>
-
-									<div class="px-3 d-none d-md-block">
-										<span class="me-3"> $150.00</span
-										><span> 12 feb</span>
-									</div>
-
-									<div class="px-3 pb-3 d-none d-md-block">
-										<a
-											class="mt-2 btn btn-outline-dark rounded-pill px-3"
-											>View</a
-										><button
-											onclick="document.getElementById('addToCartToastBtn').click()"
-											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										<button
+											class="add-to-cart-btn btn btn-outline-success"
 										>
 											<i class="bi bi-cart-plus"></i>
 										</button>
 									</div>
+
+									<a
+										href="./view-book.html"
+										class="view-book-link"
+									>
+									</a>
 								</div>
 							</div>
 
-							<div class="col my-3 d-flex p-1">
-								<div class="border shadow w-100 c-rounded-1">
-									<p
-										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-									>
-										Thrift (Fashion) by the Gum.iNc &reg;
-									</p>
+							<div class="col d-flex p-2">
+								<div class="book">
+									<p class="book-title">Creme Restaurants</p>
 
-									<div
-										style="max-height: 200px"
-										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-									>
-										<img
-											src="./assets/img/images.jpeg"
-											class="w-100"
-										/>
-										<span
-											class="bg-success text-white p-2 position-absolute top-0 end-0"
-											style="border-radius: 0 0 0 10px"
-											>almanac</span
+									<div class="book-cover-holder">
+										<button
+											class="add-to-cart-btn btn btn-success d-md-none btn-sm"
 										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+										<img
+											src="./assets/logos and stuff/book-food.jpg"
+										/>
 									</div>
-
-									<p class="p-3 m-0 d-none d-md-block">
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing elit.
-									</p>
 
 									<div
-										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+										class="d-none d-md-flex p-3 align-items-center justify-content-between"
 									>
-										<div>$150.00</div>
+										<p class="book-description m-0 pe-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Vero,
+											soluta?
+										</p>
 
-										<div class="dropdown open">
-											<button
-												class="btn fs-4"
-												type="button"
-												id="triggerId"
-												data-bs-toggle="dropdown"
-												aria-haspopup="true"
-												aria-expanded="false"
-											>
-												<i
-													class="bi bi-three-dots-vertical"
-												></i>
-											</button>
-
-											<div
-												class="dropdown-menu"
-												aria-labelledby="triggerId"
-											>
-												<a
-													class="dropdown-item"
-													href="./view-book.html"
-												>
-													View
-												</a>
-												<button
-													type="button"
-													class="dropdown-item"
-													onclick="document.getElementById('addToCartToastBtn').click()"
-												>
-													Add to cart
-												</button>
-											</div>
-										</div>
-									</div>
-
-									<div class="px-3 d-none d-md-block">
-										<span class="me-3"> $150.00</span
-										><span> 12 feb</span>
-									</div>
-
-									<div class="px-3 pb-3 d-none d-md-block">
-										<a
-											class="mt-2 btn btn-outline-dark rounded-pill px-3"
-											>View</a
-										><button
-											onclick="document.getElementById('addToCartToastBtn').click()"
-											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										<button
+											class="add-to-cart-btn btn btn-outline-success"
 										>
 											<i class="bi bi-cart-plus"></i>
 										</button>
 									</div>
+
+									<a
+										href="./view-book.html"
+										class="view-book-link"
+									>
+									</a>
 								</div>
 							</div>
 
-							<div class="col my-3 d-flex p-1">
-								<div class="border shadow w-100 c-rounded-1">
-									<p
-										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-									>
-										Edu-Cation by the Gum.iNc &reg;
-									</p>
+							<div class="col d-flex p-2">
+								<div class="book">
+									<p class="book-title">Upcoming Events</p>
 
-									<div
-										style="max-height: 200px"
-										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-									>
-										<img
-											src="./assets/img/images.jpeg"
-											class="w-100"
-										/>
-										<span
-											class="bg-success text-white p-2 position-absolute top-0 end-0"
-											style="border-radius: 0 0 0 10px"
-											>almanac</span
+									<div class="book-cover-holder">
+										<button
+											class="add-to-cart-btn btn btn-success d-md-none btn-sm"
 										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+										<img
+											src="./assets/logos and stuff/book-upcoming.jpg"
+										/>
 									</div>
-
-									<p class="p-3 m-0 d-none d-md-block">
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing elit.
-									</p>
 
 									<div
-										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+										class="d-none d-md-flex p-3 align-items-center justify-content-between"
 									>
-										<div>$150.00</div>
+										<p class="book-description m-0 pe-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Vero,
+											soluta?
+										</p>
 
-										<div class="dropdown open">
-											<button
-												class="btn fs-4"
-												type="button"
-												id="triggerId"
-												data-bs-toggle="dropdown"
-												aria-haspopup="true"
-												aria-expanded="false"
-											>
-												<i
-													class="bi bi-three-dots-vertical"
-												></i>
-											</button>
-
-											<div
-												class="dropdown-menu"
-												aria-labelledby="triggerId"
-											>
-												<a
-													class="dropdown-item"
-													href="./view-book.html"
-												>
-													View
-												</a>
-												<button
-													type="button"
-													class="dropdown-item"
-													onclick="document.getElementById('addToCartToastBtn').click()"
-												>
-													Add to cart
-												</button>
-											</div>
-										</div>
-									</div>
-
-									<div class="px-3 d-none d-md-block">
-										<span class="me-3"> $150.00</span
-										><span> 12 feb</span>
-									</div>
-
-									<div class="px-3 pb-3 d-none d-md-block">
-										<a
-											class="mt-2 btn btn-outline-dark rounded-pill px-3"
-											>View</a
-										><button
-											onclick="document.getElementById('addToCartToastBtn').click()"
-											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										<button
+											class="add-to-cart-btn btn btn-outline-success"
 										>
 											<i class="bi bi-cart-plus"></i>
 										</button>
 									</div>
+
+									<a
+										href="./view-book.html"
+										class="view-book-link"
+									>
+									</a>
 								</div>
 							</div>
 
-							<div class="col my-3 d-flex p-1">
-								<div class="border shadow w-100 c-rounded-1">
-									<p
-										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-									>
-										Creatives &amp; Artists by the Gum.iNc
-										&reg;
+							<div class="col d-flex p-2">
+								<div class="book">
+									<p class="book-title">
+										Gummy Pages (Yellow Pages)
 									</p>
 
-									<div
-										style="max-height: 200px"
-										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-									>
-										<img
-											src="./assets/img/images.jpeg"
-											class="w-100"
-										/>
-										<span
-											class="bg-success text-white p-2 position-absolute top-0 end-0"
-											style="border-radius: 0 0 0 10px"
-											>almanac</span
+									<div class="book-cover-holder">
+										<button
+											class="add-to-cart-btn btn btn-success d-md-none btn-sm"
 										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+										<img
+											src="./assets/logos and stuff/book-gummy-pages.jpg"
+										/>
 									</div>
-
-									<p class="p-3 m-0 d-none d-md-block">
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing elit.
-									</p>
 
 									<div
-										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+										class="d-none d-md-flex p-3 align-items-center justify-content-between"
 									>
-										<div>$150.00</div>
+										<p class="book-description m-0 pe-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Vero,
+											soluta?
+										</p>
 
-										<div class="dropdown open">
-											<button
-												class="btn fs-4"
-												type="button"
-												id="triggerId"
-												data-bs-toggle="dropdown"
-												aria-haspopup="true"
-												aria-expanded="false"
-											>
-												<i
-													class="bi bi-three-dots-vertical"
-												></i>
-											</button>
-
-											<div
-												class="dropdown-menu"
-												aria-labelledby="triggerId"
-											>
-												<a
-													class="dropdown-item"
-													href="./view-book.html"
-												>
-													View
-												</a>
-												<button
-													type="button"
-													class="dropdown-item"
-													onclick="document.getElementById('addToCartToastBtn').click()"
-												>
-													Add to cart
-												</button>
-											</div>
-										</div>
-									</div>
-
-									<div class="px-3 d-none d-md-block">
-										<span class="me-3"> $150.00</span
-										><span> 12 feb</span>
-									</div>
-
-									<div class="px-3 pb-3 d-none d-md-block">
-										<a
-											class="mt-2 btn btn-outline-dark rounded-pill px-3"
-											>View</a
-										><button
-											onclick="document.getElementById('addToCartToastBtn').click()"
-											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										<button
+											class="add-to-cart-btn btn btn-outline-success"
 										>
 											<i class="bi bi-cart-plus"></i>
 										</button>
 									</div>
+
+									<a
+										href="./view-book.html"
+										class="view-book-link"
+									>
+									</a>
 								</div>
 							</div>
 
-							<div class="col my-3 d-flex p-1">
-								<div class="border shadow w-100 c-rounded-1">
-									<p
-										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-									>
-										Recording Labels | Artists &amp;
-										Repertoire/Booking Agents by the Gum.iNc
-										&reg;
-									</p>
+							<div class="col d-flex p-2">
+								<div class="book">
+									<p class="book-title">Creme Chefs</p>
 
-									<div
-										style="max-height: 200px"
-										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-									>
-										<img
-											src="./assets/img/images.jpeg"
-											class="w-100"
-										/>
-										<span
-											class="bg-success text-white p-2 position-absolute top-0 end-0"
-											style="border-radius: 0 0 0 10px"
-											>almanac</span
+									<div class="book-cover-holder">
+										<button
+											class="add-to-cart-btn btn btn-success d-md-none btn-sm"
 										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+										<img
+											src="./assets/logos and stuff/book-food.jpg"
+										/>
 									</div>
-
-									<p class="p-3 m-0 d-none d-md-block">
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing elit.
-									</p>
 
 									<div
-										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+										class="d-none d-md-flex p-3 align-items-center justify-content-between"
 									>
-										<div>$150.00</div>
+										<p class="book-description m-0 pe-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Vero,
+											soluta?
+										</p>
 
-										<div class="dropdown open">
-											<button
-												class="btn fs-4"
-												type="button"
-												id="triggerId"
-												data-bs-toggle="dropdown"
-												aria-haspopup="true"
-												aria-expanded="false"
-											>
-												<i
-													class="bi bi-three-dots-vertical"
-												></i>
-											</button>
-
-											<div
-												class="dropdown-menu"
-												aria-labelledby="triggerId"
-											>
-												<a
-													class="dropdown-item"
-													href="./view-book.html"
-												>
-													View
-												</a>
-												<button
-													type="button"
-													class="dropdown-item"
-													onclick="document.getElementById('addToCartToastBtn').click()"
-												>
-													Add to cart
-												</button>
-											</div>
-										</div>
-									</div>
-
-									<div class="px-3 d-none d-md-block">
-										<span class="me-3"> $150.00</span
-										><span> 12 feb</span>
-									</div>
-
-									<div class="px-3 pb-3 d-none d-md-block">
-										<a
-											class="mt-2 btn btn-outline-dark rounded-pill px-3"
-											>View</a
-										><button
-											onclick="document.getElementById('addToCartToastBtn').click()"
-											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										<button
+											class="add-to-cart-btn btn btn-outline-success"
 										>
 											<i class="bi bi-cart-plus"></i>
 										</button>
 									</div>
+
+									<a
+										href="./view-book.html"
+										class="view-book-link"
+									>
+									</a>
 								</div>
 							</div>
 
-							<div class="col my-3 d-flex p-1">
-								<div class="border shadow w-100 c-rounded-1">
-									<p
-										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-									>
-										NGOs/Sponsorships &amp; Funds by the
-										Gum.iNc &reg;
-									</p>
+							<div class="col d-flex p-2">
+								<div class="book">
+									<p class="book-title">Creme Restaurants</p>
 
-									<div
-										style="max-height: 200px"
-										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-									>
-										<img
-											src="./assets/img/images.jpeg"
-											class="w-100"
-										/>
-										<span
-											class="bg-success text-white p-2 position-absolute top-0 end-0"
-											style="border-radius: 0 0 0 10px"
-											>almanac</span
+									<div class="book-cover-holder">
+										<button
+											class="add-to-cart-btn btn btn-success d-md-none btn-sm"
 										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+										<img
+											src="./assets/logos and stuff/book-food.jpg"
+										/>
 									</div>
-
-									<p class="p-3 m-0 d-none d-md-block">
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing elit.
-									</p>
 
 									<div
-										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+										class="d-none d-md-flex p-3 align-items-center justify-content-between"
 									>
-										<div>$150.00</div>
+										<p class="book-description m-0 pe-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Vero,
+											soluta?
+										</p>
 
-										<div class="dropdown open">
-											<button
-												class="btn fs-4"
-												type="button"
-												id="triggerId"
-												data-bs-toggle="dropdown"
-												aria-haspopup="true"
-												aria-expanded="false"
-											>
-												<i
-													class="bi bi-three-dots-vertical"
-												></i>
-											</button>
-
-											<div
-												class="dropdown-menu"
-												aria-labelledby="triggerId"
-											>
-												<a
-													class="dropdown-item"
-													href="./view-book.html"
-												>
-													View
-												</a>
-												<button
-													type="button"
-													class="dropdown-item"
-													onclick="document.getElementById('addToCartToastBtn').click()"
-												>
-													Add to cart
-												</button>
-											</div>
-										</div>
-									</div>
-
-									<div class="px-3 d-none d-md-block">
-										<span class="me-3"> $150.00</span
-										><span> 12 feb</span>
-									</div>
-
-									<div class="px-3 pb-3 d-none d-md-block">
-										<a
-											class="mt-2 btn btn-outline-dark rounded-pill px-3"
-											>View</a
-										><button
-											onclick="document.getElementById('addToCartToastBtn').click()"
-											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										<button
+											class="add-to-cart-btn btn btn-outline-success"
 										>
 											<i class="bi bi-cart-plus"></i>
 										</button>
 									</div>
+
+									<a
+										href="./view-book.html"
+										class="view-book-link"
+									>
+									</a>
 								</div>
 							</div>
 
-							<div class="col my-3 d-flex p-1">
-								<div class="border shadow w-100 c-rounded-1">
-									<p
-										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-									>
-										Creative Hubs/Studios &amp; Co-working
-										spaces by the Gum.iNc &reg;
-									</p>
+							<div class="col d-flex p-2">
+								<div class="book">
+									<p class="book-title">Creme Restaurants</p>
 
-									<div
-										style="max-height: 200px"
-										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-									>
-										<img
-											src="./assets/img/images.jpeg"
-											class="w-100"
-										/>
-										<span
-											class="bg-success text-white p-2 position-absolute top-0 end-0"
-											style="border-radius: 0 0 0 10px"
-											>almanac</span
+									<div class="book-cover-holder">
+										<button
+											class="add-to-cart-btn btn btn-success d-md-none btn-sm"
 										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+										<img
+											src="./assets/logos and stuff/book-food.jpg"
+										/>
 									</div>
-
-									<p class="p-3 m-0 d-none d-md-block">
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing elit.
-									</p>
 
 									<div
-										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+										class="d-none d-md-flex p-3 align-items-center justify-content-between"
 									>
-										<div>$150.00</div>
+										<p class="book-description m-0 pe-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Vero,
+											soluta?
+										</p>
 
-										<div class="dropdown open">
-											<button
-												class="btn fs-4"
-												type="button"
-												id="triggerId"
-												data-bs-toggle="dropdown"
-												aria-haspopup="true"
-												aria-expanded="false"
-											>
-												<i
-													class="bi bi-three-dots-vertical"
-												></i>
-											</button>
-
-											<div
-												class="dropdown-menu"
-												aria-labelledby="triggerId"
-											>
-												<a
-													class="dropdown-item"
-													href="./view-book.html"
-												>
-													View
-												</a>
-												<button
-													type="button"
-													class="dropdown-item"
-													onclick="document.getElementById('addToCartToastBtn').click()"
-												>
-													Add to cart
-												</button>
-											</div>
-										</div>
-									</div>
-
-									<div class="px-3 d-none d-md-block">
-										<span class="me-3"> $150.00</span
-										><span> 12 feb</span>
-									</div>
-
-									<div class="px-3 pb-3 d-none d-md-block">
-										<a
-											class="mt-2 btn btn-outline-dark rounded-pill px-3"
-											>View</a
-										><button
-											onclick="document.getElementById('addToCartToastBtn').click()"
-											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										<button
+											class="add-to-cart-btn btn btn-outline-success"
 										>
 											<i class="bi bi-cart-plus"></i>
 										</button>
 									</div>
+
+									<a
+										href="./view-book.html"
+										class="view-book-link"
+									>
+									</a>
 								</div>
 							</div>
 
-							<div class="col my-3 d-flex p-1">
-								<div class="border shadow w-100 c-rounded-1">
-									<p
-										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-									>
-										Air Bnbs, Hotels &amp; Resorts by the
-										Gum.iNc &reg;
-									</p>
+							<div class="col d-flex p-2">
+								<div class="book">
+									<p class="book-title">Creme Restaurants</p>
 
-									<div
-										style="max-height: 200px"
-										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-									>
-										<img
-											src="./assets/img/images.jpeg"
-											class="w-100"
-										/>
-										<span
-											class="bg-success text-white p-2 position-absolute top-0 end-0"
-											style="border-radius: 0 0 0 10px"
-											>almanac</span
+									<div class="book-cover-holder">
+										<button
+											class="add-to-cart-btn btn btn-success d-md-none btn-sm"
 										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+										<img
+											src="./assets/logos and stuff/book-food.jpg"
+										/>
 									</div>
-
-									<p class="p-3 m-0 d-none d-md-block">
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing elit.
-									</p>
 
 									<div
-										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+										class="d-none d-md-flex p-3 align-items-center justify-content-between"
 									>
-										<div>$150.00</div>
+										<p class="book-description m-0 pe-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Vero,
+											soluta?
+										</p>
 
-										<div class="dropdown open">
-											<button
-												class="btn fs-4"
-												type="button"
-												id="triggerId"
-												data-bs-toggle="dropdown"
-												aria-haspopup="true"
-												aria-expanded="false"
-											>
-												<i
-													class="bi bi-three-dots-vertical"
-												></i>
-											</button>
-
-											<div
-												class="dropdown-menu"
-												aria-labelledby="triggerId"
-											>
-												<a
-													class="dropdown-item"
-													href="./view-book.html"
-												>
-													View
-												</a>
-												<button
-													type="button"
-													class="dropdown-item"
-													onclick="document.getElementById('addToCartToastBtn').click()"
-												>
-													Add to cart
-												</button>
-											</div>
-										</div>
-									</div>
-
-									<div class="px-3 d-none d-md-block">
-										<span class="me-3"> $150.00</span
-										><span> 12 feb</span>
-									</div>
-
-									<div class="px-3 pb-3 d-none d-md-block">
-										<a
-											class="mt-2 btn btn-outline-dark rounded-pill px-3"
-											>View</a
-										><button
-											onclick="document.getElementById('addToCartToastBtn').click()"
-											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										<button
+											class="add-to-cart-btn btn btn-outline-success"
 										>
 											<i class="bi bi-cart-plus"></i>
 										</button>
 									</div>
+
+									<a
+										href="./view-book.html"
+										class="view-book-link"
+									>
+									</a>
 								</div>
 							</div>
 
-							<div class="col my-3 d-flex p-1">
-								<div class="border shadow w-100 c-rounded-1">
-									<p
-										class="py-2 px-3 w-100 border-bottom white-space-nowrap fw-bold border-2"
-									>
-										Hospitals/Medical Specialists &amp;
-										facilities by the Gum.iNc &reg;
-									</p>
+							<div class="col d-flex p-2">
+								<div class="book">
+									<p class="book-title">Creme Restaurants</p>
 
-									<div
-										style="max-height: 200px"
-										class="image-holder c-rounded-1 overflow-hidden mx-2 d-flex justify-content-center align-items-start overflow-hidden position-relative"
-									>
-										<img
-											src="./assets/img/images.jpeg"
-											class="w-100"
-										/>
-										<span
-											class="bg-success text-white p-2 position-absolute top-0 end-0"
-											style="border-radius: 0 0 0 10px"
-											>almanac</span
+									<div class="book-cover-holder">
+										<button
+											class="add-to-cart-btn btn btn-success d-md-none btn-sm"
 										>
+											<i class="bi bi-cart-plus"></i>
+										</button>
+										<img
+											src="./assets/logos and stuff/book-food.jpg"
+										/>
 									</div>
-
-									<p class="p-3 m-0 d-none d-md-block">
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing elit.
-									</p>
 
 									<div
-										class="p-3 py-1 text-center align-items-center d-flex justify-content-between d-md-none"
+										class="d-none d-md-flex p-3 align-items-center justify-content-between"
 									>
-										<div>$150.00</div>
+										<p class="book-description m-0 pe-2">
+											Lorem ipsum dolor sit amet
+											consectetur adipisicing elit. Vero,
+											soluta?
+										</p>
 
-										<div class="dropdown open">
-											<button
-												class="btn fs-4"
-												type="button"
-												id="triggerId"
-												data-bs-toggle="dropdown"
-												aria-haspopup="true"
-												aria-expanded="false"
-											>
-												<i
-													class="bi bi-three-dots-vertical"
-												></i>
-											</button>
-
-											<div
-												class="dropdown-menu"
-												aria-labelledby="triggerId"
-											>
-												<a
-													class="dropdown-item"
-													href="./view-book.html"
-												>
-													View
-												</a>
-												<button
-													type="button"
-													class="dropdown-item"
-													onclick="document.getElementById('addToCartToastBtn').click()"
-												>
-													Add to cart
-												</button>
-											</div>
-										</div>
-									</div>
-
-									<div class="px-3 d-none d-md-block">
-										<span class="me-3"> $150.00</span
-										><span> 12 feb</span>
-									</div>
-
-									<div class="px-3 pb-3 d-none d-md-block">
-										<a
-											class="mt-2 btn btn-outline-dark rounded-pill px-3"
-											>View</a
-										><button
-											onclick="document.getElementById('addToCartToastBtn').click()"
-											class="mt-2 ms-2 btn btn-outline-dark rounded-pill px-3"
+										<button
+											class="add-to-cart-btn btn btn-outline-success"
 										>
 											<i class="bi bi-cart-plus"></i>
 										</button>
 									</div>
+
+									<a
+										href="./view-book.html"
+										class="view-book-link"
+									>
+									</a>
 								</div>
 							</div>
 						</div>
 					</div>
+				</div>
 
-					<div
-						class="col d-none d-lg-block px-4 mb-5 shadow-lg c-rounded-3 py-5"
-					>
-						<div id="detail-view">
-							<h2
-								class="pb-2 border-bottom border-4 d-flex align-items-center justify-content-between"
+				<div class="col-lg-4 d-none d-lg-block">
+					<div class="custom-sticky-top mb-5 shadow c-rounded-2 p-5">
+						<h2 class="pb-3 border-bottom border-4 text-center">
+							Detailed View
+						</h2>
+
+						<p class="fw-bold">
+							Upcoming Events by the Gum.iNc &reg;
+						</p>
+
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Facilis fuga inventore quod, pariatur, rerum
+							corrupti nisi rem eum optio quia ipsam debitis
+							aspernatur sint suscipit, impedit sapiente soluta.
+							Labore, corporis.
+						</p>
+
+						<div class="d-flex flex-wrap align-items-center">
+							<p class="me-3 bg-light p-2">
+								<i class="bi bi-book-half me-2"></i>Events
+								Almanac
+							</p>
+
+							<p class="me-3 bg-light p-2">
+								<i class="bi bi-currency-dollar me-2"></i>150.00
+							</p>
+
+							<p class="me-3 bg-light p-2">
+								<i class="bi bi-calendar-date me-2"></i>12 Feb
+								Issue
+							</p>
+						</div>
+
+						<div class="mt-3 d-lg-flex align-items-center">
+							<button
+								class="add-to-cart-btn btn btn-primary m-1 rounded-pill w-100"
 							>
-								Detailed View
-							</h2>
+								Add To Cart<i class="bi bi-cart-plus ms-2"></i>
+							</button>
 
-							<div class="row">
-								<div class="col my-3 d-flex">
-									<div
-										class="listing border shadow text-dark overflow-hidden c-rounded-1"
-									>
-										<p
-											class="py-2 px-3 border-bottom fw-bold border-2"
-										>
-											Upcoming Events by the Gum.iNc &reg;
-										</p>
-
-										<p class="p-3 m-0">
-											Lorem ipsum dolor sit amet
-											consectetur adipisicing elit.
-											Facilis fuga inventore quod,
-											pariatur, rerum corrupti nisi rem
-											eum optio quia ipsam debitis
-											aspernatur sint suscipit, impedit
-											sapiente soluta. Labore, corporis.
-										</p>
-
-										<div class="px-3 pb-3 d-flex flex-wrap">
-											<p
-												class="me-3 border border-2 p-2 rounded-pill"
-											>
-												<i class="bi bi-bank me-2"></i
-												>Educational
-											</p>
-
-											<p
-												class="me-3 border border-2 p-2 rounded-pill"
-											>
-												<i
-													class="bi bi-currency-dollar me-1"
-												></i
-												>150.00
-											</p>
-
-											<p
-												class="me-3 border border-2 p-2 rounded-pill"
-											>
-												<i
-													class="bi bi-calendar-date me-1"
-												></i
-												>12 feb
-											</p>
-
-											<div
-												class="p-4 pt-0 d-lg-flex align-items-center"
-											>
-												<button
-													onclick="document.getElementById('addToCartToastBtn').click()"
-													class="btn btn-primary m-1 rounded-pill w-100"
-												>
-													Add To Cart<i
-														class="bi bi-cart-plus ms-2"
-													></i>
-												</button>
-												<a
-													href="directories-and-almanacs.html"
-													class="btn btn-success m-1 rounded-pill"
-													>Join
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+							<a
+								href="./join-inc.html"
+								class="btn btn-success m-1 rounded-pill"
+								>Join
+							</a>
 						</div>
 					</div>
 				</div>
 			</section>
 		</main>
 
-		<div class="container">
-			<nav class="mx-auto w-fit" aria-label="...">
-				<ul class="pagination">
-					<li class="page-item disabled">
-						<span class="page-link">Previous</span>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">1</a>
-					</li>
-					<li class="page-item active" aria-current="page">
-						<span class="page-link">2</span>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">3</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">Next</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
+		<footer class="container d-lg-flex justify-content-between p-5">
+			<div class="text-center">
+				<p class="d-lg-inline">
+					&copy; 2022 Gum.iNc. All Rights Reserved
+				</p>
 
-		<footer
-			class="d-flex container flex-wrap justify-content-between align-items-center py-5 px-3"
-		>
-			<div class="col d-flex align-items-center">
-				<span class="text-muted"
-					>&copy; 2022 Gum.iNc. All Rights Reserved</span
-				>
 				<a
 					href="./partner.html"
 					class="btn btn-success px-3 rounded-pill ms-3"
@@ -1899,36 +1022,28 @@
 				>
 			</div>
 
-			<ul
-				class="nav col-md-4 justify-content-end fs-4 list-unstyled d-flex"
-			>
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.twitter.com"
-						target="_blank"
-						><i class="bi bi-twitter"></i
-					></a>
-				</li>
+			<div class="text-center mt-3 mt-lg-0">
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.twitter.com"
+					target="_blank"
+					><i class="bi bi-twitter"></i
+				></a>
 
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.instagram.com"
-						target="_blank"
-						><i class="bi bi-instagram"></i
-					></a>
-				</li>
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.instagram.com"
+					target="_blank"
+					><i class="bi bi-instagram"></i
+				></a>
 
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.facebook.com"
-						target="_blank"
-						><i class="bi bi-facebook"></i
-					></a>
-				</li>
-			</ul>
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.facebook.com"
+					target="_blank"
+					><i class="bi bi-facebook"></i
+				></a>
+			</div>
 		</footer>
 	</body>
 </html>

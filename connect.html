@@ -18,28 +18,26 @@
 			rel="stylesheet"
 			href="./assets/vendor/fontawsome/css/all.min.css"
 		/>
-		<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css" />
+		<link
+			rel="stylesheet"
+			href="./assets/vendor/custom-bootstrap/css/custom.min.css"
+		/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<!-- scripts -->
 
 		<script
 			defer
-			src="./assets/vendor/bootstrap/bootstrap.bundle.js"
+			src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"
 		></script>
 
 		<script defer src="./assets/js/main.js"></script>
 		<script defer src="./assets/js/custom.js"></script>
 	</head>
 
-	<body
-		class="p-1 p-lg-0 pt-5 d-flex flex-column justify-content-center"
-		style="min-height: 100vh"
-	>
+	<body>
 		<div id="invisible-elements">
 			<div class="custom-modals">
-				<!--Location Modal -->
-
 				<div
 					class="modal fade"
 					id="locationModal"
@@ -50,7 +48,7 @@
 					aria-hidden="true"
 				>
 					<div class="modal-dialog modal-dialog-centered">
-						<div class="modal-content c-rounded-2 p-5">
+						<div class="modal-content c-rounded-1 p-lg-5">
 							<div class="modal-header">
 								<h5 class="modal-title" id="locationModalLabel">
 									Gum.iNc Access
@@ -75,9 +73,7 @@
 									</a>
 
 									<span class="text-success d-inline-block"
-										>selected<i
-											class="fas fa-check-circle ms-3"
-										></i>
+										><i class="fas fa-check-circle"></i>
 									</span>
 								</div>
 
@@ -308,8 +304,11 @@
 							<a class="mobile-link p-3" href="./index.html"
 								>Home</a
 							>
-							<a class="mobile-link p-3" href="directory.html"
+							<a class="mobile-link p-3" href="./directory.html"
 								>Directory
+							</a>
+							<a class="mobile-link p-3" href="./connect.html"
+								>Inc Connect
 							</a>
 							<a class="mobile-link p-3" href="./store.html"
 								>Store</a
@@ -344,237 +343,217 @@
 			</div>
 		</div>
 
-		<header id="header" class="p-2 px-4 px-md-2 pt-md-2 fixed-top">
-			<div
-				class="container-xxl d-flex justify-content-between align-items-center justify-content-md-around"
-			>
-				<button
-					class="btn p-0 d-md-none nav-link"
-					id="nav-toggle"
-					type="button"
-					data-bs-toggle="offcanvas"
-					data-bs-target="#mobileNavOffcanvas"
-					aria-controls="mobileNavOffcanvas"
-				>
-					<i class="bi bi-list fs-2"></i>
-				</button>
+		<header id="header">
+			<div class="container">
+				<div class="d-flex justify-content-between align-items-center">
+					<button
+						class="nav-link btn border-0 p-0 d-lg-none"
+						id="nav-toggle"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#mobileNavOffcanvas"
+						aria-controls="mobileNavOffcanvas"
+					>
+						<i class="bi bi-list fs-4"></i>
+					</button>
 
-				<a href="./index.html" class="navbar-brand text-dark p-0 fs-2"
-					>Gum.iNc</a
-				>
-
-				<a
-					class="btn order-last btn-primary rounded-circle d-lg-none"
-					href="./cart.html"
-					><i class="bi bi-cart4"></i
-				></a>
-
-				<div class="d-md-flex d-none p-0">
 					<a
 						href="./index.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Home</a
-					>
-					<a
-						href="directory.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Directory</a
-					>
-					<a
-						href="./connect.html"
-						class="nav-link rounded-pill px-2 py-1 active"
-						>Inc Connect</a
-					>
-					<a
-						href="./store.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Store</a
-					>
-					<a
-						href="directories-and-almanacs.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Almanacs & Directories</a
-					>
-					<a
-						href="./about.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>About</a
-					>
-					<a
-						href="./account.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Account</a
-					>
-					<a
-						href="./cart.html"
-						class="nav-link border rounded-circle px-2 ms-2 py-1"
+						class="navbar-brand fw-bold text-primary fs-3"
+						><img
+							src="./assets/logos and stuff/logo (44).jpg"
+							class="gum-logo rounded-pill"
+					/></a>
+
+					<a class="nav-link order-last d-lg-none" href="./cart.html"
 						><i class="bi bi-cart4"></i
 					></a>
+
+					<div class="d-lg-flex d-none">
+						<a href="./index.html" class="nav-link">Home</a>
+						<a href="directory.html" class="nav-link">Directory</a>
+						<a href="./connect.html" class="nav-link active"
+							>Inc Connect</a
+						>
+						<a href="./store.html" class="nav-link">Store</a>
+						<a href="directories-and-almanacs.html" class="nav-link"
+							>Almanacs & Directories</a
+						>
+						<a href="./about.html" class="nav-link">About</a>
+						<a href="./account.html" class="nav-link">Account</a>
+						<a href="./cart.html" class="nav-link"
+							><i class="bi bi-cart4"></i
+						></a>
+					</div>
 				</div>
 			</div>
 		</header>
 
-		<section id="connect-hero" class="mt-5 pt-5 container">
-			<div class="row justify-content-around lead">
-				<h1 class="display-4 p-5">Welcome To Inc Connect</h1>
+		<div class="container pt-5 mt-4">
+			<div id="connect-hero" class="row lead">
+				<h1 class="display-4 p-4 p-lg-5 text-gray">
+					Welcome To Inc Connect
+				</h1>
 
-				<div class="col-6 d-flex">
-					<div class="advertise text-white c-rounded-2 shadow p-5">
-						<h1>Advertise your services.</h1>
+				<div class="col-lg-6 p-2 d-flex">
+					<div
+						class="advertise text-white c-rounded-1 shadow p-3 p-lg-5"
+					>
+						<h2>Advertise your services.</h2>
 
 						<p>
-							Lorem ipsum, dolor sit amet consectetur adipisicing
-							elit.
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Magnam sint architecto exercitationem, earum
+							obcaecati sed.
 						</p>
 
 						<a
-							href="./login.html"
+							href="./signup.html"
 							class="btn btn-success shadow btn-lg"
-							>Join Now</a
+							>Signup</a
 						>
 					</div>
 				</div>
 
-				<div class="col-6 d-flex">
-					<div class="hire text-white c-rounded-2 shadow p-5">
-						<h1>Hire skilled individuals.</h1>
+				<div class="col-lg-6 p-2 d-flex">
+					<div class="hire text-white c-rounded-1 shadow p-3 p-lg-5">
+						<h2>Hire skilled individuals.</h2>
 
 						<p>
 							Lorem ipsum, dolor sit amet consectetur adipisicing
 							elit consectetur adipisicing.
 						</p>
 
-						<button
-							id="start-connecting"
-							class="btn btn-success btn-lg shadow"
-						>
+						<a href="#start" class="btn btn-success btn-lg shadow">
 							Get Started
-						</button>
+						</a>
 					</div>
 				</div>
 			</div>
-		</section>
 
-		<div class="container mt-5">
-			<div
-				class="d-flex justify-content-between border-top border-2 align-items-center mt-5 p-4"
-			>
+			<div class="mt-5">
+				<div class="row align-items-center">
+					<div class="col-lg p-2">
+						<div
+							class="input-group rounded-pill overflow-hidden border border-3"
+						>
+							<input
+								type="search"
+								class="form-control form-control-lg border-0"
+								placeholder="Search services..."
+							/>
+							<span class="input-group-text border-0"
+								><i class="bi bi-search"></i
+							></span>
+						</div>
+					</div>
+
+					<div class="col-lg-auto p-2">
+						<div class="text-center">
+							<a
+								href="./login.html"
+								class="btn btn-primary px-3 rounded-pill m-1"
+								>Login</a
+							>
+
+							<button
+								type="button"
+								class="btn btn-success m-1 rounded-pill px-3 shadow"
+								data-bs-toggle="modal"
+								data-bs-target="#locationModal"
+							>
+								Gum.iNc Local - Zim<i
+									class="bi bi-caret-down-fill ms-2"
+								></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<p class="lead text-success px-2 py-4 border-bottom border-2">
+					<i class="bi bi-info-circle me-2"></i> You only have access
+					to listings under Gum.iNc Local (Zimbabwe). Change/upgrade
+					your access to view more!
+				</p>
+			</div>
+
+			<div class="popular-searches">
+				<h2 class="text-gray text-center p-3">Popular Searches</h2>
+
+				<div class="d-flex justify-content-center flex-wrap">
+					<a class="btn btn-secondary px-3 rounded-pill m-1"
+						>Graphic Design</a
+					>
+					<a class="btn btn-secondary px-3 rounded-pill m-1"
+						>Marketing</a
+					>
+					<a class="btn btn-secondary px-3 rounded-pill m-1"
+						>Tutors</a
+					>
+					<a class="btn btn-secondary px-3 rounded-pill m-1"
+						>Web Development</a
+					>
+					<a class="btn btn-secondary px-3 rounded-pill m-1"
+						>Electricians</a
+					>
+					<a class="btn btn-secondary px-3 rounded-pill m-1"
+						>Drivers</a
+					>
+					<a class="btn btn-secondary px-3 rounded-pill m-1"
+						>Caretaker</a
+					>
+					<a class="btn btn-secondary px-3 rounded-pill m-1"
+						>Logo Design</a
+					>
+					<a class="btn btn-secondary px-3 rounded-pill m-1"
+						>Farmers</a
+					>
+					<a class="btn btn-secondary px-3 rounded-pill m-1"
+						>Carpenters</a
+					>
+					<a class="btn btn-secondary px-3 rounded-pill m-1">Choir</a>
+					<a class="btn btn-secondary px-3 rounded-pill m-1">Chef</a>
+					<a class="btn btn-secondary px-3 rounded-pill m-1"
+						>Advisory Services</a
+					>
+					<a class="btn btn-secondary px-3 rounded-pill m-1"
+						>Printing</a
+					>
+				</div>
+			</div>
+		</div>
+
+		<main class="container my-5" id="start">
+			<div class="mb-5 shadow-lg c-rounded-2 p-3 p-md-5">
 				<div
-					class="col transition-03 rounded-pill overflow-hidden border border-3 input-group me-5"
+					class="row align-items-center border-bottom border-3 mb-4 pb-2 text-center"
 				>
-					<input
-						id="connect-search"
-						type="search"
-						class="form-control form-control-lg border-0"
-						placeholder="Search services..."
-						aria-describedby="basic-addon1"
-					/>
-					<span class="input-group-text border-0" id="basic-addon1"
-						><i class="bi bi-search"></i
-					></span>
+					<div class="col-lg p-2">
+						<h2 class="text-lg-start">
+							Graphic Design
+							<a
+								href="./more-connects.html"
+								class="btn btn-primary ms-3 rounded-pill px-3"
+								>All<i class="bi bi-arrow-right-short ms-2"></i
+							></a>
+						</h2>
+					</div>
+
+					<div class="col-lg-auto p-2">
+						<div class="input-group w-fit mx-auto mx-lg-0">
+							<span class="input-group-text">Sort By</span>
+							<select
+								class="form-select w-fit"
+								aria-label="Sort by"
+							>
+								<option selected>Popularity</option>
+								<option>Relevance</option>
+							</select>
+						</div>
+					</div>
 				</div>
 
-				<div class="col-auto">
-					<a
-						href="./login.html"
-						class="btn btn-primary px-3 rounded-pill me-2"
-						>Login</a
-					>
-
-					<a
-						href="./signup.html"
-						class="btn btn-success px-3 rounded-pill me-2"
-						>Join!</a
-					>
-
-					<button
-						type="button"
-						class="btn m-2 rounded-pill px-3 shadow border-0 btn-success"
-						data-bs-toggle="modal"
-						data-bs-target="#locationModal"
-					>
-						Gum.iNc Local - Zim<i
-							class="bi bi-caret-down-fill fs-5 ms-2"
-						></i>
-					</button>
-				</div>
-			</div>
-
-			<h5 class="text-success p-4 border-bottom border-2">
-				<i class="bi bi-info-circle fs5 me-2"></i> You only have access
-				to lisitngs under Gum.iNc Local (Zimbabwe). Change/upgrade your
-				access to view more!
-			</h5>
-		</div>
-
-		<div class="container popular-searches">
-			<h2 class="text-center p-3">Popular Searches</h2>
-			<div class="d-flex justify-content-center flex-wrap">
-				<a class="btn btn-secondary px-3 rounded-pill m-1"
-					>Graphic Design</a
-				>
-				<a class="btn btn-secondary px-3 rounded-pill m-1">Marketing</a>
-				<a class="btn btn-secondary px-3 rounded-pill m-1">Tutors</a>
-				<a class="btn btn-secondary px-3 rounded-pill m-1"
-					>Web Development</a
-				>
-				<a class="btn btn-secondary px-3 rounded-pill m-1"
-					>Electricians</a
-				>
-				<a class="btn btn-secondary px-3 rounded-pill m-1">Drivers</a>
-				<a class="btn btn-secondary px-3 rounded-pill m-1">Caretaker</a>
-				<a class="btn btn-secondary px-3 rounded-pill m-1"
-					>Logo Design</a
-				>
-				<a class="btn btn-secondary px-3 rounded-pill m-1">Farmers</a>
-				<a class="btn btn-secondary px-3 rounded-pill m-1"
-					>Carpenters</a
-				>
-				<a class="btn btn-secondary px-3 rounded-pill m-1">Choir</a>
-				<a class="btn btn-secondary px-3 rounded-pill m-1">Chef</a>
-				<a class="btn btn-secondary px-3 rounded-pill m-1"
-					>Advisory Services</a
-				>
-				<a class="btn btn-secondary px-3 rounded-pill m-1">Printing</a>
-			</div>
-		</div>
-
-		<main class="container my-5">
-			<div class="mb-5 shadow-lg c-rounded-2 p-3 p-md-5">
-				<h2
-					class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
-				>
-					<p class="p-0 m-0 me-2 text-start">
-						Graphic Design
-						<a
-							href="./more-connects.html"
-							class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
-							>See all<i
-								class="bi bi-arrow-right-short fs-5 ms-2"
-							></i
-						></a>
-					</p>
-
-					<div
-						class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
-					>
-						<span
-							class="input-group-text bg-white border-brown"
-							id="basic-addon2"
-							>Sort By</span
-						>
-						<select
-							class="form-select w-fit border-brown"
-							aria-label="Sort by"
-						>
-							<option selected>Popularity</option>
-							<option>Relevance</option>
-							<option>Name</option>
-						</select>
-					</div>
-				</h2>
-
-				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
+				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-2">
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
@@ -583,7 +562,7 @@
 								</a>
 							</h5>
 
-							<div class="d-flex align-items-start">
+							<div class="d-flex">
 								<div
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
@@ -599,10 +578,12 @@
 										<i class="bi bi-person me-2"></i>Patrick
 										Schick
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-clock me-2"></i>9am -
 										6pm, weekdays
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-geo-alt me-2"></i>Harare
 									</p>
@@ -617,12 +598,20 @@
 									adipisicing elit. Laborum officia
 									necessitatibus.
 								</p>
+
 								<div>
-									<button class="saveIncOption btn">
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
 										<img
 											src="./assets/img/ink.svg"
-											width="35"
+											width="30"
 										/>
+										<br />save
 									</button>
 								</div>
 							</div>
@@ -636,7 +625,8 @@
 									Graphic and UI/UX Design
 								</a>
 							</h5>
-							<div class="d-flex align-items-start">
+
+							<div class="d-flex">
 								<div
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
@@ -652,10 +642,12 @@
 										<i class="bi bi-person me-2"></i>Patrick
 										Schick
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-clock me-2"></i>9am -
 										6pm, weekdays
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-geo-alt me-2"></i>Harare
 									</p>
@@ -672,11 +664,18 @@
 								</p>
 
 								<div>
-									<button class="saveIncOption btn">
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
 										<img
 											src="./assets/img/ink.svg"
-											width="35"
+											width="30"
 										/>
+										<br />save
 									</button>
 								</div>
 							</div>
@@ -690,7 +689,8 @@
 									Graphic and UI/UX Design
 								</a>
 							</h5>
-							<div class="d-flex align-items-start">
+
+							<div class="d-flex">
 								<div
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
@@ -706,10 +706,12 @@
 										<i class="bi bi-person me-2"></i>Patrick
 										Schick
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-clock me-2"></i>9am -
 										6pm, weekdays
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-geo-alt me-2"></i>Harare
 									</p>
@@ -726,11 +728,18 @@
 								</p>
 
 								<div>
-									<button class="saveIncOption btn">
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
 										<img
 											src="./assets/img/ink.svg"
-											width="35"
+											width="30"
 										/>
+										<br />save
 									</button>
 								</div>
 							</div>
@@ -744,7 +753,8 @@
 									Graphic and UI/UX Design
 								</a>
 							</h5>
-							<div class="d-flex align-items-start">
+
+							<div class="d-flex">
 								<div
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
@@ -760,10 +770,12 @@
 										<i class="bi bi-person me-2"></i>Patrick
 										Schick
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-clock me-2"></i>9am -
 										6pm, weekdays
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-geo-alt me-2"></i>Harare
 									</p>
@@ -780,11 +792,18 @@
 								</p>
 
 								<div>
-									<button class="saveIncOption btn">
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
 										<img
 											src="./assets/img/ink.svg"
-											width="35"
+											width="30"
 										/>
+										<br />save
 									</button>
 								</div>
 							</div>
@@ -798,7 +817,8 @@
 									Graphic and UI/UX Design
 								</a>
 							</h5>
-							<div class="d-flex align-items-start">
+
+							<div class="d-flex">
 								<div
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
@@ -814,10 +834,12 @@
 										<i class="bi bi-person me-2"></i>Patrick
 										Schick
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-clock me-2"></i>9am -
 										6pm, weekdays
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-geo-alt me-2"></i>Harare
 									</p>
@@ -834,11 +856,18 @@
 								</p>
 
 								<div>
-									<button class="saveIncOption btn">
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
 										<img
 											src="./assets/img/ink.svg"
-											width="35"
+											width="30"
 										/>
+										<br />save
 									</button>
 								</div>
 							</div>
@@ -852,7 +881,8 @@
 									Graphic and UI/UX Design
 								</a>
 							</h5>
-							<div class="d-flex align-items-start">
+
+							<div class="d-flex">
 								<div
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
@@ -868,10 +898,12 @@
 										<i class="bi bi-person me-2"></i>Patrick
 										Schick
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-clock me-2"></i>9am -
 										6pm, weekdays
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-geo-alt me-2"></i>Harare
 									</p>
@@ -888,11 +920,18 @@
 								</p>
 
 								<div>
-									<button class="saveIncOption btn">
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
 										<img
 											src="./assets/img/ink.svg"
-											width="35"
+											width="30"
 										/>
+										<br />save
 									</button>
 								</div>
 							</div>
@@ -902,71 +941,67 @@
 			</div>
 
 			<div class="mb-5 shadow-lg c-rounded-2 p-3 p-md-5">
-				<h2
-					class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
+				<div
+					class="row align-items-center border-bottom border-3 mb-4 pb-2 text-center"
 				>
-					<p class="p-0 m-0 me-2 text-start">
-						Advisory Services
-						<a
-							href="./more-connects.html"
-							class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
-							>See all<i
-								class="bi bi-arrow-right-short fs-5 ms-2"
-							></i
-						></a>
-					</p>
-
-					<div
-						class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
-					>
-						<span
-							class="input-group-text bg-white border-brown"
-							id="basic-addon2"
-							>Sort By</span
-						>
-						<select
-							class="form-select w-fit border-brown"
-							aria-label="Sort by"
-						>
-							<option selected>Popularity</option>
-							<option>Relevance</option>
-							<option>Name</option>
-						</select>
+					<div class="col-lg p-2">
+						<h2 class="text-lg-start">
+							Sales & Marketing
+							<a
+								href="./more-connects.html"
+								class="btn btn-primary ms-3 rounded-pill px-3"
+								>All<i class="bi bi-arrow-right-short ms-2"></i
+							></a>
+						</h2>
 					</div>
-				</h2>
 
-				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
+					<div class="col-lg-auto p-2">
+						<div class="input-group w-fit mx-auto mx-lg-0">
+							<span class="input-group-text">Sort By</span>
+							<select
+								class="form-select w-fit"
+								aria-label="Sort by"
+							>
+								<option selected>Popularity</option>
+								<option>Relevance</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-2">
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
 								<a href="./account-connect-listing.html">
-									Financial Advisory
+									Sales Consultant
 								</a>
 							</h5>
 
-							<div class="d-flex align-items-start">
+							<div class="d-flex">
 								<div
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="./assets/images/user4.jpg"
+										src="./assets/images/user5.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
 
 								<div>
 									<p class="my-1">
-										<i class="bi bi-person me-2"></i>Liza
-										Koshy
+										<i class="bi bi-person me-2"></i>Patrick
+										Schick
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-clock me-2"></i>9am -
 										6pm, weekdays
 									</p>
+
 									<p class="my-1">
-										<i class="bi bi-geo-alt me-2"></i
-										>Bulawayo
+										<i class="bi bi-geo-alt me-2"></i>Harare
 									</p>
 								</div>
 							</div>
@@ -981,11 +1016,18 @@
 								</p>
 
 								<div>
-									<button class="saveIncOption btn">
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
 										<img
 											src="./assets/img/ink.svg"
-											width="35"
+											width="30"
 										/>
+										<br />save
 									</button>
 								</div>
 							</div>
@@ -996,33 +1038,34 @@
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
 								<a href="./account-connect-listing.html">
-									Financial Advisory
+									Sales Consultant
 								</a>
 							</h5>
 
-							<div class="d-flex align-items-start">
+							<div class="d-flex">
 								<div
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="./assets/images/user4.jpg"
+										src="./assets/images/user5.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
 
 								<div>
 									<p class="my-1">
-										<i class="bi bi-person me-2"></i>Liza
-										Koshy
+										<i class="bi bi-person me-2"></i>Patrick
+										Schick
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-clock me-2"></i>9am -
 										6pm, weekdays
 									</p>
+
 									<p class="my-1">
-										<i class="bi bi-geo-alt me-2"></i
-										>Bulawayo
+										<i class="bi bi-geo-alt me-2"></i>Harare
 									</p>
 								</div>
 							</div>
@@ -1037,11 +1080,18 @@
 								</p>
 
 								<div>
-									<button class="saveIncOption btn">
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
 										<img
 											src="./assets/img/ink.svg"
-											width="35"
+											width="30"
 										/>
+										<br />save
 									</button>
 								</div>
 							</div>
@@ -1052,33 +1102,34 @@
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
 								<a href="./account-connect-listing.html">
-									Financial Advisory
+									Sales Consultant
 								</a>
 							</h5>
 
-							<div class="d-flex align-items-start">
+							<div class="d-flex">
 								<div
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="./assets/images/user4.jpg"
+										src="./assets/images/user5.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
 
 								<div>
 									<p class="my-1">
-										<i class="bi bi-person me-2"></i>Liza
-										Koshy
+										<i class="bi bi-person me-2"></i>Patrick
+										Schick
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-clock me-2"></i>9am -
 										6pm, weekdays
 									</p>
+
 									<p class="my-1">
-										<i class="bi bi-geo-alt me-2"></i
-										>Bulawayo
+										<i class="bi bi-geo-alt me-2"></i>Harare
 									</p>
 								</div>
 							</div>
@@ -1093,11 +1144,18 @@
 								</p>
 
 								<div>
-									<button class="saveIncOption btn">
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
 										<img
 											src="./assets/img/ink.svg"
-											width="35"
+											width="30"
 										/>
+										<br />save
 									</button>
 								</div>
 							</div>
@@ -1108,33 +1166,34 @@
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
 								<a href="./account-connect-listing.html">
-									Financial Advisory
+									Sales Consultant
 								</a>
 							</h5>
 
-							<div class="d-flex align-items-start">
+							<div class="d-flex">
 								<div
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="./assets/images/user4.jpg"
+										src="./assets/images/user5.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
 
 								<div>
 									<p class="my-1">
-										<i class="bi bi-person me-2"></i>Liza
-										Koshy
+										<i class="bi bi-person me-2"></i>Patrick
+										Schick
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-clock me-2"></i>9am -
 										6pm, weekdays
 									</p>
+
 									<p class="my-1">
-										<i class="bi bi-geo-alt me-2"></i
-										>Bulawayo
+										<i class="bi bi-geo-alt me-2"></i>Harare
 									</p>
 								</div>
 							</div>
@@ -1149,11 +1208,18 @@
 								</p>
 
 								<div>
-									<button class="saveIncOption btn">
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
 										<img
 											src="./assets/img/ink.svg"
-											width="35"
+											width="30"
 										/>
+										<br />save
 									</button>
 								</div>
 							</div>
@@ -1164,33 +1230,34 @@
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
 								<a href="./account-connect-listing.html">
-									Financial Advisory
+									Sales Consultant
 								</a>
 							</h5>
 
-							<div class="d-flex align-items-start">
+							<div class="d-flex">
 								<div
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="./assets/images/user4.jpg"
+										src="./assets/images/user5.jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
 
 								<div>
 									<p class="my-1">
-										<i class="bi bi-person me-2"></i>Liza
-										Koshy
+										<i class="bi bi-person me-2"></i>Patrick
+										Schick
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-clock me-2"></i>9am -
 										6pm, weekdays
 									</p>
+
 									<p class="my-1">
-										<i class="bi bi-geo-alt me-2"></i
-										>Bulawayo
+										<i class="bi bi-geo-alt me-2"></i>Harare
 									</p>
 								</div>
 							</div>
@@ -1205,11 +1272,82 @@
 								</p>
 
 								<div>
-									<button class="saveIncOption btn">
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
 										<img
 											src="./assets/img/ink.svg"
-											width="35"
+											width="30"
 										/>
+										<br />save
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col p-1 d-flex">
+						<div class="p-3 shadow c-rounded-2">
+							<h5 class="mb-2">
+								<a href="./account-connect-listing.html">
+									Sales Consultant
+								</a>
+							</h5>
+
+							<div class="d-flex">
+								<div
+									style="width: 6rem; height: 6rem"
+									class="d-flex align-items-center me-3"
+								>
+									<img
+										src="./assets/images/user5.jpg"
+										class="w-100 c-rounded-1"
+									/>
+								</div>
+
+								<div>
+									<p class="my-1">
+										<i class="bi bi-person me-2"></i>Patrick
+										Schick
+									</p>
+
+									<p class="my-1">
+										<i class="bi bi-clock me-2"></i>9am -
+										6pm, weekdays
+									</p>
+
+									<p class="my-1">
+										<i class="bi bi-geo-alt me-2"></i>Harare
+									</p>
+								</div>
+							</div>
+
+							<div
+								class="d-flex border-top mt-2 align-items-center pt-2 border-2"
+							>
+								<p class="p-0 m-0 pe-2">
+									Lorem ipsum dolor sit amet, consectetur
+									adipisicing elit. Laborum officia
+									necessitatibus.
+								</p>
+
+								<div>
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
+										<img
+											src="./assets/img/ink.svg"
+											width="30"
+										/>
+										<br />save
 									</button>
 								</div>
 							</div>
@@ -1219,40 +1357,35 @@
 			</div>
 
 			<div class="mb-5 shadow-lg c-rounded-2 p-3 p-md-5">
-				<h2
-					class="border-bottom border-3 mb-5 pb-2 text-center d-lg-flex justify-content-between align-items-end"
+				<div
+					class="row align-items-center border-bottom border-3 mb-4 pb-2 text-center"
 				>
-					<p class="p-0 m-0 me-2 text-start">
-						Graphic Design
-						<a
-							href="./more-connects.html"
-							class="btn btn-primary ms-3 rounded-pill px-3 d-inline-flex align-items-center"
-							>See all<i
-								class="bi bi-arrow-right-short fs-5 ms-2"
-							></i
-						></a>
-					</p>
-
-					<div
-						class="input-group d-flex flex-nowrap border-brown w-fit mt-4 m-lg-0 mx-auto mx-lg-0"
-					>
-						<span
-							class="input-group-text bg-white border-brown"
-							id="basic-addon2"
-							>Sort By</span
-						>
-						<select
-							class="form-select w-fit border-brown"
-							aria-label="Sort by"
-						>
-							<option selected>Popularity</option>
-							<option>Relevance</option>
-							<option>Name</option>
-						</select>
+					<div class="col-lg p-2">
+						<h2 class="text-lg-start">
+							Graphic Design
+							<a
+								href="./more-connects.html"
+								class="btn btn-primary ms-3 rounded-pill px-3"
+								>All<i class="bi bi-arrow-right-short ms-2"></i
+							></a>
+						</h2>
 					</div>
-				</h2>
 
-				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
+					<div class="col-lg-auto p-2">
+						<div class="input-group w-fit mx-auto mx-lg-0">
+							<span class="input-group-text">Sort By</span>
+							<select
+								class="form-select w-fit"
+								aria-label="Sort by"
+							>
+								<option selected>Popularity</option>
+								<option>Relevance</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-2">
 					<div class="col p-1 d-flex">
 						<div class="p-3 shadow c-rounded-2">
 							<h5 class="mb-2">
@@ -1260,7 +1393,8 @@
 									Graphic and UI/UX Design
 								</a>
 							</h5>
-							<div class="d-flex align-items-start">
+
+							<div class="d-flex">
 								<div
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
@@ -1276,10 +1410,12 @@
 										<i class="bi bi-person me-2"></i>Patrick
 										Schick
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-clock me-2"></i>9am -
 										6pm, weekdays
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-geo-alt me-2"></i>Harare
 									</p>
@@ -1296,11 +1432,18 @@
 								</p>
 
 								<div>
-									<button class="saveIncOption btn">
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
 										<img
 											src="./assets/img/ink.svg"
-											width="35"
+											width="30"
 										/>
+										<br />save
 									</button>
 								</div>
 							</div>
@@ -1314,7 +1457,8 @@
 									Graphic and UI/UX Design
 								</a>
 							</h5>
-							<div class="d-flex align-items-start">
+
+							<div class="d-flex">
 								<div
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
@@ -1330,10 +1474,12 @@
 										<i class="bi bi-person me-2"></i>Patrick
 										Schick
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-clock me-2"></i>9am -
 										6pm, weekdays
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-geo-alt me-2"></i>Harare
 									</p>
@@ -1350,11 +1496,18 @@
 								</p>
 
 								<div>
-									<button class="saveIncOption btn">
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
 										<img
 											src="./assets/img/ink.svg"
-											width="35"
+											width="30"
 										/>
+										<br />save
 									</button>
 								</div>
 							</div>
@@ -1368,7 +1521,8 @@
 									Graphic and UI/UX Design
 								</a>
 							</h5>
-							<div class="d-flex align-items-start">
+
+							<div class="d-flex">
 								<div
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
@@ -1384,10 +1538,12 @@
 										<i class="bi bi-person me-2"></i>Patrick
 										Schick
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-clock me-2"></i>9am -
 										6pm, weekdays
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-geo-alt me-2"></i>Harare
 									</p>
@@ -1404,11 +1560,18 @@
 								</p>
 
 								<div>
-									<button class="saveIncOption btn">
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
 										<img
 											src="./assets/img/ink.svg"
-											width="35"
+											width="30"
 										/>
+										<br />save
 									</button>
 								</div>
 							</div>
@@ -1422,7 +1585,8 @@
 									Graphic and UI/UX Design
 								</a>
 							</h5>
-							<div class="d-flex align-items-start">
+
+							<div class="d-flex">
 								<div
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
@@ -1438,10 +1602,12 @@
 										<i class="bi bi-person me-2"></i>Patrick
 										Schick
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-clock me-2"></i>9am -
 										6pm, weekdays
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-geo-alt me-2"></i>Harare
 									</p>
@@ -1458,11 +1624,18 @@
 								</p>
 
 								<div>
-									<button class="saveIncOption btn">
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
 										<img
 											src="./assets/img/ink.svg"
-											width="35"
+											width="30"
 										/>
+										<br />save
 									</button>
 								</div>
 							</div>
@@ -1476,7 +1649,8 @@
 									Graphic and UI/UX Design
 								</a>
 							</h5>
-							<div class="d-flex align-items-start">
+
+							<div class="d-flex">
 								<div
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
@@ -1492,10 +1666,12 @@
 										<i class="bi bi-person me-2"></i>Patrick
 										Schick
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-clock me-2"></i>9am -
 										6pm, weekdays
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-geo-alt me-2"></i>Harare
 									</p>
@@ -1512,11 +1688,18 @@
 								</p>
 
 								<div>
-									<button class="saveIncOption btn">
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
 										<img
 											src="./assets/img/ink.svg"
-											width="35"
+											width="30"
 										/>
+										<br />save
 									</button>
 								</div>
 							</div>
@@ -1530,7 +1713,8 @@
 									Graphic and UI/UX Design
 								</a>
 							</h5>
-							<div class="d-flex align-items-start">
+
+							<div class="d-flex">
 								<div
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
@@ -1546,10 +1730,12 @@
 										<i class="bi bi-person me-2"></i>Patrick
 										Schick
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-clock me-2"></i>9am -
 										6pm, weekdays
 									</p>
+
 									<p class="my-1">
 										<i class="bi bi-geo-alt me-2"></i>Harare
 									</p>
@@ -1566,11 +1752,18 @@
 								</p>
 
 								<div>
-									<button class="saveIncOption btn">
+									<button
+										type="button"
+										class="btn btn-outline-primary saveIncOption"
+										data-bs-toggle="tooltip"
+										data-bs-placement="top"
+										title="Save Inc (Listing)"
+									>
 										<img
 											src="./assets/img/ink.svg"
-											width="35"
+											width="30"
 										/>
+										<br />save
 									</button>
 								</div>
 							</div>
@@ -1600,13 +1793,12 @@
 			</nav>
 		</main>
 
-		<footer
-			class="d-flex container flex-wrap justify-content-between align-items-center py-5 px-3"
-		>
-			<div class="col d-flex align-items-center">
-				<span class="text-muted"
-					>&copy; 2022 Gum.iNc. All Rights Reserved</span
-				>
+		<footer class="container d-lg-flex justify-content-between p-5">
+			<div class="text-center">
+				<p class="d-lg-inline">
+					&copy; 2022 Gum.iNc. All Rights Reserved
+				</p>
+
 				<a
 					href="./partner.html"
 					class="btn btn-success px-3 rounded-pill ms-3"
@@ -1614,36 +1806,28 @@
 				>
 			</div>
 
-			<ul
-				class="nav col-md-4 justify-content-end fs-4 list-unstyled d-flex"
-			>
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.twitter.com"
-						target="_blank"
-						><i class="bi bi-twitter"></i
-					></a>
-				</li>
+			<div class="text-center mt-3 mt-lg-0">
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.twitter.com"
+					target="_blank"
+					><i class="bi bi-twitter"></i
+				></a>
 
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.instagram.com"
-						target="_blank"
-						><i class="bi bi-instagram"></i
-					></a>
-				</li>
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.instagram.com"
+					target="_blank"
+					><i class="bi bi-instagram"></i
+				></a>
 
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.facebook.com"
-						target="_blank"
-						><i class="bi bi-facebook"></i
-					></a>
-				</li>
-			</ul>
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.facebook.com"
+					target="_blank"
+					><i class="bi bi-facebook"></i
+				></a>
+			</div>
 		</footer>
 	</body>
 </html>

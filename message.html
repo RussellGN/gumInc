@@ -18,21 +18,24 @@
 			rel="stylesheet"
 			href="./assets/vendor/fontawsome/css/all.min.css"
 		/>
-		<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css" />
+		<link
+			rel="stylesheet"
+			href="./assets/vendor/custom-bootstrap/css/custom.min.css"
+		/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<!-- scripts -->
 
 		<script
 			defer
-			src="./assets/vendor/bootstrap/bootstrap.bundle.js"
+			src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"
 		></script>
 
 		<script defer src="./assets/js/main.js"></script>
 		<script defer src="./assets/js/custom.js"></script>
 	</head>
 
-	<body class="p-0 position-relative">
+	<body>
 		<div id="invisible-elements">
 			<div class="custom-modals">
 				<!--Location Modal -->
@@ -305,8 +308,11 @@
 							<a class="mobile-link p-3" href="./index.html"
 								>Home</a
 							>
-							<a class="mobile-link p-3" href="directory.html"
+							<a class="mobile-link p-3" href="./directory.html"
 								>Directory
+							</a>
+							<a class="mobile-link p-3" href="./connect.html"
+								>Inc Connect
 							</a>
 							<a class="mobile-link p-3" href="./store.html"
 								>Store</a
@@ -341,294 +347,302 @@
 			</div>
 		</div>
 
-		<header id="header" class="p-2 px-4 px-md-2 pt-md-2 fixed-top">
-			<div
-				class="container-xxl d-flex justify-content-between align-items-center justify-content-md-around"
-			>
-				<button
-					class="btn p-0 d-md-none nav-link"
-					id="nav-toggle"
-					type="button"
-					data-bs-toggle="offcanvas"
-					data-bs-target="#mobileNavOffcanvas"
-					aria-controls="mobileNavOffcanvas"
-				>
-					<i class="bi bi-list fs-2"></i>
-				</button>
+		<header id="header">
+			<div class="container">
+				<div class="d-flex justify-content-between align-items-center">
+					<button
+						class="nav-link btn border-0 p-0 d-lg-none"
+						id="nav-toggle"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#mobileNavOffcanvas"
+						aria-controls="mobileNavOffcanvas"
+					>
+						<i class="bi bi-list fs-4"></i>
+					</button>
 
-				<a href="./index.html" class="navbar-brand text-dark p-0 fs-2"
-					>Gum.iNc</a
-				>
-
-				<a
-					class="btn order-last btn-primary rounded-circle d-lg-none"
-					href="./cart.html"
-					><i class="bi bi-cart4"></i
-				></a>
-
-				<div class="d-md-flex d-none p-0">
 					<a
 						href="./index.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Home</a
-					>
-					<a
-						href="directory.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Directory</a
-					>
-					<a
-						href="./connect.html"
-						class="nav-link rounded-pill px-2 py-1 active"
-						>Inc Connect</a
-					>
-					<a
-						href="./store.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Store</a
-					>
-					<a
-						href="directories-and-almanacs.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Almanacs & Directories</a
-					>
-					<a
-						href="./about.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>About</a
-					>
-					<a
-						href="./account.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Account</a
-					>
-					<a
-						href="./cart.html"
-						class="nav-link border rounded-circle px-2 ms-2 py-1"
+						class="navbar-brand fw-bold text-primary fs-3"
+						><img
+							src="./assets/logos and stuff/logo (44).jpg"
+							class="gum-logo rounded-pill"
+					/></a>
+
+					<a class="nav-link order-last d-lg-none" href="./cart.html"
 						><i class="bi bi-cart4"></i
 					></a>
+
+					<div class="d-lg-flex d-none">
+						<a href="./index.html" class="nav-link">Home</a>
+						<a href="directory.html" class="nav-link">Directory</a>
+						<a href="./connect.html" class="nav-link active"
+							>Inc Connect</a
+						>
+						<a href="./store.html" class="nav-link">Store</a>
+						<a href="directories-and-almanacs.html" class="nav-link"
+							>Almanacs & Directories</a
+						>
+						<a href="./about.html" class="nav-link">About</a>
+						<a href="./account.html" class="nav-link">Account</a>
+						<a href="./cart.html" class="nav-link"
+							><i class="bi bi-cart4"></i
+						></a>
+					</div>
 				</div>
 			</div>
 		</header>
 
 		<main class="container my-5 pt-5">
 			<div>
-				<a
-					href="./account-connect-listing.html"
-					class="btn btn-primary px-4 rounded-pill"
-					>Back To Listing
-					<i class="bi bi-box-arrow-left ms-2 fs-5"></i
-				></a>
+				<a class="btn btn-primary px-4 rounded-pill"
+					><i class="bi bi-box-arrow-left me-2"></i>Back</a
+				>
 			</div>
 
-			<section class="my-5 container">
-				<div class="row justify-content-around">
-					<div
-						class="col-lg-3 p-4 shadow me-3 c-rounded-3"
-						style="min-height: 60vh"
-					>
-						<div>
-							<h2 class="pb-2 mb-2 border-bottom border-3">
-								Chats
-							</h2>
+			<div class="row my-4">
+				<div class="col-lg-4 p-2">
+					<div class="p-4 shadow c-rounded-2">
+						<h3 class="text-center">Chats</h3>
 
-							<div
-								class="d-flex w-100 bg-light c-rounded-2 my-2 p-2 align-items-center"
-							>
-								<div
-									style="width: 50px; height: 50px"
-									class="me-3 d-flex border align-items-center bg-dark rounded-circle overflow-hidden border"
-								>
-									<img
-										src="./assets/images/user2.jpg"
-										class="w-100"
-									/>
-								</div>
-
-								<div>
-									<p class="p-0 m-0">
-										<b>John Doe</b>
-									</p>
-								</div>
-
-								<div class="dropdown open ms-auto">
-									<button
-										class="btn text-a-link-blue p-0 fs-5"
-										type="button"
-										id="triggerId21"
-										data-bs-toggle="dropdown"
-										aria-haspopup="true"
-										aria-expanded="false"
-									>
-										<i
-											class="bi bi-three-dots-vertical"
-										></i>
-									</button>
-
-									<div
-										class="dropdown-menu"
-										aria-labelledby="triggerId21"
-									>
-										<button class="dropdown-item" href="#">
-											Delete Chat
-										</button>
-									</div>
-								</div>
+						<div class="cloud-contact bg-light position-relative">
+							<div class="cloud-contact-img-holder">
+								<img src="./assets/img/undraw_profile.svg" />
 							</div>
 
-							<div
-								class="d-flex w-100 bg-light c-rounded-2 my-2 p-2 align-items-center"
-							>
-								<div
-									style="width: 50px; height: 50px"
-									class="me-3 d-flex border align-items-center bg-dark rounded-circle overflow-hidden border"
+							<div class="cloud-contact-name fw-bold">
+								<a href="./mobile-chat.html" class="d-lg-none">
+									John Doe </a
+								><span class="d-none d-lg-inline">
+									John Doe</span
 								>
-									<img
-										src="./assets/images/user2.jpg"
-										class="w-100"
-									/>
-								</div>
-
-								<div>
-									<p class="p-0 m-0">
-										<b>John Doe</b>
-									</p>
-								</div>
-
-								<div class="dropdown open ms-auto">
-									<button
-										class="btn text-a-link-blue p-0 fs-5"
-										type="button"
-										id="triggerId21"
-										data-bs-toggle="dropdown"
-										aria-haspopup="true"
-										aria-expanded="false"
-									>
-										<i
-											class="bi bi-three-dots-vertical"
-										></i>
-									</button>
-
-									<div
-										class="dropdown-menu"
-										aria-labelledby="triggerId21"
-									>
-										<button class="dropdown-item" href="#">
-											Delete Chat
-										</button>
-									</div>
-								</div>
 							</div>
 
-							<div
-								class="d-flex w-100 bg-light c-rounded-2 my-2 p-2 align-items-center"
-							>
-								<div
-									style="width: 50px; height: 50px"
-									class="me-3 d-flex border align-items-center bg-dark rounded-circle overflow-hidden border"
+							<div class="dropdown open ms-auto">
+								<button
+									class="btn text-success p-0 fs-5"
+									type="button"
+									id="triggerId21"
+									data-bs-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
 								>
-									<img
-										src="./assets/images/user2.jpg"
-										class="w-100"
-									/>
-								</div>
+									<i class="bi bi-three-dots-vertical"></i>
+								</button>
 
-								<div>
-									<p class="p-0 m-0">
-										<b>John Doe</b>
-									</p>
-								</div>
-
-								<div class="dropdown open ms-auto">
-									<button
-										class="btn text-a-link-blue p-0 fs-5"
-										type="button"
-										id="triggerId21"
-										data-bs-toggle="dropdown"
-										aria-haspopup="true"
-										aria-expanded="false"
-									>
-										<i
-											class="bi bi-three-dots-vertical"
-										></i>
+								<div
+									class="dropdown-menu dropdown-menu-end"
+									aria-labelledby="triggerId21"
+								>
+									<button class="dropdown-item" href="#">
+										Delete
 									</button>
-
-									<div
-										class="dropdown-menu"
-										aria-labelledby="triggerId21"
-									>
-										<button class="dropdown-item" href="#">
-											Delete Chat
-										</button>
-									</div>
 								</div>
 							</div>
+						</div>
 
-							<div
-								class="d-flex w-100 bg-light c-rounded-2 my-2 p-2 align-items-center"
-							>
-								<div
-									style="width: 50px; height: 50px"
-									class="me-3 d-flex border align-items-center bg-dark rounded-circle overflow-hidden border"
+						<div class="cloud-contact bg-light position-relative">
+							<div class="cloud-contact-img-holder">
+								<img src="./assets/img/undraw_profile.svg" />
+							</div>
+
+							<div class="cloud-contact-name fw-bold">
+								<a href="./mobile-chat.html" class="d-lg-none">
+									John Doe </a
+								><span class="d-none d-lg-inline">
+									John Doe</span
 								>
-									<img
-										src="./assets/images/user2.jpg"
-										class="w-100"
-									/>
-								</div>
+							</div>
 
-								<div>
-									<p class="p-0 m-0">
-										<b>John Doe</b>
-									</p>
-								</div>
+							<div class="dropdown open ms-auto">
+								<button
+									class="btn text-success p-0 fs-5"
+									type="button"
+									id="triggerId21"
+									data-bs-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									<i class="bi bi-three-dots-vertical"></i>
+								</button>
 
-								<div class="dropdown open ms-auto">
-									<button
-										class="btn text-a-link-blue p-0 fs-5"
-										type="button"
-										id="triggerId21"
-										data-bs-toggle="dropdown"
-										aria-haspopup="true"
-										aria-expanded="false"
-									>
-										<i
-											class="bi bi-three-dots-vertical"
-										></i>
+								<div
+									class="dropdown-menu dropdown-menu-end"
+									aria-labelledby="triggerId21"
+								>
+									<button class="dropdown-item" href="#">
+										Delete
 									</button>
+								</div>
+							</div>
+						</div>
 
-									<div
-										class="dropdown-menu"
-										aria-labelledby="triggerId21"
-									>
-										<button class="dropdown-item" href="#">
-											Delete Chat
-										</button>
-									</div>
+						<div class="cloud-contact bg-light position-relative">
+							<div class="cloud-contact-img-holder">
+								<img src="./assets/img/undraw_profile.svg" />
+							</div>
+
+							<div class="cloud-contact-name fw-bold">
+								<a href="./mobile-chat.html" class="d-lg-none">
+									John Doe </a
+								><span class="d-none d-lg-inline">
+									John Doe</span
+								>
+							</div>
+
+							<div class="dropdown open ms-auto">
+								<button
+									class="btn text-success p-0 fs-5"
+									type="button"
+									id="triggerId21"
+									data-bs-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									<i class="bi bi-three-dots-vertical"></i>
+								</button>
+
+								<div
+									class="dropdown-menu dropdown-menu-end"
+									aria-labelledby="triggerId21"
+								>
+									<button class="dropdown-item" href="#">
+										Delete
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="cloud-contact bg-light position-relative">
+							<div class="cloud-contact-img-holder">
+								<img src="./assets/img/undraw_profile.svg" />
+							</div>
+
+							<div class="cloud-contact-name fw-bold">
+								<a href="./mobile-chat.html" class="d-lg-none">
+									John Doe </a
+								><span class="d-none d-lg-inline">
+									John Doe</span
+								>
+							</div>
+
+							<div class="dropdown open ms-auto">
+								<button
+									class="btn text-success p-0 fs-5"
+									type="button"
+									id="triggerId21"
+									data-bs-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									<i class="bi bi-three-dots-vertical"></i>
+								</button>
+
+								<div
+									class="dropdown-menu dropdown-menu-end"
+									aria-labelledby="triggerId21"
+								>
+									<button class="dropdown-item" href="#">
+										Delete
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="cloud-contact bg-light position-relative">
+							<div class="cloud-contact-img-holder">
+								<img src="./assets/img/undraw_profile.svg" />
+							</div>
+
+							<div class="cloud-contact-name fw-bold">
+								<a href="./mobile-chat.html" class="d-lg-none">
+									John Doe </a
+								><span class="d-none d-lg-inline">
+									John Doe</span
+								>
+							</div>
+
+							<div class="dropdown open ms-auto">
+								<button
+									class="btn text-success p-0 fs-5"
+									type="button"
+									id="triggerId21"
+									data-bs-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									<i class="bi bi-three-dots-vertical"></i>
+								</button>
+
+								<div
+									class="dropdown-menu dropdown-menu-end"
+									aria-labelledby="triggerId21"
+								>
+									<button class="dropdown-item" href="#">
+										Delete
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="cloud-contact bg-light position-relative">
+							<div class="cloud-contact-img-holder">
+								<img src="./assets/img/undraw_profile.svg" />
+							</div>
+
+							<div class="cloud-contact-name fw-bold">
+								<a href="./mobile-chat.html" class="d-lg-none">
+									John Doe </a
+								><span class="d-none d-lg-inline">
+									John Doe</span
+								>
+							</div>
+
+							<div class="dropdown open ms-auto">
+								<button
+									class="btn text-success p-0 fs-5"
+									type="button"
+									id="triggerId21"
+									data-bs-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									<i class="bi bi-three-dots-vertical"></i>
+								</button>
+
+								<div
+									class="dropdown-menu dropdown-menu-end"
+									aria-labelledby="triggerId21"
+								>
+									<button class="dropdown-item" href="#">
+										Delete
+									</button>
 								</div>
 							</div>
 						</div>
 					</div>
+				</div>
 
-					<div class="col p-4 shadow c-rounded-3">
-						<h3
+				<div class="d-none d-lg-block col-lg p-2">
+					<div class="p-4 shadow c-rounded-2">
+						<div
 							class="pb-2 px-5 d-flex justify-content-between align-items-center"
 						>
 							<div
 								style="width: 50px; height: 50px"
-								class="me-3 d-flex border align-items-center bg-dark rounded-circle overflow-hidden border"
+								class="me-3 d-flex align-items-center bg-dark rounded-circle overflow-hidden border"
 							>
 								<img
-									src="./assets/images/user2.jpg"
+									src="./assets/img/undraw_profile.svg"
 									class="w-100"
 								/>
 							</div>
 
-							<p class="p-0 m-0">John Doe</p>
+							<h4>John Doe</h4>
 
 							<div class="dropdown open ms-auto">
 								<button
-									class="btn text-a-link-blue p-0 fs-5"
+									class="btn p-0 fs-5"
 									type="button"
 									id="triggerId21"
 									data-bs-toggle="dropdown"
@@ -647,9 +661,9 @@
 									</button>
 								</div>
 							</div>
-						</h3>
+						</div>
 
-						<div class="border c-rounded-2 p-4">
+						<div class="border c-rounded-1 p-4">
 							<div class="message-right">
 								<p class="m-0 p-0 mb-1">Lorem.</p>
 								<small
@@ -703,28 +717,27 @@
 								</button>
 
 								<textarea
-									cols="2"
+									rows="1"
 									class="form-control"
 									placeholder="Type Message..."
 								></textarea>
 
-								<button type="button" class="btn btn-success">
+								<button type="submit" class="btn btn-success">
 									<i class="bi bi-send fs-5"></i>
 								</button>
 							</div>
 						</form>
 					</div>
 				</div>
-			</section>
+			</div>
 		</main>
 
-		<footer
-			class="d-flex container flex-wrap justify-content-between align-items-center py-5 px-3"
-		>
-			<div class="col d-flex align-items-center">
-				<span class="text-muted"
-					>&copy; 2022 Gum.iNc. All Rights Reserved</span
-				>
+		<footer class="container d-lg-flex justify-content-between p-5">
+			<div class="text-center">
+				<p class="d-lg-inline">
+					&copy; 2022 Gum.iNc. All Rights Reserved
+				</p>
+
 				<a
 					href="./partner.html"
 					class="btn btn-success px-3 rounded-pill ms-3"
@@ -732,36 +745,28 @@
 				>
 			</div>
 
-			<ul
-				class="nav col-md-4 justify-content-end fs-4 list-unstyled d-flex"
-			>
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.twitter.com"
-						target="_blank"
-						><i class="bi bi-twitter"></i
-					></a>
-				</li>
+			<div class="text-center mt-3 mt-lg-0">
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.twitter.com"
+					target="_blank"
+					><i class="bi bi-twitter"></i
+				></a>
 
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.instagram.com"
-						target="_blank"
-						><i class="bi bi-instagram"></i
-					></a>
-				</li>
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.instagram.com"
+					target="_blank"
+					><i class="bi bi-instagram"></i
+				></a>
 
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.facebook.com"
-						target="_blank"
-						><i class="bi bi-facebook"></i
-					></a>
-				</li>
-			</ul>
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.facebook.com"
+					target="_blank"
+					><i class="bi bi-facebook"></i
+				></a>
+			</div>
 		</footer>
 	</body>
 </html>

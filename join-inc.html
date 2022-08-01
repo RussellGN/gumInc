@@ -18,81 +18,24 @@
 			rel="stylesheet"
 			href="./assets/vendor/fontawsome/css/all.min.css"
 		/>
-		<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.css" />
+		<link
+			rel="stylesheet"
+			href="./assets/vendor/custom-bootstrap/css/custom.min.css"
+		/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<!-- scripts -->
 
 		<script
 			defer
-			src="./assets/vendor/bootstrap/bootstrap.bundle.js"
+			src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"
 		></script>
 
 		<script defer src="./assets/js/main.js"></script>
 		<script defer src="./assets/js/custom.js"></script>
 	</head>
 
-	<style>
-		.carousel-control-next,
-		.carousel-control-prev {
-			position: absolute;
-			top: initial !important;
-			bottom: 50% !important;
-			width: fit-content !important	;
-			padding: 0.3rem !important;
-			border-radius: 100%;
-			opacity: 1 !important;
-			transition: all 0.3s;
-			background-color: #712d24 !important;
-		}
-		.increase-hover-opacity {
-			opacity: 0.5;
-			transition: opacity 0.3s;
-		}
-		.increase-hover-opacity:hover,
-		.increase-hover-opacity:focus {
-			opacity: 1;
-		}
-
-		.h-80-px {
-			height: 80px;
-		}
-		.h-120-px {
-			height: 120px;
-		}
-	</style>
-
-	<style>
-		@media screen {
-			.tabs .nav-link {
-				/* margin: 0 0.5rem; */
-				height: 3rem;
-				width: 3rem;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				border-radius: 100%;
-				color: #fff !important;
-				background-color: rgba(113, 45, 36, 0.5);
-				border: solid !important;
-				cursor: pointer;
-			}
-
-			.tabs .nav-link:hover {
-				border-color: #712d24 !important;
-			}
-			.tabs .nav-link.active {
-				background: #712d24 !important;
-				color: #fff !important;
-				border-color: #712d24 !important;
-			}
-		}
-	</style>
-
-	<body
-		class="p-0 pt-5 position-relative d-flex flex-column justify-content-center"
-		style="min-height: 100vh"
-	>
+	<body>
 		<div id="invisible-elements">
 			<div class="custom-modals">
 				<!--Location Modal -->
@@ -365,8 +308,11 @@
 							<a class="mobile-link p-3" href="./index.html"
 								>Home</a
 							>
-							<a class="mobile-link p-3" href="directory.html"
+							<a class="mobile-link p-3" href="./directory.html"
 								>Directory
+							</a>
+							<a class="mobile-link p-3" href="./connect.html"
+								>Inc Connect
 							</a>
 							<a class="mobile-link p-3" href="./store.html"
 								>Store</a
@@ -401,291 +347,226 @@
 			</div>
 		</div>
 
-		<header id="header" class="p-2 px-4 px-md-2 pt-md-2 fixed-top">
-			<div
-				class="container-xxl d-flex justify-content-between align-items-center justify-content-md-around"
-			>
-				<button
-					class="btn p-0 d-md-none nav-link"
-					id="nav-toggle"
-					type="button"
-					data-bs-toggle="offcanvas"
-					data-bs-target="#mobileNavOffcanvas"
-					aria-controls="mobileNavOffcanvas"
-				>
-					<i class="bi bi-list fs-2"></i>
-				</button>
+		<header id="header">
+			<div class="container">
+				<div class="d-flex justify-content-between align-items-center">
+					<button
+						class="nav-link btn border-0 p-0 d-lg-none"
+						id="nav-toggle"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#mobileNavOffcanvas"
+						aria-controls="mobileNavOffcanvas"
+					>
+						<i class="bi bi-list fs-4"></i>
+					</button>
 
-				<a href="./index.html" class="navbar-brand text-dark p-0 fs-2"
-					>Gum.iNc</a
-				>
-
-				<a
-					class="btn order-last btn-primary rounded-circle d-lg-none"
-					href="./cart.html"
-					><i class="bi bi-cart4"></i
-				></a>
-
-				<div class="d-md-flex d-none p-0">
 					<a
 						href="./index.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Home</a
-					>
-					<a
-						href="directory.html"
-						class="nav-link rounded-pill px-2 py-1 active"
-						>Directory</a
-					>
-					<a
-						href="./connect.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Inc Connect</a
-					>
-					<a
-						href="./store.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Store</a
-					>
-					<a
-						href="directories-and-almanacs.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Almanacs & Directories</a
-					>
-					<a
-						href="./about.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>About</a
-					>
-					<a
-						href="./account.html"
-						class="nav-link rounded-pill px-2 py-1"
-						>Account</a
-					>
-					<a
-						href="./cart.html"
-						class="nav-link border rounded-circle px-2 ms-2 py-1"
+						class="navbar-brand fw-bold text-primary fs-3"
+						><img
+							src="./assets/logos and stuff/logo (44).jpg"
+							class="gum-logo rounded-pill"
+					/></a>
+
+					<a class="nav-link order-last d-lg-none" href="./cart.html"
 						><i class="bi bi-cart4"></i
 					></a>
+
+					<div class="d-lg-flex d-none">
+						<a href="./index.html" class="nav-link">Home</a>
+						<a href="directory.html" class="nav-link active"
+							>Directory</a
+						>
+						<a href="./connect.html" class="nav-link"
+							>Inc Connect</a
+						>
+						<a href="./store.html" class="nav-link">Store</a>
+						<a href="directories-and-almanacs.html" class="nav-link"
+							>Almanacs & Directories</a
+						>
+						<a href="./about.html" class="nav-link">About</a>
+						<a href="./account.html" class="nav-link">Account</a>
+						<a href="./cart.html" class="nav-link"
+							><i class="bi bi-cart4"></i
+						></a>
+					</div>
 				</div>
 			</div>
 		</header>
 
-		<main class="my-5 container shadow-lg c-rounded-3 p-4 p-md-5 tabs">
-			<form class="my-5 row justify-content-around">
-				<h4 class="text-success mb-4">
-					<i class="bi bi-info-circle me-2"></i>3. Please Enter The
-					Following Details
-				</h4>
-
-				<div class="col-md-6">
-					<div class="form-floating mb-3">
-						<input
-							type="text"
-							class="form-control"
-							placeholder="Entry Field"
-							value="field value"
-						/>
-						<label>Entry Field</label>
+		<main class="container mt-5 p-4 p-md-5">
+			<form>
+				<div class="row mt-5 justify-content-around">
+					<div class="col-12 mb-4">
+						<h5 class="text-success text-center">
+							<i class="bi bi-info-circle me-2"></i>Enter The
+							Following Details
+						</h5>
 					</div>
 
-					<div class="form-floating mb-3">
-						<input
-							type="text"
-							class="form-control"
-							placeholder="Entry Field"
-							value="field value"
-						/>
-						<label>Entry Field</label>
-					</div>
+					<div class="col-lg-6">
+						<div class="form-floating mb-3">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="Entry Field"
+								value="field value"
+							/>
+							<label>Entry Field</label>
+						</div>
 
-					<div class="mb-3">
-						<label for="about" class="form-label d-block p-2"
-							>About Field</label
-						>
-						<textarea class="form-control" id="about" rows="4">
+						<div class="form-floating mb-3">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="Entry Field"
+								value="field value"
+							/>
+							<label>Entry Field</label>
+						</div>
+
+						<div class="mb-3">
+							<label for="about" class="form-label d-block p-2"
+								>About Field</label
+							>
+							<textarea class="form-control" id="about" rows="4">
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, quisquam!</textarea
-						>
-					</div>
-				</div>
-
-				<div class="col-md-6">
-					<div class="form-floating mb-3">
-						<input
-							type="text"
-							class="form-control"
-							placeholder="Entry Field"
-							value="field value"
-						/>
-						<label>Entry Field</label>
-					</div>
-
-					<div class="form-floating mb-3">
-						<input
-							type="text"
-							class="form-control"
-							placeholder="Entry Field"
-							value="field value"
-						/>
-						<label>Entry Field</label>
-					</div>
-
-					<p class="text-success mb-3">
-						<i class="bi bi-info-circle"></i>
-						Image Upload Fields.
-					</p>
-
-					<div
-						class="row row-cols-4 mx-1 d-flex gap-3 fs-1 text-white flex-nowrap overflowx-scroll"
-					>
-						<div
-							class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
-						>
-							<img
-								class="d-none position-absolute top-50 start-50 w-100 translate-middle"
-								src="#"
-							/>
-							<i
-								onclick="clickNext(this)"
-								class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
-							></i>
-							<input
-								type="file"
-								name="image1"
-								onchange="previewImg(this)"
-								class="d-none"
-								accept="image/*"
-							/>
-						</div>
-
-						<div
-							class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
-						>
-							<img
-								class="d-none position-absolute top-50 start-50 w-100 translate-middle"
-								src="#"
-							/>
-							<i
-								onclick="clickNext(this)"
-								class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
-							></i>
-							<input
-								type="file"
-								name="image2"
-								onchange="previewImg(this)"
-								class="d-none"
-								accept="image/*"
-							/>
-						</div>
-
-						<div
-							class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
-						>
-							<img
-								class="d-none position-absolute top-50 start-50 w-100 translate-middle"
-								src="#"
-							/>
-							<i
-								onclick="clickNext(this)"
-								class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
-							></i>
-							<input
-								type="file"
-								name="image3"
-								onchange="previewImg(this)"
-								class="d-none"
-								accept="image/*"
-							/>
-						</div>
-
-						<div
-							class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
-						>
-							<img
-								class="d-none position-absolute top-50 start-50 w-100 translate-middle"
-								src="#"
-							/>
-							<i
-								onclick="clickNext(this)"
-								class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
-							></i>
-							<input
-								type="file"
-								name="image4"
-								onchange="previewImg(this)"
-								class="d-none"
-								accept="image/*"
-							/>
-						</div>
-
-						<div
-							class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
-						>
-							<img
-								class="d-none position-absolute top-50 start-50 w-100 translate-middle"
-								src="#"
-							/>
-							<i
-								onclick="clickNext(this)"
-								class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
-							></i>
-							<input
-								type="file"
-								name="image5"
-								onchange="previewImg(this)"
-								class="d-none"
-								accept="image/*"
-							/>
-						</div>
-
-						<div
-							class="col border h-80-px position-relative c-rounded-1 overflow-hidden bg-dark"
-						>
-							<img
-								class="d-none position-absolute top-50 start-50 w-100 translate-middle"
-								src="#"
-							/>
-							<i
-								onclick="clickNext(this)"
-								class="bi bi-image position-absolute top-50 start-50 translate-middle increase-hover-opacity"
-							></i>
-							<input
-								type="file"
-								name="image6"
-								onchange="previewImg(this)"
-								class="d-none"
-								accept="image/*"
-							/>
+							>
 						</div>
 					</div>
-				</div>
 
-				<div class="text-center">
-					<button
-						onclick="document.getElementById('tab5Toggler').click()"
-						class="btn m-2 btn-primary rounded-pill px-3"
-						type="button"
-					>
-						Proceed
-					</button>
+					<div class="col-lg-6">
+						<div class="form-floating mb-3">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="Entry Field"
+								value="field value"
+							/>
+							<label>Entry Field</label>
+						</div>
 
-					<button
-						class="btn btn-outline-dark rounded-pill px-3"
-						type="reset"
-					>
-						Reset
-					</button>
+						<div class="form-floating mb-3">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="Entry Field"
+								value="field value"
+							/>
+							<label>Entry Field</label>
+						</div>
+
+						<p class="text-success mb-3">
+							<i class="bi bi-images"></i>
+							Upload Images
+						</p>
+
+						<div
+							class="row row-cols-2 row-cols-md-3 row-cols-lg-4 p-3 pt-0 flex-nowrap overflowx-scroll"
+						>
+							<div class="col px-1">
+								<div class="image-upload-field">
+									<img src="" class="d-none img-fluid" />
+									<button type="button">
+										<i class="bi bi-plus-circle"></i>
+									</button>
+
+									<input
+										type="file"
+										class="d-none"
+										accept="image/*"
+									/>
+								</div>
+							</div>
+
+							<div class="col px-1">
+								<div class="image-upload-field">
+									<img src="" class="d-none img-fluid" />
+									<button type="button">
+										<i class="bi bi-plus-circle"></i>
+									</button>
+
+									<input
+										type="file"
+										class="d-none"
+										accept="image/*"
+									/>
+								</div>
+							</div>
+
+							<div class="col px-1">
+								<div class="image-upload-field">
+									<img src="" class="d-none img-fluid" />
+									<button type="button">
+										<i class="bi bi-plus-circle"></i>
+									</button>
+
+									<input
+										type="file"
+										class="d-none"
+										accept="image/*"
+									/>
+								</div>
+							</div>
+
+							<div class="col px-1">
+								<div class="image-upload-field">
+									<img src="" class="d-none img-fluid" />
+									<button type="button">
+										<i class="bi bi-plus-circle"></i>
+									</button>
+
+									<input
+										type="file"
+										class="d-none"
+										accept="image/*"
+									/>
+								</div>
+							</div>
+
+							<div class="col px-1">
+								<div class="image-upload-field">
+									<img src="" class="d-none img-fluid" />
+									<button type="button">
+										<i class="bi bi-plus-circle"></i>
+									</button>
+
+									<input
+										type="file"
+										class="d-none"
+										accept="image/*"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 mt-3 text-center">
+						<button
+							class="btn btn-primary m-2 rounded-pill px-3"
+							type="submit"
+						>
+							Proceed
+						</button>
+
+						<a
+							class="btn btn-outline-dark rounded-pill px-3"
+							href="?"
+						>
+							Reset
+						</a>
+					</div>
 				</div>
 			</form>
 		</main>
 
-		<footer
-			class="d-flex container flex-wrap justify-content-between align-items-center py-5 px-3"
-		>
-			<div class="col d-flex align-items-center">
-				<span class="text-muted"
-					>&copy; 2022 Gum.iNc. All Rights Reserved</span
-				>
+		<footer class="container d-lg-flex justify-content-between p-5">
+			<div class="text-center">
+				<p class="d-lg-inline">
+					&copy; 2022 Gum.iNc. All Rights Reserved
+				</p>
+
 				<a
 					href="./partner.html"
 					class="btn btn-success px-3 rounded-pill ms-3"
@@ -693,36 +574,28 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, quisquam!</textare
 				>
 			</div>
 
-			<ul
-				class="nav col-md-4 justify-content-end fs-4 list-unstyled d-flex"
-			>
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.twitter.com"
-						target="_blank"
-						><i class="bi bi-twitter"></i
-					></a>
-				</li>
+			<div class="text-center mt-3 mt-lg-0">
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.twitter.com"
+					target="_blank"
+					><i class="bi bi-twitter"></i
+				></a>
 
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.instagram.com"
-						target="_blank"
-						><i class="bi bi-instagram"></i
-					></a>
-				</li>
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.instagram.com"
+					target="_blank"
+					><i class="bi bi-instagram"></i
+				></a>
 
-				<li class="ms-3">
-					<a
-						class="text-muted"
-						href="https://www.facebook.com"
-						target="_blank"
-						><i class="bi bi-facebook"></i
-					></a>
-				</li>
-			</ul>
+				<a
+					class="btn btn-outline-primary border-0 fs-4"
+					href="https://www.facebook.com"
+					target="_blank"
+					><i class="bi bi-facebook"></i
+				></a>
+			</div>
 		</footer>
 	</body>
 </html>
