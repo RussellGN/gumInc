@@ -34,6 +34,11 @@
 		<script defer src="./assets/js/main.js"></script>
 		<script defer src="./assets/js/custom.js"></script>
 	</head>
+	<style>
+		#generalCarousel1 .carousel-item > div h2 {
+			align-items: end !important;
+		}
+	</style>
 
 	<body>
 		<div id="invisible-elements">
@@ -365,8 +370,8 @@
 						href="./index.html"
 						class="navbar-brand fw-bold text-primary fs-3"
 						><img
-							src="./assets/logos and stuff/logo (44).jpg"
-							class="gum-logo rounded-pill"
+							src="./assets/logos and stuff/logo.jpg"
+							class="gum-logo"
 					/></a>
 
 					<a class="nav-link order-last d-lg-none" href="./cart.html"
@@ -399,7 +404,7 @@
 					<div class="col-lg-6 d-flex py-4 align-items-center">
 						<div>
 							<img
-								src="./assets/logos and stuff/logo (44).jpg"
+								src="./assets/logos and stuff/logo.jpg"
 								class="w-100"
 							/>
 							<div
@@ -558,11 +563,11 @@
 							class="carousel slide general-carousel"
 							data-bs-ride="carousel"
 						>
-							<div class="carousel-inner" role="listbox">
+							<div class="carousel-inner p-2" role="listbox">
 								<div class="carousel-item active">
 									<div>
 										<img
-											src="./assets/images/background.jpg"
+											src="./assets/img/covers/gummy.jpg"
 										/>
 										<h2 class="h5">
 											<span
@@ -576,7 +581,7 @@
 								<div class="carousel-item">
 									<div>
 										<img
-											src="./assets/images/background.jpg"
+											src="./assets/img/covers/upcoming-events.jpg"
 										/>
 										<h2 class="h5">
 											<span
@@ -590,7 +595,7 @@
 								<div class="carousel-item">
 									<div>
 										<img
-											src="./assets/images/background.jpg"
+											src="./assets/img/covers/creme-chefs.jpg"
 										/>
 										<h2 class="h5">
 											<span
@@ -604,7 +609,7 @@
 								<div class="carousel-item">
 									<div>
 										<img
-											src="./assets/images/background.jpg"
+											src="./assets/img/covers/creme-restaurants.jpg"
 										/>
 										<h2 class="h5">
 											<span
@@ -618,7 +623,7 @@
 								<div class="carousel-item">
 									<div>
 										<img
-											src="./assets/images/background.jpg"
+											src="./assets/img/covers/sports.jpg"
 										/>
 										<h2 class="h5">
 											<span>Sports by the Gum.iNc ®</span>
@@ -629,7 +634,7 @@
 								<div class="carousel-item">
 									<div>
 										<img
-											src="./assets/images/background.jpg"
+											src="./assets/img/covers/craft-skill.jpg"
 										/>
 										<h2 class="h5">
 											<span
@@ -643,7 +648,7 @@
 								<div class="carousel-item">
 									<div>
 										<img
-											src="./assets/images/background.jpg"
+											src="./assets/img/covers/coin.jpg"
 										/>
 										<h2 class="h5">
 											<span
@@ -657,7 +662,7 @@
 								<div class="carousel-item">
 									<div>
 										<img
-											src="./assets/images/background.jpg"
+											src="./assets/img/covers/thrift.jpg"
 										/>
 										<h2 class="h5">
 											<span
@@ -671,7 +676,7 @@
 								<div class="carousel-item">
 									<div>
 										<img
-											src="./assets/images/background.jpg"
+											src="./assets/img/covers/thrift.jpg"
 										/>
 										<h2 class="h5">
 											<span
@@ -685,7 +690,7 @@
 								<div class="carousel-item">
 									<div>
 										<img
-											src="./assets/images/background.jpg"
+											src="./assets/img/covers/artists-creatives.jpg"
 										/>
 										<h2 class="h5">
 											<span
@@ -699,7 +704,7 @@
 								<div class="carousel-item">
 									<div>
 										<img
-											src="./assets/images/background.jpg"
+											src="./assets/img/covers/record.jpg"
 										/>
 										<h2 class="h5">
 											<span>
@@ -714,7 +719,7 @@
 								<div class="carousel-item">
 									<div>
 										<img
-											src="./assets/images/background.jpg"
+											src="./assets/img/covers/ngos.jpg"
 										/>
 										<h2 class="h5">
 											<span
@@ -728,7 +733,7 @@
 								<div class="carousel-item">
 									<div>
 										<img
-											src="./assets/images/background.jpg"
+											src="./assets/img/covers/creative-hubs.jpg"
 										/>
 										<h2 class="h5">
 											<span>
@@ -743,7 +748,7 @@
 								<div class="carousel-item">
 									<div>
 										<img
-											src="./assets/images/background.jpg"
+											src="./assets/img/covers/airbnbs.jpg"
 										/>
 										<h2 class="h5">
 											<span
@@ -757,7 +762,7 @@
 								<div class="carousel-item">
 									<div>
 										<img
-											src="./assets/images/background.jpg"
+											src="./assets/img/covers/hospitals.jpg"
 										/>
 										<h2 class="h5">
 											<span>
@@ -1051,6 +1056,34 @@
 					</div>
 
 					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-heading25">
+							<button
+								class="accordion-button collapsed"
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#flush-collapse25"
+								aria-expanded="true"
+								aria-controls="flush-collapse25"
+							>
+								Gum.iNc ASIA
+							</button>
+						</h2>
+
+						<div
+							id="flush-collapse25"
+							class="accordion-collapse collapse"
+							aria-labelledby="flush-heading25"
+							data-bs-parent="#locationsAccordion"
+						>
+							<div class="accordion-body">
+								Gum.INc CHINA | Gum.INc HONG KONG | Gum.INc
+								JAPAN | Gum.INc KOREA Gum.INc MALAYSIA | Gum.INc
+								THAILAND | Gum.INc SINGAPORE|
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion-item">
 						<h2 class="accordion-header" id="flush-heading2">
 							<button
 								class="accordion-button collapsed"
@@ -1075,10 +1108,7 @@
 								Gum.INc WESTERN AUSTRALIA |Gum.iNc WESTERN
 								AUSTRALIA | Gum.INc TASMANIA | Gum.INc NORTHERN
 								TERRITORY | ATLS SERIES AUSTRALIAN CAPITAL
-								TERRITORY Gum.INc ASIA Gum.INc CHINA | Gum.INc
-								HONG KONG | Gum.INc JAPAN | Gum.INc KOREA
-								Gum.INc MALAYSIA | Gum.INc THAILAND | Gum.INc
-								SINGAPORE|
+								TERRITORY
 							</div>
 						</div>
 					</div>
@@ -1093,7 +1123,7 @@
 								aria-expanded="true"
 								aria-controls="flush-collapse3"
 							>
-								ATLAS SERIES Gum.iNc SOUTH AMERICA
+								Gum.iNc SOUTH AMERICA
 							</button>
 						</h2>
 
