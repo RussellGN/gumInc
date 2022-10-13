@@ -10,33 +10,15 @@
 			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
 			rel="stylesheet"
 		/>
-		<link
-			rel="stylesheet"
-			href="./assets/vendor/bootstrap-icons/bootstrap-icons.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="./assets/vendor/fontawsome/css/all.min.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="./assets/vendor/swiper/swiper-bundle.min.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="./assets/vendor/custom-bootstrap/css/custom.min.css"
-		/>
+		<link rel="stylesheet" href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" />
+		<link rel="stylesheet" href="./assets/vendor/fontawsome/css/all.min.css" />
+		<link rel="stylesheet" href="./assets/vendor/swiper/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="./assets/vendor/custom-bootstrap/css/custom.min.css" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<!-- scripts -->
-		<script
-			defer
-			src="./assets/vendor/swiper/swiper-bundle.min.js"
-		></script>
-		<script
-			defer
-			src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"
-		></script>
+		<script defer src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
+		<script defer src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"></script>
 
 		<script defer src="./assets/js/directory.js"></script>
 		<script defer src="./assets/js/custom.js"></script>
@@ -57,9 +39,7 @@
 					<div class="modal-dialog modal-dialog-centered">
 						<div class="modal-content c-rounded-1 p-lg-5">
 							<div class="modal-header">
-								<h5 class="modal-title" id="locationModalLabel">
-									Gum.iNc Access
-								</h5>
+								<h5 class="modal-title" id="locationModalLabel">Gum.iNc Access</h5>
 
 								<button
 									type="button"
@@ -70,9 +50,7 @@
 							</div>
 
 							<div class="modal-body">
-								<div
-									class="d-flex justify-content-between align-items-center"
-								>
+								<div class="d-flex justify-content-between align-items-center">
 									<a
 										class="col-8 btn btn-primary text-start border c-rounded-1 mb-2 p-2"
 									>
@@ -98,29 +76,25 @@
 										Gum.iNc Regional
 									</button>
 
-									<span class="text-warning d-inline-block"
-										>pro<i class="fas fa-crown ms-3"></i
-									></span>
-
-									<div
-										class="dropdown-menu"
-										aria-labelledby="counTrigger"
+									<button
+										type="button"
+										class="btn btn-outline-warning rounded"
+										data-bs-toggle="modal"
+										data-bs-target="#proModal"
 									>
-										<a class="dropdown-item" href="#"
-											>Argentina</a
-										>
-										<a class="dropdown-item" href="#"
-											>Brasil</a
-										>
-										<a class="dropdown-item" href="#"
-											>France</a
-										>
-										<a class="dropdown-item" href="#"
-											>France</a
-										>
-										<a class="dropdown-item" href="#"
-											>And So Forth...</a
-										>
+										pro<i class="fas fa-crown ms-3"></i>
+									</button>
+
+									<!-- <span class="text-warning d-inline-block"
+										>pro<i class="fas fa-crown ms-3"></i
+									></span> -->
+
+									<div class="dropdown-menu" aria-labelledby="counTrigger">
+										<a class="dropdown-item" href="#">Argentina</a>
+										<a class="dropdown-item" href="#">Brasil</a>
+										<a class="dropdown-item" href="#">France</a>
+										<a class="dropdown-item" href="#">France</a>
+										<a class="dropdown-item" href="#">And So Forth...</a>
 									</div>
 								</div>
 
@@ -138,47 +112,93 @@
 										Gum.iNc Continental
 									</button>
 
-									<span class="text-warning d-inline-block"
-										>pro<i class="fas fa-crown ms-3"></i
-									></span>
-
-									<div
-										class="dropdown-menu"
-										aria-labelledby="coTrigger"
+									<button
+										type="button"
+										class="btn btn-outline-warning rounded"
+										data-bs-toggle="modal"
+										data-bs-target="#proModal"
 									>
-										<a class="dropdown-item" href="#"
-											>Africa</a
-										>
-										<a class="dropdown-item" href="#"
-											>Europe</a
-										>
-										<a class="dropdown-item" href="#"
-											>Asia</a
-										>
-										<a class="dropdown-item" href="#"
-											>Astralia</a
-										>
-										<a class="dropdown-item" href="#"
-											>North America</a
-										>
-										<a class="dropdown-item" href="#"
-											>South America</a
-										>
+										pro<i class="fas fa-crown ms-3"></i>
+									</button>
+
+									<!-- <span class="text-warning d-inline-block"
+										>pro<i class="fas fa-crown ms-3"></i
+									></span> -->
+
+									<div class="dropdown-menu" aria-labelledby="coTrigger">
+										<a class="dropdown-item" href="#">Africa</a>
+										<a class="dropdown-item" href="#">Europe</a>
+										<a class="dropdown-item" href="#">Asia</a>
+										<a class="dropdown-item" href="#">Astralia</a>
+										<a class="dropdown-item" href="#">North America</a>
+										<a class="dropdown-item" href="#">South America</a>
 									</div>
 								</div>
 
-								<div
-									class="d-flex justify-content-between align-items-center"
-								>
+								<div class="d-flex justify-content-between align-items-center">
 									<a
 										class="col-8 disabled btn text-start btn-primary border c-rounded-1 mb-2 p-2"
 									>
 										Gum.iNc International
 									</a>
 
-									<span class="text-warning d-inline-block"
+									<button
+										type="button"
+										class="btn btn-outline-warning rounded"
+										data-bs-toggle="modal"
+										data-bs-target="#proModal"
+									>
+										pro<i class="fas fa-crown ms-3"></i>
+									</button>
+
+									<!-- <span class="text-warning d-inline-block"
 										>pro<i class="fas fa-crown ms-3"></i
-									></span>
+									></span> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="modal fade"
+					id="proModal"
+					data-bs-backdrop="static"
+					data-bs-keyboard="false"
+					tabindex="-1"
+					aria-labelledby="proModalLabel"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content p-4 c-rounded-2">
+							<div class="modal-header">
+								<h5 class="modal-title flex-fill text-center" id="proModalLabel">
+									Upgrade To Gum.iNc Pro!
+								</h5>
+
+								<button
+									type="button"
+									class="btn-close fs-5"
+									data-bs-dismiss="modal"
+									aria-label="Close"
+								></button>
+							</div>
+
+							<div class="modal-body p-3 p-lg-5">
+								<div class="text-center align-items-center justify-content-around">
+									<div
+										class="c-rounded-1 shadow p-3 d-flex flex-column align-items-center justify-content-around h-100"
+									>
+										<div>
+											<i class="fas fa-crown fs-1 text-warning"></i>
+										</div>
+
+										<p class="my-3">Extent your reach/access globally</p>
+
+										<button class="btn btn-success rounded-pill px-3">
+											USD 50.00 Annually
+										</button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -187,14 +207,9 @@
 			</div>
 
 			<div id="popovers">
-				<button type="button" class="d-none" id="saveIncToastBtn">
-					save inc
-				</button>
+				<button type="button" class="d-none" id="saveIncToastBtn">save inc</button>
 
-				<div
-					class="position-fixed bottom-0 end-0 p-3"
-					style="z-index: 11"
-				>
+				<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
 					<div
 						id="saveIncToast"
 						class="toast text-white bg-success"
@@ -206,8 +221,8 @@
 							<div class="d-flex align-items-center">
 								<i class="bi bi-check fs-2 me-2"></i>
 								<span class="me-2">
-									Listing Saved! You can find it on the saved
-									Incs tab on you profile.</span
+									Listing Saved! You can find it on the saved Incs tab on you
+									profile.</span
 								>
 								<button
 									type="button"
@@ -220,10 +235,7 @@
 					</div>
 				</div>
 
-				<div
-					class="position-fixed bottom-0 end-0 p-3"
-					style="z-index: 11"
-				>
+				<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
 					<div
 						id="requestAudienceToast"
 						class="toast text-white bg-success"
@@ -235,8 +247,8 @@
 							<div class="d-flex align-items-center">
 								<i class="bi bi-send-check fs-2 me-2"></i>
 								<span class="me-2">
-									Requested! You'll Be notified of a response
-									in your notifications.</span
+									Requested! You'll Be notified of a response in your
+									notifications.</span
 								>
 								<button
 									type="button"
@@ -272,36 +284,17 @@
 
 					<div class="offcanvas-body">
 						<div class="text-center mb-4">
-							<span
-								class="text-gray p-2 fw-bold display-5 p-0 fs-2"
+							<span class="text-gray p-2 fw-bold display-5 p-0 fs-2"
 								>Gum.iNc<i class="bi bi-circle-fill ms-2"></i>
 							</span>
 						</div>
 
 						<div class="d-flex flex-column">
-							<a class="mobile-link p-3" href="./index.html"
-								>Home</a
-							>
-							<a class="mobile-link p-3" href="./directory.html"
-								>Directory
-							</a>
-							<a class="mobile-link p-3" href="./connect.html"
-								>Inc Connect
-							</a>
-							<a class="mobile-link p-3" href="./store.html"
-								>Store</a
-							>
-							<a
-								class="mobile-link p-3"
-								href="directories-and-almanacs.html"
-								>Almanacs & Directories</a
-							>
-							<a class="mobile-link p-3" href="./about.html">
-								About
-							</a>
-							<a class="mobile-link p-3" href="./account.html"
-								>Account</a
-							>
+							<a class="mobile-link p-3" href="./index.html">Home</a>
+							<a class="mobile-link p-3" href="./directory.html">Directory </a>
+							<a class="mobile-link p-3" href="./connect.html">Inc Connect </a>
+							<a class="mobile-link p-3" href="./about.html"> About </a>
+							<a class="mobile-link p-3" href="./account.html">Account</a>
 						</div>
 					</div>
 				</div>
@@ -315,9 +308,7 @@
 
 			<div class="mobile-barrier">
 				<h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
-				<h2 class="p-4">
-					Please view on desktop. Site is not mobile ready.
-				</h2>
+				<h2 class="p-4">Please view on desktop. Site is not mobile ready.</h2>
 			</div>
 		</div>
 
@@ -335,9 +326,7 @@
 						<i class="bi bi-list fs-4"></i>
 					</button>
 
-					<a
-						href="./index.html"
-						class="navbar-brand fw-bold text-primary fs-3"
+					<a href="./index.html" class="navbar-brand fw-bold text-primary fs-3"
 						><img
 							src="./assets/logos and stuff/logo (44).jpg"
 							class="gum-logo rounded-pill"
@@ -349,21 +338,12 @@
 
 					<div class="d-lg-flex d-none">
 						<a href="./index.html" class="nav-link">Home</a>
-						<a href="directory.html" class="nav-link active"
-							>Directory</a
-						>
-						<a href="./connect.html" class="nav-link"
-							>Inc Connect</a
-						>
-						<a href="./store.html" class="nav-link">Store</a>
-						<a href="directories-and-almanacs.html" class="nav-link"
-							>Almanacs & Directories</a
-						>
+						<a href="directory.html" class="nav-link active">Directory</a>
+						<a href="./connect.html" class="nav-link">Inc Connect</a>
+
 						<a href="./about.html" class="nav-link">About</a>
 						<a href="./account.html" class="nav-link">Account</a>
-						<a href="./cart.html" class="nav-link"
-							><i class="bi bi-cart4"></i
-						></a>
+						<a href="./cart.html" class="nav-link"><i class="bi bi-cart4"></i></a>
 					</div>
 				</div>
 			</div>
@@ -407,13 +387,11 @@
 			<div class="categories-slider swiper">
 				<div class="swiper-wrapper align-items-center">
 					<div class="swiper-slide text-center">
-						<i class="fas fa-hourglass fs-5 me-2"></i>Upcoming
-						Events
+						<i class="fas fa-hourglass fs-5 me-2"></i>Upcoming Events
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="fas fa-phone fs-5 me-2"></i>Gummy Pages
-						(Yellow Pages)
+						<i class="fas fa-phone fs-5 me-2"></i>Gummy Pages (Yellow Pages)
 					</div>
 
 					<div class="swiper-slide text-center">
@@ -421,8 +399,7 @@
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="fas fa-hamburger fs-5 me-2"></i>Crème
-						Restaurants
+						<i class="fas fa-hamburger fs-5 me-2"></i>Crème Restaurants
 					</div>
 
 					<div class="swiper-slide text-center">
@@ -434,8 +411,7 @@
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="fas fa-briefcase fs-5 me-2"></i>Coin
-						(Business)
+						<i class="fas fa-briefcase fs-5 me-2"></i>Coin (Business)
 					</div>
 
 					<div class="swiper-slide text-center">
@@ -447,33 +423,30 @@
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="fas fa-brush fs-5 me-2"></i>Creatives &
-						Artists
+						<i class="fas fa-brush fs-5 me-2"></i>Creatives & Artists
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="fas fa-record-vinyl fs-5 me-2"></i>Recording
-						Labels | Artists &amp; Repertoire/Booking Agents
+						<i class="fas fa-record-vinyl fs-5 me-2"></i>Recording Labels | Artists
+						&amp; Repertoire/Booking Agents
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="fas fa-university fs-5 me-2"></i
-						>NGOs/Sponsorships &amp; Funds
+						<i class="fas fa-university fs-5 me-2"></i>NGOs/Sponsorships &amp; Funds
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="fas fa-users fs-5 me-2"></i>Creative
-						Hubs/Studios &amp; Co-working spaces
+						<i class="fas fa-users fs-5 me-2"></i>Creative Hubs/Studios &amp; Co-working
+						spaces
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="fas fa-hotel fs-5 me-2"></i>Bnbs, Hotels &amp;
-						Resorts
+						<i class="fas fa-hotel fs-5 me-2"></i>Bnbs, Hotels &amp; Resorts
 					</div>
 
 					<div class="swiper-slide text-center">
-						<i class="fas fa-first-aid fs-5 me-2"></i
-						>Hospitals/Medical Specialists &amp; facilities
+						<i class="fas fa-first-aid fs-5 me-2"></i>Hospitals/Medical Specialists
+						&amp; facilities
 					</div>
 				</div>
 			</div>
@@ -483,17 +456,14 @@
 			<div class="row align-items-center my-5">
 				<div class="col-lg p-2">
 					<p class="fw-bold text-success px-2 m-0">
-						<i class="bi bi-info-circle me-2"></i> You only have
-						access to listings under Gum.iNc Local (Zimbabwe).
-						Change/upgrade your access to view more!
+						<i class="bi bi-info-circle me-2"></i> You only have access to listings
+						under Gum.iNc Local (Zimbabwe). Change/upgrade your access to view more!
 					</p>
 				</div>
 
 				<div class="col-lg-auto p-2">
 					<div class="text-center">
-						<a
-							href="./login.html"
-							class="btn btn-primary px-3 rounded-pill m-1"
+						<a href="./login.html" class="btn btn-primary px-3 rounded-pill m-1"
 							>Login</a
 						>
 
@@ -503,9 +473,7 @@
 							data-bs-toggle="modal"
 							data-bs-target="#locationModal"
 						>
-							Gum.iNc Local - Zim<i
-								class="bi bi-caret-down-fill ms-2"
-							></i>
+							Gum.iNc Local - Zim<i class="bi bi-caret-down-fill ms-2"></i>
 						</button>
 					</div>
 				</div>
@@ -519,9 +487,7 @@
 					data-bs-target="#booksOffcanvas"
 					aria-controls="booksOffcanvas"
 				>
-					Alamancs & Directories<i
-						class="bi bi-caret-down-fill ms-2"
-					></i>
+					Alamancs & Directories<i class="bi bi-caret-down-fill ms-2"></i>
 				</button>
 
 				<div
@@ -557,8 +523,7 @@
 										aria-controls="tab-1"
 										aria-selected="true"
 									>
-										<i class="fas fa-hourglass me-2"></i
-										>Upcoming Events
+										<i class="fas fa-hourglass me-2"></i>Upcoming Events
 									</button>
 								</li>
 
@@ -573,8 +538,7 @@
 										aria-controls="tab-2"
 										aria-selected="false"
 									>
-										<i class="fas fa-phone me-2"></i>Gummy
-										Pages (Yellow Pages)
+										<i class="fas fa-phone me-2"></i>Gummy Pages (Yellow Pages)
 									</button>
 								</li>
 
@@ -589,8 +553,7 @@
 										aria-controls="tab-3"
 										aria-selected="false"
 									>
-										<i class="fas fa-pepper-hot me-2"></i
-										>Crème Chefs
+										<i class="fas fa-pepper-hot me-2"></i>Crème Chefs
 									</button>
 								</li>
 
@@ -605,8 +568,7 @@
 										aria-controls="tab-4"
 										aria-selected="false"
 									>
-										<i class="fas fa-hamburger me-2"></i
-										>Crème Restaurants
+										<i class="fas fa-hamburger me-2"></i>Crème Restaurants
 									</button>
 								</li>
 
@@ -636,8 +598,7 @@
 										aria-controls="tab-6"
 										aria-selected="false"
 									>
-										<i class="fas fa-feather me-2"></i
-										>Craft/Skill
+										<i class="fas fa-feather me-2"></i>Craft/Skill
 									</button>
 								</li>
 
@@ -652,8 +613,7 @@
 										aria-controls="tab-7"
 										aria-selected="false"
 									>
-										<i class="fas fa-briefcase me-2"></i
-										>Coin (Business)
+										<i class="fas fa-briefcase me-2"></i>Coin (Business)
 									</button>
 								</li>
 
@@ -668,8 +628,7 @@
 										aria-controls="tab-8"
 										aria-selected="false"
 									>
-										<i class="fas fa-tshirt me-2"></i>Thrift
-										(Fashion)
+										<i class="fas fa-tshirt me-2"></i>Thrift (Fashion)
 									</button>
 								</li>
 
@@ -684,8 +643,7 @@
 										aria-controls="tab-9"
 										aria-selected="false"
 									>
-										<i class="fas fa-book-open me-2"></i
-										>Edu-Cation
+										<i class="fas fa-book-open me-2"></i>Edu-Cation
 									</button>
 								</li>
 
@@ -700,8 +658,7 @@
 										aria-controls="tab-10"
 										aria-selected="false"
 									>
-										<i class="fas fa-brush me-2"></i
-										>Creatives & Artists
+										<i class="fas fa-brush me-2"></i>Creatives & Artists
 									</button>
 								</li>
 
@@ -716,9 +673,8 @@
 										aria-controls="tab-11"
 										aria-selected="false"
 									>
-										<i class="fas fa-record-vinyl me-2"></i
-										>Recording Labels | Artists &amp;
-										Repertoire/Booking Agents
+										<i class="fas fa-record-vinyl me-2"></i>Recording Labels |
+										Artists &amp; Repertoire/Booking Agents
 									</button>
 								</li>
 
@@ -733,8 +689,8 @@
 										aria-controls="tab-12"
 										aria-selected="false"
 									>
-										<i class="fas fa-university me-2"></i
-										>NGOs/Sponsorships &amp; Funds
+										<i class="fas fa-university me-2"></i>NGOs/Sponsorships
+										&amp; Funds
 									</button>
 								</li>
 
@@ -749,9 +705,8 @@
 										aria-controls="tab-13"
 										aria-selected="false"
 									>
-										<i class="fas fa-users me-2"></i
-										>Creative Hubs/Studios &amp; Co-working
-										spaces
+										<i class="fas fa-users me-2"></i>Creative Hubs/Studios &amp;
+										Co-working spaces
 									</button>
 								</li>
 
@@ -766,8 +721,8 @@
 										aria-controls="my-directories-tab"
 										aria-selected="false"
 									>
-										<i class="fas fa-hotel me-2"></i>Air
-										Bnbs, Hotels &amp; Resorts
+										<i class="fas fa-hotel me-2"></i>Air Bnbs, Hotels &amp;
+										Resorts
 									</button>
 								</li>
 
@@ -782,9 +737,8 @@
 										aria-controls="tab-15"
 										aria-selected="false"
 									>
-										<i class="fas fa-first-aid me-2"></i
-										>Hospitals/Medical Specialists &amp;
-										facilities
+										<i class="fas fa-first-aid me-2"></i>Hospitals/Medical
+										Specialists &amp; facilities
 									</button>
 								</li>
 							</ul>
@@ -812,8 +766,7 @@
 									aria-controls="tab-1"
 									aria-selected="true"
 								>
-									<i class="fas fa-hourglass me-2"></i
-									>Upcoming Events
+									<i class="fas fa-hourglass me-2"></i>Upcoming Events
 								</button>
 							</li>
 
@@ -828,8 +781,7 @@
 									aria-controls="tab-2"
 									aria-selected="false"
 								>
-									<i class="fas fa-phone me-2"></i>Gummy Pages
-									(Yellow Pages)
+									<i class="fas fa-phone me-2"></i>Gummy Pages (Yellow Pages)
 								</button>
 							</li>
 
@@ -844,8 +796,7 @@
 									aria-controls="tab-3"
 									aria-selected="false"
 								>
-									<i class="fas fa-pepper-hot me-2"></i>Crème
-									Chefs
+									<i class="fas fa-pepper-hot me-2"></i>Crème Chefs
 								</button>
 							</li>
 
@@ -860,8 +811,7 @@
 									aria-controls="tab-4"
 									aria-selected="false"
 								>
-									<i class="fas fa-hamburger me-2"></i>Crème
-									Restaurants
+									<i class="fas fa-hamburger me-2"></i>Crème Restaurants
 								</button>
 							</li>
 
@@ -891,8 +841,7 @@
 									aria-controls="tab-6"
 									aria-selected="false"
 								>
-									<i class="fas fa-feather me-2"></i
-									>Craft/Skill
+									<i class="fas fa-feather me-2"></i>Craft/Skill
 								</button>
 							</li>
 
@@ -907,8 +856,7 @@
 									aria-controls="tab-7"
 									aria-selected="false"
 								>
-									<i class="fas fa-briefcase me-2"></i>Coin
-									(Business)
+									<i class="fas fa-briefcase me-2"></i>Coin (Business)
 								</button>
 							</li>
 
@@ -923,8 +871,7 @@
 									aria-controls="tab-8"
 									aria-selected="false"
 								>
-									<i class="fas fa-tshirt me-2"></i>Thrift
-									(Fashion)
+									<i class="fas fa-tshirt me-2"></i>Thrift (Fashion)
 								</button>
 							</li>
 
@@ -939,8 +886,7 @@
 									aria-controls="tab-9"
 									aria-selected="false"
 								>
-									<i class="fas fa-book-open me-2"></i
-									>Edu-Cation
+									<i class="fas fa-book-open me-2"></i>Edu-Cation
 								</button>
 							</li>
 
@@ -955,8 +901,7 @@
 									aria-controls="tab-10"
 									aria-selected="false"
 								>
-									<i class="fas fa-brush me-2"></i>Creatives &
-									Artists
+									<i class="fas fa-brush me-2"></i>Creatives & Artists
 								</button>
 							</li>
 
@@ -971,9 +916,8 @@
 									aria-controls="tab-11"
 									aria-selected="false"
 								>
-									<i class="fas fa-record-vinyl me-2"></i
-									>Recording Labels | Artists &amp;
-									Repertoire/Booking Agents
+									<i class="fas fa-record-vinyl me-2"></i>Recording Labels |
+									Artists &amp; Repertoire/Booking Agents
 								</button>
 							</li>
 
@@ -988,8 +932,8 @@
 									aria-controls="tab-12"
 									aria-selected="false"
 								>
-									<i class="fas fa-university me-2"></i
-									>NGOs/Sponsorships &amp; Funds
+									<i class="fas fa-university me-2"></i>NGOs/Sponsorships &amp;
+									Funds
 								</button>
 							</li>
 
@@ -1004,8 +948,8 @@
 									aria-controls="tab-13"
 									aria-selected="false"
 								>
-									<i class="fas fa-users me-2"></i>Creative
-									Hubs/Studios &amp; Co-working spaces
+									<i class="fas fa-users me-2"></i>Creative Hubs/Studios &amp;
+									Co-working spaces
 								</button>
 							</li>
 
@@ -1020,8 +964,7 @@
 									aria-controls="my-directories-tab"
 									aria-selected="false"
 								>
-									<i class="fas fa-hotel me-2"></i>Air Bnbs,
-									Hotels &amp; Resorts
+									<i class="fas fa-hotel me-2"></i>Air Bnbs, Hotels &amp; Resorts
 								</button>
 							</li>
 
@@ -1036,9 +979,8 @@
 									aria-controls="tab-15"
 									aria-selected="false"
 								>
-									<i class="fas fa-first-aid me-2"></i
-									>Hospitals/Medical Specialists &amp;
-									facilities
+									<i class="fas fa-first-aid me-2"></i>Hospitals/Medical
+									Specialists &amp; facilities
 								</button>
 							</li>
 						</ul>
@@ -1069,36 +1011,22 @@
 										</div>
 
 										<div class="col-lg-auto p-2">
-											<div
-												class="input-group mx-auto w-fit"
-											>
-												<span class="input-group-text"
-													>Sort By</span
-												>
-												<select
-													class="form-select w-fit"
-												>
-													<option selected>
-														Popularity
-													</option>
+											<div class="input-group mx-auto w-fit">
+												<span class="input-group-text">Sort By</span>
+												<select class="form-select w-fit">
+													<option selected>Popularity</option>
 													<option>Relevance</option>
 												</select>
 											</div>
 										</div>
 									</div>
 
-									<div
-										class="row row-cols-1 row-cols-md-2 row-cols-lg-3"
-									>
+									<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
 										<div class="col p-2">
 											<div class="p-3 shadow c-rounded-1">
-												<div
-													class="row align-items-center"
-												>
+												<div class="row align-items-center">
 													<div class="col-4 p-1">
-														<div
-															class="d-flex align-items-center"
-														>
+														<div class="d-flex align-items-center">
 															<img
 																src="./assets/img/4.jpg"
 																class="w-100 c-rounded-1"
@@ -1109,37 +1037,27 @@
 													<div class="col p-1">
 														<div>
 															<h5 class="mb-1">
-																<a
-																	href="./account-event.html"
-																>
-																	Fiesta
-																	Festival
+																<a href="./account-event.html">
+																	Fiesta Festival
 																</a>
 															</h5>
 
 															<p class="my-1">
-																<i
-																	class="bi bi-geo-alt me-2"
-																></i
+																<i class="bi bi-geo-alt me-2"></i
 																>Harare
 															</p>
 
 															<p class="my-1">
-																Leisure, Music,
-																Drinks
+																Leisure, Music, Drinks
 															</p>
 														</div>
 													</div>
 												</div>
 
-												<div
-													class="border-top mt-2 pt-2 border-2"
-												>
+												<div class="border-top mt-2 pt-2 border-2">
 													<p class="m-0 p-0">
-														Lorem ipsum dolor sit
-														amet, consectetur
-														adipisicing elit.
-														Laborum officia
+														Lorem ipsum dolor sit amet, consectetur
+														adipisicing elit. Laborum officia
 														necessitatibus.
 													</p>
 												</div>
@@ -1148,13 +1066,9 @@
 
 										<div class="col p-2">
 											<div class="p-3 shadow c-rounded-1">
-												<div
-													class="row align-items-center"
-												>
+												<div class="row align-items-center">
 													<div class="col-4 p-1">
-														<div
-															class="d-flex align-items-center"
-														>
+														<div class="d-flex align-items-center">
 															<img
 																src="./assets/img/4.jpg"
 																class="w-100 c-rounded-1"
@@ -1165,37 +1079,27 @@
 													<div class="col p-1">
 														<div>
 															<h5 class="mb-1">
-																<a
-																	href="./account-event.html"
-																>
-																	Fiesta
-																	Festival
+																<a href="./account-event.html">
+																	Fiesta Festival
 																</a>
 															</h5>
 
 															<p class="my-1">
-																<i
-																	class="bi bi-geo-alt me-2"
-																></i
+																<i class="bi bi-geo-alt me-2"></i
 																>Harare
 															</p>
 
 															<p class="my-1">
-																Leisure, Music,
-																Drinks
+																Leisure, Music, Drinks
 															</p>
 														</div>
 													</div>
 												</div>
 
-												<div
-													class="border-top mt-2 pt-2 border-2"
-												>
+												<div class="border-top mt-2 pt-2 border-2">
 													<p class="m-0 p-0">
-														Lorem ipsum dolor sit
-														amet, consectetur
-														adipisicing elit.
-														Laborum officia
+														Lorem ipsum dolor sit amet, consectetur
+														adipisicing elit. Laborum officia
 														necessitatibus.
 													</p>
 												</div>
@@ -1204,13 +1108,9 @@
 
 										<div class="col p-2">
 											<div class="p-3 shadow c-rounded-1">
-												<div
-													class="row align-items-center"
-												>
+												<div class="row align-items-center">
 													<div class="col-4 p-1">
-														<div
-															class="d-flex align-items-center"
-														>
+														<div class="d-flex align-items-center">
 															<img
 																src="./assets/img/4.jpg"
 																class="w-100 c-rounded-1"
@@ -1221,37 +1121,27 @@
 													<div class="col p-1">
 														<div>
 															<h5 class="mb-1">
-																<a
-																	href="./account-event.html"
-																>
-																	Fiesta
-																	Festival
+																<a href="./account-event.html">
+																	Fiesta Festival
 																</a>
 															</h5>
 
 															<p class="my-1">
-																<i
-																	class="bi bi-geo-alt me-2"
-																></i
+																<i class="bi bi-geo-alt me-2"></i
 																>Harare
 															</p>
 
 															<p class="my-1">
-																Leisure, Music,
-																Drinks
+																Leisure, Music, Drinks
 															</p>
 														</div>
 													</div>
 												</div>
 
-												<div
-													class="border-top mt-2 pt-2 border-2"
-												>
+												<div class="border-top mt-2 pt-2 border-2">
 													<p class="m-0 p-0">
-														Lorem ipsum dolor sit
-														amet, consectetur
-														adipisicing elit.
-														Laborum officia
+														Lorem ipsum dolor sit amet, consectetur
+														adipisicing elit. Laborum officia
 														necessitatibus.
 													</p>
 												</div>
@@ -1260,13 +1150,9 @@
 
 										<div class="col p-2">
 											<div class="p-3 shadow c-rounded-1">
-												<div
-													class="row align-items-center"
-												>
+												<div class="row align-items-center">
 													<div class="col-4 p-1">
-														<div
-															class="d-flex align-items-center"
-														>
+														<div class="d-flex align-items-center">
 															<img
 																src="./assets/img/4.jpg"
 																class="w-100 c-rounded-1"
@@ -1277,37 +1163,27 @@
 													<div class="col p-1">
 														<div>
 															<h5 class="mb-1">
-																<a
-																	href="./account-event.html"
-																>
-																	Fiesta
-																	Festival
+																<a href="./account-event.html">
+																	Fiesta Festival
 																</a>
 															</h5>
 
 															<p class="my-1">
-																<i
-																	class="bi bi-geo-alt me-2"
-																></i
+																<i class="bi bi-geo-alt me-2"></i
 																>Harare
 															</p>
 
 															<p class="my-1">
-																Leisure, Music,
-																Drinks
+																Leisure, Music, Drinks
 															</p>
 														</div>
 													</div>
 												</div>
 
-												<div
-													class="border-top mt-2 pt-2 border-2"
-												>
+												<div class="border-top mt-2 pt-2 border-2">
 													<p class="m-0 p-0">
-														Lorem ipsum dolor sit
-														amet, consectetur
-														adipisicing elit.
-														Laborum officia
+														Lorem ipsum dolor sit amet, consectetur
+														adipisicing elit. Laborum officia
 														necessitatibus.
 													</p>
 												</div>
@@ -1317,11 +1193,7 @@
 								</div>
 							</div>
 
-							<div
-								class="tab-pane position-relative"
-								id="tab-2"
-								role="tabpanel"
-							>
+							<div class="tab-pane position-relative" id="tab-2" role="tabpanel">
 								<div>
 									<div
 										class="row border-bottom border-2 mb-4 pb-2 text-center text-lg-start align-items-center"
@@ -1338,18 +1210,10 @@
 										</div>
 
 										<div class="col-lg-auto p-2">
-											<div
-												class="input-group mx-auto w-fit"
-											>
-												<span class="input-group-text"
-													>Sort By</span
-												>
-												<select
-													class="form-select w-fit"
-												>
-													<option selected>
-														Popularity
-													</option>
+											<div class="input-group mx-auto w-fit">
+												<span class="input-group-text">Sort By</span>
+												<select class="form-select w-fit">
+													<option selected>Popularity</option>
 													<option>Relevance</option>
 												</select>
 											</div>
@@ -1358,14 +1222,9 @@
 
 									<div class="row row-cols-2 row-cols-lg-5">
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -1375,15 +1234,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -1395,14 +1249,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -1412,15 +1261,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -1432,14 +1276,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -1449,15 +1288,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -1469,14 +1303,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -1486,15 +1315,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -1506,14 +1330,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -1523,15 +1342,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -1543,14 +1357,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -1560,15 +1369,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -1582,11 +1386,7 @@
 								</div>
 							</div>
 
-							<div
-								class="tab-pane position-relative"
-								id="tab-3"
-								role="tabpanel"
-							>
+							<div class="tab-pane position-relative" id="tab-3" role="tabpanel">
 								<div>
 									<div
 										class="row border-bottom border-2 mb-4 pb-2 text-center text-lg-start align-items-center"
@@ -1603,18 +1403,10 @@
 										</div>
 
 										<div class="col-lg-auto p-2">
-											<div
-												class="input-group mx-auto w-fit"
-											>
-												<span class="input-group-text"
-													>Sort By</span
-												>
-												<select
-													class="form-select w-fit"
-												>
-													<option selected>
-														Popularity
-													</option>
+											<div class="input-group mx-auto w-fit">
+												<span class="input-group-text">Sort By</span>
+												<select class="form-select w-fit">
+													<option selected>Popularity</option>
 													<option>Relevance</option>
 												</select>
 											</div>
@@ -1623,14 +1415,9 @@
 
 									<div class="row row-cols-2 row-cols-lg-5">
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -1640,15 +1427,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -1660,14 +1442,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -1677,15 +1454,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -1697,14 +1469,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -1714,15 +1481,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -1734,14 +1496,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -1751,15 +1508,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -1771,14 +1523,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -1788,15 +1535,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -1808,14 +1550,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -1825,15 +1562,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -1847,11 +1579,7 @@
 								</div>
 							</div>
 
-							<div
-								class="tab-pane position-relative"
-								id="tab-4"
-								role="tabpanel"
-							>
+							<div class="tab-pane position-relative" id="tab-4" role="tabpanel">
 								<div>
 									<div
 										class="row border-bottom border-2 mb-4 pb-2 text-center text-lg-start align-items-center"
@@ -1868,18 +1596,10 @@
 										</div>
 
 										<div class="col-lg-auto p-2">
-											<div
-												class="input-group mx-auto w-fit"
-											>
-												<span class="input-group-text"
-													>Sort By</span
-												>
-												<select
-													class="form-select w-fit"
-												>
-													<option selected>
-														Popularity
-													</option>
+											<div class="input-group mx-auto w-fit">
+												<span class="input-group-text">Sort By</span>
+												<select class="form-select w-fit">
+													<option selected>Popularity</option>
 													<option>Relevance</option>
 												</select>
 											</div>
@@ -1888,14 +1608,9 @@
 
 									<div class="row row-cols-2 row-cols-lg-5">
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -1905,15 +1620,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -1925,14 +1635,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -1942,15 +1647,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -1962,14 +1662,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -1979,15 +1674,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -1999,14 +1689,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2016,15 +1701,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2036,14 +1716,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2053,15 +1728,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2073,14 +1743,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2090,15 +1755,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2112,11 +1772,7 @@
 								</div>
 							</div>
 
-							<div
-								class="tab-pane position-relative"
-								id="tab-5"
-								role="tabpanel"
-							>
+							<div class="tab-pane position-relative" id="tab-5" role="tabpanel">
 								<div>
 									<div
 										class="row border-bottom border-2 mb-4 pb-2 text-center text-lg-start align-items-center"
@@ -2133,18 +1789,10 @@
 										</div>
 
 										<div class="col-lg-auto p-2">
-											<div
-												class="input-group mx-auto w-fit"
-											>
-												<span class="input-group-text"
-													>Sort By</span
-												>
-												<select
-													class="form-select w-fit"
-												>
-													<option selected>
-														Popularity
-													</option>
+											<div class="input-group mx-auto w-fit">
+												<span class="input-group-text">Sort By</span>
+												<select class="form-select w-fit">
+													<option selected>Popularity</option>
 													<option>Relevance</option>
 												</select>
 											</div>
@@ -2153,14 +1801,9 @@
 
 									<div class="row row-cols-2 row-cols-lg-5">
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2170,15 +1813,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2190,14 +1828,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2207,15 +1840,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2227,14 +1855,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2244,15 +1867,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2264,14 +1882,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2281,15 +1894,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2301,14 +1909,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2318,15 +1921,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2338,14 +1936,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2355,15 +1948,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2377,11 +1965,7 @@
 								</div>
 							</div>
 
-							<div
-								class="tab-pane position-relative"
-								id="tab-6"
-								role="tabpanel"
-							>
+							<div class="tab-pane position-relative" id="tab-6" role="tabpanel">
 								<div>
 									<div
 										class="row border-bottom border-2 mb-4 pb-2 text-center text-lg-start align-items-center"
@@ -2399,18 +1983,10 @@
 										</div>
 
 										<div class="col-lg-auto p-2">
-											<div
-												class="input-group mx-auto w-fit"
-											>
-												<span class="input-group-text"
-													>Sort By</span
-												>
-												<select
-													class="form-select w-fit"
-												>
-													<option selected>
-														Popularity
-													</option>
+											<div class="input-group mx-auto w-fit">
+												<span class="input-group-text">Sort By</span>
+												<select class="form-select w-fit">
+													<option selected>Popularity</option>
 													<option>Relevance</option>
 												</select>
 											</div>
@@ -2419,14 +1995,9 @@
 
 									<div class="row row-cols-2 row-cols-lg-5">
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2436,15 +2007,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2456,14 +2022,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2473,15 +2034,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2493,14 +2049,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2510,15 +2061,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2530,14 +2076,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2547,15 +2088,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2567,14 +2103,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2584,15 +2115,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2604,14 +2130,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2621,15 +2142,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2643,11 +2159,7 @@
 								</div>
 							</div>
 
-							<div
-								class="tab-pane position-relative"
-								id="tab-7"
-								role="tabpanel"
-							>
+							<div class="tab-pane position-relative" id="tab-7" role="tabpanel">
 								<div>
 									<div
 										class="row border-bottom border-2 mb-4 pb-2 text-center text-lg-start align-items-center"
@@ -2664,18 +2176,10 @@
 										</div>
 
 										<div class="col-lg-auto p-2">
-											<div
-												class="input-group mx-auto w-fit"
-											>
-												<span class="input-group-text"
-													>Sort By</span
-												>
-												<select
-													class="form-select w-fit"
-												>
-													<option selected>
-														Popularity
-													</option>
+											<div class="input-group mx-auto w-fit">
+												<span class="input-group-text">Sort By</span>
+												<select class="form-select w-fit">
+													<option selected>Popularity</option>
 													<option>Relevance</option>
 												</select>
 											</div>
@@ -2684,14 +2188,9 @@
 
 									<div class="row row-cols-2 row-cols-lg-5">
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2701,15 +2200,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2721,14 +2215,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2738,15 +2227,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2758,14 +2242,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2775,15 +2254,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2795,14 +2269,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2812,15 +2281,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2832,14 +2296,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2849,15 +2308,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2869,14 +2323,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2886,15 +2335,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2908,11 +2352,7 @@
 								</div>
 							</div>
 
-							<div
-								class="tab-pane position-relative"
-								id="tab-8"
-								role="tabpanel"
-							>
+							<div class="tab-pane position-relative" id="tab-8" role="tabpanel">
 								<div>
 									<div
 										class="row border-bottom border-2 mb-4 pb-2 text-center text-lg-start align-items-center"
@@ -2929,18 +2369,10 @@
 										</div>
 
 										<div class="col-lg-auto p-2">
-											<div
-												class="input-group mx-auto w-fit"
-											>
-												<span class="input-group-text"
-													>Sort By</span
-												>
-												<select
-													class="form-select w-fit"
-												>
-													<option selected>
-														Popularity
-													</option>
+											<div class="input-group mx-auto w-fit">
+												<span class="input-group-text">Sort By</span>
+												<select class="form-select w-fit">
+													<option selected>Popularity</option>
 													<option>Relevance</option>
 												</select>
 											</div>
@@ -2949,14 +2381,9 @@
 
 									<div class="row row-cols-2 row-cols-lg-5">
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -2966,15 +2393,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -2986,14 +2408,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3003,15 +2420,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3023,14 +2435,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3040,15 +2447,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3060,14 +2462,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3077,15 +2474,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3097,14 +2489,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3114,15 +2501,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3134,14 +2516,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3151,15 +2528,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3173,11 +2545,7 @@
 								</div>
 							</div>
 
-							<div
-								class="tab-pane position-relative"
-								id="tab-9"
-								role="tabpanel"
-							>
+							<div class="tab-pane position-relative" id="tab-9" role="tabpanel">
 								<div>
 									<div
 										class="row border-bottom border-2 mb-4 pb-2 text-center text-lg-start align-items-center"
@@ -3195,18 +2563,10 @@
 										</div>
 
 										<div class="col-lg-auto p-2">
-											<div
-												class="input-group mx-auto w-fit"
-											>
-												<span class="input-group-text"
-													>Sort By</span
-												>
-												<select
-													class="form-select w-fit"
-												>
-													<option selected>
-														Popularity
-													</option>
+											<div class="input-group mx-auto w-fit">
+												<span class="input-group-text">Sort By</span>
+												<select class="form-select w-fit">
+													<option selected>Popularity</option>
 													<option>Relevance</option>
 												</select>
 											</div>
@@ -3215,14 +2575,9 @@
 
 									<div class="row row-cols-2 row-cols-lg-5">
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3232,15 +2587,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3252,14 +2602,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3269,15 +2614,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3289,14 +2629,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3306,15 +2641,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3326,14 +2656,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3343,15 +2668,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3363,14 +2683,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3380,15 +2695,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3400,14 +2710,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3417,15 +2722,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3439,11 +2739,7 @@
 								</div>
 							</div>
 
-							<div
-								class="tab-pane position-relative"
-								id="tab-10"
-								role="tabpanel"
-							>
+							<div class="tab-pane position-relative" id="tab-10" role="tabpanel">
 								<div>
 									<div
 										class="row border-bottom border-2 mb-4 pb-2 text-center text-lg-start align-items-center"
@@ -3460,18 +2756,10 @@
 										</div>
 
 										<div class="col-lg-auto p-2">
-											<div
-												class="input-group mx-auto w-fit"
-											>
-												<span class="input-group-text"
-													>Sort By</span
-												>
-												<select
-													class="form-select w-fit"
-												>
-													<option selected>
-														Popularity
-													</option>
+											<div class="input-group mx-auto w-fit">
+												<span class="input-group-text">Sort By</span>
+												<select class="form-select w-fit">
+													<option selected>Popularity</option>
 													<option>Relevance</option>
 												</select>
 											</div>
@@ -3480,14 +2768,9 @@
 
 									<div class="row row-cols-2 row-cols-lg-5">
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3497,15 +2780,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3517,14 +2795,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3534,15 +2807,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3554,14 +2822,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3571,15 +2834,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3591,14 +2849,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3608,15 +2861,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3628,14 +2876,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3645,15 +2888,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3665,14 +2903,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3682,15 +2915,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3704,19 +2932,15 @@
 								</div>
 							</div>
 
-							<div
-								class="tab-pane position-relative"
-								id="tab-11"
-								role="tabpanel"
-							>
+							<div class="tab-pane position-relative" id="tab-11" role="tabpanel">
 								<div>
 									<div
 										class="row border-bottom border-2 mb-4 pb-2 text-center text-lg-start align-items-center"
 									>
 										<div class="col-lg p-2">
 											<h5 class="m-0 p-0">
-												Recording Labels | Artists &amp;
-												Repertoire/Booking Agents
+												Recording Labels | Artists &amp; Repertoire/Booking
+												Agents
 												<a
 													href="join-inc.html"
 													class="btn btn-primary m-2 rounded-pill px-3"
@@ -3726,18 +2950,10 @@
 										</div>
 
 										<div class="col-lg-auto p-2">
-											<div
-												class="input-group mx-auto w-fit"
-											>
-												<span class="input-group-text"
-													>Sort By</span
-												>
-												<select
-													class="form-select w-fit"
-												>
-													<option selected>
-														Popularity
-													</option>
+											<div class="input-group mx-auto w-fit">
+												<span class="input-group-text">Sort By</span>
+												<select class="form-select w-fit">
+													<option selected>Popularity</option>
 													<option>Relevance</option>
 												</select>
 											</div>
@@ -3746,14 +2962,9 @@
 
 									<div class="row row-cols-2 row-cols-lg-5">
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3763,15 +2974,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3783,14 +2989,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3800,15 +3001,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3820,14 +3016,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3837,15 +3028,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3857,14 +3043,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3874,15 +3055,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3894,14 +3070,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3911,15 +3082,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3931,14 +3097,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -3948,15 +3109,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -3970,11 +3126,7 @@
 								</div>
 							</div>
 
-							<div
-								class="tab-pane position-relative"
-								id="tab-12"
-								role="tabpanel"
-							>
+							<div class="tab-pane position-relative" id="tab-12" role="tabpanel">
 								<div>
 									<div
 										class="row border-bottom border-2 mb-4 pb-2 text-center text-lg-start align-items-center"
@@ -3991,18 +3143,10 @@
 										</div>
 
 										<div class="col-lg-auto p-2">
-											<div
-												class="input-group mx-auto w-fit"
-											>
-												<span class="input-group-text"
-													>Sort By</span
-												>
-												<select
-													class="form-select w-fit"
-												>
-													<option selected>
-														Popularity
-													</option>
+											<div class="input-group mx-auto w-fit">
+												<span class="input-group-text">Sort By</span>
+												<select class="form-select w-fit">
+													<option selected>Popularity</option>
 													<option>Relevance</option>
 												</select>
 											</div>
@@ -4011,14 +3155,9 @@
 
 									<div class="row row-cols-2 row-cols-lg-5">
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4028,15 +3167,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4048,14 +3182,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4065,15 +3194,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4085,14 +3209,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4102,15 +3221,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4122,14 +3236,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4139,15 +3248,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4159,14 +3263,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4176,15 +3275,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4196,14 +3290,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4213,15 +3302,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4235,19 +3319,14 @@
 								</div>
 							</div>
 
-							<div
-								class="tab-pane position-relative"
-								id="tab-13"
-								role="tabpanel"
-							>
+							<div class="tab-pane position-relative" id="tab-13" role="tabpanel">
 								<div>
 									<div
 										class="row border-bottom border-2 mb-4 pb-2 text-center text-lg-start align-items-center"
 									>
 										<div class="col-lg p-2">
 											<h5 class="m-0 p-0">
-												Creative Hubs/Studios &amp;
-												Co-working spaces
+												Creative Hubs/Studios &amp; Co-working spaces
 
 												<a
 													href="join-inc.html"
@@ -4258,18 +3337,10 @@
 										</div>
 
 										<div class="col-lg-auto p-2">
-											<div
-												class="input-group mx-auto w-fit"
-											>
-												<span class="input-group-text"
-													>Sort By</span
-												>
-												<select
-													class="form-select w-fit"
-												>
-													<option selected>
-														Popularity
-													</option>
+											<div class="input-group mx-auto w-fit">
+												<span class="input-group-text">Sort By</span>
+												<select class="form-select w-fit">
+													<option selected>Popularity</option>
 													<option>Relevance</option>
 												</select>
 											</div>
@@ -4278,14 +3349,9 @@
 
 									<div class="row row-cols-2 row-cols-lg-5">
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4295,15 +3361,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4315,14 +3376,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4332,15 +3388,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4352,14 +3403,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4369,15 +3415,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4389,14 +3430,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4406,15 +3442,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4426,14 +3457,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4443,15 +3469,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4463,14 +3484,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4480,15 +3496,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4502,11 +3513,7 @@
 								</div>
 							</div>
 
-							<div
-								class="tab-pane position-relative"
-								id="tab-14"
-								role="tabpanel"
-							>
+							<div class="tab-pane position-relative" id="tab-14" role="tabpanel">
 								<div>
 									<div
 										class="row border-bottom border-2 mb-4 pb-2 text-center text-lg-start align-items-center"
@@ -4524,18 +3531,10 @@
 										</div>
 
 										<div class="col-lg-auto p-2">
-											<div
-												class="input-group mx-auto w-fit"
-											>
-												<span class="input-group-text"
-													>Sort By</span
-												>
-												<select
-													class="form-select w-fit"
-												>
-													<option selected>
-														Popularity
-													</option>
+											<div class="input-group mx-auto w-fit">
+												<span class="input-group-text">Sort By</span>
+												<select class="form-select w-fit">
+													<option selected>Popularity</option>
 													<option>Relevance</option>
 												</select>
 											</div>
@@ -4544,14 +3543,9 @@
 
 									<div class="row row-cols-2 row-cols-lg-5">
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4561,15 +3555,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4581,14 +3570,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4598,15 +3582,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4618,14 +3597,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4635,15 +3609,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4655,14 +3624,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4672,15 +3636,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4692,14 +3651,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4709,15 +3663,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4729,14 +3678,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4746,15 +3690,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4768,19 +3707,14 @@
 								</div>
 							</div>
 
-							<div
-								class="tab-pane position-relative"
-								id="tab-15"
-								role="tabpanel"
-							>
+							<div class="tab-pane position-relative" id="tab-15" role="tabpanel">
 								<div>
 									<div
 										class="row border-bottom border-2 mb-4 pb-2 text-center text-lg-start align-items-center"
 									>
 										<div class="col-lg p-2">
 											<h5 class="m-0 p-0">
-												Hospitals/Medical Specialists
-												&amp; facilities
+												Hospitals/Medical Specialists &amp; facilities
 												<a
 													href="join-inc.html"
 													class="btn btn-primary m-2 rounded-pill px-3"
@@ -4790,18 +3724,10 @@
 										</div>
 
 										<div class="col-lg-auto p-2">
-											<div
-												class="input-group mx-auto w-fit"
-											>
-												<span class="input-group-text"
-													>Sort By</span
-												>
-												<select
-													class="form-select w-fit"
-												>
-													<option selected>
-														Popularity
-													</option>
+											<div class="input-group mx-auto w-fit">
+												<span class="input-group-text">Sort By</span>
+												<select class="form-select w-fit">
+													<option selected>Popularity</option>
 													<option>Relevance</option>
 												</select>
 											</div>
@@ -4810,14 +3736,9 @@
 
 									<div class="row row-cols-2 row-cols-lg-5">
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4827,15 +3748,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4847,14 +3763,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4864,15 +3775,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4884,14 +3790,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4901,15 +3802,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4921,14 +3817,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4938,15 +3829,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4958,14 +3844,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -4975,15 +3856,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -4995,14 +3871,9 @@
 										</div>
 
 										<div class="col p-2">
-											<div
-												class="text-center p-3 shadow c-rounded-2"
-											>
+											<div class="text-center p-3 shadow c-rounded-2">
 												<div
-													style="
-														width: 6rem;
-														height: 6rem;
-													"
+													style="width: 6rem; height: 6rem"
 													class="d-flex justify-content-center align-items-center rounded-circle overflow-hidden mx-auto"
 												>
 													<img
@@ -5012,15 +3883,10 @@
 												</div>
 
 												<h5 class="my-2">
-													<a
-														href="./account-person.html"
-														>John Doe</a
-													>
+													<a href="./account-person.html">John Doe</a>
 												</h5>
 
-												<p class="my-1">
-													Financial Advisor
-												</p>
+												<p class="my-1">Financial Advisor</p>
 
 												<p class="my-1">
 													<i
@@ -5043,10 +3909,7 @@
 								<li class="page-item">
 									<a class="page-link" href="#">1</a>
 								</li>
-								<li
-									class="page-item active"
-									aria-current="page"
-								>
+								<li class="page-item active" aria-current="page">
 									<span class="page-link">2</span>
 								</li>
 								<li class="page-item">
@@ -5064,13 +3927,9 @@
 
 		<footer class="container d-lg-flex justify-content-between p-5">
 			<div class="text-center">
-				<p class="d-lg-inline">
-					&copy; 2022 Gum.iNc. All Rights Reserved
-				</p>
+				<p class="d-lg-inline">&copy; 2022 Gum.iNc. All Rights Reserved</p>
 
-				<a
-					href="./partner.html"
-					class="btn btn-success px-3 rounded-pill ms-3"
+				<a href="./partner.html" class="btn btn-success px-3 rounded-pill ms-3"
 					>Partner With Us</a
 				>
 			</div>

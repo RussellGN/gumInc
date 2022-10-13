@@ -10,26 +10,14 @@
 			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
 			rel="stylesheet"
 		/>
-		<link
-			rel="stylesheet"
-			href="./assets/vendor/bootstrap-icons/bootstrap-icons.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="./assets/vendor/fontawsome/css/all.min.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="./assets/vendor/custom-bootstrap/css/custom.min.css"
-		/>
+		<link rel="stylesheet" href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" />
+		<link rel="stylesheet" href="./assets/vendor/fontawsome/css/all.min.css" />
+		<link rel="stylesheet" href="./assets/vendor/custom-bootstrap/css/custom.min.css" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<!-- scripts -->
 
-		<script
-			defer
-			src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"
-		></script>
+		<script defer src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"></script>
 
 		<script defer src="./assets/js/main.js"></script>
 		<script defer src="./assets/js/custom.js"></script>
@@ -50,30 +38,21 @@
 						<i class="bi bi-list fs-4"></i>
 					</button>
 
-					<a
-						href="./index.html"
-						class="navbar-brand fw-bold text-primary fs-3"
+					<a href="./index.html" class="navbar-brand fw-bold text-primary fs-3"
 						><img
 							src="./assets/logos and stuff/logo (44).jpg"
 							class="gum-logo rounded-pill"
 					/></a>
 
-					<a
-						class="nav-link order-last d-lg-none active"
-						href="./cart.html"
+					<a class="nav-link order-last d-lg-none active" href="./cart.html"
 						><i class="bi bi-cart4"></i
 					></a>
 
 					<div class="d-lg-flex d-none">
 						<a href="./index.html" class="nav-link">Home</a>
 						<a href="directory.html" class="nav-link">Directory</a>
-						<a href="./connect.html" class="nav-link"
-							>Inc Connect</a
-						>
-						<a href="./store.html" class="nav-link">Store</a>
-						<a href="directories-and-almanacs.html" class="nav-link"
-							>Almanacs & Directories</a
-						>
+						<a href="./connect.html" class="nav-link">Inc Connect</a>
+
 						<a href="./about.html" class="nav-link">About</a>
 						<a href="./account.html" class="nav-link">Account</a>
 						<a href="./cart.html" class="nav-link active"
@@ -86,11 +65,7 @@
 
 		<main class="container pt-5 mt-4">
 			<div class="c-rounded-2 shadow my-5 p-4" style="min-height: 70vh">
-				<ul
-					class="nav nav-tabs justify-content-around"
-					id="generalTabs"
-					role="tablist"
-				>
+				<ul class="nav nav-tabs justify-content-around" id="generalTabs" role="tablist">
 					<li class="nav-item" role="presentation">
 						<button
 							class="nav-link active"
@@ -103,9 +78,7 @@
 							aria-selected="true"
 						>
 							<i class="bi bi-info-circle me-lg-2"></i
-							><span class="d-none d-lg-inline"
-								>Select Payment Method</span
-							>
+							><span class="d-none d-lg-inline">Select Payment Method</span>
 						</button>
 					</li>
 
@@ -121,9 +94,7 @@
 							aria-selected="false"
 						>
 							<i class="bi bi-credit-card-2-front me-lg-2"></i
-							><span class="d-none d-lg-inline"
-								>Enter Payment Details</span
-							>
+							><span class="d-none d-lg-inline">Enter Payment Details</span>
 						</button>
 					</li>
 
@@ -139,9 +110,7 @@
 							aria-selected="false"
 						>
 							<i class="bi bi-check-circle me-lg-2"></i
-							><span class="d-none d-lg-inline"
-								>Confirmation</span
-							>
+							><span class="d-none d-lg-inline">Confirmation</span>
 						</button>
 					</li>
 				</ul>
@@ -157,12 +126,8 @@
 							<form>
 								<h5>Select payment method</h5>
 
-								<div
-									class="d-flex justify-content-between py-3 align-items-center"
-								>
-									<div class="lead pe-2 text-success">
-										Amount: $ 200
-									</div>
+								<div class="d-flex justify-content-between py-3 align-items-center">
+									<div class="lead pe-2 text-success">Amount: $ 200</div>
 
 									<input
 										type="submit"
@@ -173,19 +138,16 @@
 
 								<div>
 									<div class="d-flex my-2">
-										<div
-											class="d-flex align-items-center pe-2"
-										>
+										<div class="d-flex align-items-center pe-2">
 											<input
 												class="form-check-input"
 												type="radio"
+												name="payment-option"
 												checked
 											/>
 										</div>
 
-										<div
-											class="border-bottom row w-100 p-3 align-items-center"
-										>
+										<div class="border-bottom row w-100 p-3 align-items-center">
 											<div class="col-4 col-lg-2 p-2">
 												<img
 													src="./assets/img/paypal.jpg"
@@ -197,27 +159,22 @@
 												<div>PayPal</div>
 											</div>
 
-											<div
-												class="col-auto p-2 d-none d-lg-block"
-											>
+											<div class="col-auto p-2 d-none d-lg-block">
 												<div>****************</div>
 											</div>
 										</div>
 									</div>
 
 									<div class="d-flex my-2">
-										<div
-											class="d-flex align-items-center pe-2"
-										>
+										<div class="d-flex align-items-center pe-2">
 											<input
 												class="form-check-input"
 												type="radio"
+												name="payment-option"
 											/>
 										</div>
 
-										<div
-											class="border-bottom row w-100 p-3 align-items-center"
-										>
+										<div class="border-bottom row w-100 p-3 align-items-center">
 											<div class="col-4 col-lg-2 p-2">
 												<img
 													src="./assets/img/mastercard.jpg"
@@ -229,27 +186,22 @@
 												<div>Mastercard</div>
 											</div>
 
-											<div
-												class="col-auto p-2 d-none d-lg-block"
-											>
+											<div class="col-auto p-2 d-none d-lg-block">
 												<div>****************</div>
 											</div>
 										</div>
 									</div>
 
 									<div class="d-flex my-2">
-										<div
-											class="d-flex align-items-center pe-2"
-										>
+										<div class="d-flex align-items-center pe-2">
 											<input
 												class="form-check-input"
 												type="radio"
+												name="payment-option"
 											/>
 										</div>
 
-										<div
-											class="border-bottom row w-100 p-3 align-items-center"
-										>
+										<div class="border-bottom row w-100 p-3 align-items-center">
 											<div class="col-4 col-lg-2 p-2">
 												<img
 													src="./assets/img/visa.jpg"
@@ -261,27 +213,22 @@
 												<div>Visa</div>
 											</div>
 
-											<div
-												class="col-auto p-2 d-none d-lg-block"
-											>
+											<div class="col-auto p-2 d-none d-lg-block">
 												<div>****************</div>
 											</div>
 										</div>
 									</div>
 
 									<div class="d-flex my-2">
-										<div
-											class="d-flex align-items-center pe-2"
-										>
+										<div class="d-flex align-items-center pe-2">
 											<input
 												class="form-check-input"
 												type="radio"
+												name="payment-option"
 											/>
 										</div>
 
-										<div
-											class="border-bottom row w-100 p-3 align-items-center"
-										>
+										<div class="border-bottom row w-100 p-3 align-items-center">
 											<div class="col-4 col-lg-2 p-2">
 												<img
 													src="./assets/img/ecocash.png"
@@ -293,9 +240,7 @@
 												<div>EcoCash</div>
 											</div>
 
-											<div
-												class="col-auto p-2 d-none d-lg-block"
-											>
+											<div class="col-auto p-2 d-none d-lg-block">
 												<div>****************</div>
 											</div>
 										</div>
@@ -305,23 +250,16 @@
 						</div>
 					</div>
 
-					<div
-						class="tab-pane"
-						id="tab2"
-						role="tabpanel"
-						aria-labelledby="toggle2"
-					>
+					<div class="tab-pane" id="tab2" role="tabpanel" aria-labelledby="toggle2">
 						<form>
 							<div class="row justify-content-around">
 								<div class="col-12 text-center">
-									<h5>Payment Details & Delivery Address</h5>
+									<h5>Payment Details</h5>
 
 									<div
 										class="d-flex justify-content-center align-items-center py-3"
 									>
-										<div class="lead me-3 text-success">
-											Payment: USD 200
-										</div>
+										<div class="lead me-3 text-success">Payment: USD 200</div>
 										<input
 											type="submit"
 											value="Finish"
@@ -333,10 +271,8 @@
 								<div class="col-lg-6 p-3">
 									<div>
 										<p class="text-danger">
-											<i
-												class="bi bi-info-circle me-2"
-											></i
-											>Please Input Correct Details
+											<i class="bi bi-info-circle me-2"></i>Please Input
+											Correct Details
 										</p>
 
 										<div class="form-floating mb-3">
@@ -369,9 +305,7 @@
 														class="form-control"
 														placeholder="Expiry Date ***"
 													/>
-													<label
-														>Expiry Date ***</label
-													>
+													<label>Expiry Date ***</label>
 												</div>
 											</div>
 
@@ -390,14 +324,11 @@
 									</div>
 								</div>
 
-								<div class="col-lg-6 p-3">
+								<!-- <div class="col-lg-6 p-3">
 									<div>
 										<p class="text-danger">
-											<i
-												class="bi bi-info-circle me-2"
-											></i
-											>Your Items Will Be Delivered To
-											This Address.
+											<i class="bi bi-info-circle me-2"></i>Your Items Will Be
+											Delivered To This Address.
 										</p>
 
 										<div class="form-floating mb-3">
@@ -436,26 +367,18 @@
 											<label>Cell Number ***</label>
 										</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 
 							<div class="text-center">
-								<button
-									type="reset"
-									class="btn btn-danger rounded-pill px-3"
-								>
+								<button type="reset" class="btn btn-danger rounded-pill px-3">
 									Reset
 								</button>
 							</div>
 						</form>
 					</div>
 
-					<div
-						class="tab-pane"
-						id="tab3"
-						role="tabpanel"
-						aria-labelledby="toggle3"
-					>
+					<div class="tab-pane" id="tab3" role="tabpanel" aria-labelledby="toggle3">
 						<h3 class="text-center">Confirmation Message</h3>
 					</div>
 				</div>
@@ -464,13 +387,9 @@
 
 		<footer class="container d-lg-flex justify-content-between p-5">
 			<div class="text-center">
-				<p class="d-lg-inline">
-					&copy; 2022 Gum.iNc. All Rights Reserved
-				</p>
+				<p class="d-lg-inline">&copy; 2022 Gum.iNc. All Rights Reserved</p>
 
-				<a
-					href="./partner.html"
-					class="btn btn-success px-3 rounded-pill ms-3"
+				<a href="./partner.html" class="btn btn-success px-3 rounded-pill ms-3"
 					>Partner With Us</a
 				>
 			</div>

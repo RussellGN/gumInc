@@ -10,26 +10,14 @@
 			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
 			rel="stylesheet"
 		/>
-		<link
-			rel="stylesheet"
-			href="./assets/vendor/bootstrap-icons/bootstrap-icons.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="./assets/vendor/fontawsome/css/all.min.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="./assets/vendor/custom-bootstrap/css/custom.min.css"
-		/>
+		<link rel="stylesheet" href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" />
+		<link rel="stylesheet" href="./assets/vendor/fontawsome/css/all.min.css" />
+		<link rel="stylesheet" href="./assets/vendor/custom-bootstrap/css/custom.min.css" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<!-- scripts -->
 
-		<script
-			defer
-			src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"
-		></script>
+		<script defer src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"></script>
 
 		<script defer src="./assets/js/main.js"></script>
 		<script defer src="./assets/js/custom.js"></script>
@@ -39,9 +27,7 @@
 		<main class="container my-5">
 			<form class="shadow-lg mx-auto p-4">
 				<div>
-					<a
-						href="./index.html"
-						class="btn btn-primary px-3 rounded-pill"
+					<a href="./index.html" class="btn btn-primary px-3 rounded-pill"
 						><i class="bi bi-box-arrow-left me-2"></i>Back</a
 					>
 				</div>
@@ -53,29 +39,17 @@
 
 				<div class="col-md-8 mx-auto">
 					<div class="form-floating mb-3">
-						<input
-							type="text"
-							class="form-control"
-							placeholder="Username"
-						/>
+						<input type="text" class="form-control" placeholder="Username" />
 						<label>Username</label>
 					</div>
 
 					<div class="form-floating mb-3">
-						<input
-							type="email"
-							class="form-control"
-							placeholder="Email Address"
-						/>
+						<input type="email" class="form-control" placeholder="Email Address" />
 						<label>Email address</label>
 					</div>
 
 					<div class="form-floating mb-3">
-						<input
-							type="password"
-							class="form-control"
-							placeholder="Password"
-						/>
+						<input type="password" class="form-control" placeholder="Password" />
 						<label>Password</label>
 					</div>
 
@@ -98,20 +72,12 @@
 					</div>
 
 					<div class="form-floating mb-3">
-						<input
-							type="text"
-							class="form-control"
-							placeholder="Location"
-						/>
+						<input type="text" class="form-control" placeholder="Location" />
 						<label>Location</label>
 					</div>
 
 					<div class="form-floating mb-3">
-						<input
-							type="text"
-							class="form-control"
-							placeholder="Phone number"
-						/>
+						<input type="text" class="form-control" placeholder="Phone number" />
 						<label>Phone number</label>
 					</div>
 
@@ -122,9 +88,8 @@
 
 					<div class="mb-3">
 						<p class="text-success text-center">
-							<i class="bi bi-image me-2"></i>Upload a display
-							photo, you can change this later. Try picking an
-							image that fits perfectly into the frame
+							<i class="bi bi-image me-2"></i>Upload a display photo, you can change
+							this later. Try picking an image that fits perfectly into the frame
 						</p>
 
 						<div class="image-upload-field">
@@ -133,19 +98,12 @@
 								<i class="bi bi-plus-circle"></i>
 							</button>
 
-							<input
-								type="file"
-								class="d-none"
-								accept="image/*"
-							/>
+							<input type="file" class="d-none" accept="image/*" />
 						</div>
 					</div>
 
 					<div class="text-center">
-						<a
-							href="./account.html"
-							class="btn m-2 btn-success rounded-pill px-3"
-						>
+						<a href="./account.html" class="btn m-2 btn-success rounded-pill px-3">
 							Proceed
 						</a>
 
@@ -168,9 +126,7 @@
 
 		<script>
 			function resetDp() {
-				const DP = document.querySelector(
-					".image-upload-field button i"
-				);
+				const DP = document.querySelector(".image-upload-field button i");
 				if (DP.classList.contains("bi-trash")) {
 					DP.parentElement.click();
 				}
