@@ -23,6 +23,36 @@
 		<script defer src="./assets/js/custom.js"></script>
 	</head>
 
+	<style>
+		.selectable {
+			border: solid thin #008a63;
+			color: #008a63;
+			border-radius: 0.5rem;
+			cursor: pointer;
+			transition: all 0.2s;
+		}
+		.selectable:hover {
+			box-shadow: 1px 1px 5px gray;
+		}
+		.selectable.selected {
+			background-color: #008a63;
+			color: white;
+		}
+		.bi-cursor-fill {
+			transition: color 0.3s, transform 0.1s;
+		}
+		.block-screen {
+			cursor: not-allowed;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(255, 255, 255, 0.7);
+			z-index: 1;
+		}
+	</style>
+
 	<body>
 		<div id="invisible-elements">
 			<div class="custom-modals">
@@ -36,7 +66,7 @@
 					aria-hidden="true"
 				>
 					<div class="modal-dialog modal-dialog-centered">
-						<div class="modal-content c-rounded-2 p-5">
+						<div class="modal-content c-rounded-1 p-lg-5">
 							<div class="modal-header">
 								<h5 class="modal-title" id="locationModalLabel">Gum.iNc Access</h5>
 
@@ -57,7 +87,7 @@
 									</a>
 
 									<span class="text-success d-inline-block"
-										>selected<i class="fas fa-check-circle ms-3"></i>
+										><i class="fas fa-check-circle"></i>
 									</span>
 								</div>
 
@@ -75,9 +105,18 @@
 										Gum.iNc Regional
 									</button>
 
-									<span class="text-warning d-inline-block"
+									<button
+										type="button"
+										class="btn btn-outline-warning rounded"
+										data-bs-toggle="modal"
+										data-bs-target="#proModal"
+									>
+										pro<i class="fas fa-crown ms-3"></i>
+									</button>
+
+									<!-- <span class="text-warning d-inline-block"
 										>pro<i class="fas fa-crown ms-3"></i
-									></span>
+									></span> -->
 
 									<div class="dropdown-menu" aria-labelledby="counTrigger">
 										<a class="dropdown-item" href="#">Argentina</a>
@@ -102,9 +141,18 @@
 										Gum.iNc Continental
 									</button>
 
-									<span class="text-warning d-inline-block"
+									<button
+										type="button"
+										class="btn btn-outline-warning rounded"
+										data-bs-toggle="modal"
+										data-bs-target="#proModal"
+									>
+										pro<i class="fas fa-crown ms-3"></i>
+									</button>
+
+									<!-- <span class="text-warning d-inline-block"
 										>pro<i class="fas fa-crown ms-3"></i
-									></span>
+									></span> -->
 
 									<div class="dropdown-menu" aria-labelledby="coTrigger">
 										<a class="dropdown-item" href="#">Africa</a>
@@ -123,9 +171,63 @@
 										Gum.iNc International
 									</a>
 
-									<span class="text-warning d-inline-block"
+									<button
+										type="button"
+										class="btn btn-outline-warning rounded"
+										data-bs-toggle="modal"
+										data-bs-target="#proModal"
+									>
+										pro<i class="fas fa-crown ms-3"></i>
+									</button>
+
+									<!-- <span class="text-warning d-inline-block"
 										>pro<i class="fas fa-crown ms-3"></i
-									></span>
+									></span> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="modal fade"
+					id="proModal"
+					data-bs-backdrop="static"
+					data-bs-keyboard="false"
+					tabindex="-1"
+					aria-labelledby="proModalLabel"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content p-4 c-rounded-2">
+							<div class="modal-header">
+								<h5 class="modal-title flex-fill text-center" id="proModalLabel">
+									Upgrade To Gum.iNc Pro!
+								</h5>
+
+								<button
+									type="button"
+									class="btn-close fs-5"
+									data-bs-dismiss="modal"
+									aria-label="Close"
+								></button>
+							</div>
+
+							<div class="modal-body p-3 p-lg-5">
+								<div class="text-center align-items-center justify-content-around">
+									<div
+										class="c-rounded-1 shadow p-3 d-flex flex-column align-items-center justify-content-around h-100"
+									>
+										<div>
+											<i class="fas fa-crown fs-1 text-warning"></i>
+										</div>
+
+										<p class="my-3">Extent your reach/access globally</p>
+
+										<button class="btn btn-success rounded-pill px-3">
+											USD 50.00 Annually
+										</button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -284,7 +386,7 @@
 							class="gum-logo rounded-pill"
 					/></a>
 
-					<a class="nav-link order-last d-lg-none active" href="./cart.html"
+					<a class="nav-link order-last d-lg-none" href="./cart.html"
 						><i class="bi bi-cart4"></i
 					></a>
 
@@ -292,284 +394,211 @@
 						<a href="./index.html" class="nav-link">Home</a>
 						<a href="./directory.html" class="nav-link">Directory</a>
 						<a href="./connect.html" class="nav-link">Inc Connect</a>
-						<a href="./office.html" class="nav-link">Inc Office</a>
+						<a href="./office.html" class="nav-link active">Inc Office</a>
 
 						<a href="./about.html" class="nav-link">About</a>
 						<a href="./account.html" class="nav-link">Account</a>
-						<a href="./cart.html" class="nav-link active"
-							><i class="bi bi-cart4"></i
-						></a>
+						<a href="./cart.html" class="nav-link"><i class="bi bi-cart4"></i></a>
 					</div>
 				</div>
 			</div>
 		</header>
 
-		<main class="container pt-5">
-			<section class="top-section">
-				<h2>
-					<i class="bi bi-cart4 me-2 text-primary"></i> Cart
-					<span class="d-none d-lg-inline">- View your order</span>
-				</h2>
-			</section>
+		<a
+			href="./office-form.html"
+			class="office-proceed d-none shadow-lg btn btn-primary btn-lg rounded-pill px-3 position-fixed top-50 left-0 z-index-5 m-3"
+			>Proceed<i class="bi bi-arrow-right-short ms-2"></i
+		></a>
 
-			<div class="row">
-				<div class="col-lg p-2 mb-4 mb-lg-0">
-					<div class="p-3 p-lg-5 shadow c-rounded-2">
-						<div
-							class="pb-2 d-flex justify-content-between align-items-center border-bottom border-3"
-						>
-							<h2>Items</h2>
+		<main>
+			<div class="container pt-5 mt-4">
+				<div>
+					<h1 class="display-4 p-4 p-lg-5 pb-lg-4 text-gray">
+						Welcome To Inc
+						<span class="text-success"> Office </span>
+					</h1>
 
-							<span class="bg-success text-white rounded px-3 py-2">5 </span>
+					<p class="lead px-4 px-lg-5 mb-5">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium error
+						odit incidunt officiis, voluptas nam velit dolores praesentium dignissimos
+						tempora porro mollitia modi rem cum facere itaque aliquam quo doloremque?
+					</p>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-6 p-2">
+						<div class="border border-2 bg-light c-rounded-2 p-3 p-lg-5 lead">
+							<div class="mb-4">
+								<h2 class="p-0">Business Research Bureau iNc</h2>
+								<p class="">
+									Welcome to the Business Bureau by the Gum iNc- We offer monthly
+									newsletters ---
+									<i
+										style="font-size: 5rem; float: right"
+										class="bi bi-clipboard-data m-1 text-primary"
+									></i>
+									<!-- <img
+										src="./assets/clipboard.svg"
+										style="width: 4rem; float: right"
+										class="m-2"
+									/> -->
+									---- -------- ---- -------- ---- ---- ------------ ---- --------
+									---- -------- ---- ---- ------------ ---- -------- ---- --------
+									---- ---- ------------ -- ------ ----------- --
+								</p>
+							</div>
 						</div>
 
-						<div>
-							<div
-								class="row border border-2 align-items-center p-4 my-3 position-relative c-rounded-1"
-							>
-								<button
-									style="right: -10px; top: -10px"
-									class="btn btn-light border btn-sm rounded-circle position-absolute w-fit"
+						<div
+							style="position: relative; top: -40px; width: 85%; margin: 0 auto"
+							class="border border-2 bg-white c-rounded-2 shadow p-4"
+						>
+							<div class="w-fit position-relative">
+								<div
+									class="w-fit overflow-hidden d-flex bg-primary"
+									style="border-radius: 0 2rem 2rem 0; z-index: 1"
 								>
-									<i class="bi bi-x fs-4"></i>
-								</button>
-
-								<div class="col-9 p-2 mx-auto mx-lg-0 col-lg-3">
-									<div class="d-flex align-items-center">
-										<img
-											src="./assets/img/covers/gummy.jpg"
-											class="w-100 c-rounded-1 shadow"
-										/>
-									</div>
-								</div>
-
-								<div class="col-lg-auto text-center text-lg-start p-3">
-									<div>
-										<div>
-											<b>Gummy Pages Directory</b> <br />
-											<p class="border my-2 p-1 rounded">1 month feature</p>
-											<div>
-												<span class="text-success"
-													>Once-off fee: USD 4.00
-												</span>
-											</div>
-										</div>
-
-										<!-- <div
-											class="d-flex justify-content-center justify-content-lg-start align-items-center"
-										>
-											<span class="me-2">Copies:</span>
-
-											<button
-												type="button"
-												class="decreamentCopies btn p-0 text-danger"
-											>
-												<i class="bi bi-dash-circle fs-5"></i>
-											</button>
-
-											<input
-												type="number"
-												value="1"
-												max="999"
-												min="1"
-												class="copiesField w-fit rounded p-1 mx-1 text-center form-control"
-											/>
-
-											<button
-												type="button"
-												class="increamentCopies btn p-0 text-success"
-											>
-												<i class="bi bi-plus-circle fs-5"></i>
-											</button>
-										</div> -->
-									</div>
-								</div>
-
-								<div class="col-auto col-lg-3 p-2 mx-auto mx-lg-0 ms-lg-auto">
 									<div
-										class="shadow subscription-advert c-rounded-1 p-2 text-center text-shadow"
+										style="border-radius: 0 2rem 2rem 0; z-index: 1"
+										class="border bg-light p-1 pe-3"
 									>
-										<div>
-											<i class="bi bi-calendar-check text-shadow-0 fs-1"></i>
-										</div>
-
-										<p>
-											Subscribe for auto renewal!
-											<br />
-											<a class="btn btn-light mt-2 text-shadow-0 rounded-pill"
-												>Subscribe</a
-											>
-										</p>
+										Pick up to 3 - £ 29,9
 									</div>
+
+									<button class="select-all btn btn-primary p-2 pe-4 shadow">
+										<i class="bi bi-star me-2"></i>
+										Due Diligence (All) - £50
+									</button>
 								</div>
+
+								<i
+									class="bi bi-cursor-fill text-white"
+									style="
+										transform: rotate(-90deg);
+										position: absolute;
+										bottom: -1.84rem;
+										right: -0.7rem;
+										font-size: 2.3rem;
+										z-index: 2;
+									"
+								></i>
+								<i
+									class="bi bi-cursor-fill text-dark"
+									style="
+										transform: rotate(-90deg);
+										position: absolute;
+										bottom: -1.7rem;
+										right: -0.7rem;
+										font-size: 2rem;
+										z-index: 2;
+									"
+								></i>
 							</div>
 
 							<div
-								class="row border border-2 align-items-center p-4 my-3 position-relative c-rounded-1"
+								class="row pt-3 p-1 row-cols-auto lead position-relative"
+								id="block1"
 							>
-								<button
-									style="right: -10px; top: -10px"
-									class="btn btn-light border btn-sm rounded-circle position-absolute w-fit"
-								>
-									<i class="bi bi-x fs-4"></i>
-								</button>
-
-								<div class="col-9 p-2 mx-auto mx-lg-0 col-lg-3">
-									<div class="d-flex align-items-center">
-										<img
-											src="./assets/img/covers/creme-chefs.jpg"
-											class="w-100 c-rounded-1 shadow"
-										/>
-									</div>
+								<div class="block-screen d-none"></div>
+								<div class="selectable col p-3 m-1">Operations</div>
+								<div class="selectable col p-3 m-1">Sales & Marketing</div>
+								<div class="selectable col p-3 m-1">Strategy</div>
+								<div class="selectable col p-3 m-1">
+									Sustainability , Cause & Responsibility
 								</div>
-
-								<div class="col-lg-auto text-center text-lg-start p-3">
-									<div>
-										<div>
-											<b> Creme Chefs Almanac</b> <br />
-											<p class="bg-success text-white my-2 p-1 rounded">
-												1 year feature (ongoing renewal)
-											</p>
-											<div>
-												<span class="text-success"
-													>Annual fee: USD 45.60 <br />
-													<small class="text-gray"
-														>( USD 2.40 subscription disount )</small
-													></span
-												>
-											</div>
-										</div>
-
-										<!-- <div
-											class="d-flex justify-content-center justify-content-lg-start align-items-center"
-										>
-											<span class="me-2">Copies:</span>
-
-											<button
-												type="button"
-												class="decreamentCopies btn p-0 text-danger"
-											>
-												<i class="bi bi-dash-circle fs-5"></i>
-											</button>
-
-											<input
-												type="number"
-												value="1"
-												max="999"
-												min="1"
-												class="copiesField w-fit rounded p-1 mx-1 text-center form-control"
-											/>
-
-											<button
-												type="button"
-												class="increamentCopies btn p-0 text-success"
-											>
-												<i class="bi bi-plus-circle fs-5"></i>
-											</button>
-										</div> -->
-									</div>
-								</div>
-
-								<div class="col-auto col-lg-3 p-2 mx-auto mx-lg-0 ms-lg-auto">
-									<div
-										class="shadow subscription-advert c-rounded-1 p-2 text-center text-shadow"
-									>
-										<div>
-											<i class="bi bi-calendar-check text-shadow-0 fs-1"></i>
-										</div>
-
-										<p>
-											Subscribe for automatic renewal!
-											<br />
-											<a
-												class="btn btn-success mt-2 text-shadow-0 rounded-pill"
-												>Subscribed<i class="bi bi-check-circle ms-2"></i
-											></a>
-										</p>
-									</div>
-								</div>
-							</div>
-
-							<div
-								class="row border border-2 align-items-center p-4 my-3 position-relative c-rounded-1"
-							>
-								<button
-									style="right: -10px; top: -10px"
-									class="btn btn-light border btn-sm rounded-circle position-absolute w-fit"
-								>
-									<i class="bi bi-x fs-4"></i>
-								</button>
-
-								<div class="col-auto mx-auto mx-lg-0 p-2">
-									<div class="p-4 shadow c-rounded-1">
-										<i class="bi bi-cloud fs-1 m-1"></i>
-										<i class="bi bi-cloud-plus fs-1 m-1"></i><br />
-										<i class="bi bi-cloud-plus fs-1 m-1"></i>
-										<i class="bi bi-cloud fs-1 m-1"></i>
-									</div>
-								</div>
-
-								<div class="col-auto mx-auto mx-lg-0 p-3 text-center text-lg-start">
-									<div class="mt-3">
-										<b> 50 GB Cloud Storage - Contact Manager</b>
-										<br />
-										Duration: 12 Months
-										<div class="my-2 text-success">USD 59.99</div>
-									</div>
-								</div>
+								<div class="selectable col p-3 m-1">Procurement</div>
+								<div class="selectable col p-3 m-1">Enterprise Technology</div>
+								<div class="selectable col p-3 m-1">Morden Marketing</div>
+								<div class="selectable col p-3 m-1">Customer Experience</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="col-lg-3 p-2">
-					<div class="p-4 shadow c-rounded-2">
-						<div>
-							<h2 class="pb-2 border-bottom border-3">Summary</h2>
+					<div class="col-lg-6 p-2">
+						<div class="border border-2 bg-light c-rounded-2 p-3 p-lg-5 lead">
+							<div class="mb-4">
+								<h2 class="p-0">Business Consultancy iNc</h2>
+								<p class="">
+									Welcome to the Business Consultancy by the Gum iNc ---
+									<i
+										style="font-size: 5rem; float: right"
+										class="bi bi-headset m-1 text-primary"
+									></i>
+									<!-- <img
+										src="./assets/clipboard.svg"
+										style="width: 4rem; float: right"
+										class="m-2"
+									/> -->
+									---- -------- ---- -------- ---- ---- ------------ ---- --------
+									---- -------- ---- ---- ------------ ---- -------- ---- --------
+									---- ---- ------------ -- ------ ----------- --
+								</p>
+							</div>
+						</div>
 
-							<div>
-								<div class="d-flex justify-content-between">
-									<p>Total</p>
-									<p class="text-success">167.95</p>
-								</div>
-
-								<div class="d-flex justify-content-between">
-									<p>Subscription discount</p>
-									<p class="text-success">- 2.95</p>
-								</div>
-
-								<div class="d-flex justify-content-between">
-									<p>Delivery costs</p>
-									<p class="text-success">+ 0.95</p>
-								</div>
-
+						<div
+							style="position: relative; top: -40px; width: 85%; margin: 0 auto"
+							class="border border-2 bg-white c-rounded-2 shadow p-4"
+						>
+							<div class="w-fit position-relative">
 								<div
-									class="d-flex justify-content-between border-top pt-2 border-3 my-3"
+									class="w-fit overflow-hidden d-flex bg-primary"
+									style="border-radius: 0 2rem 2rem 0; z-index: 1"
 								>
-									<b>You pay</b>
-									<p class="text-success">USD 167.95</p>
+									<div
+										style="border-radius: 0 2rem 2rem 0; z-index: 1"
+										class="border bg-light p-1 pe-3"
+									>
+										Pick up to 3 - £ 29,9
+									</div>
+
+									<button class="select-all btn btn-primary p-2 pe-4 shadow">
+										<i class="bi bi-star me-2"></i>
+										Due Diligence (All) - £50
+									</button>
 								</div>
+
+								<i
+									class="bi bi-cursor-fill text-white"
+									style="
+										transform: rotate(-90deg);
+										position: absolute;
+										bottom: -1.84rem;
+										right: -0.7rem;
+										font-size: 2.3rem;
+										z-index: 2;
+									"
+								></i>
+								<i
+									class="bi bi-cursor-fill text-dark"
+									style="
+										transform: rotate(-90deg);
+										position: absolute;
+										bottom: -1.7rem;
+										right: -0.7rem;
+										font-size: 2rem;
+										z-index: 2;
+									"
+								></i>
 							</div>
 
-							<a href="./checkout.html" class="btn btn-success w-100"
-								>Proceed To Checkout<i class="bi bi-arrow-right ms-2"></i
-							></a>
-
-							<p class="text-center fw-bold my-3 mx-0">We Accept</p>
-
-							<div class="row row-cols-4 align-items-center">
-								<div class="col p-1">
-									<img src="./assets/img/paypal.jpg" class="w-100 rounded" />
+							<div
+								class="row pt-3 p-1 row-cols-auto lead position-relative"
+								id="block2"
+							>
+								<div class="block-screen d-none"></div>
+								<div class="selectable col p-3 m-1">Digital Growth</div>
+								<div class="selectable col p-3 m-1">Marketing & Sales</div>
+								<div class="selectable col p-3 m-1">Implementation Operations</div>
+								<div class="selectable col p-3 m-1">
+									People & Organisation Performance
 								</div>
-								<div class="col p-1">
-									<img src="./assets/img/visa.jpg" class="w-100 rounded" />
+								<div class="selectable col p-3 m-1">Risk & Resilience</div>
+								<div class="selectable col p-3 m-1">
+									Strategy & Corporate Finance
 								</div>
-								<div class="col p-1">
-									<img src="./assets/img/ecocash.png" class="w-100 rounded" />
-								</div>
-								<div class="col p-1">
-									<img src="./assets/img/mastercard.jpg" class="w-100 rounded" />
-								</div>
+								<div class="selectable col p-3 m-1">Sustainability</div>
+								<div class="selectable col p-3 m-1">Transformation</div>
 							</div>
 						</div>
 					</div>
@@ -610,4 +639,6 @@
 			</div>
 		</footer>
 	</body>
+
+	<script src="./assets/js/office.js"></script>
 </html>

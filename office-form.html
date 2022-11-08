@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Gum.iNc</title>
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" />
+		<link rel="stylesheet" href="./assets/vendor/fontawsome/css/all.min.css" />
+		<link rel="stylesheet" href="./assets/vendor/custom-bootstrap/css/custom.min.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+
+		<!-- scripts -->
+
+		<script defer src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<script defer src="./assets/js/main.js"></script>
+		<script defer src="./assets/js/custom.js"></script>
+	</head>
+
+	<style>
+		.content-div {
+			height: 50vh;
+		}
+		#office-form {
+			max-width: 80%;
+			min-height: 95vh;
+		}
+		#office-form .nav-link {
+			border-radius: 50%;
+		}
+		#office-form .tab-content {
+			max-width: 600px;
+		}
+
+		#office-form .tab-content textarea {
+			border-radius: 0.5rem;
+			border-width: 1px;
+			box-shadow: 2px 2px 10px gainsboro;
+			padding: 1rem;
+			resize: none;
+		}
+		#office-form .tab-content input {
+			border-radius: 0.5rem;
+			border-width: 1px;
+			box-shadow: 2px 2px 10px gainsboro;
+		}
+		@media screen and (max-width: 576px) {
+			#office-form .tab-content {
+				max-width: none;
+			}
+		}
+		.bi-chevron-double-left {
+			pointer-events: none;
+		}
+	</style>
+
+	<style>
+		.drop-area {
+			border: dotted;
+		}
+		.drop-area.highlight {
+			border-color: rgb(13, 147, 80);
+		}
+	</style>
+
+	<body class="registration d-flex align-items-center">
+		<main class="container">
+			<form class="shadow-lg mx-auto p-4" id="office-form">
+				<div>
+					<a href="./office.html" class="btn btn-primary px-3 rounded-pill"
+						><i class="bi bi-box-arrow-left me-2"></i>Back</a
+					>
+				</div>
+
+				<ul
+					class="nav nav-pills justify-content-center position-relative"
+					id="office-tabs"
+					role="tablist"
+				>
+					<!-- <div class="position-absolute top-0 start-0 bottom-0 end-0 z-index-5"></div> -->
+					<li class="nav-item" role="presentation">
+						<button
+							class="nav-link active"
+							id="toggle0"
+							data-bs-toggle="tab"
+							data-bs-target="#tab0"
+							type="button"
+							role="tab"
+						>
+							<i class="bi bi-info-circle"></i>
+						</button>
+					</li>
+
+					<li class="nav-item" role="presentation">
+						<button
+							class="nav-link"
+							id="toggle1"
+							data-bs-toggle="tab"
+							data-bs-target="#tab1"
+							type="button"
+							role="tab"
+						>
+							1
+						</button>
+					</li>
+
+					<li class="nav-item" role="presentation">
+						<button
+							class="nav-link"
+							id="toggle2"
+							data-bs-toggle="tab"
+							data-bs-target="#tab2"
+							type="button"
+							role="tab"
+						>
+							2
+						</button>
+					</li>
+
+					<li class="nav-item" role="presentation">
+						<button
+							class="nav-link"
+							id="toggle3"
+							data-bs-toggle="tab"
+							data-bs-target="#tab3"
+							type="button"
+							role="tab"
+						>
+							3
+						</button>
+					</li>
+
+					<li class="nav-item" role="presentation">
+						<button
+							class="nav-link"
+							id="toggle4"
+							data-bs-toggle="tab"
+							data-bs-target="#tab4"
+							type="button"
+							role="tab"
+						>
+							4
+						</button>
+					</li>
+
+					<li class="nav-item" role="presentation">
+						<button
+							class="nav-link"
+							id="toggle5"
+							data-bs-toggle="tab"
+							data-bs-target="#tab5"
+							type="button"
+							role="tab"
+						>
+							5
+						</button>
+					</li>
+
+					<li class="nav-item" role="presentation">
+						<button
+							class="nav-link"
+							id="toggle6"
+							data-bs-toggle="tab"
+							data-bs-target="#tab6"
+							type="button"
+							role="tab"
+						>
+							6
+						</button>
+					</li>
+
+					<li class="nav-item" role="presentation">
+						<button
+							class="nav-link"
+							id="toggle7"
+							data-bs-toggle="tab"
+							data-bs-target="#tab7"
+							type="button"
+							role="tab"
+						>
+							7
+						</button>
+					</li>
+				</ul>
+
+				<div class="tab-content mx-auto text-gray mt-4 mt-lg-5">
+					<div class="tab-pane active" id="tab0" role="tabpanel">
+						<h5 class="my-4 text-center lead">
+							Info tab<i class="bi bi-info-circle-fill ms-2"></i>
+						</h5>
+
+						<div class="content-div">
+							<p class="">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ipsum
+								saepe alias, facere numquam libero recusandae corrupti a. Ipsam
+								expedita magnam obcaecati repellendus, laborum voluptatem mollitia
+								provident cumque debitis error.
+							</p>
+
+							<p class="">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ipsum
+								saepe alias, facere numquam libero recusandae corrupti a. Ipsam
+								expedita magnam obcaecati repellendus, laborum voluptatem mollitia
+								provident cumque debitis error.
+							</p>
+						</div>
+
+						<!-- <div class="text-center mt-auto">
+							<button
+								type="button"
+								class="office-form-next btn btn-success px-3 rounded-pill"
+							>
+								Start
+							</button>
+						</div> -->
+					</div>
+
+					<div class="tab-pane" id="tab1" role="tabpanel">
+						<h5 class="my-4 text-center lead">Questions 1 and 2</h5>
+
+						<div class="content-div">
+							<div class="mb-3">
+								<label class="form-label">Question 1?</label>
+								<!-- <input class="form-control" placeholder="Type here..." /> -->
+								<textarea
+									class="form-control"
+									rows="2"
+									placeholder="Type here..."
+								></textarea>
+							</div>
+
+							<div class="mb-3">
+								<label class="form-label">Question 2? </label>
+								<textarea
+									class="form-control"
+									rows="4"
+									placeholder="Type here..."
+								></textarea>
+							</div>
+						</div>
+
+						<!-- <div class="text-center mt-auto">
+							<button
+								type="button"
+								class="office-form-prev btn btn-outline-success rounded-pill"
+							>
+								<i class="bi bi-chevron-double-left"></i>
+							</button>
+
+							<button
+								type="button"
+								class="office-form-next btn btn-success px-3 rounded-pill"
+							>
+								Next
+							</button>
+						</div> -->
+					</div>
+
+					<div class="tab-pane" id="tab2" role="tabpanel">
+						<h5 class="my-4 text-center lead">Questions 3 and 4</h5>
+
+						<div class="content-div">
+							<div class="mb-3">
+								<label class="form-label">Question 3?</label>
+								<textarea
+									class="form-control"
+									rows="4"
+									placeholder="Type here..."
+								></textarea>
+							</div>
+
+							<div class="mb-3">
+								<label class="form-label">Question 4? </label>
+								<!-- <input class="form-control" placeholder="Type here..." /> -->
+								<textarea
+									class="form-control"
+									rows="2"
+									placeholder="Type here..."
+								></textarea>
+							</div>
+						</div>
+
+						<!-- <div class="text-center mt-auto">
+							<button
+								type="button"
+								class="office-form-prev btn btn-outline-success rounded-pill"
+							>
+								<i class="bi bi-chevron-double-left"></i>
+							</button>
+							<button
+								type="button"
+								class="office-form-next btn btn-success px-3 rounded-pill"
+							>
+								Next
+							</button>
+						</div> -->
+					</div>
+
+					<div class="tab-pane" id="tab3" role="tabpanel">
+						<h5 class="my-4 text-center lead">Questions 5 and 6</h5>
+
+						<div class="content-div">
+							<div class="mb-3">
+								<label class="form-label">Question 5?</label>
+								<!-- <input class="form-control" placeholder="Type here..." /> -->
+								<textarea
+									class="form-control"
+									rows="2"
+									placeholder="Type here..."
+								></textarea>
+							</div>
+
+							<div class="mb-3">
+								<label class="form-label">Question 6? </label>
+								<textarea
+									class="form-control"
+									rows="4"
+									placeholder="Type here..."
+								></textarea>
+							</div>
+						</div>
+
+						<!-- <div class="text-center mt-auto">
+							<button
+								type="button"
+								class="office-form-prev btn btn-outline-success rounded-pill"
+							>
+								<i class="bi bi-chevron-double-left"></i>
+							</button>
+							<button
+								type="button"
+								class="office-form-next btn btn-success px-3 rounded-pill"
+							>
+								Next
+							</button>
+						</div> -->
+					</div>
+
+					<div class="tab-pane" id="tab4" role="tabpanel">
+						<h5 class="my-4 text-center lead">Documents and links tab</h5>
+
+						<div class="content-div">
+							<div class="row justify-content-around align-items-center">
+								<div class="col-lg-6 p-2">
+									<textarea
+										class="form-control"
+										placeholder="List out any website and social media links here..."
+										rows="8"
+									></textarea>
+								</div>
+
+								<div class="col-lg-6 p-2">
+									<div class="drop-area bg-light p-5 c-rounded-2 text-center">
+										<div class="div1 d-none">
+											<p></p>
+											<i
+												class="reselect-files bi bi-trash ms-3 fs-5 cursor-pointer text-danger"
+											></i>
+										</div>
+										<div class="div2">
+											<p>
+												Drag and drop or select your business' documents
+												here for upload
+											</p>
+											<input
+												type="file"
+												name="files"
+												class="d-none file-elem"
+												multiple
+											/>
+											<label
+												for="file-elem"
+												class="file-label btn btn-primary"
+												>Select files</label
+											>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- <div class="text-center mt-auto">
+							<button
+								type="button"
+								class="office-form-prev btn btn-outline-success rounded-pill"
+							>
+								<i class="bi bi-chevron-double-left"></i>
+							</button>
+							<button
+								type="button"
+								class="office-form-next btn btn-success px-3 rounded-pill"
+							>
+								Next
+							</button>
+						</div> -->
+					</div>
+
+					<div class="tab-pane" id="tab5" role="tabpanel">
+						<h5 class="my-4 text-center lead">Summary tab</h5>
+
+						<div class="content-div">
+							<div class="mb-3">
+								<label class="form-label">Write a short summary. </label>
+								<textarea
+									class="form-control"
+									rows="8"
+									placeholder="Type here..."
+								></textarea>
+							</div>
+						</div>
+
+						<!-- <div class="text-center mt-auto">
+							<button
+								type="button"
+								class="office-form-prev btn btn-outline-success rounded-pill"
+							>
+								<i class="bi bi-chevron-double-left"></i>
+							</button>
+							<button
+								type="button"
+								class="office-form-next btn btn-success px-3 rounded-pill"
+							>
+								Next
+							</button>
+						</div> -->
+					</div>
+
+					<div class="tab-pane" id="tab6" role="tabpanel">
+						<h5 class="my-4 text-center lead">Payment tab</h5>
+
+						<div class="content-div">
+							<div class="row justify-content-center align-items-center">
+								<div class="col-lg-8 p-2 pe-lg-5">
+									<h5 class="mb-3 options-type">
+										You opted for the following - Due Dilligence (All)
+									</h5>
+									<div class="options-list"></div>
+									<!-- <div class="options-list">
+										<mark class="mr-1 mb-1 c-rounded-1 px-2 d-inline-block">
+											Operations
+										</mark>
+										<mark class="mr-1 mb-1 c-rounded-1 px-2 d-inline-block"
+											>Manufacturing
+										</mark>
+										<mark class="mr-1 mb-1 c-rounded-1 px-2 d-inline-block">
+											Supply Chain</mark
+										><mark
+											class="mr-1 mb-1 c-rounded-1 px-2 d-inline-block"
+										>
+											Support Functions</mark
+										>
+										<mark class="mr-1 mb-1 c-rounded-1 px-2 d-inline-block">
+											Sales & Marketing</mark
+										>
+										<mark class="mr-1 mb-1 c-rounded-1 px-2 d-inline-block"
+											>Business strategy</mark
+										>
+										<mark class="mr-1 mb-1 c-rounded-1 px-2 d-inline-block">
+											Business Corporate Sustainability</mark
+										>
+										<mark class="mr-1 mb-1 c-rounded-1 px-2 d-inline-block">
+											Cause & Responsibility</mark
+										>
+										<mark class="mr-1 mb-1 c-rounded-1 px-2 d-inline-block">
+											Procurement</mark
+										>
+										<mark class="mr-1 mb-1 c-rounded-1 px-2 d-inline-block">
+											Enterprise Technology</mark
+										>
+										<mark class="mr-1 mb-1 c-rounded-1 px-2 d-inline-block">
+											Morden Marketing</mark
+										>
+										<mark class="mr-1 mb-1 c-rounded-1 px-2 d-inline-block">
+											Customer Experience
+										</mark>
+									</div> -->
+								</div>
+
+								<div class="col-lg-auto p-2">
+									<div class="bg-success p-4 c-rounded-2 text-center text-white">
+										<h3 class="options-price">$50</h3>
+										<h5>monthly</h5>
+										<button class="btn btn-primary shadow-lg px-3 rounded-pill">
+											Add to cart <i class="bi bi-cart4 ms-2"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- <div class="text-center mt-auto">
+							<button
+								type="button"
+								class="office-form-prev btn btn-outline-success rounded-pill"
+							>
+								<i class="bi bi-chevron-double-left"></i>
+							</button>
+							<button
+								type="button"
+								class="office-form-next btn btn-success px-3 rounded-pill"
+							>
+								Confirm
+							</button>
+						</div> -->
+					</div>
+
+					<div class="tab-pane" id="tab7" role="tabpanel">
+						<h5 class="my-4 text-center lead">Confirmation tab</h5>
+
+						<div class="content-div">
+							<p class="text-center lead">
+								<i class="bi bi-info-circle ms-2"></i>
+								You'll receive a success notification upon completing payment on the
+								checkout page.
+								<br />
+								<button
+									type="submit"
+									class="btn btn-success px-3 rounded-pill mt-3"
+								>
+									Submit form
+								</button>
+							</p>
+						</div>
+
+						<!-- <div class="text-center mt-auto">
+							<button
+								type="button"
+								class="office-form-prev btn btn-outline-success rounded-pill"
+							>
+								<i class="bi bi-chevron-double-left"></i>
+							</button>
+							<button
+								type="submit"
+								class="office-form-next btn btn-success px-3 rounded-pill"
+							>
+								Finish
+							</button>
+						</div> -->
+					</div>
+				</div>
+			</form>
+		</main>
+
+		<script src="./assets/js/office-form.js"></script>
+		<script src="./assets/js/drag-and-drop.js"></script>
+	</body>
+</html>
