@@ -53,6 +53,20 @@
 		}
 	</style>
 
+	<style>
+		.office-block {
+			position: relative;
+			top: -40px;
+			margin: 0 auto;
+			width: 85%;
+		}
+		@media screen and (max-width: 500px) {
+			.office-block {
+				width: 95%;
+			}
+		}
+	</style>
+
 	<body>
 		<div id="invisible-elements">
 			<div class="custom-modals">
@@ -406,7 +420,8 @@
 
 		<a
 			href="./office-form.html"
-			class="office-proceed d-none shadow-lg btn btn-primary btn-lg rounded-pill px-3 position-fixed top-50 left-0 z-index-5 m-3"
+			target="_self"
+			class="office-proceed d-none shadow-lg btn btn-primary btn-lg rounded-pill px-3 position-fixed bottom-0 end-0 z-index-5 m-3"
 			>Proceed<i class="bi bi-arrow-right-short ms-2"></i
 		></a>
 
@@ -426,7 +441,7 @@
 				</div>
 
 				<div class="row">
-					<div class="col-lg-6 p-2">
+					<div class="col-lg-6 p-2" id="parent-elem-1">
 						<div class="border border-2 bg-light c-rounded-2 p-3 p-lg-5 lead">
 							<div class="mb-4">
 								<h2 class="p-0">Business Research Bureau iNc</h2>
@@ -450,22 +465,34 @@
 						</div>
 
 						<div
-							style="position: relative; top: -40px; width: 85%; margin: 0 auto"
-							class="border border-2 bg-white c-rounded-2 shadow p-4"
+							class="office-block border border-2 bg-white c-rounded-2 shadow p-3 p-lg-4"
 						>
-							<div class="w-fit position-relative">
+							<div class="text-center d-lg-none">
+								<div class="p-1 pe-3 rounded-pill">Pick up to 3 - £ 29,9</div>
+
+								<button
+									class="select-all select-all-1 w-100 rounded-pill mt-2 btn btn-primary p-2 pe-4 shadow"
+								>
+									<i class="bi bi-star me-2"></i>
+									Due Diligence (All) - £50
+								</button>
+							</div>
+
+							<div class="w-fit position-relative d-none d-lg-block">
 								<div
 									class="w-fit overflow-hidden d-flex bg-primary"
 									style="border-radius: 0 2rem 2rem 0; z-index: 1"
 								>
 									<div
 										style="border-radius: 0 2rem 2rem 0; z-index: 1"
-										class="border bg-light p-1 pe-3"
+										class="bg-white p-1 pe-3"
 									>
 										Pick up to 3 - £ 29,9
 									</div>
 
-									<button class="select-all btn btn-primary p-2 pe-4 shadow">
+									<button
+										class="select-all select-all-1 btn btn-primary p-2 pe-4 shadow"
+									>
 										<i class="bi bi-star me-2"></i>
 										Due Diligence (All) - £50
 									</button>
@@ -500,21 +527,23 @@
 								id="block1"
 							>
 								<div class="block-screen d-none"></div>
-								<div class="selectable col p-3 m-1">Operations</div>
-								<div class="selectable col p-3 m-1">Sales & Marketing</div>
-								<div class="selectable col p-3 m-1">Strategy</div>
-								<div class="selectable col p-3 m-1">
+								<div class="selectable col p-1 p-lg-3 m-1">Operations</div>
+								<div class="selectable col p-1 p-lg-3 m-1">Sales & Marketing</div>
+								<div class="selectable col p-1 p-lg-3 m-1">Strategy</div>
+								<div class="selectable col p-1 p-lg-3 m-1">Procurement</div>
+								<div class="selectable col p-1 p-lg-3 m-1">
 									Sustainability , Cause & Responsibility
 								</div>
-								<div class="selectable col p-3 m-1">Procurement</div>
-								<div class="selectable col p-3 m-1">Enterprise Technology</div>
-								<div class="selectable col p-3 m-1">Morden Marketing</div>
-								<div class="selectable col p-3 m-1">Customer Experience</div>
+								<div class="selectable col p-1 p-lg-3 m-1">
+									Enterprise Technology
+								</div>
+								<div class="selectable col p-1 p-lg-3 m-1">Morden Marketing</div>
+								<div class="selectable col p-1 p-lg-3 m-1">Customer Experience</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="col-lg-6 p-2">
+					<div class="col-lg-6 p-2" id="parent-elem-2">
 						<div class="border border-2 bg-light c-rounded-2 p-3 p-lg-5 lead">
 							<div class="mb-4">
 								<h2 class="p-0">Business Consultancy iNc</h2>
@@ -537,22 +566,34 @@
 						</div>
 
 						<div
-							style="position: relative; top: -40px; width: 85%; margin: 0 auto"
-							class="border border-2 bg-white c-rounded-2 shadow p-4"
+							class="office-block border border-2 bg-white c-rounded-2 shadow p-3 p-lg-4"
 						>
-							<div class="w-fit position-relative">
+							<div class="text-center d-lg-none">
+								<div class="p-1 pe-3 rounded-pill">Pick up to 3 - £ 29,9</div>
+
+								<button
+									class="select-all select-all-2 w-100 rounded-pill mt-2 btn btn-primary p-2 pe-4 shadow"
+								>
+									<i class="bi bi-star me-2"></i>
+									Due Diligence (All) - £50
+								</button>
+							</div>
+
+							<div class="w-fit position-relative d-none d-lg-block">
 								<div
 									class="w-fit overflow-hidden d-flex bg-primary"
 									style="border-radius: 0 2rem 2rem 0; z-index: 1"
 								>
 									<div
 										style="border-radius: 0 2rem 2rem 0; z-index: 1"
-										class="border bg-light p-1 pe-3"
+										class="bg-white p-1 pe-3"
 									>
 										Pick up to 3 - £ 29,9
 									</div>
 
-									<button class="select-all btn btn-primary p-2 pe-4 shadow">
+									<button
+										class="select-all select-all-2 btn btn-primary p-2 pe-4 shadow"
+									>
 										<i class="bi bi-star me-2"></i>
 										Due Diligence (All) - £50
 									</button>
@@ -587,18 +628,20 @@
 								id="block2"
 							>
 								<div class="block-screen d-none"></div>
-								<div class="selectable col p-3 m-1">Digital Growth</div>
-								<div class="selectable col p-3 m-1">Marketing & Sales</div>
-								<div class="selectable col p-3 m-1">Implementation Operations</div>
-								<div class="selectable col p-3 m-1">
+								<div class="selectable col p-1 p-lg-3 m-1">Digital Growth</div>
+								<div class="selectable col p-1 p-lg-3 m-1">Marketing & Sales</div>
+								<div class="selectable col p-1 p-lg-3 m-1">
+									Implementation Operations
+								</div>
+								<div class="selectable col p-1 p-lg-3 m-1">
 									People & Organisation Performance
 								</div>
-								<div class="selectable col p-3 m-1">Risk & Resilience</div>
-								<div class="selectable col p-3 m-1">
+								<div class="selectable col p-1 p-lg-3 m-1">Risk & Resilience</div>
+								<div class="selectable col p-1 p-lg-3 m-1">
 									Strategy & Corporate Finance
 								</div>
-								<div class="selectable col p-3 m-1">Sustainability</div>
-								<div class="selectable col p-3 m-1">Transformation</div>
+								<div class="selectable col p-1 p-lg-3 m-1">Sustainability</div>
+								<div class="selectable col p-1 p-lg-3 m-1">Transformation</div>
 							</div>
 						</div>
 					</div>

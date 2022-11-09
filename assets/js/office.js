@@ -31,8 +31,12 @@ if (selectables) {
 if (selectAlls) {
 	selectAlls.forEach((selectAll) => {
 		selectAll.addEventListener("mouseover", (e) => {
-			const preCursorIcon = selectAll.parentElement.nextElementSibling;
-			const cursorIcon = selectAll.parentElement.nextElementSibling.nextElementSibling;
+			let parentElemId = selectAll.classList.contains("select-all-1")
+				? "parent-elem-1"
+				: "parent-elem-2";
+			let parentElem = document.querySelector(`#${parentElemId}`);
+			const preCursorIcon = parentElem.querySelector(".bi-cursor-fill:first-of-type");
+			const cursorIcon = parentElem.querySelector(".bi-cursor-fill:last-of-type");
 			cursorIcon.classList.remove("text-dark");
 			cursorIcon.classList.add("text-success");
 			[cursorIcon, preCursorIcon].forEach(
@@ -41,8 +45,12 @@ if (selectAlls) {
 		});
 
 		selectAll.addEventListener("mouseout", (e) => {
-			const preCursorIcon = selectAll.parentElement.nextElementSibling;
-			const cursorIcon = selectAll.parentElement.nextElementSibling.nextElementSibling;
+			let parentElemId = selectAll.classList.contains("select-all-1")
+				? "parent-elem-1"
+				: "parent-elem-2";
+			let parentElem = document.querySelector(`#${parentElemId}`);
+			const preCursorIcon = parentElem.querySelector(".bi-cursor-fill:first-of-type");
+			const cursorIcon = parentElem.querySelector(".bi-cursor-fill:last-of-type");
 			cursorIcon.classList.remove("text-success");
 			cursorIcon.classList.add("text-dark");
 			[cursorIcon, preCursorIcon].forEach(
@@ -51,10 +59,13 @@ if (selectAlls) {
 		});
 
 		selectAll.addEventListener("click", (e) => {
-			const targetSelectables =
-				selectAll.parentElement.parentElement.nextElementSibling.querySelectorAll(
-					".selectable"
-				);
+			let block = selectAll.classList.contains("select-all-1") ? "block1" : "block2";
+
+			const targetSelectables = document.querySelectorAll(` #${block} .selectable`);
+			// const targetSelectables =
+			// 	selectAll.parentElement.parentElement.nextElementSibling.querySelectorAll(
+			// 		".selectable"
+			// 	);
 
 			let allSelected = true;
 			for (let s of targetSelectables) {
@@ -95,7 +106,7 @@ if (officeProceed) {
 		e.preventDefault();
 		localStorage.setItem("officeDetails", JSON.stringify({ ...details, selectedItems }));
 
-		open(window.location.origin + "/office-form.html");
+		open(window.location.origin + "/office-form.html", "_self");
 	});
 }
 
@@ -134,19 +145,24 @@ function toggleProceed() {
 	console.log(details);
 }
 function disableOtherBlock(blockID) {
-	blockScreen = document.querySelector(`#${blockID} .block-screen`);
+	let parentElemId = blockID === "block1" ? "parent-elem-1" : "parent-elem-2";
+	let parentElem = document.querySelector(`#${parentElemId}`);
+
+	blockScreen = parentElem.querySelector(".block-screen");
 	blockScreen.classList.remove("d-none");
-	blockScreen.parentElement.previousElementSibling
-		.querySelector(".select-all")
-		.classList.add("disabled");
+
+	parentElem.querySelectorAll(".select-all").forEach((elem) => elem.classList.add("disabled"));
 }
 function enableAllBlocks() {
 	blockScreens = document.querySelectorAll(`.block-screen`);
+
 	blockScreens.forEach((screen) => {
 		screen.classList.add("d-none");
-		screen.parentElement.previousElementSibling
-			.querySelector(".select-all")
-			.classList.remove("disabled");
+		selectAlls.forEach((elem) => {
+			if (elem.classList.contains("disabled")) {
+				elem.classList.remove("disabled");
+			}
+		});
 	});
 }
 

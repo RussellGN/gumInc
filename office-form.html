@@ -25,11 +25,20 @@
 
 	<style>
 		.content-div {
-			height: 50vh;
+			min-height: 50vh;
 		}
 		#office-form {
 			max-width: 80%;
 			min-height: 95vh;
+		}
+		@media screen and (max-width: 500px) {
+			#office-form {
+				max-width: 96%;
+				min-height: 96vh;
+			}
+			#office-form .nav-link {
+				padding: 0.1rem 0.5rem;
+			}
 		}
 		#office-form .nav-link {
 			border-radius: 50%;
@@ -71,7 +80,7 @@
 
 	<body class="registration d-flex align-items-center">
 		<main class="container">
-			<form class="shadow-lg mx-auto p-4" id="office-form">
+			<form class="shadow-lg mx-auto p-3 py-4 p-lg-4 my-4" id="office-form">
 				<div>
 					<a href="./office.html" class="btn btn-primary px-3 rounded-pill"
 						><i class="bi bi-box-arrow-left me-2"></i>Back</a
@@ -79,7 +88,7 @@
 				</div>
 
 				<ul
-					class="nav nav-pills justify-content-center position-relative"
+					class="nav nav-pills justify-content-around justify-content-md-center position-relative mt-3"
 					id="office-tabs"
 					role="tablist"
 				>
@@ -192,10 +201,10 @@
 				<div class="tab-content mx-auto text-gray mt-4 mt-lg-5">
 					<div class="tab-pane active" id="tab0" role="tabpanel">
 						<h5 class="my-4 text-center lead">
-							Info tab<i class="bi bi-info-circle-fill ms-2"></i>
+							Lorem ipsum dolor sit amet.<i class="bi bi-info-circle ms-2"></i>
 						</h5>
 
-						<div class="content-div">
+						<div class="content-div lead">
 							<p class="">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ipsum
 								saepe alias, facere numquam libero recusandae corrupti a. Ipsam
@@ -222,14 +231,14 @@
 					</div>
 
 					<div class="tab-pane" id="tab1" role="tabpanel">
-						<h5 class="my-4 text-center lead">Questions 1 and 2</h5>
+						<h5 class="my-4 text-center lead">Lorem ipsum dolor sit.</h5>
 
 						<div class="content-div">
 							<div class="mb-3">
 								<label class="form-label">Question 1?</label>
 								<!-- <input class="form-control" placeholder="Type here..." /> -->
 								<textarea
-									class="form-control"
+									class="form-control bg-light"
 									rows="2"
 									placeholder="Type here..."
 								></textarea>
@@ -238,7 +247,7 @@
 							<div class="mb-3">
 								<label class="form-label">Question 2? </label>
 								<textarea
-									class="form-control"
+									class="form-control bg-light"
 									rows="4"
 									placeholder="Type here..."
 								></textarea>
@@ -263,13 +272,13 @@
 					</div>
 
 					<div class="tab-pane" id="tab2" role="tabpanel">
-						<h5 class="my-4 text-center lead">Questions 3 and 4</h5>
+						<h5 class="my-4 text-center lead">Lorem, ipsum dolor.</h5>
 
 						<div class="content-div">
 							<div class="mb-3">
 								<label class="form-label">Question 3?</label>
 								<textarea
-									class="form-control"
+									class="form-control bg-light"
 									rows="4"
 									placeholder="Type here..."
 								></textarea>
@@ -279,7 +288,7 @@
 								<label class="form-label">Question 4? </label>
 								<!-- <input class="form-control" placeholder="Type here..." /> -->
 								<textarea
-									class="form-control"
+									class="form-control bg-light"
 									rows="2"
 									placeholder="Type here..."
 								></textarea>
@@ -303,14 +312,16 @@
 					</div>
 
 					<div class="tab-pane" id="tab3" role="tabpanel">
-						<h5 class="my-4 text-center lead">Questions 5 and 6</h5>
+						<h5 class="my-4 text-center lead">
+							Lorem ipsum dolor sit amet consectetur.
+						</h5>
 
 						<div class="content-div">
 							<div class="mb-3">
 								<label class="form-label">Question 5?</label>
 								<!-- <input class="form-control" placeholder="Type here..." /> -->
 								<textarea
-									class="form-control"
+									class="form-control bg-light"
 									rows="2"
 									placeholder="Type here..."
 								></textarea>
@@ -319,7 +330,7 @@
 							<div class="mb-3">
 								<label class="form-label">Question 6? </label>
 								<textarea
-									class="form-control"
+									class="form-control bg-light"
 									rows="4"
 									placeholder="Type here..."
 								></textarea>
@@ -343,7 +354,7 @@
 					</div>
 
 					<div class="tab-pane" id="tab4" role="tabpanel">
-						<h5 class="my-4 text-center lead">Documents and links tab</h5>
+						<h5 class="my-4 text-center lead">Documents and links</h5>
 
 						<div class="content-div">
 							<div class="row justify-content-around align-items-center">
@@ -402,13 +413,15 @@
 					</div>
 
 					<div class="tab-pane" id="tab5" role="tabpanel">
-						<h5 class="my-4 text-center lead">Summary tab</h5>
+						<h5 class="my-4 text-center lead">
+							Lorem ipsum dolor sit amet consectetur.
+						</h5>
 
 						<div class="content-div">
 							<div class="mb-3">
 								<label class="form-label">Write a short summary. </label>
 								<textarea
-									class="form-control"
+									class="form-control bg-light"
 									rows="8"
 									placeholder="Type here..."
 								></textarea>
@@ -436,7 +449,7 @@
 
 						<div class="content-div">
 							<div class="row justify-content-center align-items-center">
-								<div class="col-lg-8 p-2 pe-lg-5">
+								<div class="col-lg-8 p-3 p-lg-2 pe-lg-5">
 									<h5 class="mb-3 options-type">
 										You opted for the following - Due Dilligence (All)
 									</h5>
@@ -519,12 +532,22 @@
 								You'll receive a success notification upon completing payment on the
 								checkout page.
 								<br />
-								<button
+								<a
+									href="./cart.html"
 									type="submit"
 									class="btn btn-success px-3 rounded-pill mt-3"
 								>
-									Submit form
-								</button>
+									Submit and proceed
+								</a>
+
+								<!-- actual submit button -->
+
+								<!-- <button
+									type="submit"
+									class="btn btn-success px-3 rounded-pill mt-3"
+									>
+									Submit and proceed
+								</button> -->
 							</p>
 						</div>
 

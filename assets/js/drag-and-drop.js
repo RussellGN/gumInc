@@ -88,7 +88,9 @@ function handleFiles(files) {
 	const div1 = dropArea.querySelector(".div1");
 
 	div1.classList.remove("d-none");
-	div1.querySelector("p").textContent = `${files.length} files ready for upload`;
+	div1.querySelector("p").textContent = `${files.length} file${
+		files.length > 1 ? "s" : ""
+	} ready for upload`;
 
 	console.log(files);
 }
