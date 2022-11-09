@@ -103,10 +103,10 @@ if (selectAlls) {
 
 if (officeProceed) {
 	officeProceed.addEventListener("click", (e) => {
-		e.preventDefault();
+		// e.preventDefault();
 		localStorage.setItem("officeDetails", JSON.stringify({ ...details, selectedItems }));
 
-		open(window.location.origin + "/office-form.html", "_self");
+		// open(window.location.origin + "./office-form.html", "_self");
 	});
 }
 
