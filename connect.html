@@ -49,46 +49,893 @@
 							</div>
 
 							<div class="modal-body">
-								<div class="d-flex mb-2 justify-content-between align-items-center">
-									<span class="col-8"> London Access £10 </span>
+								<form>
+									<div class="dropdown">
+										<label class="d-flex justify-content-between p-3"
+											>City <small>£10</small></label
+										>
 
-									<span class="btn btn-outline-success border-0"
-										><i class="fas fa-check-circle fs-5"></i>
-									</span>
-								</div>
+										<input
+											type="text"
+											class="city-input form-control rounded-pill px-3 w-100"
+											name="city"
+											placeholder="London"
+											list="cities-list"
+										/>
+										<datalist id="cities-list">
+											<option value="All"></option>
+										</datalist>
 
-								<div class="d-flex mb-2 justify-content-between align-items-center">
-									<span class="col-8"> United Kingdom Access £20 </span>
+										<!-- <button
+											class="btn bg-light rounded-pill border px-3 w-100 d-flex justify-content-between align-items-center dropdown-toggle"
+											type="button"
+											data-bs-toggle="dropdown"
+										>
+											London
+										</button>
 
-									<button
-										type="button"
-										class="btn btn-outline-warning border-0 rounded-circle"
+										<ul class="dropdown-menu shadow-sm w-100 bg-light">
+											<div class="location-items">
+												<li>
+													<span class="dropdown-item">All</span>
+												</li>
+												<li>
+													<span class="dropdown-item">London</span>
+												</li>
+												<li>
+													<span class="dropdown-item">Manchester</span>
+												</li>
+												<li>
+													<span class="dropdown-item">Newcastle</span>
+												</li>
+												<li>
+													<span class="dropdown-item">Stoke</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+												<li>
+													<span class="dropdown-item">City</span>
+												</li>
+											</div>
+										</ul> -->
+									</div>
+
+									<div class="dropdown">
+										<label class="d-flex justify-content-between p-3"
+											>Country <small>£20</small></label
+										>
+
+										<input
+											type="text"
+											class="d-none country-input"
+											name="country"
+											value="Gum.iNc United Kingdom"
+										/>
+
+										<button
+											class="country-button border location-control btn btn-light rounded-pill px-3 w-100 d-flex justify-content-between align-items-center dropdown-toggle"
+											type="button"
+											data-bs-toggle="dropdown"
+										>
+											Gum.iNc United Kingdom
+										</button>
+
+										<ul class="dropdown-menu shadow-sm w-100 bg-light">
+											<div class="location-items countries">
+												<li>
+													<span class="all dropdown-item">All</span>
+												</li>
+
+												<li class="d-none">
+													<span class="african-country dropdown-item">
+														Gum.iNc SOUTH AFRICA
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="african-country dropdown-item">
+														Gum.iNc ZAMBIA
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="african-country dropdown-item">
+														Gum.iNc BOTSWANA
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="african-country dropdown-item">
+														Gum.iNc TANZANIA
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="african-country dropdown-item">
+														Gum.iNc MADAGASCAR
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="african-country dropdown-item">
+														Gum.iNc MAURITIUS
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="african-country dropdown-item">
+														Gum.iNc RWANDA
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="african-country dropdown-item">
+														Gum.iNc ZIMBABWE
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="african-country dropdown-item">
+														Gum.Inc ETHIOPIA
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="african-country dropdown-item">
+														Gum.Inc MOZAMBIQUE
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="african-country dropdown-item">
+														Gum.Inc SWAZILAND
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="african-country dropdown-item">
+														Gum.Inc LESOTHO
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="african-country dropdown-item">
+														Gum.Inc CHAD
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="african-country dropdown-item">
+														Gum.INc MOROCCO
+													</span>
+												</li>
+
+												<li class="d-none">
+													<span class="asian-country dropdown-item">
+														Gum.INc CHINA
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="asian-country dropdown-item">
+														Gum.INc HONG KONG
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="asian-country dropdown-item">
+														Gum.INc JAPAN
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="asian-country dropdown-item">
+														Gum.INc KOREA
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="asian-country dropdown-item">
+														Gum.INc MALAYSIA
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="asian-country dropdown-item">
+														Gum.INc THAILAND
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="asian-country dropdown-item">
+														Gum.INc SINGAPORE
+													</span>
+												</li>
+
+												<li class="d-none">
+													<span class="australian-country dropdown-item">
+														Gum.INc NEW SOUTH WALES
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="australian-country dropdown-item">
+														Gum.INc GREENSLAND
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="australian-country dropdown-item">
+														Gum.INc WESTERN AUSTRALIA
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="australian-country dropdown-item">
+														Gum.iNc WESTERN AUSTRALIA
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="australian-country dropdown-item">
+														Gum.INc TASMANIA
+													</span>
+												</li>
+												<li class="d-none">
+													<span class="australian-country dropdown-item">
+														Gum.INc NORTHERN TERRITORY
+													</span>
+												</li>
+
+												<li class="d-none">
+													<span
+														class="south-american-country dropdown-item"
+													>
+														Gum.INc ARGENTINA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="south-american-country dropdown-item"
+													>
+														Gum.INc BOLIVIA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="south-american-country dropdown-item"
+													>
+														Gum.INc BRAZIL
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="south-american-country dropdown-item"
+													>
+														Gum.INc CHILE
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="south-american-country dropdown-item"
+													>
+														Gum.INc COLOMBIA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="south-american-country dropdown-item"
+													>
+														Gum.INc ECUADOR
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="south-american-country dropdown-item"
+													>
+														Gum.INc GUYANA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="south-american-country dropdown-item"
+													>
+														Gum.INc PARAGUAY
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="south-american-country dropdown-item"
+													>
+														Gum.INc PERU
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="south-american-country dropdown-item"
+													>
+														Gum.INc SURINAME
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="south-american-country dropdown-item"
+													>
+														Gum.INc URUGUAY
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="south-american-country dropdown-item"
+													>
+														Gum.iNc VENEZUELA
+													</span>
+												</li>
+
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc ANTIGUA & BARBUDA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc ANGUILLA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc ARUBA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.Inc THE BAHAMAS
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc BARBADOS
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc BELIZE
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc BERMUDA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc BONAIRE
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc BRITISH VIRGIN ISLANDS
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc CANADA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc CAYMAN ISLANDS
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc CLIPPERTON ISLAND
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc COSTA RICA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc CUBA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc DOMINICA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc DOMINICAN REPUBLIC
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc EL SALVADOR
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc GREENLAND
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc GRENADA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc GUADELOUPE</span
+													>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc GUATEMALA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc HAITI
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc HONDURAS
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc JAMAICA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc MEXICO
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc NICARAGUA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc PANAMA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc SAINT KITTS & NEVIS
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc SAINT LUCIA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc TRINIDAD & TOBAGO
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc UNITED STATES OF AMERICA
+													</span>
+												</li>
+												<li class="d-none">
+													<span
+														class="north-american-country dropdown-item"
+													>
+														Gum.iNc US VIRGIN ISLANDS</span
+													>
+												</li>
+
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc ALBANIA
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc ANDORA
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc AUSRIA
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc BELARUS
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc BELGIUM
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc BOSNIA & HERZEGOVIA
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc BULGARIA
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc CROATIA
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc CZECH REPUBLIC
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc DENMARK
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc ESTONIA
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc FINLAND
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc FRANCE
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc GERMANY
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc GREECE
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc HUNGARY
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc ICELAND
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc REPUBLIC OF IRELAND
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc ITALY
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc KOSOVO
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc LATIVA
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc LIECHTENSTEIN
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc LITHUANA
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc LUXEMBOURG
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc NORTH MACEDONIA
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc MALTA
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc MOLDOVA
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc MONACO
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc MONTENEGRO
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc NETHERLANDS
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc NORWAY
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc POLAND
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc PORTUGAL
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc ROMANIA
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc RUSSIA
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc SAN MARINO
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc SERBIA
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc SLOVAKIA
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc SLOVENIA
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc SPAIN
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc SWEEDEN
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc SWITZERLAND
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc UKRAINE
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc UNITED KINGDOM
+													</span>
+												</li>
+												<li>
+													<span class="european-country dropdown-item">
+														Gum.iNc VATICAN CITY
+													</span>
+												</li>
+											</div>
+										</ul>
+									</div>
+
+									<div class="dropdown">
+										<label class="d-flex justify-content-between p-3"
+											>Continent <small>£23</small></label
+										>
+
+										<input
+											type="text"
+											class="d-none"
+											name="continent"
+											value="Europe"
+										/>
+
+										<button
+											class="btn btn-light border location-control rounded-pill px-3 w-100 d-flex justify-content-between align-items-center dropdown-toggle"
+											type="button"
+											data-bs-toggle="dropdown"
+										>
+											Europe
+										</button>
+
+										<ul class="dropdown-menu shadow-sm w-100 bg-light">
+											<div class="location-items">
+												<li>
+													<span class="dropdown-item">Europe</span>
+												</li>
+												<li>
+													<span class="dropdown-item">Africa</span>
+												</li>
+												<li>
+													<span class="dropdown-item">Asia</span>
+												</li>
+												<li>
+													<span class="dropdown-item">Australia</span>
+												</li>
+												<li>
+													<span class="dropdown-item">North America</span>
+												</li>
+												<li>
+													<span class="dropdown-item">South America</span>
+												</li>
+												<li>
+													<span class="dropdown-item">Antarctica</span>
+												</li>
+											</div>
+										</ul>
+									</div>
+
+									<div
+										class="form-check form-check-inline d-flex justify-content-center my-4"
 									>
-										<i class="bi bi-cart-plus fs-5"></i>
-									</button>
-								</div>
+										<input
+											id="go-international"
+											class="form-check-input me-2"
+											type="checkbox"
+											name="international"
+										/>
+										<label class="form-check-label">
+											International
+											<small class="ms-3">£50</small></label
+										>
+									</div>
 
-								<div class="d-flex mb-2 justify-content-between align-items-center">
-									<span class="col-8"> Europe Access £23 </span>
-
-									<button
-										type="button"
-										class="btn btn-outline-warning border-0 rounded-circle"
-									>
-										<i class="bi bi-cart-plus fs-5"></i>
-									</button>
-								</div>
-
-								<div class="d-flex mb-2 justify-content-between align-items-center">
-									<span class="col-8"> International £50 </span>
-
-									<button
-										type="button"
-										class="btn btn-outline-warning border-0 rounded-circle"
-									>
-										<i class="bi bi-cart-plus fs-5"></i>
-									</button>
-								</div>
+									<div class="text-center mt-3">
+										<button
+											type="submit"
+											id="updateLocationOptions"
+											class="btn btn-success px-3 rounded-pill"
+										>
+											<i class="bi bi-cart-plus me-2"></i>Save Changes
+										</button>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -442,7 +1289,10 @@
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
 								>
-									<img src="./assets/images/more.jpg" class="w-100 c-rounded-1" />
+									<img
+										src="./assets/logos and stuff/logo (4).jpg"
+										class="w-100 c-rounded-1"
+									/>
 								</div>
 
 								<div>
@@ -493,7 +1343,10 @@
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
 								>
-									<img src="./assets/images/more.jpg" class="w-100 c-rounded-1" />
+									<img
+										src="./assets/logos and stuff/logo (4).jpg"
+										class="w-100 c-rounded-1"
+									/>
 								</div>
 
 								<div>
@@ -544,7 +1397,10 @@
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
 								>
-									<img src="./assets/images/more.jpg" class="w-100 c-rounded-1" />
+									<img
+										src="./assets/logos and stuff/logo (4).jpg"
+										class="w-100 c-rounded-1"
+									/>
 								</div>
 
 								<div>
@@ -595,7 +1451,10 @@
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
 								>
-									<img src="./assets/images/more.jpg" class="w-100 c-rounded-1" />
+									<img
+										src="./assets/logos and stuff/logo (4).jpg"
+										class="w-100 c-rounded-1"
+									/>
 								</div>
 
 								<div>
@@ -646,7 +1505,10 @@
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
 								>
-									<img src="./assets/images/more.jpg" class="w-100 c-rounded-1" />
+									<img
+										src="./assets/logos and stuff/logo (4).jpg"
+										class="w-100 c-rounded-1"
+									/>
 								</div>
 
 								<div>
@@ -697,7 +1559,10 @@
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
 								>
-									<img src="./assets/images/more.jpg" class="w-100 c-rounded-1" />
+									<img
+										src="./assets/logos and stuff/logo (4).jpg"
+										class="w-100 c-rounded-1"
+									/>
 								</div>
 
 								<div>
@@ -774,7 +1639,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="./assets/images/user5.jpg"
+										src="./assets/logos and stuff/logo (4).jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -826,7 +1691,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="./assets/images/user5.jpg"
+										src="./assets/logos and stuff/logo (4).jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -878,7 +1743,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="./assets/images/user5.jpg"
+										src="./assets/logos and stuff/logo (4).jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -930,7 +1795,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="./assets/images/user5.jpg"
+										src="./assets/logos and stuff/logo (4).jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -982,7 +1847,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="./assets/images/user5.jpg"
+										src="./assets/logos and stuff/logo (4).jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -1034,7 +1899,7 @@
 									class="d-flex align-items-center me-3"
 								>
 									<img
-										src="./assets/images/user5.jpg"
+										src="./assets/logos and stuff/logo (4).jpg"
 										class="w-100 c-rounded-1"
 									/>
 								</div>
@@ -1114,7 +1979,10 @@
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
 								>
-									<img src="./assets/images/more.jpg" class="w-100 c-rounded-1" />
+									<img
+										src="./assets/logos and stuff/logo (4).jpg"
+										class="w-100 c-rounded-1"
+									/>
 								</div>
 
 								<div>
@@ -1165,7 +2033,10 @@
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
 								>
-									<img src="./assets/images/more.jpg" class="w-100 c-rounded-1" />
+									<img
+										src="./assets/logos and stuff/logo (4).jpg"
+										class="w-100 c-rounded-1"
+									/>
 								</div>
 
 								<div>
@@ -1216,7 +2087,10 @@
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
 								>
-									<img src="./assets/images/more.jpg" class="w-100 c-rounded-1" />
+									<img
+										src="./assets/logos and stuff/logo (4).jpg"
+										class="w-100 c-rounded-1"
+									/>
 								</div>
 
 								<div>
@@ -1267,7 +2141,10 @@
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
 								>
-									<img src="./assets/images/more.jpg" class="w-100 c-rounded-1" />
+									<img
+										src="./assets/logos and stuff/logo (4).jpg"
+										class="w-100 c-rounded-1"
+									/>
 								</div>
 
 								<div>
@@ -1318,7 +2195,10 @@
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
 								>
-									<img src="./assets/images/more.jpg" class="w-100 c-rounded-1" />
+									<img
+										src="./assets/logos and stuff/logo (4).jpg"
+										class="w-100 c-rounded-1"
+									/>
 								</div>
 
 								<div>
@@ -1369,7 +2249,10 @@
 									style="width: 6rem; height: 6rem"
 									class="d-flex align-items-center me-3"
 								>
-									<img src="./assets/images/more.jpg" class="w-100 c-rounded-1" />
+									<img
+										src="./assets/logos and stuff/logo (4).jpg"
+										class="w-100 c-rounded-1"
+									/>
 								</div>
 
 								<div>

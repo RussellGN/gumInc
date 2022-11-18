@@ -53,9 +53,7 @@ if (decreamentCopies) {
 // ______________________________________________________________________
 
 // automatically close books affocanvas when a nav-link is clicked
-let booksOffcanvasLinks = document.querySelectorAll(
-	"#booksOffcanvas .nav-link"
-);
+let booksOffcanvasLinks = document.querySelectorAll("#booksOffcanvas .nav-link");
 let booksOffcanvasClose = document.querySelector("#booksOffcanvas .btn-close");
 
 if (booksOffcanvasLinks) {
@@ -67,9 +65,7 @@ if (booksOffcanvasLinks) {
 // saveinc btns and toasts
 var saveIncToastTrigger = document.getElementById("saveIncToastBtn");
 var saveIncToast = document.getElementById("saveIncToast");
-var requestAudienceToastTrigger = document.getElementById(
-	"requestAudienceToastBtn"
-);
+var requestAudienceToastTrigger = document.getElementById("requestAudienceToastBtn");
 var requestAudienceToast = document.getElementById("requestAudienceToast");
 let saveIncOptions = document.querySelectorAll(".saveIncOption");
 
@@ -111,3 +107,86 @@ if (addToCartButtons) {
 		});
 	});
 }
+
+// location modal dropdowns
+const locationDropdowns = document.querySelectorAll("#locationModal .dropdown-item");
+const goInternational = document.querySelector("#go-international");
+
+locationDropdowns.forEach((dropdown) => {
+	dropdown.addEventListener("click", (e) => {
+		const dropSection = dropdown.parentElement.parentElement.parentElement.parentElement;
+
+		document.querySelector("#locationModal .city-input").value = "All";
+		dropSection.querySelector("input").value = dropdown.textContent;
+		dropSection.querySelector("button").textContent = dropdown.textContent;
+
+		if (dropSection.querySelector("label").innerHTML.startsWith("Continent")) {
+			filterCountries(dropdown.textContent.toLowerCase().trim());
+		}
+	});
+});
+
+function filterCountries(continent) {
+	let filteredClassName = "";
+
+	switch (continent) {
+		case "africa":
+			filteredClassName = "african-country";
+			break;
+
+		case "asia":
+			filteredClassName = "asian-country";
+			break;
+
+		case "australia":
+			filteredClassName = "australian-country";
+			break;
+
+		case "europe":
+			filteredClassName = "european-country";
+			break;
+
+		case "north america":
+			filteredClassName = "north-american-country";
+			break;
+
+		case "south america":
+			filteredClassName = "south-american-country";
+			break;
+
+		case "antarctica":
+			filteredClassName = "antarctican-country";
+			break;
+	}
+
+	const countryDropdowns = document.querySelectorAll("#locationModal .countries .dropdown-item");
+	countryDropdowns.forEach((dropdown) => {
+		if (
+			!dropdown.classList.contains(filteredClassName) &&
+			!dropdown.classList.contains("All")
+		) {
+			dropdown.parentElement.classList.add("d-none");
+		} else {
+			dropdown.parentElement.classList.remove("d-none");
+		}
+		document.querySelector(".country-input").value = "All";
+		document.querySelector(".city-input").value = "All";
+		document.querySelector(".country-button").textContent = "All";
+	});
+}
+
+goInternational.addEventListener("change", (e) => {
+	if (e.target.checked) {
+		document.querySelector("#locationModal .city-input").disabled = true;
+		document.querySelector("#locationModal .city-input").value = "All";
+		document.querySelectorAll("#locationModal .location-control").forEach((control) => {
+			control.classList.add("disabled");
+			control.textContent = "All";
+		});
+	} else {
+		document.querySelector("#locationModal .city-input").disabled = false;
+		document.querySelectorAll("#locationModal .location-control").forEach((control) => {
+			control.classList.remove("disabled");
+		});
+	}
+});

@@ -517,28 +517,28 @@
 
 /* account nav offcanvas */
 @media screen {
-	#accountNav a.btn:hover:not(.nav-accord-active),
+	#accountNav {
+		background: linear-gradient(to bottom right, rgb(0, 161, 99), rgb(0, 109, 92));
+	}
+	/* #accountNav a.btn:hover:not(.nav-accord-active),
 	#accountNav a.btn:focus:not(.nav-accord-active) {
 		border-color: rgb(181, 133, 54);
-	}
+	}*/
 	#accountNav a.btn.active {
-		background-color: rgb(181, 133, 54) !important	;
+		background-color: rgba(255, 255, 255, 0.2) !important	;
+	}
+	#accountNav a.btn {
+		background-color: rgba(255, 255, 255, 0.1) !important	;
 		color: white !important	;
 	}
-	.accountNav-dp {
-		margin: 0 auto;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-radius: 100%;
-		overflow: hidden;
-		background-color: rgb(18, 18, 18);
+	.accountNav-dp img {
 		width: 6rem;
 		height: 6rem;
-		border: solid 10px rgb(170, 178, 181);
-	}
-	.accountNav-dp img {
-		width: 100%;
+		object-fit: cover;
+		border-radius: 100%;
+		margin: 0 auto;
+		display: block;
+		border: solid 5px rgba(255, 255, 255, 0.3);
 	}
 }
 
@@ -1003,4 +1003,10 @@
 			background: rgb(181, 133, 54);
 		}
 	}
+}
+
+/* location modals and dropdowns */
+#locationModal .dropdown-menu .location-items {
+	max-height: 10rem;
+	overflow-y: scroll;
 }
