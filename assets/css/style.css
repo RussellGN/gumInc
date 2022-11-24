@@ -517,20 +517,20 @@
 
 /* account nav offcanvas */
 @media screen {
-	#accountNav {
+	/* #accountNav {
 		background: linear-gradient(to bottom right, rgb(0, 161, 99), rgb(0, 109, 92));
-	}
+	} */
 	/* #accountNav a.btn:hover:not(.nav-accord-active),
 	#accountNav a.btn:focus:not(.nav-accord-active) {
 		border-color: rgb(181, 133, 54);
 	}*/
-	#accountNav a.btn.active {
+	/* #accountNav a.btn.active {
 		background-color: rgba(255, 255, 255, 0.2) !important	;
 	}
 	#accountNav a.btn {
 		background-color: rgba(255, 255, 255, 0.1) !important	;
 		color: white !important	;
-	}
+	} */
 	.accountNav-dp img {
 		width: 6rem;
 		height: 6rem;
