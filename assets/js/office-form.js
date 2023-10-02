@@ -21,6 +21,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
   optionsList.innerHTML = items;
   optionsType.innerHTML = officeDetails.DD
     ? "You selected Due Dilligence(All)"
-    : "You selected the following under";
+    : "You selected the following:";
   optionsPrice.textContent = officeDetails.DD ? "£80" : "£35";
 });
