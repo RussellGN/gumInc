@@ -1,41 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gum.iNc</title>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Gum.iNc</title>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/vendor/bootstrap-icons/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="./assets/vendor/fontawsome/css/all.min.css" />
-    <link
-      rel="stylesheet"
-      href="./assets/vendor/custom-bootstrap/css/custom.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+      <link
+         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" />
+      <link rel="stylesheet" href="./assets/vendor/fontawsome/css/all.min.css" />
+      <link rel="stylesheet" href="./assets/vendor/custom-bootstrap/css/custom.min.css" />
+      <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!-- scripts -->
+      <!-- scripts -->
 
-    <script
-      defer
-      src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"
-    ></script>
+      <script defer src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script defer src="./assets/js/main.js"></script>
-    <script defer src="./assets/js/custom.js"></script>
-  </head>
+      <script defer src="./assets/js/main.js"></script>
+      <script defer src="./assets/js/custom.js"></script>
+   </head>
 
-  <body>
-    <div id="invisible-elements">
-      <div class="custom-modals">
-        <!-- <div
+   <body>
+      <div id="invisible-elements">
+         <div class="custom-modals">
+            <!-- <div
 					class="modal fade"
 					id="locationModal"
 					data-bs-backdrop="static"
@@ -103,49 +94,40 @@
 					</div>
 				</div> -->
 
-        <div
-          class="modal fade"
-          id="locationModal"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabindex="-1"
-          aria-labelledby="locationModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content c-rounded-1 p-lg-5">
-              <div class="modal-header">
-                <h5 class="modal-title" id="locationModalLabel">
-                  Gum.iNc Access
-                </h5>
+            <div
+               class="modal fade"
+               id="locationModal"
+               data-bs-backdrop="static"
+               data-bs-keyboard="false"
+               tabindex="-1"
+               aria-labelledby="locationModalLabel"
+               aria-hidden="true"
+            >
+               <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content c-rounded-1 p-lg-5">
+                     <div class="modal-header">
+                        <h5 class="modal-title" id="locationModalLabel">Gum.iNc Access</h5>
 
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
 
-              <div class="modal-body">
-                <form>
-                  <div class="dropdown">
-                    <label class="d-flex justify-content-between p-3"
-                      >City <small>£10</small></label
-                    >
+                     <div class="modal-body">
+                        <form>
+                           <div class="dropdown">
+                              <label class="d-flex justify-content-between p-3">City <small>£10</small></label>
 
-                    <input
-                      type="text"
-                      class="city-input form-control bg-light rounded-pill px-3 w-100"
-                      name="city"
-                      placeholder="London"
-                      list="cities-list"
-                    />
-                    <datalist id="cities-list">
-                      <option value="All"></option>
-                    </datalist>
+                              <input
+                                 type="text"
+                                 class="city-input form-control bg-light rounded-pill px-3 w-100"
+                                 name="city"
+                                 placeholder="London"
+                                 list="cities-list"
+                              />
+                              <datalist id="cities-list">
+                                 <option value="All"></option>
+                              </datalist>
 
-                    <!-- <button
+                              <!-- <button
 											class="btn bg-light rounded-pill border px-3 w-100 d-flex justify-content-between align-items-center dropdown-toggle"
 											type="button"
 											data-bs-toggle="dropdown"
@@ -238,701 +220,462 @@
 												</li>
 											</div>
 										</ul> -->
+                           </div>
+
+                           <div class="dropdown">
+                              <label class="d-flex justify-content-between p-3">Country <small>£20</small></label>
+
+                              <input
+                                 type="text"
+                                 class="d-none country-input"
+                                 name="country"
+                                 value="Gum.iNc United Kingdom"
+                              />
+
+                              <button
+                                 class="country-button location-control btn btn-primary rounded-pill px-3 w-100 d-flex justify-content-between align-items-center dropdown-toggle"
+                                 type="button"
+                                 data-bs-toggle="dropdown"
+                              >
+                                 Gum.iNc United Kingdom
+                              </button>
+
+                              <ul class="dropdown-menu shadow-sm w-100 bg-light">
+                                 <div class="location-items countries">
+                                    <li>
+                                       <span class="all dropdown-item">All</span>
+                                    </li>
+
+                                    <li class="d-none">
+                                       <span class="african-country dropdown-item"> Gum.iNc SOUTH AFRICA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="african-country dropdown-item"> Gum.iNc ZAMBIA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="african-country dropdown-item"> Gum.iNc BOTSWANA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="african-country dropdown-item"> Gum.iNc TANZANIA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="african-country dropdown-item"> Gum.iNc MADAGASCAR </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="african-country dropdown-item"> Gum.iNc MAURITIUS </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="african-country dropdown-item"> Gum.iNc RWANDA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="african-country dropdown-item"> Gum.iNc ZIMBABWE </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="african-country dropdown-item"> Gum.Inc ETHIOPIA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="african-country dropdown-item"> Gum.Inc MOZAMBIQUE </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="african-country dropdown-item"> Gum.Inc SWAZILAND </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="african-country dropdown-item"> Gum.Inc LESOTHO </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="african-country dropdown-item"> Gum.Inc CHAD </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="african-country dropdown-item"> Gum.INc MOROCCO </span>
+                                    </li>
+
+                                    <li class="d-none">
+                                       <span class="asian-country dropdown-item"> Gum.INc CHINA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="asian-country dropdown-item"> Gum.INc HONG KONG </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="asian-country dropdown-item"> Gum.INc JAPAN </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="asian-country dropdown-item"> Gum.INc KOREA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="asian-country dropdown-item"> Gum.INc MALAYSIA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="asian-country dropdown-item"> Gum.INc THAILAND </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="asian-country dropdown-item"> Gum.INc SINGAPORE </span>
+                                    </li>
+
+                                    <li class="d-none">
+                                       <span class="australian-country dropdown-item"> Gum.INc NEW SOUTH WALES </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="australian-country dropdown-item"> Gum.INc GREENSLAND </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="australian-country dropdown-item"> Gum.INc WESTERN AUSTRALIA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="australian-country dropdown-item"> Gum.iNc WESTERN AUSTRALIA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="australian-country dropdown-item"> Gum.INc TASMANIA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="australian-country dropdown-item"> Gum.INc NORTHERN TERRITORY </span>
+                                    </li>
+
+                                    <li class="d-none">
+                                       <span class="south-american-country dropdown-item"> Gum.INc ARGENTINA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="south-american-country dropdown-item"> Gum.INc BOLIVIA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="south-american-country dropdown-item"> Gum.INc BRAZIL </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="south-american-country dropdown-item"> Gum.INc CHILE </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="south-american-country dropdown-item"> Gum.INc COLOMBIA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="south-american-country dropdown-item"> Gum.INc ECUADOR </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="south-american-country dropdown-item"> Gum.INc GUYANA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="south-american-country dropdown-item"> Gum.INc PARAGUAY </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="south-american-country dropdown-item"> Gum.INc PERU </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="south-american-country dropdown-item"> Gum.INc SURINAME </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="south-american-country dropdown-item"> Gum.INc URUGUAY </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="south-american-country dropdown-item"> Gum.iNc VENEZUELA </span>
+                                    </li>
+
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc ANTIGUA & BARBUDA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc ANGUILLA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc ARUBA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.Inc THE BAHAMAS </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc BARBADOS </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc BELIZE </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc BERMUDA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc BONAIRE </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item">
+                                          Gum.iNc BRITISH VIRGIN ISLANDS
+                                       </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc CANADA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc CAYMAN ISLANDS </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc CLIPPERTON ISLAND </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc COSTA RICA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc CUBA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc DOMINICA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item">
+                                          Gum.iNc DOMINICAN REPUBLIC
+                                       </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc EL SALVADOR </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc GREENLAND </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc GRENADA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc GUADELOUPE</span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc GUATEMALA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc HAITI </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc HONDURAS </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc JAMAICA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc MEXICO </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc NICARAGUA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc PANAMA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item">
+                                          Gum.iNc SAINT KITTS & NEVIS
+                                       </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc SAINT LUCIA </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc TRINIDAD & TOBAGO </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item">
+                                          Gum.iNc UNITED STATES OF AMERICA
+                                       </span>
+                                    </li>
+                                    <li class="d-none">
+                                       <span class="north-american-country dropdown-item"> Gum.iNc US VIRGIN ISLANDS</span>
+                                    </li>
+
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc ALBANIA </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc ANDORA </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc AUSRIA </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc BELARUS </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc BELGIUM </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc BOSNIA & HERZEGOVIA </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc BULGARIA </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc CROATIA </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc CZECH REPUBLIC </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc DENMARK </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc ESTONIA </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc FINLAND </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc FRANCE </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc GERMANY </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc GREECE </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc HUNGARY </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc ICELAND </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc REPUBLIC OF IRELAND </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc ITALY </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc KOSOVO </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc LATIVA </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc LIECHTENSTEIN </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc LITHUANA </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc LUXEMBOURG </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc NORTH MACEDONIA </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc MALTA </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc MOLDOVA </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc MONACO </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc MONTENEGRO </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc NETHERLANDS </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc NORWAY </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc POLAND </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc PORTUGAL </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc ROMANIA </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc RUSSIA </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc SAN MARINO </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc SERBIA </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc SLOVAKIA </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc SLOVENIA </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc SPAIN </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc SWEEDEN </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc SWITZERLAND </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc UKRAINE </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc UNITED KINGDOM </span>
+                                    </li>
+                                    <li>
+                                       <span class="european-country dropdown-item"> Gum.iNc VATICAN CITY </span>
+                                    </li>
+                                 </div>
+                              </ul>
+                           </div>
+
+                           <div class="dropdown">
+                              <label class="d-flex justify-content-between p-3">Continent <small>£23</small></label>
+
+                              <input type="text" class="d-none" name="continent" value="Europe" />
+
+                              <button
+                                 class="btn btn-primary location-control rounded-pill px-3 w-100 d-flex justify-content-between align-items-center dropdown-toggle"
+                                 type="button"
+                                 data-bs-toggle="dropdown"
+                              >
+                                 Europe
+                              </button>
+
+                              <ul class="dropdown-menu shadow-sm w-100 bg-light">
+                                 <div class="location-items">
+                                    <li>
+                                       <span class="dropdown-item">Europe</span>
+                                    </li>
+                                    <li>
+                                       <span class="dropdown-item">Africa</span>
+                                    </li>
+                                    <li>
+                                       <span class="dropdown-item">Asia</span>
+                                    </li>
+                                    <li>
+                                       <span class="dropdown-item">Australia</span>
+                                    </li>
+                                    <li>
+                                       <span class="dropdown-item">North America</span>
+                                    </li>
+                                    <li>
+                                       <span class="dropdown-item">South America</span>
+                                    </li>
+                                    <li>
+                                       <span class="dropdown-item">Antarctica</span>
+                                    </li>
+                                 </div>
+                              </ul>
+                           </div>
+
+                           <div class="form-check form-check-inline d-flex justify-content-center my-4">
+                              <input
+                                 id="go-international"
+                                 class="form-check-input me-2"
+                                 type="checkbox"
+                                 name="international"
+                              />
+                              <label class="form-check-label">
+                                 International
+                                 <small class="ms-3">£50</small></label
+                              >
+                           </div>
+
+                           <div class="text-center mt-3">
+                              <button type="submit" id="updateLocationOptions" class="btn btn-success px-3 rounded-pill">
+                                 <i class="bi bi-cart-plus me-2"></i>Save Changes
+                              </button>
+                           </div>
+                        </form>
+                     </div>
                   </div>
-
-                  <div class="dropdown">
-                    <label class="d-flex justify-content-between p-3"
-                      >Country <small>£20</small></label
-                    >
-
-                    <input
-                      type="text"
-                      class="d-none country-input"
-                      name="country"
-                      value="Gum.iNc United Kingdom"
-                    />
-
-                    <button
-                      class="country-button location-control btn btn-primary rounded-pill px-3 w-100 d-flex justify-content-between align-items-center dropdown-toggle"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                    >
-                      Gum.iNc United Kingdom
-                    </button>
-
-                    <ul class="dropdown-menu shadow-sm w-100 bg-light">
-                      <div class="location-items countries">
-                        <li>
-                          <span class="all dropdown-item">All</span>
-                        </li>
-
-                        <li class="d-none">
-                          <span class="african-country dropdown-item">
-                            Gum.iNc SOUTH AFRICA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="african-country dropdown-item">
-                            Gum.iNc ZAMBIA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="african-country dropdown-item">
-                            Gum.iNc BOTSWANA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="african-country dropdown-item">
-                            Gum.iNc TANZANIA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="african-country dropdown-item">
-                            Gum.iNc MADAGASCAR
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="african-country dropdown-item">
-                            Gum.iNc MAURITIUS
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="african-country dropdown-item">
-                            Gum.iNc RWANDA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="african-country dropdown-item">
-                            Gum.iNc ZIMBABWE
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="african-country dropdown-item">
-                            Gum.Inc ETHIOPIA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="african-country dropdown-item">
-                            Gum.Inc MOZAMBIQUE
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="african-country dropdown-item">
-                            Gum.Inc SWAZILAND
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="african-country dropdown-item">
-                            Gum.Inc LESOTHO
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="african-country dropdown-item">
-                            Gum.Inc CHAD
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="african-country dropdown-item">
-                            Gum.INc MOROCCO
-                          </span>
-                        </li>
-
-                        <li class="d-none">
-                          <span class="asian-country dropdown-item">
-                            Gum.INc CHINA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="asian-country dropdown-item">
-                            Gum.INc HONG KONG
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="asian-country dropdown-item">
-                            Gum.INc JAPAN
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="asian-country dropdown-item">
-                            Gum.INc KOREA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="asian-country dropdown-item">
-                            Gum.INc MALAYSIA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="asian-country dropdown-item">
-                            Gum.INc THAILAND
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="asian-country dropdown-item">
-                            Gum.INc SINGAPORE
-                          </span>
-                        </li>
-
-                        <li class="d-none">
-                          <span class="australian-country dropdown-item">
-                            Gum.INc NEW SOUTH WALES
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="australian-country dropdown-item">
-                            Gum.INc GREENSLAND
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="australian-country dropdown-item">
-                            Gum.INc WESTERN AUSTRALIA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="australian-country dropdown-item">
-                            Gum.iNc WESTERN AUSTRALIA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="australian-country dropdown-item">
-                            Gum.INc TASMANIA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="australian-country dropdown-item">
-                            Gum.INc NORTHERN TERRITORY
-                          </span>
-                        </li>
-
-                        <li class="d-none">
-                          <span class="south-american-country dropdown-item">
-                            Gum.INc ARGENTINA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="south-american-country dropdown-item">
-                            Gum.INc BOLIVIA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="south-american-country dropdown-item">
-                            Gum.INc BRAZIL
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="south-american-country dropdown-item">
-                            Gum.INc CHILE
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="south-american-country dropdown-item">
-                            Gum.INc COLOMBIA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="south-american-country dropdown-item">
-                            Gum.INc ECUADOR
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="south-american-country dropdown-item">
-                            Gum.INc GUYANA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="south-american-country dropdown-item">
-                            Gum.INc PARAGUAY
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="south-american-country dropdown-item">
-                            Gum.INc PERU
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="south-american-country dropdown-item">
-                            Gum.INc SURINAME
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="south-american-country dropdown-item">
-                            Gum.INc URUGUAY
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="south-american-country dropdown-item">
-                            Gum.iNc VENEZUELA
-                          </span>
-                        </li>
-
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc ANTIGUA & BARBUDA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc ANGUILLA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc ARUBA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.Inc THE BAHAMAS
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc BARBADOS
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc BELIZE
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc BERMUDA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc BONAIRE
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc BRITISH VIRGIN ISLANDS
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc CANADA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc CAYMAN ISLANDS
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc CLIPPERTON ISLAND
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc COSTA RICA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc CUBA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc DOMINICA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc DOMINICAN REPUBLIC
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc EL SALVADOR
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc GREENLAND
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc GRENADA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc GUADELOUPE</span
-                          >
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc GUATEMALA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc HAITI
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc HONDURAS
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc JAMAICA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc MEXICO
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc NICARAGUA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc PANAMA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc SAINT KITTS & NEVIS
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc SAINT LUCIA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc TRINIDAD & TOBAGO
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc UNITED STATES OF AMERICA
-                          </span>
-                        </li>
-                        <li class="d-none">
-                          <span class="north-american-country dropdown-item">
-                            Gum.iNc US VIRGIN ISLANDS</span
-                          >
-                        </li>
-
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc ALBANIA
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc ANDORA
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc AUSRIA
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc BELARUS
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc BELGIUM
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc BOSNIA & HERZEGOVIA
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc BULGARIA
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc CROATIA
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc CZECH REPUBLIC
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc DENMARK
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc ESTONIA
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc FINLAND
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc FRANCE
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc GERMANY
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc GREECE
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc HUNGARY
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc ICELAND
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc REPUBLIC OF IRELAND
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc ITALY
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc KOSOVO
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc LATIVA
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc LIECHTENSTEIN
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc LITHUANA
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc LUXEMBOURG
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc NORTH MACEDONIA
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc MALTA
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc MOLDOVA
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc MONACO
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc MONTENEGRO
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc NETHERLANDS
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc NORWAY
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc POLAND
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc PORTUGAL
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc ROMANIA
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc RUSSIA
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc SAN MARINO
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc SERBIA
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc SLOVAKIA
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc SLOVENIA
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc SPAIN
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc SWEEDEN
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc SWITZERLAND
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc UKRAINE
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc UNITED KINGDOM
-                          </span>
-                        </li>
-                        <li>
-                          <span class="european-country dropdown-item">
-                            Gum.iNc VATICAN CITY
-                          </span>
-                        </li>
-                      </div>
-                    </ul>
-                  </div>
-
-                  <div class="dropdown">
-                    <label class="d-flex justify-content-between p-3"
-                      >Continent <small>£23</small></label
-                    >
-
-                    <input
-                      type="text"
-                      class="d-none"
-                      name="continent"
-                      value="Europe"
-                    />
-
-                    <button
-                      class="btn btn-primary location-control rounded-pill px-3 w-100 d-flex justify-content-between align-items-center dropdown-toggle"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                    >
-                      Europe
-                    </button>
-
-                    <ul class="dropdown-menu shadow-sm w-100 bg-light">
-                      <div class="location-items">
-                        <li>
-                          <span class="dropdown-item">Europe</span>
-                        </li>
-                        <li>
-                          <span class="dropdown-item">Africa</span>
-                        </li>
-                        <li>
-                          <span class="dropdown-item">Asia</span>
-                        </li>
-                        <li>
-                          <span class="dropdown-item">Australia</span>
-                        </li>
-                        <li>
-                          <span class="dropdown-item">North America</span>
-                        </li>
-                        <li>
-                          <span class="dropdown-item">South America</span>
-                        </li>
-                        <li>
-                          <span class="dropdown-item">Antarctica</span>
-                        </li>
-                      </div>
-                    </ul>
-                  </div>
-
-                  <div
-                    class="form-check form-check-inline d-flex justify-content-center my-4"
-                  >
-                    <input
-                      id="go-international"
-                      class="form-check-input me-2"
-                      type="checkbox"
-                      name="international"
-                    />
-                    <label class="form-check-label">
-                      International
-                      <small class="ms-3">£50</small></label
-                    >
-                  </div>
-
-                  <div class="text-center mt-3">
-                    <button
-                      type="submit"
-                      id="updateLocationOptions"
-                      class="btn btn-success px-3 rounded-pill"
-                    >
-                      <i class="bi bi-cart-plus me-2"></i>Save Changes
-                    </button>
-                  </div>
-                </form>
-              </div>
+               </div>
             </div>
-          </div>
-        </div>
 
-        <!-- <div
+            <!-- <div
 					class="modal fade"
 					id="proModal"
 					data-bs-backdrop="static"
@@ -976,778 +719,666 @@
 						</div>
 					</div>
 				</div> -->
-      </div>
+         </div>
 
-      <div id="popovers">
-        <button type="button" class="d-none" id="addToCartToastBtn">
-          Add To Cart
-        </button>
+         <div id="popovers">
+            <button type="button" class="d-none" id="addToCartToastBtn">Add To Cart</button>
 
-        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-          <div
-            id="addToCartToast"
-            class="toast text-white bg-primary"
-            role="alert"
-            aria-live="assertive"
-            aria-atomic="true"
-          >
-            <div class="toast-body">
-              <div class="d-flex align-items-center">
-                Added!
-                <button
-                  type="button"
-                  class="btn-close me-2 ms-auto"
-                  data-bs-dismiss="toast"
-                  aria-label="Close"
-                ></button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <button type="button" class="d-none" id="saveIncToastBtn">
-          save inc
-        </button>
-
-        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-          <div
-            id="saveIncToast"
-            class="toast text-white bg-success"
-            role="alert"
-            aria-live="assertive"
-            aria-atomic="true"
-          >
-            <div class="toast-body">
-              <div class="d-flex align-items-center">
-                <i class="bi bi-check fs-2 me-2"></i>
-                <span class="me-2">
-                  Listing Saved! You can find it on the saved Incs tab on you
-                  profile.</span
-                >
-                <button
-                  type="button"
-                  class="btn-close me-2 ms-auto"
-                  data-bs-dismiss="toast"
-                  aria-label="Close"
-                ></button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-          <div
-            id="requestAudienceToast"
-            class="toast text-white bg-success"
-            role="alert"
-            aria-live="assertive"
-            aria-atomic="true"
-          >
-            <div class="toast-body">
-              <div class="d-flex align-items-center">
-                <i class="bi bi-send-check fs-2 me-2"></i>
-                <span class="me-2">
-                  Requested! You'll Be notified of a response in your
-                  notifications.</span
-                >
-                <button
-                  type="button"
-                  class="btn-close me-2 ms-auto"
-                  data-bs-dismiss="toast"
-                  aria-label="Close"
-                ></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="offcanvases">
-        <div
-          class="offcanvas offcanvas-start"
-          tabindex="-1"
-          id="mobileNavOffcanvas"
-          aria-labelledby="mobileNavOffcanvasLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 id="mobileNavOffcanvasLabel"></h5>
-
-            <button
-              type="button"
-              class="btn text-gray"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            >
-              <i class="bi bi-x-circle fs-1"></i>
-            </button>
-          </div>
-
-          <div class="offcanvas-body">
-            <div class="text-center mb-4">
-              <span class="text-gray p-2 fw-bold display-5 p-0 fs-2"
-                >Gum.iNc<i class="bi bi-circle-fill ms-2"></i>
-              </span>
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+               <div
+                  id="addToCartToast"
+                  class="toast text-white bg-primary"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+               >
+                  <div class="toast-body">
+                     <div class="d-flex align-items-center">
+                        Added!
+                        <button
+                           type="button"
+                           class="btn-close me-2 ms-auto"
+                           data-bs-dismiss="toast"
+                           aria-label="Close"
+                        ></button>
+                     </div>
+                  </div>
+               </div>
             </div>
 
-            <div class="d-flex flex-column">
-              <a class="mobile-link p-3" href="./index.html">Home</a>
-              <a class="mobile-link p-3" href="./inc-connect.html"
-                >Inc Connect
-              </a>
-              <a class="mobile-link p-3" href="./office.html">Inc Office </a>
-              <a class="mobile-link p-3" href="./about.html"> About </a>
-              <a class="mobile-link p-3" href="./account.html">Account</a>
+            <button type="button" class="d-none" id="saveIncToastBtn">save inc</button>
+
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+               <div
+                  id="saveIncToast"
+                  class="toast text-white bg-success"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+               >
+                  <div class="toast-body">
+                     <div class="d-flex align-items-center">
+                        <i class="bi bi-check fs-2 me-2"></i>
+                        <span class="me-2"> Listing Saved! You can find it on the saved Incs tab on you profile.</span>
+                        <button
+                           type="button"
+                           class="btn-close me-2 ms-auto"
+                           data-bs-dismiss="toast"
+                           aria-label="Close"
+                        ></button>
+                     </div>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <div id="preloader">
-        <div class="spinner-border" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+               <div
+                  id="requestAudienceToast"
+                  class="toast text-white bg-success"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+               >
+                  <div class="toast-body">
+                     <div class="d-flex align-items-center">
+                        <i class="bi bi-send-check fs-2 me-2"></i>
+                        <span class="me-2"> Requested! You'll Be notified of a response in your notifications.</span>
+                        <button
+                           type="button"
+                           class="btn-close me-2 ms-auto"
+                           data-bs-dismiss="toast"
+                           aria-label="Close"
+                        ></button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
 
-      <div class="mobile-barrier">
-        <h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
-        <h2 class="p-4">Please view on desktop. Site is not mobile ready.</h2>
-      </div>
-    </div>
-
-    <header id="header">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-          <button
-            class="nav-link btn border-0 p-0 d-lg-none"
-            id="nav-toggle"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#mobileNavOffcanvas"
-            aria-controls="mobileNavOffcanvas"
-          >
-            <i class="bi bi-list fs-4"></i>
-          </button>
-
-          <a href="./index.html" class="navbar-brand fw-bold text-primary fs-3"
-            ><img
-              src="./assets/logos and stuff/logo (44).jpg"
-              class="gum-logo rounded-pill"
-          /></a>
-
-          <a class="nav-link order-last d-lg-none" href="./cart.html"
-            ><i class="bi bi-cart4"></i
-          ></a>
-
-          <div class="d-lg-flex d-none">
-            <a href="./index.html" class="nav-link">Home</a>
-            <a href="./inc-connect.html" class="nav-link active">Inc Connect</a>
-            <a href="./office.html" class="nav-link">Inc Office</a>
-
-            <a href="./about.html" class="nav-link">About</a>
-            <a href="./account.html" class="nav-link">Account</a>
-            <a href="./cart.html" class="nav-link"
-              ><i class="bi bi-cart4"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <div class="container mt-5 pt-5">
-      <div>
-        <a href="" class="btn btn-primary px-4 rounded-pill"
-          >Back <i class="bi bi-box-arrow-left ms-2 fs-5"></i
-        ></a>
-      </div>
-
-      <div class="mt-5">
-        <div class="row align-items-center">
-          <div class="col-lg p-2">
+         <div id="offcanvases">
             <div
-              class="input-group rounded-pill overflow-hidden border border-3"
+               class="offcanvas offcanvas-start"
+               tabindex="-1"
+               id="mobileNavOffcanvas"
+               aria-labelledby="mobileNavOffcanvasLabel"
             >
-              <input
-                type="search"
-                class="form-control form-control-lg border-0"
-                placeholder="Search services..."
-              />
-              <span class="input-group-text border-0"
-                ><i class="bi bi-search"></i
-              ></span>
+               <div class="offcanvas-header">
+                  <h5 id="mobileNavOffcanvasLabel"></h5>
+
+                  <button type="button" class="btn text-gray" data-bs-dismiss="offcanvas" aria-label="Close">
+                     <i class="bi bi-x-circle fs-1"></i>
+                  </button>
+               </div>
+
+               <div class="offcanvas-body">
+                  <div class="text-center mb-4">
+                     <span class="text-gray p-2 fw-bold display-5 p-0 fs-2"
+                        >Gum.iNc<i class="bi bi-circle-fill ms-2"></i>
+                     </span>
+                  </div>
+
+                  <div class="d-flex flex-column">
+                     <a class="mobile-link p-3" href="./index.html">Home</a>
+                     <a class="mobile-link p-3" href="./inc-connect.html">Inc Connect </a>
+                     <a class="mobile-link p-3" href="./office.html">Inc Office </a>
+                     <a class="mobile-link p-3" href="./about.html"> About </a>
+                     <a class="mobile-link p-3" href="./account.html">Account</a>
+                  </div>
+               </div>
             </div>
-          </div>
+         </div>
 
-          <div class="col-lg-auto p-2">
-            <div class="text-center">
-              <a
-                href="./login.html"
-                class="btn btn-primary px-3 rounded-pill m-1"
-                >Login</a
-              >
-
-              <button
-                type="button"
-                class="btn btn-success m-1 rounded-pill px-3 shadow"
-                data-bs-toggle="modal"
-                data-bs-target="#locationModal"
-              >
-                London Access<i class="bi bi-caret-down-fill ms-2"></i>
-              </button>
+         <div id="preloader">
+            <div class="spinner-border" role="status">
+               <span class="visually-hidden">Loading...</span>
             </div>
-          </div>
-        </div>
+         </div>
 
-        <p class="lead text-success px-2 py-4 border-bottom border-2">
-          <i class="bi bi-info-circle me-2"></i> You only have access to
-          listings under London Access. Change/upgrade your access to view more!
-        </p>
+         <div class="mobile-barrier">
+            <h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
+            <h2 class="p-4">Please view on desktop. Site is not mobile ready.</h2>
+         </div>
       </div>
 
-      <div class="text-gray lead">
-        <div class="row justify-content-between align-items-end mb-5">
-          <div class="col-lg p-2">
-            <h1 class="text-center text-lg-start display-5">Graphic Design</h1>
-          </div>
+      <header id="header">
+         <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+               <button
+                  class="nav-link btn border-0 p-0 d-lg-none"
+                  id="nav-toggle"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#mobileNavOffcanvas"
+                  aria-controls="mobileNavOffcanvas"
+               >
+                  <i class="bi bi-list fs-4"></i>
+               </button>
 
-          <div class="col-lg-auto p-2">
-            <div class="input-group w-fit mx-auto mx-lg-0">
-              <span class="input-group-text">Sort By</span>
+               <a href="./index.html" class="navbar-brand fw-bold text-primary fs-3"
+                  ><img src="./assets/logos and stuff/logo (44).jpg" class="gum-logo rounded-pill"
+               /></a>
 
-              <select class="form-select w-fit">
-                <option selected>Popularity</option>
-                <option>Relevance</option>
-              </select>
+               <a class="nav-link order-last d-lg-none" href="./cart.html"><i class="bi bi-cart4"></i></a>
+
+               <div class="d-lg-flex d-none">
+                  <a href="./index.html" class="nav-link">Home</a>
+                  <a href="./inc-connect.html" class="nav-link active">Inc Connect</a>
+                  <a href="./office.html" class="nav-link">Inc Office</a>
+
+                  <a href="./about.html" class="nav-link">About</a>
+                  <a href="./account.html" class="nav-link">Account</a>
+                  <a href="./cart.html" class="nav-link"><i class="bi bi-cart4"></i></a>
+               </div>
             </div>
-          </div>
-        </div>
+         </div>
+      </header>
 
-        <div class="d-flex flex-wrap align-items-center">
-          <h5 class="m-1">
-            Also Checkout<i class="bi bi-chevron-double-right ms-2"></i>
-          </h5>
+      <div class="container mt-5 pt-5">
+         <div>
+            <a href="" class="btn btn-primary px-4 rounded-pill">Back <i class="bi bi-box-arrow-left ms-2 fs-5"></i></a>
+         </div>
 
-          <a class="c-rounded-1 btn btn-secondary m-1 py-2 px-3"
-            >Logo Design
-          </a>
+         <div class="mt-5">
+            <div class="row align-items-center">
+               <div class="col-lg p-2">
+                  <div class="input-group rounded-pill overflow-hidden border border-3">
+                     <input type="search" class="form-control form-control-lg border-0" placeholder="Search services..." />
+                     <span class="input-group-text border-0"><i class="bi bi-search"></i></span>
+                  </div>
+               </div>
 
-          <a class="c-rounded-1 btn btn-secondary m-1 py-2 px-3"
-            >UI/UX Design
-          </a>
+               <div class="col-lg-auto p-2">
+                  <div class="text-center">
+                     <a href="./login.html" class="btn btn-primary px-3 rounded-pill m-1">Login</a>
 
-          <a class="c-rounded-1 btn btn-secondary m-1 py-2 px-3"
-            >Web Development
-          </a>
-
-          <a class="c-rounded-1 btn btn-secondary m-1 py-2 px-3">Printing </a>
-        </div>
-      </div>
-    </div>
-
-    <main class="container my-5">
-      <div class="mb-5 shadow-lg c-rounded-2 p-3 p-md-5">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-          <div class="col p-1 d-flex">
-            <div class="p-3 shadow c-rounded-2">
-              <h5 class="mb-2">
-                <a href="./account-connect-listing.html">
-                  Graphic and UI/UX Design
-                </a>
-              </h5>
-
-              <div class="d-flex">
-                <div
-                  style="width: 6rem; height: 6rem"
-                  class="d-flex align-items-center me-3"
-                >
-                  <img
-                    src="./assets/logos and stuff/logo (4).jpg"
-                    class="w-100 c-rounded-1"
-                  />
-                </div>
-
-                <div>
-                  <p class="my-1">
-                    <i class="bi bi-person me-2"></i>Patrick Schick
-                  </p>
-
-                  <p class="my-1">
-                    <i class="bi bi-clock me-2"></i>9am - 6pm, weekdays
-                  </p>
-
-                  <p class="my-1"><i class="bi bi-geo-alt me-2"></i>London</p>
-                </div>
-              </div>
-
-              <div
-                class="d-flex border-top mt-2 align-items-center pt-2 border-2"
-              >
-                <p class="p-0 m-0 pe-2">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Laborum officia necessitatibus.
-                </p>
-
-                <div>
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary saveIncOption"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Save Inc (Listing)"
-                  >
-                    <img src="./assets/img/ink.svg" width="30" />
-                    <br />save
-                  </button>
-                </div>
-              </div>
+                     <button
+                        type="button"
+                        class="btn btn-success m-1 rounded-pill px-3 shadow"
+                        data-bs-toggle="modal"
+                        data-bs-target="#locationModal"
+                     >
+                        London Access<i class="bi bi-caret-down-fill ms-2"></i>
+                     </button>
+                  </div>
+               </div>
             </div>
-          </div>
 
-          <div class="col p-1 d-flex">
-            <div class="p-3 shadow c-rounded-2">
-              <h5 class="mb-2">
-                <a href="./account-connect-listing.html">
-                  Graphic and UI/UX Design
-                </a>
-              </h5>
+            <p class="lead text-success px-2 py-4 border-bottom border-2">
+               <i class="bi bi-info-circle me-2"></i> You only have access to listings under London Access. Change/upgrade
+               your access to view more!
+            </p>
+         </div>
 
-              <div class="d-flex">
-                <div
-                  style="width: 6rem; height: 6rem"
-                  class="d-flex align-items-center me-3"
-                >
-                  <img
-                    src="./assets/logos and stuff/logo (4).jpg"
-                    class="w-100 c-rounded-1"
-                  />
-                </div>
+         <div class="text-gray lead">
+            <div class="row justify-content-between align-items-end mb-5">
+               <div class="col-lg p-2">
+                  <h1 class="text-center text-lg-start display-5">Graphic Design</h1>
+               </div>
 
-                <div>
-                  <p class="my-1">
-                    <i class="bi bi-person me-2"></i>Patrick Schick
-                  </p>
+               <div class="col-lg-auto p-2">
+                  <div class="input-group w-fit mx-auto mx-lg-0">
+                     <span class="input-group-text">Sort By</span>
 
-                  <p class="my-1">
-                    <i class="bi bi-clock me-2"></i>9am - 6pm, weekdays
-                  </p>
-
-                  <p class="my-1"><i class="bi bi-geo-alt me-2"></i>London</p>
-                </div>
-              </div>
-
-              <div
-                class="d-flex border-top mt-2 align-items-center pt-2 border-2"
-              >
-                <p class="p-0 m-0 pe-2">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Laborum officia necessitatibus.
-                </p>
-
-                <div>
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary saveIncOption"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Save Inc (Listing)"
-                  >
-                    <img src="./assets/img/ink.svg" width="30" />
-                    <br />save
-                  </button>
-                </div>
-              </div>
+                     <select class="form-select w-fit">
+                        <option selected>Popularity</option>
+                        <option>Relevance</option>
+                     </select>
+                  </div>
+               </div>
             </div>
-          </div>
 
-          <div class="col p-1 d-flex">
-            <div class="p-3 shadow c-rounded-2">
-              <h5 class="mb-2">
-                <a href="./account-connect-listing.html">
-                  Graphic and UI/UX Design
-                </a>
-              </h5>
+            <div class="d-flex flex-wrap align-items-center">
+               <h5 class="m-1">Also Checkout<i class="bi bi-chevron-double-right ms-2"></i></h5>
 
-              <div class="d-flex">
-                <div
-                  style="width: 6rem; height: 6rem"
-                  class="d-flex align-items-center me-3"
-                >
-                  <img
-                    src="./assets/logos and stuff/logo (4).jpg"
-                    class="w-100 c-rounded-1"
-                  />
-                </div>
+               <a class="c-rounded-1 btn btn-secondary m-1 py-2 px-3">Logo Design </a>
 
-                <div>
-                  <p class="my-1">
-                    <i class="bi bi-person me-2"></i>Patrick Schick
-                  </p>
+               <a class="c-rounded-1 btn btn-secondary m-1 py-2 px-3">UI/UX Design </a>
 
-                  <p class="my-1">
-                    <i class="bi bi-clock me-2"></i>9am - 6pm, weekdays
-                  </p>
+               <a class="c-rounded-1 btn btn-secondary m-1 py-2 px-3">Web Development </a>
 
-                  <p class="my-1"><i class="bi bi-geo-alt me-2"></i>London</p>
-                </div>
-              </div>
-
-              <div
-                class="d-flex border-top mt-2 align-items-center pt-2 border-2"
-              >
-                <p class="p-0 m-0 pe-2">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Laborum officia necessitatibus.
-                </p>
-
-                <div>
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary saveIncOption"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Save Inc (Listing)"
-                  >
-                    <img src="./assets/img/ink.svg" width="30" />
-                    <br />save
-                  </button>
-                </div>
-              </div>
+               <a class="c-rounded-1 btn btn-secondary m-1 py-2 px-3">Printing </a>
             </div>
-          </div>
-
-          <div class="col p-1 d-flex">
-            <div class="p-3 shadow c-rounded-2">
-              <h5 class="mb-2">
-                <a href="./account-connect-listing.html">
-                  Graphic and UI/UX Design
-                </a>
-              </h5>
-
-              <div class="d-flex">
-                <div
-                  style="width: 6rem; height: 6rem"
-                  class="d-flex align-items-center me-3"
-                >
-                  <img
-                    src="./assets/logos and stuff/logo (4).jpg"
-                    class="w-100 c-rounded-1"
-                  />
-                </div>
-
-                <div>
-                  <p class="my-1">
-                    <i class="bi bi-person me-2"></i>Patrick Schick
-                  </p>
-
-                  <p class="my-1">
-                    <i class="bi bi-clock me-2"></i>9am - 6pm, weekdays
-                  </p>
-
-                  <p class="my-1"><i class="bi bi-geo-alt me-2"></i>London</p>
-                </div>
-              </div>
-
-              <div
-                class="d-flex border-top mt-2 align-items-center pt-2 border-2"
-              >
-                <p class="p-0 m-0 pe-2">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Laborum officia necessitatibus.
-                </p>
-
-                <div>
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary saveIncOption"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Save Inc (Listing)"
-                  >
-                    <img src="./assets/img/ink.svg" width="30" />
-                    <br />save
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col p-1 d-flex">
-            <div class="p-3 shadow c-rounded-2">
-              <h5 class="mb-2">
-                <a href="./account-connect-listing.html">
-                  Graphic and UI/UX Design
-                </a>
-              </h5>
-
-              <div class="d-flex">
-                <div
-                  style="width: 6rem; height: 6rem"
-                  class="d-flex align-items-center me-3"
-                >
-                  <img
-                    src="./assets/logos and stuff/logo (4).jpg"
-                    class="w-100 c-rounded-1"
-                  />
-                </div>
-
-                <div>
-                  <p class="my-1">
-                    <i class="bi bi-person me-2"></i>Patrick Schick
-                  </p>
-
-                  <p class="my-1">
-                    <i class="bi bi-clock me-2"></i>9am - 6pm, weekdays
-                  </p>
-
-                  <p class="my-1"><i class="bi bi-geo-alt me-2"></i>London</p>
-                </div>
-              </div>
-
-              <div
-                class="d-flex border-top mt-2 align-items-center pt-2 border-2"
-              >
-                <p class="p-0 m-0 pe-2">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Laborum officia necessitatibus.
-                </p>
-
-                <div>
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary saveIncOption"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Save Inc (Listing)"
-                  >
-                    <img src="./assets/img/ink.svg" width="30" />
-                    <br />save
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col p-1 d-flex">
-            <div class="p-3 shadow c-rounded-2">
-              <h5 class="mb-2">
-                <a href="./account-connect-listing.html">
-                  Graphic and UI/UX Design
-                </a>
-              </h5>
-
-              <div class="d-flex">
-                <div
-                  style="width: 6rem; height: 6rem"
-                  class="d-flex align-items-center me-3"
-                >
-                  <img
-                    src="./assets/logos and stuff/logo (4).jpg"
-                    class="w-100 c-rounded-1"
-                  />
-                </div>
-
-                <div>
-                  <p class="my-1">
-                    <i class="bi bi-person me-2"></i>Patrick Schick
-                  </p>
-
-                  <p class="my-1">
-                    <i class="bi bi-clock me-2"></i>9am - 6pm, weekdays
-                  </p>
-
-                  <p class="my-1"><i class="bi bi-geo-alt me-2"></i>London</p>
-                </div>
-              </div>
-
-              <div
-                class="d-flex border-top mt-2 align-items-center pt-2 border-2"
-              >
-                <p class="p-0 m-0 pe-2">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Laborum officia necessitatibus.
-                </p>
-
-                <div>
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary saveIncOption"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Save Inc (Listing)"
-                  >
-                    <img src="./assets/img/ink.svg" width="30" />
-                    <br />save
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col p-1 d-flex">
-            <div class="p-3 shadow c-rounded-2">
-              <h5 class="mb-2">
-                <a href="./account-connect-listing.html">
-                  Graphic and UI/UX Design
-                </a>
-              </h5>
-
-              <div class="d-flex">
-                <div
-                  style="width: 6rem; height: 6rem"
-                  class="d-flex align-items-center me-3"
-                >
-                  <img
-                    src="./assets/logos and stuff/logo (4).jpg"
-                    class="w-100 c-rounded-1"
-                  />
-                </div>
-
-                <div>
-                  <p class="my-1">
-                    <i class="bi bi-person me-2"></i>Patrick Schick
-                  </p>
-
-                  <p class="my-1">
-                    <i class="bi bi-clock me-2"></i>9am - 6pm, weekdays
-                  </p>
-
-                  <p class="my-1"><i class="bi bi-geo-alt me-2"></i>London</p>
-                </div>
-              </div>
-
-              <div
-                class="d-flex border-top mt-2 align-items-center pt-2 border-2"
-              >
-                <p class="p-0 m-0 pe-2">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Laborum officia necessitatibus.
-                </p>
-
-                <div>
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary saveIncOption"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Save Inc (Listing)"
-                  >
-                    <img src="./assets/img/ink.svg" width="30" />
-                    <br />save
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col p-1 d-flex">
-            <div class="p-3 shadow c-rounded-2">
-              <h5 class="mb-2">
-                <a href="./account-connect-listing.html">
-                  Graphic and UI/UX Design
-                </a>
-              </h5>
-
-              <div class="d-flex">
-                <div
-                  style="width: 6rem; height: 6rem"
-                  class="d-flex align-items-center me-3"
-                >
-                  <img
-                    src="./assets/logos and stuff/logo (4).jpg"
-                    class="w-100 c-rounded-1"
-                  />
-                </div>
-
-                <div>
-                  <p class="my-1">
-                    <i class="bi bi-person me-2"></i>Patrick Schick
-                  </p>
-
-                  <p class="my-1">
-                    <i class="bi bi-clock me-2"></i>9am - 6pm, weekdays
-                  </p>
-
-                  <p class="my-1"><i class="bi bi-geo-alt me-2"></i>London</p>
-                </div>
-              </div>
-
-              <div
-                class="d-flex border-top mt-2 align-items-center pt-2 border-2"
-              >
-                <p class="p-0 m-0 pe-2">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Laborum officia necessitatibus.
-                </p>
-
-                <div>
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary saveIncOption"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Save Inc (Listing)"
-                  >
-                    <img src="./assets/img/ink.svg" width="30" />
-                    <br />save
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+         </div>
       </div>
 
-      <nav class="mx-auto w-fit mt-5">
-        <ul class="pagination">
-          <li class="page-item disabled">
-            <span class="page-link">Previous</span>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">1</a>
-          </li>
-          <li class="page-item active" aria-current="page">
-            <span class="page-link">2</span>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">3</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-          </li>
-        </ul>
-      </nav>
-    </main>
+      <main class="container my-5">
+         <div class="mb-5 shadow-lg c-rounded-2 p-3 p-md-5">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+               <div class="col p-1 d-flex">
+                  <div class="p-3 shadow c-rounded-2">
+                     <h5 class="mb-2">
+                        <a href="./account-connect-listing.html"> Graphic and UI/UX Design </a>
+                     </h5>
 
-    <footer class="container d-lg-flex justify-content-between p-5">
-      <div class="text-center">
-        <p class="d-lg-inline">&copy; 2022 Gum.iNc. All Rights Reserved</p>
+                     <div class="d-flex">
+                        <div style="width: 6rem; height: 6rem" class="d-flex align-items-center me-3">
+                           <img src="./assets/logos and stuff/logo (4).jpg" class="w-100 c-rounded-1" />
+                        </div>
 
-        <a href="./partner.html" class="btn btn-success px-3 rounded-pill ms-3"
-          >Partner With Us</a
-        >
-      </div>
+                        <div>
+                           <p class="my-1"><i class="bi bi-person me-2"></i>Patrick Schick</p>
 
-      <div class="text-center mt-3 mt-lg-0">
-        <a
-          class="btn btn-outline-primary border-0 fs-4"
-          href="https://www.twitter.com"
-          target="_blank"
-          ><i class="bi bi-twitter"></i
-        ></a>
+                           <p class="my-1"><i class="bi bi-clock me-2"></i>9am - 6pm, weekdays</p>
 
-        <a
-          class="btn btn-outline-primary border-0 fs-4"
-          href="https://www.instagram.com"
-          target="_blank"
-          ><i class="bi bi-instagram"></i
-        ></a>
+                           <p class="my-1"><i class="bi bi-geo-alt me-2"></i>London</p>
+                        </div>
+                     </div>
 
-        <a
-          class="btn btn-outline-primary border-0 fs-4"
-          href="https://www.facebook.com"
-          target="_blank"
-          ><i class="bi bi-facebook"></i
-        ></a>
-      </div>
-    </footer>
-  </body>
+                     <div class="d-flex border-top mt-2 align-items-center pt-2 border-2">
+                        <p class="p-0 m-0 pe-2 row flex-grow-1">
+                           <span class="m-1 col-3 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-6 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-4 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-8 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-4 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-2 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-1 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-5 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-3 bg-gray rounded" style="height: 10px"></span>
+                        </p>
+
+                        <div>
+                           <button
+                              type="button"
+                              class="btn btn-outline-primary saveIncOption"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="top"
+                              title="Save Inc (Listing)"
+                           >
+                              <img src="./assets/img/ink.svg" width="30" />
+                              <br />save
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="col p-1 d-flex">
+                  <div class="p-3 shadow c-rounded-2">
+                     <h5 class="mb-2">
+                        <a href="./account-connect-listing.html"> Graphic and UI/UX Design </a>
+                     </h5>
+
+                     <div class="d-flex">
+                        <div style="width: 6rem; height: 6rem" class="d-flex align-items-center me-3">
+                           <img src="./assets/logos and stuff/logo (4).jpg" class="w-100 c-rounded-1" />
+                        </div>
+
+                        <div>
+                           <p class="my-1"><i class="bi bi-person me-2"></i>Patrick Schick</p>
+
+                           <p class="my-1"><i class="bi bi-clock me-2"></i>9am - 6pm, weekdays</p>
+
+                           <p class="my-1"><i class="bi bi-geo-alt me-2"></i>London</p>
+                        </div>
+                     </div>
+
+                     <div class="d-flex border-top mt-2 align-items-center pt-2 border-2">
+                        <p class="p-0 m-0 pe-2 row flex-grow-1">
+                           <span class="m-1 col-3 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-6 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-4 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-8 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-4 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-2 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-1 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-5 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-3 bg-gray rounded" style="height: 10px"></span>
+                        </p>
+
+                        <div>
+                           <button
+                              type="button"
+                              class="btn btn-outline-primary saveIncOption"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="top"
+                              title="Save Inc (Listing)"
+                           >
+                              <img src="./assets/img/ink.svg" width="30" />
+                              <br />save
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="col p-1 d-flex">
+                  <div class="p-3 shadow c-rounded-2">
+                     <h5 class="mb-2">
+                        <a href="./account-connect-listing.html"> Graphic and UI/UX Design </a>
+                     </h5>
+
+                     <div class="d-flex">
+                        <div style="width: 6rem; height: 6rem" class="d-flex align-items-center me-3">
+                           <img src="./assets/logos and stuff/logo (4).jpg" class="w-100 c-rounded-1" />
+                        </div>
+
+                        <div>
+                           <p class="my-1"><i class="bi bi-person me-2"></i>Patrick Schick</p>
+
+                           <p class="my-1"><i class="bi bi-clock me-2"></i>9am - 6pm, weekdays</p>
+
+                           <p class="my-1"><i class="bi bi-geo-alt me-2"></i>London</p>
+                        </div>
+                     </div>
+
+                     <div class="d-flex border-top mt-2 align-items-center pt-2 border-2">
+                        <p class="p-0 m-0 pe-2 row flex-grow-1">
+                           <span class="m-1 col-3 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-6 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-4 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-8 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-4 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-2 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-1 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-5 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-3 bg-gray rounded" style="height: 10px"></span>
+                        </p>
+
+                        <div>
+                           <button
+                              type="button"
+                              class="btn btn-outline-primary saveIncOption"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="top"
+                              title="Save Inc (Listing)"
+                           >
+                              <img src="./assets/img/ink.svg" width="30" />
+                              <br />save
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="col p-1 d-flex">
+                  <div class="p-3 shadow c-rounded-2">
+                     <h5 class="mb-2">
+                        <a href="./account-connect-listing.html"> Graphic and UI/UX Design </a>
+                     </h5>
+
+                     <div class="d-flex">
+                        <div style="width: 6rem; height: 6rem" class="d-flex align-items-center me-3">
+                           <img src="./assets/logos and stuff/logo (4).jpg" class="w-100 c-rounded-1" />
+                        </div>
+
+                        <div>
+                           <p class="my-1"><i class="bi bi-person me-2"></i>Patrick Schick</p>
+
+                           <p class="my-1"><i class="bi bi-clock me-2"></i>9am - 6pm, weekdays</p>
+
+                           <p class="my-1"><i class="bi bi-geo-alt me-2"></i>London</p>
+                        </div>
+                     </div>
+
+                     <div class="d-flex border-top mt-2 align-items-center pt-2 border-2">
+                        <p class="p-0 m-0 pe-2 row flex-grow-1">
+                           <span class="m-1 col-3 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-6 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-4 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-8 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-4 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-2 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-1 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-5 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-3 bg-gray rounded" style="height: 10px"></span>
+                        </p>
+
+                        <div>
+                           <button
+                              type="button"
+                              class="btn btn-outline-primary saveIncOption"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="top"
+                              title="Save Inc (Listing)"
+                           >
+                              <img src="./assets/img/ink.svg" width="30" />
+                              <br />save
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="col p-1 d-flex">
+                  <div class="p-3 shadow c-rounded-2">
+                     <h5 class="mb-2">
+                        <a href="./account-connect-listing.html"> Graphic and UI/UX Design </a>
+                     </h5>
+
+                     <div class="d-flex">
+                        <div style="width: 6rem; height: 6rem" class="d-flex align-items-center me-3">
+                           <img src="./assets/logos and stuff/logo (4).jpg" class="w-100 c-rounded-1" />
+                        </div>
+
+                        <div>
+                           <p class="my-1"><i class="bi bi-person me-2"></i>Patrick Schick</p>
+
+                           <p class="my-1"><i class="bi bi-clock me-2"></i>9am - 6pm, weekdays</p>
+
+                           <p class="my-1"><i class="bi bi-geo-alt me-2"></i>London</p>
+                        </div>
+                     </div>
+
+                     <div class="d-flex border-top mt-2 align-items-center pt-2 border-2">
+                        <p class="p-0 m-0 pe-2 row flex-grow-1">
+                           <span class="m-1 col-3 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-6 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-4 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-8 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-4 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-2 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-1 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-5 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-3 bg-gray rounded" style="height: 10px"></span>
+                        </p>
+
+                        <div>
+                           <button
+                              type="button"
+                              class="btn btn-outline-primary saveIncOption"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="top"
+                              title="Save Inc (Listing)"
+                           >
+                              <img src="./assets/img/ink.svg" width="30" />
+                              <br />save
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="col p-1 d-flex">
+                  <div class="p-3 shadow c-rounded-2">
+                     <h5 class="mb-2">
+                        <a href="./account-connect-listing.html"> Graphic and UI/UX Design </a>
+                     </h5>
+
+                     <div class="d-flex">
+                        <div style="width: 6rem; height: 6rem" class="d-flex align-items-center me-3">
+                           <img src="./assets/logos and stuff/logo (4).jpg" class="w-100 c-rounded-1" />
+                        </div>
+
+                        <div>
+                           <p class="my-1"><i class="bi bi-person me-2"></i>Patrick Schick</p>
+
+                           <p class="my-1"><i class="bi bi-clock me-2"></i>9am - 6pm, weekdays</p>
+
+                           <p class="my-1"><i class="bi bi-geo-alt me-2"></i>London</p>
+                        </div>
+                     </div>
+
+                     <div class="d-flex border-top mt-2 align-items-center pt-2 border-2">
+                        <p class="p-0 m-0 pe-2 row flex-grow-1">
+                           <span class="m-1 col-3 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-6 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-4 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-8 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-4 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-2 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-1 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-5 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-3 bg-gray rounded" style="height: 10px"></span>
+                        </p>
+
+                        <div>
+                           <button
+                              type="button"
+                              class="btn btn-outline-primary saveIncOption"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="top"
+                              title="Save Inc (Listing)"
+                           >
+                              <img src="./assets/img/ink.svg" width="30" />
+                              <br />save
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="col p-1 d-flex">
+                  <div class="p-3 shadow c-rounded-2">
+                     <h5 class="mb-2">
+                        <a href="./account-connect-listing.html"> Graphic and UI/UX Design </a>
+                     </h5>
+
+                     <div class="d-flex">
+                        <div style="width: 6rem; height: 6rem" class="d-flex align-items-center me-3">
+                           <img src="./assets/logos and stuff/logo (4).jpg" class="w-100 c-rounded-1" />
+                        </div>
+
+                        <div>
+                           <p class="my-1"><i class="bi bi-person me-2"></i>Patrick Schick</p>
+
+                           <p class="my-1"><i class="bi bi-clock me-2"></i>9am - 6pm, weekdays</p>
+
+                           <p class="my-1"><i class="bi bi-geo-alt me-2"></i>London</p>
+                        </div>
+                     </div>
+
+                     <div class="d-flex border-top mt-2 align-items-center pt-2 border-2">
+                        <p class="p-0 m-0 pe-2 row flex-grow-1">
+                           <span class="m-1 col-3 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-6 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-4 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-8 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-4 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-2 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-1 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-5 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-3 bg-gray rounded" style="height: 10px"></span>
+                        </p>
+
+                        <div>
+                           <button
+                              type="button"
+                              class="btn btn-outline-primary saveIncOption"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="top"
+                              title="Save Inc (Listing)"
+                           >
+                              <img src="./assets/img/ink.svg" width="30" />
+                              <br />save
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="col p-1 d-flex">
+                  <div class="p-3 shadow c-rounded-2">
+                     <h5 class="mb-2">
+                        <a href="./account-connect-listing.html"> Graphic and UI/UX Design </a>
+                     </h5>
+
+                     <div class="d-flex">
+                        <div style="width: 6rem; height: 6rem" class="d-flex align-items-center me-3">
+                           <img src="./assets/logos and stuff/logo (4).jpg" class="w-100 c-rounded-1" />
+                        </div>
+
+                        <div>
+                           <p class="my-1"><i class="bi bi-person me-2"></i>Patrick Schick</p>
+
+                           <p class="my-1"><i class="bi bi-clock me-2"></i>9am - 6pm, weekdays</p>
+
+                           <p class="my-1"><i class="bi bi-geo-alt me-2"></i>London</p>
+                        </div>
+                     </div>
+
+                     <div class="d-flex border-top mt-2 align-items-center pt-2 border-2">
+                        <p class="p-0 m-0 pe-2 row flex-grow-1">
+                           <span class="m-1 col-3 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-6 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-4 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-8 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-4 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-2 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-1 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-5 bg-gray rounded" style="height: 10px"></span>
+                           <span class="m-1 col-3 bg-gray rounded" style="height: 10px"></span>
+                        </p>
+
+                        <div>
+                           <button
+                              type="button"
+                              class="btn btn-outline-primary saveIncOption"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="top"
+                              title="Save Inc (Listing)"
+                           >
+                              <img src="./assets/img/ink.svg" width="30" />
+                              <br />save
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <nav class="mx-auto w-fit mt-5">
+            <ul class="pagination">
+               <li class="page-item disabled">
+                  <span class="page-link">Previous</span>
+               </li>
+               <li class="page-item">
+                  <a class="page-link" href="#">1</a>
+               </li>
+               <li class="page-item active" aria-current="page">
+                  <span class="page-link">2</span>
+               </li>
+               <li class="page-item">
+                  <a class="page-link" href="#">3</a>
+               </li>
+               <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+               </li>
+            </ul>
+         </nav>
+      </main>
+
+      <footer class="container d-lg-flex justify-content-between p-5">
+         <div class="text-center">
+            <p class="d-lg-inline">&copy; 2022 Gum.iNc. All Rights Reserved</p>
+
+            <a href="./partner.html" class="btn btn-success px-3 rounded-pill ms-3">Partner With Us</a>
+         </div>
+
+         <div class="text-center mt-3 mt-lg-0">
+            <a class="btn btn-outline-primary border-0 fs-4" href="https://www.twitter.com" target="_blank"
+               ><i class="bi bi-twitter"></i
+            ></a>
+
+            <a class="btn btn-outline-primary border-0 fs-4" href="https://www.instagram.com" target="_blank"
+               ><i class="bi bi-instagram"></i
+            ></a>
+
+            <a class="btn btn-outline-primary border-0 fs-4" href="https://www.facebook.com" target="_blank"
+               ><i class="bi bi-facebook"></i
+            ></a>
+         </div>
+      </footer>
+   </body>
 </html>

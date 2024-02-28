@@ -1,591 +1,494 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gum.iNc</title>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Gum.iNc</title>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/vendor/bootstrap-icons/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="./assets/vendor/fontawsome/css/all.min.css" />
-    <link
-      rel="stylesheet"
-      href="./assets/vendor/custom-bootstrap/css/custom.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+      <link
+         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" />
+      <link rel="stylesheet" href="./assets/vendor/fontawsome/css/all.min.css" />
+      <link rel="stylesheet" href="./assets/vendor/custom-bootstrap/css/custom.min.css" />
+      <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!-- scripts -->
+      <!-- scripts -->
 
-    <script
-      defer
-      src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"
-    ></script>
+      <script defer src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script defer src="./assets/js/main.js"></script>
-    <script defer src="./assets/js/custom.js"></script>
-    <script defer src="./assets/js/office.js"></script>
-  </head>
+      <script defer src="./assets/js/main.js"></script>
+      <script defer src="./assets/js/custom.js"></script>
+      <script defer src="./assets/js/office.js"></script>
+   </head>
 
-  <style>
-    .selectable {
-      border: solid thin #008a63;
-      color: #008a63;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .selectable:hover {
-      box-shadow: 1px 1px 5px gray;
-    }
-    .selectable.selected {
-      background-color: #008a63;
-      color: white;
-    }
-    .bi-cursor-fill {
-      transition: color 0.3s, transform 0.1s;
-    }
-    .block-screen {
-      cursor: not-allowed;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(255, 255, 255, 0.7);
-      z-index: 1;
-    }
-  </style>
-
-  <style>
-    .office-block {
-      position: relative;
-      top: -40px;
-      margin: 0 auto;
-      width: 85%;
-    }
-    @media screen and (max-width: 500px) {
-      .office-block {
-        width: 95%;
+   <style>
+      .selectable {
+         border: solid thin #008a63;
+         color: #008a63;
+         border-radius: 0.5rem;
+         cursor: pointer;
+         transition: all 0.2s;
       }
-    }
-  </style>
+      .selectable:hover {
+         box-shadow: 1px 1px 5px gray;
+      }
+      .selectable.selected {
+         background-color: #008a63;
+         color: white;
+      }
+      .bi-cursor-fill {
+         transition: color 0.3s, transform 0.1s;
+      }
+      .block-screen {
+         cursor: not-allowed;
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         background-color: rgba(255, 255, 255, 0.7);
+         z-index: 1;
+      }
+   </style>
 
-  <body>
-    <div id="invisible-elements">
-      <div class="custom-modals">
-        <div
-          class="modal fade"
-          id="locationModal"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabindex="-1"
-          aria-labelledby="locationModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content c-rounded-1 p-lg-5">
-              <div class="modal-header">
-                <h5 class="modal-title" id="locationModalLabel">
-                  Gum.iNc Access
-                </h5>
+   <style>
+      .office-block {
+         position: relative;
+         top: -40px;
+         margin: 0 auto;
+         width: 85%;
+      }
+      @media screen and (max-width: 500px) {
+         .office-block {
+            width: 95%;
+         }
+      }
+   </style>
 
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-
-              <div class="modal-body">
-                <div class="d-flex justify-content-between align-items-center">
-                  <a
-                    class="col-8 btn btn-primary text-start border c-rounded-1 mb-2 p-2"
-                  >
-                    Gum.Inc Local - UK
-                  </a>
-
-                  <span class="text-success d-inline-block"
-                    ><i class="fas fa-check-circle"></i>
-                  </span>
-                </div>
-
-                <div
-                  class="dropdown d-flex justify-content-between align-items-center"
-                >
-                  <button
-                    class="col-8 btn text-start btn-primary disabled border c-rounded-1 mb-2 p-2 dropdown-toggle"
-                    type="button"
-                    id=""
-                    data-bs-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Gum.iNc Regional
-                  </button>
-
-                  <button
-                    type="button"
-                    class="btn btn-outline-warning rounded"
-                    data-bs-toggle="modal"
-                    data-bs-target="#proModal"
-                  >
-                    pro<i class="fas fa-crown ms-3"></i>
-                  </button>
-
-                  <!-- <span class="text-warning d-inline-block"
-										>pro<i class="fas fa-crown ms-3"></i
-									></span> -->
-
-                  <div class="dropdown-menu" aria-labelledby="">
-                    <a class="dropdown-item" href="#">Argentina</a>
-                    <a class="dropdown-item" href="#">Brasil</a>
-                    <a class="dropdown-item" href="#">France</a>
-                    <a class="dropdown-item" href="#">France</a>
-                    <a class="dropdown-item" href="#">And So Forth...</a>
-                  </div>
-                </div>
-
-                <div
-                  class="dropdown d-flex justify-content-between align-items-center"
-                >
-                  <button
-                    class="col-8 btn text-start btn-primary disabled border c-rounded-1 mb-2 p-2 dropdown-toggle"
-                    type="button"
-                    id="coTrigger"
-                    data-bs-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Gum.iNc Continental
-                  </button>
-
-                  <button
-                    type="button"
-                    class="btn btn-outline-warning rounded"
-                    data-bs-toggle="modal"
-                    data-bs-target="#proModal"
-                  >
-                    pro<i class="fas fa-crown ms-3"></i>
-                  </button>
-
-                  <!-- <span class="text-warning d-inline-block"
-										>pro<i class="fas fa-crown ms-3"></i
-									></span> -->
-
-                  <div class="dropdown-menu" aria-labelledby="coTrigger">
-                    <a class="dropdown-item" href="#">Africa</a>
-                    <a class="dropdown-item" href="#">Europe</a>
-                    <a class="dropdown-item" href="#">Asia</a>
-                    <a class="dropdown-item" href="#">Astralia</a>
-                    <a class="dropdown-item" href="#">North America</a>
-                    <a class="dropdown-item" href="#">South America</a>
-                  </div>
-                </div>
-
-                <div class="d-flex justify-content-between align-items-center">
-                  <a
-                    class="col-8 disabled btn text-start btn-primary border c-rounded-1 mb-2 p-2"
-                  >
-                    Gum.iNc International
-                  </a>
-
-                  <button
-                    type="button"
-                    class="btn btn-outline-warning rounded"
-                    data-bs-toggle="modal"
-                    data-bs-target="#proModal"
-                  >
-                    pro<i class="fas fa-crown ms-3"></i>
-                  </button>
-
-                  <!-- <span class="text-warning d-inline-block"
-										>pro<i class="fas fa-crown ms-3"></i
-									></span> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="modal fade"
-          id="proModal"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabindex="-1"
-          aria-labelledby="proModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content p-4 c-rounded-2">
-              <div class="modal-header">
-                <h5
-                  class="modal-title flex-fill text-center"
-                  id="proModalLabel"
-                >
-                  Upgrade To Gum.iNc Pro!
-                </h5>
-
-                <button
-                  type="button"
-                  class="btn-close fs-5"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-
-              <div class="modal-body p-3 p-lg-5">
-                <div
-                  class="text-center align-items-center justify-content-around"
-                >
-                  <div
-                    class="c-rounded-1 shadow p-3 d-flex flex-column align-items-center justify-content-around h-100"
-                  >
-                    <div>
-                      <i class="fas fa-crown fs-1 text-warning"></i>
-                    </div>
-
-                    <p class="my-3">Extent your reach/access globally</p>
-
-                    <button class="btn btn-success rounded-pill px-3">
-                      £ 50.00 Annually
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="popovers">
-        <button type="button" class="d-none" id="addToCartToastBtn">
-          Add To Cart
-        </button>
-
-        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-          <div
-            id="addToCartToast"
-            class="toast text-white bg-primary"
-            role="alert"
-            aria-live="assertive"
-            aria-atomic="true"
-          >
-            <div class="toast-body">
-              <div class="d-flex align-items-center">
-                Added!
-                <button
-                  type="button"
-                  class="btn-close me-2 ms-auto"
-                  data-bs-dismiss="toast"
-                  aria-label="Close"
-                ></button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <button type="button" class="d-none" id="saveIncToastBtn">
-          save inc
-        </button>
-
-        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-          <div
-            id="saveIncToast"
-            class="toast text-white bg-success"
-            role="alert"
-            aria-live="assertive"
-            aria-atomic="true"
-          >
-            <div class="toast-body">
-              <div class="d-flex align-items-center">
-                <i class="bi bi-check fs-2 me-2"></i>
-                <span class="me-2">
-                  Listing Saved! You can find it on the saved Incs tab on you
-                  profile.</span
-                >
-                <button
-                  type="button"
-                  class="btn-close me-2 ms-auto"
-                  data-bs-dismiss="toast"
-                  aria-label="Close"
-                ></button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-          <div
-            id="requestAudienceToast"
-            class="toast text-white bg-success"
-            role="alert"
-            aria-live="assertive"
-            aria-atomic="true"
-          >
-            <div class="toast-body">
-              <div class="d-flex align-items-center">
-                <i class="bi bi-send-check fs-2 me-2"></i>
-                <span class="me-2">
-                  Requested! You'll Be notified of a response in your
-                  notifications.</span
-                >
-                <button
-                  type="button"
-                  class="btn-close me-2 ms-auto"
-                  data-bs-dismiss="toast"
-                  aria-label="Close"
-                ></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="offcanvases">
-        <div
-          class="offcanvas offcanvas-start"
-          tabindex="-1"
-          id="mobileNavOffcanvas"
-          aria-labelledby="mobileNavOffcanvasLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 id="mobileNavOffcanvasLabel"></h5>
-
-            <button
-              type="button"
-              class="btn text-gray"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
+   <body>
+      <div id="invisible-elements">
+         <div class="custom-modals">
+            <div
+               class="modal fade"
+               id="locationModal"
+               data-bs-backdrop="static"
+               data-bs-keyboard="false"
+               tabindex="-1"
+               aria-labelledby="locationModalLabel"
+               aria-hidden="true"
             >
-              <i class="bi bi-x-circle fs-1"></i>
-            </button>
-          </div>
+               <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content c-rounded-1 p-lg-5">
+                     <div class="modal-header">
+                        <h5 class="modal-title" id="locationModalLabel">Gum.iNc Access</h5>
 
-          <div class="offcanvas-body">
-            <div class="text-center mb-4">
-              <span class="text-gray p-2 fw-bold display-5 p-0 fs-2"
-                >Gum.iNc<i class="bi bi-circle-fill ms-2"></i>
-              </span>
-            </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
 
-            <div class="d-flex flex-column">
-              <a class="mobile-link p-3" href="./index.html">Home</a>
-              <a class="mobile-link p-3" href="./inc-connect.html"
-                >Inc Connect
-              </a>
-              <a class="mobile-link p-3" href="./office.html">Inc Office </a>
-              <a class="mobile-link p-3" href="./about.html"> About </a>
-              <a class="mobile-link p-3" href="./account.html">Account</a>
-            </div>
-          </div>
-        </div>
-      </div>
+                     <div class="modal-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                           <a class="col-8 btn btn-primary text-start border c-rounded-1 mb-2 p-2"> Gum.Inc Local - UK </a>
 
-      <div id="preloader">
-        <div class="spinner-border" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
+                           <span class="text-success d-inline-block"><i class="fas fa-check-circle"></i> </span>
+                        </div>
 
-      <div class="mobile-barrier">
-        <h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
-        <h2 class="p-4">Please view on desktop. Site is not mobile ready.</h2>
-      </div>
-    </div>
+                        <div class="dropdown d-flex justify-content-between align-items-center">
+                           <button
+                              class="col-8 btn text-start btn-primary disabled border c-rounded-1 mb-2 p-2 dropdown-toggle"
+                              type="button"
+                              id=""
+                              data-bs-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                           >
+                              Gum.iNc Regional
+                           </button>
 
-    <header id="header">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-          <button
-            class="nav-link btn border-0 p-0 d-lg-none"
-            id="nav-toggle"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#mobileNavOffcanvas"
-            aria-controls="mobileNavOffcanvas"
-          >
-            <i class="bi bi-list fs-4"></i>
-          </button>
+                           <button
+                              type="button"
+                              class="btn btn-outline-warning rounded"
+                              data-bs-toggle="modal"
+                              data-bs-target="#proModal"
+                           >
+                              pro<i class="fas fa-crown ms-3"></i>
+                           </button>
 
-          <a href="./index.html" class="navbar-brand fw-bold text-primary fs-3"
-            ><img
-              src="./assets/logos and stuff/logo (44).jpg"
-              class="gum-logo rounded-pill"
-          /></a>
+                           <!-- <span class="text-warning d-inline-block"
+										>pro<i class="fas fa-crown ms-3"></i
+									></span> -->
 
-          <a class="nav-link order-last d-lg-none" href="./cart.html"
-            ><i class="bi bi-cart4"></i
-          ></a>
+                           <div class="dropdown-menu" aria-labelledby="">
+                              <a class="dropdown-item" href="#">Argentina</a>
+                              <a class="dropdown-item" href="#">Brasil</a>
+                              <a class="dropdown-item" href="#">France</a>
+                              <a class="dropdown-item" href="#">France</a>
+                              <a class="dropdown-item" href="#">And So Forth...</a>
+                           </div>
+                        </div>
 
-          <div class="d-lg-flex d-none">
-            <a href="./index.html" class="nav-link">Home</a>
-            <a href="./inc-connect.html" class="nav-link">Inc Connect</a>
-            <a href="./office.html" class="nav-link active">Inc Office</a>
+                        <div class="dropdown d-flex justify-content-between align-items-center">
+                           <button
+                              class="col-8 btn text-start btn-primary disabled border c-rounded-1 mb-2 p-2 dropdown-toggle"
+                              type="button"
+                              id="coTrigger"
+                              data-bs-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                           >
+                              Gum.iNc Continental
+                           </button>
 
-            <a href="./about.html" class="nav-link">About</a>
-            <a href="./account.html" class="nav-link">Account</a>
-            <a href="./cart.html" class="nav-link"
-              ><i class="bi bi-cart4"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-    </header>
+                           <button
+                              type="button"
+                              class="btn btn-outline-warning rounded"
+                              data-bs-toggle="modal"
+                              data-bs-target="#proModal"
+                           >
+                              pro<i class="fas fa-crown ms-3"></i>
+                           </button>
 
-    <a
-      href="./office-form.html"
-      target="_self"
-      class="office-proceed d-none shadow-lg btn btn-primary btn-lg rounded-pill px-3 position-fixed bottom-0 end-0 z-index-5 m-3"
-      >Proceed<i class="bi bi-arrow-right-short ms-2"></i
-    ></a>
+                           <!-- <span class="text-warning d-inline-block"
+										>pro<i class="fas fa-crown ms-3"></i
+									></span> -->
 
-    <main>
-      <div class="container pt-5 mt-4">
-        <div>
-          <h1 class="display-4 p-4 p-lg-5 pb-lg-4 text-gray">
-            Welcome To Inc
-            <span class="text-success"> Office </span>
-          </h1>
+                           <div class="dropdown-menu" aria-labelledby="coTrigger">
+                              <a class="dropdown-item" href="#">Africa</a>
+                              <a class="dropdown-item" href="#">Europe</a>
+                              <a class="dropdown-item" href="#">Asia</a>
+                              <a class="dropdown-item" href="#">Astralia</a>
+                              <a class="dropdown-item" href="#">North America</a>
+                              <a class="dropdown-item" href="#">South America</a>
+                           </div>
+                        </div>
 
-          <p class="lead px-4 px-lg-5 mb-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-            error odit incidunt officiis, voluptas nam velit dolores praesentium
-            dignissimos tempora porro mollitia modi rem cum facere itaque
-            aliquam quo doloremque?
-          </p>
-        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                           <a class="col-8 disabled btn text-start btn-primary border c-rounded-1 mb-2 p-2">
+                              Gum.iNc International
+                           </a>
 
-        <div class="p-2 p-lg-5" id="parent-elem-1">
-          <div class="border border-2 bg-light c-rounded-2 p-3 p-lg-5 lead">
-            <div class="mb-4">
-              <h2 class="p-0">Research Bureau Newsletter</h2>
-              <p class="">
-                Welcome to the Business Bureau by the Gum iNc- We offer monthly
-                newsletters ---
-                <i
-                  style="font-size: 5rem; float: right"
-                  class="bi bi-clipboard-data m-1 text-primary"
-                ></i>
-                <!-- <img
-										src="./assets/clipboard.svg"
-										style="width: 4rem; float: right"
-										class="m-2"
-									/> -->
-                ---- -------- ---- -------- ---- ---- ------------ ---- --------
-                ---- -------- ---- ---- ------------ ---- -------- ---- --------
-                ---- ---- ------------ -- ------ ----------- --
-              </p>
-            </div>
-          </div>
+                           <button
+                              type="button"
+                              class="btn btn-outline-warning rounded"
+                              data-bs-toggle="modal"
+                              data-bs-target="#proModal"
+                           >
+                              pro<i class="fas fa-crown ms-3"></i>
+                           </button>
 
-          <div
-            class="office-block border border-2 bg-white c-rounded-2 shadow p-3 p-lg-4"
-          >
-            <div class="text-center d-lg-none">
-              <div class="p-1 pe-3 rounded-pill">5 per month - £35</div>
-
-              <button
-                class="select-all select-all-1 w-100 rounded-pill mt-2 btn btn-primary p-2 pe-4 shadow"
-              >
-                <i class="bi bi-star me-2"></i>
-                Due Diligence (All) - £80
-              </button>
-            </div>
-
-            <div class="w-fit mx-auto position-relative d-none d-lg-block">
-              <div
-                class="rounded-pill w-fit overflow-hidden d-flex p-1 bg-primary"
-                style="z-index: 1"
-              >
-                <div
-                  style="z-index: 1"
-                  class="bg-white px-3 d-flex align-items-center rounded-pill"
-                >
-                  5 per month - £35
-                </div>
-
-                <button
-                  class="select-all select-all-1 btn btn-primary p-2 pe-4 shadow"
-                >
-                  <i class="bi bi-star me-2"></i>
-                  Due Diligence (All) - £80
-                </button>
-              </div>
-
-              <i
-                class="bi bi-cursor-fill text-white"
-                style="
-                  transform: rotate(-90deg);
-                  position: absolute;
-                  bottom: -1.84rem;
-                  right: -0.7rem;
-                  font-size: 2.3rem;
-                  z-index: 2;
-                "
-              ></i>
-              <i
-                class="bi bi-cursor-fill text-dark"
-                style="
-                  transform: rotate(-90deg);
-                  position: absolute;
-                  bottom: -1.7rem;
-                  right: -0.7rem;
-                  font-size: 2rem;
-                  z-index: 2;
-                "
-              ></i>
+                           <!-- <span class="text-warning d-inline-block"
+										>pro<i class="fas fa-crown ms-3"></i
+									></span> -->
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
 
             <div
-              class="row pt-4 p-1 row-cols-auto position-relative justify-content-center"
-              id="block1"
+               class="modal fade"
+               id="proModal"
+               data-bs-backdrop="static"
+               data-bs-keyboard="false"
+               tabindex="-1"
+               aria-labelledby="proModalLabel"
+               aria-hidden="true"
             >
-              <div class="block-screen d-none"></div>
-              <div class="selectable col p-1 p-lg-3 m-1">Operations</div>
-              <div class="selectable col p-1 p-lg-3 m-1">Sales & Marketing</div>
-              <div class="selectable col p-1 p-lg-3 m-1">Strategy</div>
-              <div class="selectable col p-1 p-lg-3 m-1">Procurement</div>
-              <div class="selectable col p-1 p-lg-3 m-1">
-                Sustainability , Cause & Responsibility
-              </div>
-              <div class="selectable col p-1 p-lg-3 m-1">
-                Enterprise Technology
-              </div>
-              <div class="selectable col p-1 p-lg-3 m-1">Morden Marketing</div>
-              <div class="selectable col p-1 p-lg-3 m-1">
-                Customer Experience
-              </div>
-              <div class="selectable col p-1 p-lg-3 m-1">Digital Growth</div>
-              <div class="selectable col p-1 p-lg-3 m-1">Marketing & Sales</div>
-              <div class="selectable col p-1 p-lg-3 m-1">
-                Implementation Operations
-              </div>
-              <div class="selectable col p-1 p-lg-3 m-1">
-                People & Organisation Performance
-              </div>
-              <div class="selectable col p-1 p-lg-3 m-1">Risk & Resilience</div>
-              <div class="selectable col p-1 p-lg-3 m-1">
-                Strategy & Corporate Finance
-              </div>
-              <div class="selectable col p-1 p-lg-3 m-1">Sustainability</div>
-              <div class="selectable col p-1 p-lg-3 m-1">Transformation</div>
-              <div class="selectable col p-1 p-lg-3 m-1">
-                Artificial Intelligence
-              </div>
-            </div>
-          </div>
-        </div>
+               <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content p-4 c-rounded-2">
+                     <div class="modal-header">
+                        <h5 class="modal-title flex-fill text-center" id="proModalLabel">Upgrade To Gum.iNc Pro!</h5>
 
-        <!-- <div class="col-lg-6 p-2" id="parent-elem-2">
+                        <button type="button" class="btn-close fs-5" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+
+                     <div class="modal-body p-3 p-lg-5">
+                        <div class="text-center align-items-center justify-content-around">
+                           <div
+                              class="c-rounded-1 shadow p-3 d-flex flex-column align-items-center justify-content-around h-100"
+                           >
+                              <div>
+                                 <i class="fas fa-crown fs-1 text-warning"></i>
+                              </div>
+
+                              <p class="my-3">Extent your reach/access globally</p>
+
+                              <button class="btn btn-success rounded-pill px-3">£ 50.00 Annually</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="popovers">
+            <button type="button" class="d-none" id="addToCartToastBtn">Add To Cart</button>
+
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+               <div
+                  id="addToCartToast"
+                  class="toast text-white bg-primary"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+               >
+                  <div class="toast-body">
+                     <div class="d-flex align-items-center">
+                        Added!
+                        <button
+                           type="button"
+                           class="btn-close me-2 ms-auto"
+                           data-bs-dismiss="toast"
+                           aria-label="Close"
+                        ></button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <button type="button" class="d-none" id="saveIncToastBtn">save inc</button>
+
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+               <div
+                  id="saveIncToast"
+                  class="toast text-white bg-success"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+               >
+                  <div class="toast-body">
+                     <div class="d-flex align-items-center">
+                        <i class="bi bi-check fs-2 me-2"></i>
+                        <span class="me-2"> Listing Saved! You can find it on the saved Incs tab on you profile.</span>
+                        <button
+                           type="button"
+                           class="btn-close me-2 ms-auto"
+                           data-bs-dismiss="toast"
+                           aria-label="Close"
+                        ></button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+               <div
+                  id="requestAudienceToast"
+                  class="toast text-white bg-success"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+               >
+                  <div class="toast-body">
+                     <div class="d-flex align-items-center">
+                        <i class="bi bi-send-check fs-2 me-2"></i>
+                        <span class="me-2"> Requested! You'll Be notified of a response in your notifications.</span>
+                        <button
+                           type="button"
+                           class="btn-close me-2 ms-auto"
+                           data-bs-dismiss="toast"
+                           aria-label="Close"
+                        ></button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="offcanvases">
+            <div
+               class="offcanvas offcanvas-start"
+               tabindex="-1"
+               id="mobileNavOffcanvas"
+               aria-labelledby="mobileNavOffcanvasLabel"
+            >
+               <div class="offcanvas-header">
+                  <h5 id="mobileNavOffcanvasLabel"></h5>
+
+                  <button type="button" class="btn text-gray" data-bs-dismiss="offcanvas" aria-label="Close">
+                     <i class="bi bi-x-circle fs-1"></i>
+                  </button>
+               </div>
+
+               <div class="offcanvas-body">
+                  <div class="text-center mb-4">
+                     <span class="text-gray p-2 fw-bold display-5 p-0 fs-2"
+                        >Gum.iNc<i class="bi bi-circle-fill ms-2"></i>
+                     </span>
+                  </div>
+
+                  <div class="d-flex flex-column">
+                     <a class="mobile-link p-3" href="./index.html">Home</a>
+                     <a class="mobile-link p-3" href="./inc-connect.html">Inc Connect </a>
+                     <a class="mobile-link p-3" href="./office.html">Inc Office </a>
+                     <a class="mobile-link p-3" href="./about.html"> About </a>
+                     <a class="mobile-link p-3" href="./account.html">Account</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="preloader">
+            <div class="spinner-border" role="status">
+               <span class="visually-hidden">Loading...</span>
+            </div>
+         </div>
+
+         <div class="mobile-barrier">
+            <h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
+            <h2 class="p-4">Please view on desktop. Site is not mobile ready.</h2>
+         </div>
+      </div>
+
+      <header id="header">
+         <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+               <button
+                  class="nav-link btn border-0 p-0 d-lg-none"
+                  id="nav-toggle"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#mobileNavOffcanvas"
+                  aria-controls="mobileNavOffcanvas"
+               >
+                  <i class="bi bi-list fs-4"></i>
+               </button>
+
+               <a href="./index.html" class="navbar-brand fw-bold text-primary fs-3"
+                  ><img src="./assets/logos and stuff/logo (44).jpg" class="gum-logo rounded-pill"
+               /></a>
+
+               <a class="nav-link order-last d-lg-none" href="./cart.html"><i class="bi bi-cart4"></i></a>
+
+               <div class="d-lg-flex d-none">
+                  <a href="./index.html" class="nav-link">Home</a>
+                  <a href="./inc-connect.html" class="nav-link">Inc Connect</a>
+                  <a href="./office.html" class="nav-link active">Inc Office</a>
+
+                  <a href="./about.html" class="nav-link">About</a>
+                  <a href="./account.html" class="nav-link">Account</a>
+                  <a href="./cart.html" class="nav-link"><i class="bi bi-cart4"></i></a>
+               </div>
+            </div>
+         </div>
+      </header>
+
+      <a
+         href="./office-form.html"
+         target="_self"
+         class="office-proceed d-none shadow-lg btn btn-primary btn-lg rounded-pill px-3 position-fixed bottom-0 end-0 z-index-5 m-3"
+         >Proceed<i class="bi bi-arrow-right-short ms-2"></i
+      ></a>
+
+      <main>
+         <div class="container pt-5 mt-4">
+            <div>
+               <h1 class="display-4 p-4 p-lg-5 pb-lg-4 text-gray">
+                  Welcome To Inc
+                  <span class="text-success"> Office </span>
+               </h1>
+               <h5 class="px-4 px-lg-5">Your Gateway to Business Excellence</h5>
+               <p class="lead px-4 px-lg-5 mb-5">
+                  Subtext: "Welcome to Inc Office, where business insights come to you. Join our exclusive newsletter for a
+                  curated selection of strategic tips, marketing trends, and digital growth hacks. Stay ahead of the curve
+                  and elevate your business with our valuable content delivered right to your inbox. Subscribe now and
+                  unlock the key to sustained success in the dynamic world of entrepreneurship.
+               </p>
+            </div>
+
+            <div class="p-2 p-lg-5" id="parent-elem-1">
+               <div class="border border-2 bg-light c-rounded-2 p-3 p-lg-5 lead">
+                  <div class="mb-4">
+                     <h2 class="p-0">Research Bureau Newsletter</h2>
+                     <!-- <p class="">
+                        Welcome to the Business Bureau by the Gum iNc- We offer monthly newsletters ---
+                        <i style="font-size: 5rem; float: right" class="bi bi-clipboard-data m-1 text-primary"></i>
+                        ---- -------- ---- -------- ---- ---- ------------ ---- -------- ---- -------- ---- ----
+                        ------------ ---- -------- ---- -------- ---- ---- ------------ -- ------ ----------- --
+                     </p> -->
+                     <p class="">
+                        Dive into the realm of business innovation with our Research Bureau Newsletter.
+                        <i style="font-size: 5rem; float: right" class="bi bi-clipboard-data m-1 text-primary"></i>
+                        Choose from a variety of focus areas and receive curated insights and valuable updates to stay
+                        informed and stay ahead ---- -------- ---- -------- ---- ---- ------------ ---- -------- ----
+                        -------- ---- ----
+                     </p>
+                  </div>
+               </div>
+
+               <div class="office-block border border-2 bg-white c-rounded-2 shadow p-3 p-lg-4">
+                  <div class="text-center d-lg-none">
+                     <div class="p-1 pe-3 rounded-pill">5 per month - £35</div>
+
+                     <button class="select-all select-all-1 w-100 rounded-pill mt-2 btn btn-primary p-2 pe-4 shadow">
+                        <i class="bi bi-star me-2"></i>
+                        Due Diligence (All) - £80
+                     </button>
+                  </div>
+
+                  <div class="w-fit mx-auto position-relative d-none d-lg-block">
+                     <div class="rounded-pill w-fit overflow-hidden d-flex p-1 bg-primary" style="z-index: 1">
+                        <div style="z-index: 1" class="bg-white px-3 d-flex align-items-center rounded-pill">
+                           5 per month - £35
+                        </div>
+
+                        <button class="select-all select-all-1 btn btn-primary p-2 pe-4 shadow">
+                           <i class="bi bi-star me-2"></i>
+                           Due Diligence (All) - £80
+                        </button>
+                     </div>
+
+                     <i
+                        class="bi bi-cursor-fill text-white"
+                        style="
+                           transform: rotate(-90deg);
+                           position: absolute;
+                           bottom: -1.84rem;
+                           right: -0.7rem;
+                           font-size: 2.3rem;
+                           z-index: 2;
+                        "
+                     ></i>
+                     <i
+                        class="bi bi-cursor-fill text-dark"
+                        style="
+                           transform: rotate(-90deg);
+                           position: absolute;
+                           bottom: -1.7rem;
+                           right: -0.7rem;
+                           font-size: 2rem;
+                           z-index: 2;
+                        "
+                     ></i>
+                  </div>
+
+                  <div class="row pt-4 p-1 row-cols-auto position-relative justify-content-center" id="block1">
+                     <div class="block-screen d-none"></div>
+                     <div class="selectable col p-1 p-lg-3 m-1">Operations</div>
+                     <div class="selectable col p-1 p-lg-3 m-1">Sales & Marketing</div>
+                     <div class="selectable col p-1 p-lg-3 m-1">Strategy</div>
+                     <div class="selectable col p-1 p-lg-3 m-1">Procurement</div>
+                     <div class="selectable col p-1 p-lg-3 m-1">Sustainability , Cause & Responsibility</div>
+                     <div class="selectable col p-1 p-lg-3 m-1">Enterprise Technology</div>
+                     <div class="selectable col p-1 p-lg-3 m-1">Morden Marketing</div>
+                     <div class="selectable col p-1 p-lg-3 m-1">Customer Experience</div>
+                     <div class="selectable col p-1 p-lg-3 m-1">Digital Growth</div>
+                     <div class="selectable col p-1 p-lg-3 m-1">Marketing & Sales</div>
+                     <div class="selectable col p-1 p-lg-3 m-1">Implementation Operations</div>
+                     <div class="selectable col p-1 p-lg-3 m-1">People & Organisation Performance</div>
+                     <div class="selectable col p-1 p-lg-3 m-1">Risk & Resilience</div>
+                     <div class="selectable col p-1 p-lg-3 m-1">Strategy & Corporate Finance</div>
+                     <div class="selectable col p-1 p-lg-3 m-1">Sustainability</div>
+                     <div class="selectable col p-1 p-lg-3 m-1">Transformation</div>
+                     <div class="selectable col p-1 p-lg-3 m-1">Artificial Intelligence</div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- <div class="col-lg-6 p-2" id="parent-elem-2">
             <div class="border border-2 bg-light c-rounded-2 p-3 p-lg-5 lead">
               <div class="mb-4">
                 <h2 class="p-0">Business Consultancy</h2>
@@ -686,40 +589,29 @@
               </div>
             </div>
           </div> -->
-      </div>
-    </main>
+         </div>
+      </main>
 
-    <footer class="container d-lg-flex justify-content-between p-5">
-      <div class="text-center">
-        <p class="d-lg-inline">&copy; 2022 Gum.iNc. All Rights Reserved</p>
+      <footer class="container d-lg-flex justify-content-between p-5">
+         <div class="text-center">
+            <p class="d-lg-inline">&copy; 2022 Gum.iNc. All Rights Reserved</p>
 
-        <a href="./partner.html" class="btn btn-success px-3 rounded-pill ms-3"
-          >Partner With Us</a
-        >
-      </div>
+            <a href="./partner.html" class="btn btn-success px-3 rounded-pill ms-3">Partner With Us</a>
+         </div>
 
-      <div class="text-center mt-3 mt-lg-0">
-        <a
-          class="btn btn-outline-primary border-0 fs-4"
-          href="https://www.twitter.com"
-          target="_blank"
-          ><i class="bi bi-twitter"></i
-        ></a>
+         <div class="text-center mt-3 mt-lg-0">
+            <a class="btn btn-outline-primary border-0 fs-4" href="https://www.twitter.com" target="_blank"
+               ><i class="bi bi-twitter"></i
+            ></a>
 
-        <a
-          class="btn btn-outline-primary border-0 fs-4"
-          href="https://www.instagram.com"
-          target="_blank"
-          ><i class="bi bi-instagram"></i
-        ></a>
+            <a class="btn btn-outline-primary border-0 fs-4" href="https://www.instagram.com" target="_blank"
+               ><i class="bi bi-instagram"></i
+            ></a>
 
-        <a
-          class="btn btn-outline-primary border-0 fs-4"
-          href="https://www.facebook.com"
-          target="_blank"
-          ><i class="bi bi-facebook"></i
-        ></a>
-      </div>
-    </footer>
-  </body>
+            <a class="btn btn-outline-primary border-0 fs-4" href="https://www.facebook.com" target="_blank"
+               ><i class="bi bi-facebook"></i
+            ></a>
+         </div>
+      </footer>
+   </body>
 </html>

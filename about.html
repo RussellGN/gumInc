@@ -1,1113 +1,917 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gum.iNc</title>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Gum.iNc</title>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/vendor/bootstrap-icons/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="./assets/vendor/fontawsome/css/all.min.css" />
-    <link
-      rel="stylesheet"
-      href="./assets/vendor/custom-bootstrap/css/custom.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+      <link
+         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" />
+      <link rel="stylesheet" href="./assets/vendor/fontawsome/css/all.min.css" />
+      <link rel="stylesheet" href="./assets/vendor/custom-bootstrap/css/custom.min.css" />
+      <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!-- scripts -->
+      <!-- scripts -->
 
-    <script
-      defer
-      src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"
-    ></script>
+      <script defer src="./assets/vendor/custom-bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script defer src="./assets/js/main.js"></script>
-    <script defer src="./assets/js/custom.js"></script>
-  </head>
+      <script defer src="./assets/js/main.js"></script>
+      <script defer src="./assets/js/custom.js"></script>
+   </head>
 
-  <style>
-    #generalCarousel1 .carousel-item > div h2 {
-      align-items: end !important;
-    }
-  </style>
+   <style>
+      #generalCarousel1 .carousel-item > div h2 {
+         align-items: end !important;
+      }
+   </style>
 
-  <body>
-    <div id="invisible-elements">
-      <div class="custom-modals">
-        <!--Location Modal -->
+   <body>
+      <div id="invisible-elements">
+         <div class="custom-modals">
+            <!--Location Modal -->
 
-        <div
-          class="modal fade"
-          id="locationModal"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabindex="-1"
-          aria-labelledby="locationModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content c-rounded-2 p-5">
-              <div class="modal-header">
-                <h5 class="modal-title" id="locationModalLabel">
-                  Gum.iNc Access
-                </h5>
-
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-
-              <div class="modal-body">
-                <div class="d-flex justify-content-between align-items-center">
-                  <a
-                    class="col-8 btn btn-primary text-start border c-rounded-1 mb-2 p-2"
-                  >
-                    Gum.Inc Local - UK
-                  </a>
-
-                  <span class="text-success d-inline-block"
-                    >selected<i class="fas fa-check-circle ms-3"></i>
-                  </span>
-                </div>
-
-                <div
-                  class="dropdown d-flex justify-content-between align-items-center"
-                >
-                  <button
-                    class="col-8 btn text-start btn-primary disabled border c-rounded-1 mb-2 p-2 dropdown-toggle"
-                    type="button"
-                    id=""
-                    data-bs-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Gum.iNc Regional
-                  </button>
-
-                  <span class="text-warning d-inline-block"
-                    >pro<i class="fas fa-crown ms-3"></i
-                  ></span>
-
-                  <div class="dropdown-menu" aria-labelledby="">
-                    <a class="dropdown-item" href="#">Argentina</a>
-                    <a class="dropdown-item" href="#">Brasil</a>
-                    <a class="dropdown-item" href="#">France</a>
-                    <a class="dropdown-item" href="#">France</a>
-                    <a class="dropdown-item" href="#">And So Forth...</a>
-                  </div>
-                </div>
-
-                <div
-                  class="dropdown d-flex justify-content-between align-items-center"
-                >
-                  <button
-                    class="col-8 btn text-start btn-primary disabled border c-rounded-1 mb-2 p-2 dropdown-toggle"
-                    type="button"
-                    id="coTrigger"
-                    data-bs-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Gum.iNc Continental
-                  </button>
-
-                  <span class="text-warning d-inline-block"
-                    >pro<i class="fas fa-crown ms-3"></i
-                  ></span>
-
-                  <div class="dropdown-menu" aria-labelledby="coTrigger">
-                    <a class="dropdown-item" href="#">Africa</a>
-                    <a class="dropdown-item" href="#">Europe</a>
-                    <a class="dropdown-item" href="#">Asia</a>
-                    <a class="dropdown-item" href="#">Astralia</a>
-                    <a class="dropdown-item" href="#">North America</a>
-                    <a class="dropdown-item" href="#">South America</a>
-                  </div>
-                </div>
-
-                <div class="d-flex justify-content-between align-items-center">
-                  <a
-                    class="col-8 disabled btn text-start btn-primary border c-rounded-1 mb-2 p-2"
-                  >
-                    Gum.iNc International
-                  </a>
-
-                  <span class="text-warning d-inline-block"
-                    >pro<i class="fas fa-crown ms-3"></i
-                  ></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="popovers">
-        <button type="button" class="d-none" id="addToCartToastBtn">
-          Add To Cart
-        </button>
-
-        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-          <div
-            id="addToCartToast"
-            class="toast text-white bg-primary"
-            role="alert"
-            aria-live="assertive"
-            aria-atomic="true"
-          >
-            <div class="toast-body">
-              <div class="d-flex align-items-center">
-                Added!
-                <button
-                  type="button"
-                  class="btn-close me-2 ms-auto"
-                  data-bs-dismiss="toast"
-                  aria-label="Close"
-                ></button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <button type="button" class="d-none" id="saveIncToastBtn">
-          save inc
-        </button>
-
-        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-          <div
-            id="saveIncToast"
-            class="toast text-white bg-success"
-            role="alert"
-            aria-live="assertive"
-            aria-atomic="true"
-          >
-            <div class="toast-body">
-              <div class="d-flex align-items-center">
-                <i class="bi bi-check fs-2 me-2"></i>
-                <span class="me-2">
-                  Listing Saved! You can find it on the saved Incs tab on you
-                  profile.</span
-                >
-                <button
-                  type="button"
-                  class="btn-close me-2 ms-auto"
-                  data-bs-dismiss="toast"
-                  aria-label="Close"
-                ></button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-          <div
-            id="requestAudienceToast"
-            class="toast text-white bg-success"
-            role="alert"
-            aria-live="assertive"
-            aria-atomic="true"
-          >
-            <div class="toast-body">
-              <div class="d-flex align-items-center">
-                <i class="bi bi-send-check fs-2 me-2"></i>
-                <span class="me-2">
-                  Requested! You'll Be notified of a response in your
-                  notifications.</span
-                >
-                <button
-                  type="button"
-                  class="btn-close me-2 ms-auto"
-                  data-bs-dismiss="toast"
-                  aria-label="Close"
-                ></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="offcanvases">
-        <div
-          class="offcanvas offcanvas-start"
-          tabindex="-1"
-          id="mobileNavOffcanvas"
-          aria-labelledby="mobileNavOffcanvasLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 id="mobileNavOffcanvasLabel"></h5>
-
-            <button
-              type="button"
-              class="btn text-gray"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
+            <div
+               class="modal fade"
+               id="locationModal"
+               data-bs-backdrop="static"
+               data-bs-keyboard="false"
+               tabindex="-1"
+               aria-labelledby="locationModalLabel"
+               aria-hidden="true"
             >
-              <i class="bi bi-x-circle fs-1"></i>
-            </button>
-          </div>
+               <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content c-rounded-2 p-5">
+                     <div class="modal-header">
+                        <h5 class="modal-title" id="locationModalLabel">Gum.iNc Access</h5>
 
-          <div class="offcanvas-body">
-            <div class="text-center mb-4">
-              <span class="text-gray p-2 fw-bold display-5 p-0 fs-2"
-                >Gum.iNc<i class="bi bi-circle-fill ms-2"></i>
-              </span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+
+                     <div class="modal-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                           <a class="col-8 btn btn-primary text-start border c-rounded-1 mb-2 p-2"> Gum.Inc Local - UK </a>
+
+                           <span class="text-success d-inline-block"
+                              >selected<i class="fas fa-check-circle ms-3"></i>
+                           </span>
+                        </div>
+
+                        <div class="dropdown d-flex justify-content-between align-items-center">
+                           <button
+                              class="col-8 btn text-start btn-primary disabled border c-rounded-1 mb-2 p-2 dropdown-toggle"
+                              type="button"
+                              id=""
+                              data-bs-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                           >
+                              Gum.iNc Regional
+                           </button>
+
+                           <span class="text-warning d-inline-block">pro<i class="fas fa-crown ms-3"></i></span>
+
+                           <div class="dropdown-menu" aria-labelledby="">
+                              <a class="dropdown-item" href="#">Argentina</a>
+                              <a class="dropdown-item" href="#">Brasil</a>
+                              <a class="dropdown-item" href="#">France</a>
+                              <a class="dropdown-item" href="#">France</a>
+                              <a class="dropdown-item" href="#">And So Forth...</a>
+                           </div>
+                        </div>
+
+                        <div class="dropdown d-flex justify-content-between align-items-center">
+                           <button
+                              class="col-8 btn text-start btn-primary disabled border c-rounded-1 mb-2 p-2 dropdown-toggle"
+                              type="button"
+                              id="coTrigger"
+                              data-bs-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                           >
+                              Gum.iNc Continental
+                           </button>
+
+                           <span class="text-warning d-inline-block">pro<i class="fas fa-crown ms-3"></i></span>
+
+                           <div class="dropdown-menu" aria-labelledby="coTrigger">
+                              <a class="dropdown-item" href="#">Africa</a>
+                              <a class="dropdown-item" href="#">Europe</a>
+                              <a class="dropdown-item" href="#">Asia</a>
+                              <a class="dropdown-item" href="#">Astralia</a>
+                              <a class="dropdown-item" href="#">North America</a>
+                              <a class="dropdown-item" href="#">South America</a>
+                           </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                           <a class="col-8 disabled btn text-start btn-primary border c-rounded-1 mb-2 p-2">
+                              Gum.iNc International
+                           </a>
+
+                           <span class="text-warning d-inline-block">pro<i class="fas fa-crown ms-3"></i></span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="popovers">
+            <button type="button" class="d-none" id="addToCartToastBtn">Add To Cart</button>
+
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+               <div
+                  id="addToCartToast"
+                  class="toast text-white bg-primary"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+               >
+                  <div class="toast-body">
+                     <div class="d-flex align-items-center">
+                        Added!
+                        <button
+                           type="button"
+                           class="btn-close me-2 ms-auto"
+                           data-bs-dismiss="toast"
+                           aria-label="Close"
+                        ></button>
+                     </div>
+                  </div>
+               </div>
             </div>
 
-            <div class="d-flex flex-column">
-              <a class="mobile-link p-3" href="./index.html">Home</a>
-              <a class="mobile-link p-3" href="./inc-connect.html"
-                >Inc Connect
-              </a>
-              <a class="mobile-link p-3" href="./office.html">Inc Office </a>
-              <a class="mobile-link p-3" href="./about.html"> About </a>
-              <a class="mobile-link p-3" href="./account.html">Account</a>
+            <button type="button" class="d-none" id="saveIncToastBtn">save inc</button>
+
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+               <div
+                  id="saveIncToast"
+                  class="toast text-white bg-success"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+               >
+                  <div class="toast-body">
+                     <div class="d-flex align-items-center">
+                        <i class="bi bi-check fs-2 me-2"></i>
+                        <span class="me-2"> Listing Saved! You can find it on the saved Incs tab on you profile.</span>
+                        <button
+                           type="button"
+                           class="btn-close me-2 ms-auto"
+                           data-bs-dismiss="toast"
+                           aria-label="Close"
+                        ></button>
+                     </div>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
+
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+               <div
+                  id="requestAudienceToast"
+                  class="toast text-white bg-success"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+               >
+                  <div class="toast-body">
+                     <div class="d-flex align-items-center">
+                        <i class="bi bi-send-check fs-2 me-2"></i>
+                        <span class="me-2"> Requested! You'll Be notified of a response in your notifications.</span>
+                        <button
+                           type="button"
+                           class="btn-close me-2 ms-auto"
+                           data-bs-dismiss="toast"
+                           aria-label="Close"
+                        ></button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="offcanvases">
+            <div
+               class="offcanvas offcanvas-start"
+               tabindex="-1"
+               id="mobileNavOffcanvas"
+               aria-labelledby="mobileNavOffcanvasLabel"
+            >
+               <div class="offcanvas-header">
+                  <h5 id="mobileNavOffcanvasLabel"></h5>
+
+                  <button type="button" class="btn text-gray" data-bs-dismiss="offcanvas" aria-label="Close">
+                     <i class="bi bi-x-circle fs-1"></i>
+                  </button>
+               </div>
+
+               <div class="offcanvas-body">
+                  <div class="text-center mb-4">
+                     <span class="text-gray p-2 fw-bold display-5 p-0 fs-2"
+                        >Gum.iNc<i class="bi bi-circle-fill ms-2"></i>
+                     </span>
+                  </div>
+
+                  <div class="d-flex flex-column">
+                     <a class="mobile-link p-3" href="./index.html">Home</a>
+                     <a class="mobile-link p-3" href="./inc-connect.html">Inc Connect </a>
+                     <a class="mobile-link p-3" href="./office.html">Inc Office </a>
+                     <a class="mobile-link p-3" href="./about.html"> About </a>
+                     <a class="mobile-link p-3" href="./account.html">Account</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="preloader">
+            <div class="spinner-border" role="status">
+               <span class="visually-hidden">Loading...</span>
+            </div>
+         </div>
+
+         <div class="mobile-barrier">
+            <h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
+            <h2 class="p-4">Please view on desktop. Site is not mobile ready.</h2>
+         </div>
       </div>
 
-      <div id="preloader">
-        <div class="spinner-border" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
+      <header id="header">
+         <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+               <button
+                  class="nav-link btn border-0 p-0 d-lg-none"
+                  id="nav-toggle"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#mobileNavOffcanvas"
+                  aria-controls="mobileNavOffcanvas"
+               >
+                  <i class="bi bi-list fs-4"></i>
+               </button>
 
-      <div class="mobile-barrier">
-        <h1 class="text-danger"><i class="bi bi-info-circle"></i></h1>
-        <h2 class="p-4">Please view on desktop. Site is not mobile ready.</h2>
-      </div>
-    </div>
+               <a href="./index.html" class="navbar-brand fw-bold text-primary fs-3"
+                  ><img src="./assets/logos and stuff/logo (44).jpg" class="gum-logo rounded-pill"
+               /></a>
 
-    <header id="header">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-          <button
-            class="nav-link btn border-0 p-0 d-lg-none"
-            id="nav-toggle"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#mobileNavOffcanvas"
-            aria-controls="mobileNavOffcanvas"
-          >
-            <i class="bi bi-list fs-4"></i>
-          </button>
+               <a class="nav-link order-last d-lg-none" href="./cart.html"><i class="bi bi-cart4"></i></a>
 
-          <a href="./index.html" class="navbar-brand fw-bold text-primary fs-3"
-            ><img
-              src="./assets/logos and stuff/logo (44).jpg"
-              class="gum-logo rounded-pill"
-          /></a>
+               <div class="d-lg-flex d-none">
+                  <a href="./index.html" class="nav-link">Home</a>
+                  <a href="./inc-connect.html" class="nav-link">Inc Connect</a>
+                  <a href="./office.html" class="nav-link">Inc Office</a>
 
-          <a class="nav-link order-last d-lg-none" href="./cart.html"
-            ><i class="bi bi-cart4"></i
-          ></a>
+                  <a href="./about.html" class="nav-link active">About</a>
+                  <a href="./account.html" class="nav-link">Account</a>
+                  <a href="./cart.html" class="nav-link"><i class="bi bi-cart4"></i></a>
+               </div>
+            </div>
+         </div>
+      </header>
 
-          <div class="d-lg-flex d-none">
-            <a href="./index.html" class="nav-link">Home</a>
-            <a href="./inc-connect.html" class="nav-link">Inc Connect</a>
-            <a href="./office.html" class="nav-link">Inc Office</a>
+      <main class="mt-5 pt-5 text-gray container">
+         <div class="shadow bg-primary p-lg-5 p-2 c-rounded-1">
+            <div class="row">
+               <div class="col-lg-6 d-flex py-4 align-items-center">
+                  <div>
+                     <img src="./assets/logos and stuff/logo (44).jpg" class="w-100" />
+                     <div class="bg-white p-2 w-25 c-rounded-1 mx-auto"></div>
+                  </div>
+               </div>
 
-            <a href="./about.html" class="nav-link active">About</a>
-            <a href="./account.html" class="nav-link">Account</a>
-            <a href="./cart.html" class="nav-link"
-              ><i class="bi bi-cart4"></i
+               <div class="col-lg-6 d-flex align-items-center">
+                  <p class="shadow-lg bg-white p-3 p-lg-5 c-rounded-1 lead">
+                     Gum.iNc is a contract management IRM & CRM system oriented as an Almanac & Directory listing platform,
+                     at both online and offline spectrums. That focuses on how entrepreneurs, corporate entities and the
+                     creative economy-stores and secures business contacts , network and connections whilst profiting and
+                     generating revenue from having their contact in the Gum.iNc platform.
+                  </p>
+               </div>
+            </div>
+         </div>
+
+         <div class="p-lg-5 my-5 py-4 text-center">
+            <div class="row justify-content-center">
+               <div class="col-auto">
+                  <i class="fas fa-quote-left fs-1 text-success"></i>
+               </div>
+
+               <p class="col col-lg-6 py-lg-5 lead m-0 px-lg-3">
+                  Revolutionizing and reinvention of the yellow pages , not only on all spectrums of information, digital or
+                  traditional yellow page hard copy culture but stretching into Motorizing contact platform, allow clients
+                  to generate funds for sustainability of existing information in our platform .
+               </p>
+
+               <div class="col-auto d-flex align-items-end">
+                  <i class="fas fa-quote-right fs-1 text-success"></i>
+               </div>
+            </div>
+         </div>
+
+         <div class="my-5 py-4">
+            <h2 class="mb-4 text-center">You earn on the platform in 3 different ways.</h2>
+
+            <div class="row row-cols-1 p-1 row-cols-md-2 row-cols-lg-5 justify-content-center">
+               <div class="col p-2">
+                  <div class="h-100 shadow c-rounded-1 p-3 text-center">
+                     <div>
+                        <i class="bi bi-coin fs-1 text-primary"></i>
+                     </div>
+
+                     <p class="m-0">Every 100 people that access your Gum.iNc you earn £ 30.00</p>
+                  </div>
+               </div>
+
+               <div class="col p-2">
+                  <div class="h-100 shadow c-rounded-1 p-3 text-center">
+                     <div>
+                        <i class="bi bi-coin fs-1 text-primary"></i>
+                     </div>
+
+                     <p class="m-0">Earn as a Gum.iNc sales agent and Sales representative</p>
+                  </div>
+               </div>
+
+               <div class="col p-1 text-center">
+                  <div class="shadow h-100 c-rounded-1 p-2">
+                     <div>
+                        <i class="bi bi-coin fs-1 text-primary"></i>
+                     </div>
+                     <div>Suggest 10 people and earn £ 10.00</div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="text-center mt-4">
+               <a href="./signup.html" class="btn rounded-pill px-4 btn-primary">Signup!</a>
+            </div>
+         </div>
+
+         <div class="row py-4 align-items-center my-5">
+            <div class="col-lg-5 p-2 p-lg-5">
+               <div>
+                  <div id="generalCarousel1" class="carousel slide general-carousel" data-bs-ride="carousel">
+                     <div class="carousel-inner p-2" role="listbox">
+                        <div class="carousel-item active">
+                           <div>
+                              <img src="./assets/img/covers/gummy.jpg" />
+                              <h2 class="h5">
+                                 <span>Gummy Pages ( Yellow Pages ) by the Gum.iNc ®</span>
+                              </h2>
+                           </div>
+                        </div>
+
+                        <div class="carousel-item">
+                           <div>
+                              <img src="./assets/img/covers/upcoming-events.jpg" />
+                              <h2 class="h5">
+                                 <span>Upcoming Events by the Gum.iNc ®</span>
+                              </h2>
+                           </div>
+                        </div>
+
+                        <div class="carousel-item">
+                           <div>
+                              <img src="./assets/img/covers/creme-chefs.jpg" />
+                              <h2 class="h5">
+                                 <span>Cremé Chefs by the Gum.iNc ®</span>
+                              </h2>
+                           </div>
+                        </div>
+
+                        <div class="carousel-item">
+                           <div>
+                              <img src="./assets/img/covers/creme-restaurants.jpg" />
+                              <h2 class="h5">
+                                 <span>Cremé Restaurants by the Gum.iNc ®</span>
+                              </h2>
+                           </div>
+                        </div>
+
+                        <div class="carousel-item">
+                           <div>
+                              <img src="./assets/img/covers/sports.jpg" />
+                              <h2 class="h5">
+                                 <span>Sports by the Gum.iNc ®</span>
+                              </h2>
+                           </div>
+                        </div>
+
+                        <div class="carousel-item">
+                           <div>
+                              <img src="./assets/img/covers/craft-skill.jpg" />
+                              <h2 class="h5">
+                                 <span>Craft/ Skill by the Gum.iNc ®</span>
+                              </h2>
+                           </div>
+                        </div>
+
+                        <div class="carousel-item">
+                           <div>
+                              <img src="./assets/img/covers/coin.jpg" />
+                              <h2 class="h5">
+                                 <span>Coin ( Business) by the Gum.iNc ®</span>
+                              </h2>
+                           </div>
+                        </div>
+
+                        <div class="carousel-item">
+                           <div>
+                              <img src="./assets/img/covers/thrift.jpg" />
+                              <h2 class="h5">
+                                 <span>Thrift ( Fashion ) by the Gum.iNc ®</span>
+                              </h2>
+                           </div>
+                        </div>
+
+                        <div class="carousel-item">
+                           <div>
+                              <img src="./assets/img/covers/thrift.jpg" />
+                              <h2 class="h5">
+                                 <span>Edu-Cation by the Gum.iNc ®</span>
+                              </h2>
+                           </div>
+                        </div>
+
+                        <div class="carousel-item">
+                           <div>
+                              <img src="./assets/img/covers/artists-creatives.jpg" />
+                              <h2 class="h5">
+                                 <span>Creatives & Artists by the Gum.iNc ®</span>
+                              </h2>
+                           </div>
+                        </div>
+
+                        <div class="carousel-item">
+                           <div>
+                              <img src="./assets/img/covers/record.jpg" />
+                              <h2 class="h5">
+                                 <span> Recording Labels | Artists & Repertoire / Booking Agents by the Gum.iNc ® </span>
+                              </h2>
+                           </div>
+                        </div>
+
+                        <div class="carousel-item">
+                           <div>
+                              <img src="./assets/img/covers/ngos.jpg" />
+                              <h2 class="h5">
+                                 <span>NGOs / Sponsorships & Funds by the Gum.iNc ®</span>
+                              </h2>
+                           </div>
+                        </div>
+
+                        <div class="carousel-item">
+                           <div>
+                              <img src="./assets/img/covers/creative-hubs.jpg" />
+                              <h2 class="h5">
+                                 <span> Creative Hubs / Studios & Co-working spaces by the Gum.iNc ® </span>
+                              </h2>
+                           </div>
+                        </div>
+
+                        <div class="carousel-item">
+                           <div>
+                              <img src="./assets/img/covers/airbnbs.jpg" />
+                              <h2 class="h5">
+                                 <span>Air Bnbs, Hotels & Resorts by the Gum.iNc ®</span>
+                              </h2>
+                           </div>
+                        </div>
+
+                        <div class="carousel-item">
+                           <div>
+                              <img src="./assets/img/covers/hospitals.jpg" />
+                              <h2 class="h5">
+                                 <span> Hospitals / Medical Specialists & facilities by the Gum.Inc </span>
+                              </h2>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="text-center">
+                     <button class="btn btn-success" type="button" data-bs-target="#generalCarousel1" data-bs-slide="prev">
+                        <i class="bi bi-chevron-double-left fs-5"></i>
+                     </button>
+
+                     <button class="btn btn-success" type="button" data-bs-target="#generalCarousel1" data-bs-slide="next">
+                        <i class="bi bi-chevron-double-right fs-5"></i>
+                     </button>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-lg-7 p-3 p-lg-5">
+               <div class="text-center text-lg-start">
+                  <h2 class="mb-3">Our Directory & Almanac System</h2>
+
+                  <p class="lead col-lg-11">
+                     Over the course of the centuries certain industries have deemed lucrative and thriving ,so we’ve
+                     carefully curated and tailor suited our directory system to 15 almanacs that have shown exponential
+                     growth and positive future outlook in this ever changing digital era . Gum.iNc is a premium access
+                     contact management system that is organized to thriving industry backed up by a multi faceted Almanac
+                     and directory platform for connecting,networking and advertising. Explore and connect iNc with us
+                  </p>
+
+                  <div>
+                     <a href="./inc-connect.html" class="btn btn-primary rounded-pill px-4 mt-2"> Explore </a>
+
+                     <a href="./signup.html" class="btn btn-success rounded-pill mt-2 px-3">
+                        Signup<i class="bi bi-arrow-right ms-2"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="my-5 py-4 px-3 px-lg-5">
+            <div class="row px-lg-5 align-items-center align-items-lg-end">
+               <div class="col-auto p-2">
+                  <i class="bi bi-geo-alt fs-1 text-success"></i>
+               </div>
+
+               <div class="col p-2">
+                  <h3>Location Based Service</h3>
+               </div>
+
+               <div class="col-12 p-2">
+                  <div class="bg-light c-rounded-1 p-3">
+                     <p class="m-0">
+                        Our Almanac and directory system in conducted under jurisdiction accordance. Each continent and
+                        broken down into cities that represent and interpret in that state and municipality but also extends
+                        all international audience. All information in relevant with each given location making information
+                        relevant and regularly regulated the for international coverage and overall international/ global
+                        coverage and stretch making theiranalytic data on radius in the youthful creative economy in 5th
+                        industrial revolution, digital era - internet ages of this - topping all this with a fintech back
+                        IRM / CRM monetized contact management system .
+                     </p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="row px-lg-5 align-items-center align-items-lg-end">
+               <div class="col-auto p-2">
+                  <i class="bi bi-people fs-1 text-success"></i>
+               </div>
+
+               <div class="col p-2">
+                  <h3>Account Syncing</h3>
+               </div>
+
+               <div class="col-12 p-2">
+                  <div class="bg-light c-rounded-1 p-3">
+                     <p class="m-0">
+                        With all the above Gim.iNc also syncs accounts with the prevailing social media platforms and 3rd
+                        party contact management systems which allows all other system can connect to our system: WhatsApp,
+                        Facebook, Twitter, Instagram, gmail , iCloud , yahoo,contact book, SIM card ,memory card .
+                     </p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="row px-lg-5 align-items-center align-items-lg-end">
+               <div class="col-auto p-2">
+                  <i class="bi bi-cloud fs-1 text-success"></i>
+               </div>
+
+               <div class="col p-2">
+                  <h3>Cloud Storage</h3>
+               </div>
+
+               <div class="col-12 p-2">
+                  <div class="bg-light c-rounded-1 p-3">
+                     <p class="m-0">
+                        Also a storage system that allows for users to have access to storage capacity to back up all
+                        information and contacts in the system.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="row py-4 align-items-center my-5">
+            <div class="col-lg-5 order-lg-2 p-2 p-lg-5">
+               <div>
+                  <div id="generalCarousel2" class="carousel slide general-carousel" data-bs-ride="carousel">
+                     <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                           <div>
+                              <img src="./assets/images/background.jpg" />
+                              <h2 class="h5">
+                                 <span>Find & Hire skilled individuals </span>
+                              </h2>
+                           </div>
+                        </div>
+
+                        <div class="carousel-item">
+                           <div>
+                              <img src="./assets/images/background.jpg" />
+                              <h2 class="h5">
+                                 <span>Signup and advertise your services</span>
+                              </h2>
+                           </div>
+                        </div>
+
+                        <div class="carousel-item">
+                           <div>
+                              <img src="./assets/images/background.jpg" />
+                              <h2 class="h5">
+                                 <span>Browse Countless listings spanning several different fields ®</span>
+                              </h2>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="text-center">
+                     <button class="btn btn-success" type="button" data-bs-target="#generalCarousel2" data-bs-slide="prev">
+                        <i class="bi bi-chevron-double-left fs-5"></i>
+                     </button>
+
+                     <button class="btn btn-success" type="button" data-bs-target="#generalCarousel2" data-bs-slide="next">
+                        <i class="bi bi-chevron-double-right fs-5"></i>
+                     </button>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-lg order-lg-1 p-3 p-lg-5">
+               <div class="text-center text-lg-end">
+                  <h2 class="mb-3">INc Connect</h2>
+
+                  <p class="lead col-lg-11 ms-lg-auto">
+                     Which is a listing platform that allows to entrepreneurs , corporates ,businesses and individuals to
+                     advertise or list their product, service , craft ,skill or expertise. It is backed up by a light
+                     messaging index that engages clients by messaging and favoriting the contacts that’d want to access and
+                     interact with . 3rd incription security codes which secures information and scrutinizes all subscribers
+                     , bank cards , contacts , storage drives and email information.
+                  </p>
+
+                  <div>
+                     <a href="./connect.html" class="btn btn-primary rounded-pill px-4 mt-2"> Explore </a>
+
+                     <a href="./signup.html" class="btn btn-success rounded-pill mt-2 px-3">
+                        Signup<i class="bi bi-arrow-right ms-2"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="my-5 px-lg-5">
+            <h2 class="text-center mb-4">Inc Office</h2>
+
+            <p class="m-0 lead bg-light c-rounded-2 p-3 p-lg-5">
+               Stay informed and ahead of the curve with our Inc Office Newsletters. This exclusive publication delivers
+               curated insights straight to your inbox, covering key areas such as strategy, marketing trends, and digital
+               growth. Crafted for entrepreneurs and professionals seeking a competitive edge, our newsletter is a valuable
+               resource to stay updated on industry trends, receive expert advice, and enhance your business acumen.
+               Subscribe today to join a community of forward-thinkers dedicated to continuous learning and success in the
+               dynamic world of entrepreneurship.
+            </p>
+         </div>
+
+         <div class="my-5 px-lg-5">
+            <h2 class="text-center mb-4">My Incs</h2>
+
+            <p class="m-0 lead bg-light c-rounded-2 p-3 p-lg-5">
+               At Gum.iNc, we understand the importance of efficiency in your networking journey. That's why we've
+               introduced 'My Incs', allowing users to bookmark and organize listings for future reference. Whether you're
+               scouting potential collaborations, planning projects, or simply keeping tabs on interesting profiles, this
+               feature streamlines your experience. We recognize the value of time in a fast-paced professional world, and
+               'My Incs' ensures that users can easily revisit and engage with promising connections. It's a tool designed
+               to enhance user experience, providing a convenient way to manage and prioritize your networking endeavors on
+               Gum.iNc.
+            </p>
+         </div>
+
+         <div class="my-5 px-lg-5">
+            <h2 class="text-center mb-4">Monetisation, Algorithm</h2>
+
+            <p class="m-0 lead bg-light c-rounded-2 p-3 p-lg-5">
+               At Gum.iNc, we believe in empowering our users not only through networking opportunities but also through
+               rewarding monetization avenues. Our platform offers three distinct ways to monetize your presence: earn per
+               listing views, become a Gum.iNc Sales Agent, or participate in our referral program.
+               <br />
+               <br />
+               As you grow your network and engagement, track your progress with insightful account stats. Monitor the
+               performance of your listings, view earnings from monetization activities, and gauge the impact of your
+               connections. Gum.iNc is not just a platform; it's a partner in your journey towards professional success,
+               providing both networking tools and avenues for financial growth.
+            </p>
+         </div>
+
+         <div class="my-5 py-4 px-md-5">
+            <div class="accordion accordion-flush" id="locationsAccordion">
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading1">
+                     <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapse1"
+                        aria-expanded="true"
+                        aria-controls="flush-collapse1"
+                     >
+                        Gum.iNc AFRICA
+                     </button>
+                  </h2>
+
+                  <div
+                     id="flush-collapse1"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="flush-heading1"
+                     data-bs-parent="#locationsAccordion"
+                  >
+                     <div class="accordion-body">
+                        Gum.iNc SOUTH AFRICA |Gum.iNc ZAMBIA |Gum.iNc BOTSWANA |Gum.iNc TANZANIA |Gum.iNc MADAGASCAR
+                        |Gum.iNc MAURITIUS |Gum.iNc RWANDA |Gum.iNc ZIMBABWE | Gum.Inc ETHIOPIA | Gum.Inc MOZAMBIQUE |
+                        Gum.Inc SWAZILAND |Gum.Inc LESOTHO | Gum.Inc CHAD |Gum.INc MOROCCO |
+                     </div>
+                  </div>
+               </div>
+
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading25">
+                     <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapse25"
+                        aria-expanded="true"
+                        aria-controls="flush-collapse25"
+                     >
+                        Gum.iNc ASIA
+                     </button>
+                  </h2>
+
+                  <div
+                     id="flush-collapse25"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="flush-heading25"
+                     data-bs-parent="#locationsAccordion"
+                  >
+                     <div class="accordion-body">
+                        Gum.INc CHINA | Gum.INc HONG KONG | Gum.INc JAPAN | Gum.INc KOREA Gum.INc MALAYSIA | Gum.INc
+                        THAILAND | Gum.INc SINGAPORE|
+                     </div>
+                  </div>
+               </div>
+
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading2">
+                     <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapse2"
+                        aria-expanded="true"
+                        aria-controls="flush-collapse2"
+                     >
+                        Gum.iNc AUSTRALIA
+                     </button>
+                  </h2>
+
+                  <div
+                     id="flush-collapse2"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="flush-heading2"
+                     data-bs-parent="#locationsAccordion"
+                  >
+                     <div class="accordion-body">
+                        Gum.INc NEW SOUTH WALES | Gum.INc GREENSLAND | Gum.INc WESTERN AUSTRALIA |Gum.iNc WESTERN AUSTRALIA
+                        | Gum.INc TASMANIA | Gum.INc NORTHERN TERRITORY | ATLS SERIES AUSTRALIAN CAPITAL TERRITORY
+                     </div>
+                  </div>
+               </div>
+
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading3">
+                     <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapse3"
+                        aria-expanded="true"
+                        aria-controls="flush-collapse3"
+                     >
+                        Gum.iNc SOUTH AMERICA
+                     </button>
+                  </h2>
+
+                  <div
+                     id="flush-collapse3"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="flush-heading3"
+                     data-bs-parent="#locationsAccordion"
+                  >
+                     <div class="accordion-body">
+                        Gum.INc ARGENTINA | Gum.INc BOLIVIA | Gum.INc BRAZIL | Gum.INc CHILE Gum.INc COLOMBIA | Gum.INc
+                        ECUADOR | Gum.INc GUYANA | Gum.INc PARAGUAY | Gum.INc PERU | Gum.INc SURINAME | Gum.INc URUGUAY |
+                        Gum.iNc VENEZUELA
+                     </div>
+                  </div>
+               </div>
+
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading4">
+                     <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapse4"
+                        aria-expanded="true"
+                        aria-controls="flush-collapse4"
+                     >
+                        Gum.iNc NORTH AMERICA
+                     </button>
+                  </h2>
+
+                  <div
+                     id="flush-collapse4"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="flush-heading4"
+                     data-bs-parent="#locationsAccordion"
+                  >
+                     <div class="accordion-body">
+                        Gum.iNc ANTIGUA & BARBUDA |Gum.iNc ANGUILLA |Gum.iNc ARUBA |Gum.Inc THE BAHAMAS |Gum.iNc BARBADOS
+                        |Gum.iNc BELIZE |Gum.iNc BERMUDA |Gum.iNc BONAIRE |Gum.iNc BRITISH VIRGIN ISLANDS |Gum.iNc CANADA
+                        |Gum.iNc CAYMAN ISLANDS |Gum.iNc CLIPPERTON ISLAND |Gum.iNc COSTA RICA |Gum.iNc CUBA |Gum.iNc
+                        DOMINICA |Gum.iNc DOMINICAN REPUBLIC |Gum.iNc EL SALVADOR |Gum.iNc GREENLAND |Gum.iNc GRENADA |
+                        Gum.iNc GUADELOUPE| Gum.iNc GUATEMALA | Gum.iNc HAITI | Gum.iNc HONDURAS | Gum.iNc JAMAICA | Gum.iNc
+                        MEXICO | Gum.iNc NICARAGUA | Gum.iNc PANAMA | Gum.iNc SAINT KITTS & NEVIS | Gum.iNc SAINT LUCIA |
+                        Gum.iNc TRINIDAD & TOBAGO | Gum.iNc UNITED STATES OF AMERICA | Gum.iNc US VIRGIN ISLANDS
+                     </div>
+                  </div>
+               </div>
+
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading5">
+                     <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapse5"
+                        aria-expanded="true"
+                        aria-controls="flush-collapse5"
+                     >
+                        Gum.iNc EUROPE
+                     </button>
+                  </h2>
+
+                  <div
+                     id="flush-collapse5"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="flush-heading5"
+                     data-bs-parent="#locationsAccordion"
+                  >
+                     <div class="accordion-body">
+                        Gum.iNc ALBANIA | Gum.iNc ANDORA | Gum.iNc AUSRIA | Gum.iNc BELARUS Gum.iNc BELGIUM | Gum.iNc BOSNIA
+                        & HERZEGOVIA | Gum.iNc BULGARIA |Gum.iNc CROATIA | Gum.iNc CZECH REPUBLIC | Gum.iNc DENMARK |
+                        Gum.iNc ESTONIA | Gum.iNc FINLAND | Gum.iNc FRANCE | Gum.iNc GERMANY Gum.iNc GREECE | Gum.iNc
+                        HUNGARY | Gum.iNc ICELAND | Gum.iNc REPUBLIC OF IRELAND | Gum.iNc ITALY | Gum.iNc KOSOVO | Gum.iNc
+                        LATIVA | Gum.iNc LIECHTENSTEIN | Gum.iNc LITHUANA | Gum.iNc LUXEMBOURG | Gum.iNc NORTH MACEDONIA |
+                        Gum.iNc MALTA | Gum.iNc MOLDOVA | Gum.iNc MONACO | Gum.iNc MONTENEGRO | Gum.iNc NETHERLANDS| Gum.iNc
+                        NORWAY | Gum.iNc POLAND | Gum.iNc PORTUGAL | Gum.iNc ROMANIA | Gum.iNc RUSSIA | Gum.iNc SAN MARINO |
+                        Gum.iNc SERBIA | Gum.iNc SLOVAKIA | Gum.iNc SLOVENIA | Gum.iNc SPAIN | Gum.iNc SWEEDEN | Gum.iNc
+                        SWITZERLAND | Gum.iNc UKRAINE | Gum.iNc UNITED KINGDOM |Gum.iNc VATICAN CITY | Gum.iNc ANTARCTIA
+                     </div>
+                  </div>
+               </div>
+
+               <p class="text-dark p-3">Gum.iNc Antarctica</p>
+            </div>
+         </div>
+
+         <div class="col-lg-9 py-4 mx-auto mt-5 text-center p-3">
+            Gum.iNc ® Headquarters 145 Stellenbosch Central Western Cape South Africa www. Gum.iNc@.co.za Gum.iNc ® Offices
+            22 Eastwind Lane Brixtun United Kingdom www.Gum.co.uk
+         </div>
+      </main>
+
+      <footer class="container d-lg-flex justify-content-between p-5">
+         <div class="text-center">
+            <p class="d-lg-inline">&copy; 2022 Gum.iNc. All Rights Reserved</p>
+
+            <a href="./partner.html" class="btn btn-success px-3 rounded-pill ms-3">Partner With Us</a>
+         </div>
+
+         <div class="text-center mt-3 mt-lg-0">
+            <a class="btn btn-outline-primary border-0 fs-4" href="https://www.twitter.com" target="_blank"
+               ><i class="bi bi-twitter"></i
             ></a>
-          </div>
-        </div>
-      </div>
-    </header>
 
-    <main class="mt-5 pt-5 text-gray container">
-      <div class="shadow bg-primary p-lg-5 p-2 c-rounded-1">
-        <div class="row">
-          <div class="col-lg-6 d-flex py-4 align-items-center">
-            <div>
-              <img src="./assets/logos and stuff/logo (44).jpg" class="w-100" />
-              <div class="bg-white p-2 w-25 c-rounded-1 mx-auto"></div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 d-flex align-items-center">
-            <p class="shadow-lg bg-white p-3 p-lg-5 c-rounded-1 lead">
-              Gum.iNc is a contract management IRM & CRM system oriented as an
-              Almanac & Directory listing platform, at both online and offline
-              spectrums. That focuses on how entrepreneurs, corporate entities
-              and the creative economy-stores and secures business contacts ,
-              network and connections whilst profiting and generating revenue
-              from having their contact in the Gum.iNc platform.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="p-lg-5 my-5 py-4 text-center">
-        <div class="row justify-content-center">
-          <div class="col-auto">
-            <i class="fas fa-quote-left fs-1 text-success"></i>
-          </div>
-
-          <p class="col col-lg-6 py-lg-5 lead m-0 px-lg-3">
-            Revolutionizing and reinvention of the yellow pages , not only on
-            all spectrums of information, digital or traditional yellow page
-            hard copy culture but stretching into Motorizing contact platform,
-            allow clients to generate funds for sustainability of existing
-            information in our platform .
-          </p>
-
-          <div class="col-auto d-flex align-items-end">
-            <i class="fas fa-quote-right fs-1 text-success"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="my-5 py-4">
-        <h2 class="mb-4 text-center">
-          You earn on the platform in 3 different ways.
-        </h2>
-
-        <div
-          class="row row-cols-1 p-1 row-cols-md-2 row-cols-lg-5 justify-content-center"
-        >
-          <div class="col p-2">
-            <div class="h-100 shadow c-rounded-1 p-3 text-center">
-              <div>
-                <i class="bi bi-coin fs-1 text-primary"></i>
-              </div>
-
-              <p class="m-0">
-                Every 100 people that access your Gum.iNc you earn £ 30.00
-              </p>
-            </div>
-          </div>
-
-          <div class="col p-2">
-            <div class="h-100 shadow c-rounded-1 p-3 text-center">
-              <div>
-                <i class="bi bi-coin fs-1 text-primary"></i>
-              </div>
-
-              <p class="m-0">
-                Earn as a Gum.iNc sales agent and Sales representative
-              </p>
-            </div>
-          </div>
-
-          <div class="col p-1 text-center">
-            <div class="shadow h-100 c-rounded-1 p-2">
-              <div>
-                <i class="bi bi-coin fs-1 text-primary"></i>
-              </div>
-              <div>Suggest 10 people and earn £ 10.00</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-4">
-          <a href="./signup.html" class="btn rounded-pill px-4 btn-primary"
-            >Signup!</a
-          >
-        </div>
-      </div>
-
-      <div class="row py-4 align-items-center my-5">
-        <div class="col-lg-5 p-2 p-lg-5">
-          <div>
-            <div
-              id="generalCarousel1"
-              class="carousel slide general-carousel"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner p-2" role="listbox">
-                <div class="carousel-item active">
-                  <div>
-                    <img src="./assets/img/covers/gummy.jpg" />
-                    <h2 class="h5">
-                      <span>Gummy Pages ( Yellow Pages ) by the Gum.iNc ®</span>
-                    </h2>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div>
-                    <img src="./assets/img/covers/upcoming-events.jpg" />
-                    <h2 class="h5">
-                      <span>Upcoming Events by the Gum.iNc ®</span>
-                    </h2>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div>
-                    <img src="./assets/img/covers/creme-chefs.jpg" />
-                    <h2 class="h5">
-                      <span>Cremé Chefs by the Gum.iNc ®</span>
-                    </h2>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div>
-                    <img src="./assets/img/covers/creme-restaurants.jpg" />
-                    <h2 class="h5">
-                      <span>Cremé Restaurants by the Gum.iNc ®</span>
-                    </h2>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div>
-                    <img src="./assets/img/covers/sports.jpg" />
-                    <h2 class="h5">
-                      <span>Sports by the Gum.iNc ®</span>
-                    </h2>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div>
-                    <img src="./assets/img/covers/craft-skill.jpg" />
-                    <h2 class="h5">
-                      <span>Craft/ Skill by the Gum.iNc ®</span>
-                    </h2>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div>
-                    <img src="./assets/img/covers/coin.jpg" />
-                    <h2 class="h5">
-                      <span>Coin ( Business) by the Gum.iNc ®</span>
-                    </h2>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div>
-                    <img src="./assets/img/covers/thrift.jpg" />
-                    <h2 class="h5">
-                      <span>Thrift ( Fashion ) by the Gum.iNc ®</span>
-                    </h2>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div>
-                    <img src="./assets/img/covers/thrift.jpg" />
-                    <h2 class="h5">
-                      <span>Edu-Cation by the Gum.iNc ®</span>
-                    </h2>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div>
-                    <img src="./assets/img/covers/artists-creatives.jpg" />
-                    <h2 class="h5">
-                      <span>Creatives & Artists by the Gum.iNc ®</span>
-                    </h2>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div>
-                    <img src="./assets/img/covers/record.jpg" />
-                    <h2 class="h5">
-                      <span>
-                        Recording Labels | Artists & Repertoire / Booking Agents
-                        by the Gum.iNc ®
-                      </span>
-                    </h2>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div>
-                    <img src="./assets/img/covers/ngos.jpg" />
-                    <h2 class="h5">
-                      <span>NGOs / Sponsorships & Funds by the Gum.iNc ®</span>
-                    </h2>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div>
-                    <img src="./assets/img/covers/creative-hubs.jpg" />
-                    <h2 class="h5">
-                      <span>
-                        Creative Hubs / Studios & Co-working spaces by the
-                        Gum.iNc ®
-                      </span>
-                    </h2>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div>
-                    <img src="./assets/img/covers/airbnbs.jpg" />
-                    <h2 class="h5">
-                      <span>Air Bnbs, Hotels & Resorts by the Gum.iNc ®</span>
-                    </h2>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div>
-                    <img src="./assets/img/covers/hospitals.jpg" />
-                    <h2 class="h5">
-                      <span>
-                        Hospitals / Medical Specialists & facilities by the
-                        Gum.Inc
-                      </span>
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="text-center">
-              <button
-                class="btn btn-success"
-                type="button"
-                data-bs-target="#generalCarousel1"
-                data-bs-slide="prev"
-              >
-                <i class="bi bi-chevron-double-left fs-5"></i>
-              </button>
-
-              <button
-                class="btn btn-success"
-                type="button"
-                data-bs-target="#generalCarousel1"
-                data-bs-slide="next"
-              >
-                <i class="bi bi-chevron-double-right fs-5"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-7 p-3 p-lg-5">
-          <div class="text-center text-lg-start">
-            <h2 class="mb-3">Our Directory & Almanac System</h2>
-
-            <p class="lead col-lg-11">
-              Over the course of the centuries certain industries have deemed
-              lucrative and thriving ,so we’ve carefully curated and tailor
-              suited our directory system to 15 almanacs that have shown
-              exponential growth and positive future outlook in this ever
-              changing digital era . Gum.iNc is a premium access contact
-              management system that is organized to thriving industry backed up
-              by a multi faceted Almanac and directory platform for
-              connecting,networking and advertising. Explore and connect iNc
-              with us
-            </p>
-
-            <div>
-              <a
-                href="./inc-connect.html"
-                class="btn btn-primary rounded-pill px-4 mt-2"
-              >
-                Explore
-              </a>
-
-              <a
-                href="./signup.html"
-                class="btn btn-success rounded-pill mt-2 px-3"
-              >
-                Signup<i class="bi bi-arrow-right ms-2"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="my-5 py-4 px-3 px-lg-5">
-        <div class="row px-lg-5 align-items-center align-items-lg-end">
-          <div class="col-auto p-2">
-            <i class="bi bi-geo-alt fs-1 text-success"></i>
-          </div>
-
-          <div class="col p-2">
-            <h3>Location Based Service</h3>
-          </div>
-
-          <div class="col-12 p-2">
-            <div class="bg-light c-rounded-1 p-3">
-              <p class="m-0">
-                Our Almanac and directory system in conducted under jurisdiction
-                accordance. Each continent and broken down into cities that
-                represent and interpret in that state and municipality but also
-                extends all international audience. All information in relevant
-                with each given location making information relevant and
-                regularly regulated the for international coverage and overall
-                international/ global coverage and stretch making theiranalytic
-                data on radius in the youthful creative economy in 5th
-                industrial revolution, digital era - internet ages of this -
-                topping all this with a fintech back IRM / CRM monetized contact
-                management system .
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row px-lg-5 align-items-center align-items-lg-end">
-          <div class="col-auto p-2">
-            <i class="bi bi-people fs-1 text-success"></i>
-          </div>
-
-          <div class="col p-2">
-            <h3>Account Syncing</h3>
-          </div>
-
-          <div class="col-12 p-2">
-            <div class="bg-light c-rounded-1 p-3">
-              <p class="m-0">
-                With all the above Gim.iNc also syncs accounts with the
-                prevailing social media platforms and 3rd party contact
-                management systems which allows all other system can connect to
-                our system: WhatsApp, Facebook, Twitter, Instagram, gmail ,
-                iCloud , yahoo,contact book, SIM card ,memory card .
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row px-lg-5 align-items-center align-items-lg-end">
-          <div class="col-auto p-2">
-            <i class="bi bi-cloud fs-1 text-success"></i>
-          </div>
-
-          <div class="col p-2">
-            <h3>Cloud Storage</h3>
-          </div>
-
-          <div class="col-12 p-2">
-            <div class="bg-light c-rounded-1 p-3">
-              <p class="m-0">
-                Also a storage system that allows for users to have access to
-                storage capacity to back up all information and contacts in the
-                system.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row py-4 align-items-center my-5">
-        <div class="col-lg-5 order-lg-2 p-2 p-lg-5">
-          <div>
-            <div
-              id="generalCarousel2"
-              class="carousel slide general-carousel"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                  <div>
-                    <img src="./assets/images/background.jpg" />
-                    <h2 class="h5">
-                      <span>Find & Hire skilled individuals </span>
-                    </h2>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div>
-                    <img src="./assets/images/background.jpg" />
-                    <h2 class="h5">
-                      <span>Signup and advertise your services</span>
-                    </h2>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div>
-                    <img src="./assets/images/background.jpg" />
-                    <h2 class="h5">
-                      <span
-                        >Browse Countless listings spanning several different
-                        fields ®</span
-                      >
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="text-center">
-              <button
-                class="btn btn-success"
-                type="button"
-                data-bs-target="#generalCarousel2"
-                data-bs-slide="prev"
-              >
-                <i class="bi bi-chevron-double-left fs-5"></i>
-              </button>
-
-              <button
-                class="btn btn-success"
-                type="button"
-                data-bs-target="#generalCarousel2"
-                data-bs-slide="next"
-              >
-                <i class="bi bi-chevron-double-right fs-5"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg order-lg-1 p-3 p-lg-5">
-          <div class="text-center text-lg-end">
-            <h2 class="mb-3">INc Connect</h2>
-
-            <p class="lead col-lg-11 ms-lg-auto">
-              Which is a listing platform that allows to entrepreneurs ,
-              corporates ,businesses and individuals to advertise or list their
-              product, service , craft ,skill or expertise. It is backed up by a
-              light messaging index that engages clients by messaging and
-              favoriting the contacts that’d want to access and interact with .
-              3rd incription security codes which secures information and
-              scrutinizes all subscribers , bank cards , contacts , storage
-              drives and email information.
-            </p>
-
-            <div>
-              <a
-                href="./connect.html"
-                class="btn btn-primary rounded-pill px-4 mt-2"
-              >
-                Explore
-              </a>
-
-              <a
-                href="./signup.html"
-                class="btn btn-success rounded-pill mt-2 px-3"
-              >
-                Signup<i class="bi bi-arrow-right ms-2"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="my-5 px-lg-5">
-        <h2 class="text-center mb-4">Inc Office</h2>
-
-        <p class="m-0 lead bg-light c-rounded-2 p-3 p-lg-5">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi id
-          soluta porro saepe, perspiciatis a maxime officia doloribus, molestias
-          ad quo? Accusamus accusantium dolorem repudiandae asperiores
-          molestiae, doloribus eius ipsum mollitia exercitationem soluta! Error
-          accusamus labore asperiores quasi harum ipsam iste necessitatibus,
-          dicta odit voluptatum nihil cupiditate! Eius, placeat id. <br />
-
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-          laboriosam omnis, iusto expedita laudantium excepturi dolores
-          voluptates ex ipsum, eius incidunt vero deleniti maxime? Natus officia
-          iste ut quis dolorum.
-        </p>
-      </div>
-
-      <div class="my-5 px-lg-5">
-        <h2 class="text-center mb-4">My Incs</h2>
-
-        <p class="m-0 lead bg-light c-rounded-2 p-3 p-lg-5">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi id
-          soluta porro saepe, perspiciatis a maxime officia doloribus, molestias
-          ad quo? Accusamus accusantium dolorem repudiandae asperiores
-          molestiae, doloribus eius ipsum mollitia exercitationem soluta! Error
-          accusamus labore asperiores quasi harum ipsam iste necessitatibus,
-          dicta odit voluptatum nihil cupiditate! Eius, placeat id. <br />
-
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-          laboriosam omnis, iusto expedita laudantium excepturi dolores
-          voluptates ex ipsum, eius incidunt vero deleniti maxime? Natus officia
-          iste ut quis dolorum.
-        </p>
-      </div>
-
-      <div class="my-5 px-lg-5">
-        <h2 class="text-center mb-4">Contact Manager</h2>
-
-        <p class="m-0 lead bg-light c-rounded-2 p-3 p-lg-5">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi id
-          soluta porro saepe, perspiciatis a maxime officia doloribus, molestias
-          ad quo? Accusamus accusantium dolorem repudiandae asperiores
-          molestiae, doloribus eius ipsum mollitia exercitationem soluta! Error
-          accusamus labore asperiores quasi harum ipsam iste necessitatibus,
-          dicta odit voluptatum nihil cupiditate! Eius, placeat id. <br />
-
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-          laboriosam omnis, iusto expedita laudantium excepturi dolores
-          voluptates ex ipsum, eius incidunt vero deleniti maxime? Natus officia
-          iste ut quis dolorum.
-        </p>
-      </div>
-
-      <div class="my-5 px-lg-5">
-        <h2 class="text-center mb-4">Monetisation, Algorithm</h2>
-
-        <p class="m-0 lead bg-light c-rounded-2 p-3 p-lg-5">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi id
-          soluta porro saepe, perspiciatis a maxime officia doloribus, molestias
-          ad quo? Accusamus accusantium dolorem repudiandae asperiores
-          molestiae, doloribus eius ipsum mollitia exercitationem soluta! Error
-          accusamus labore asperiores quasi harum ipsam iste necessitatibus,
-          dicta odit voluptatum nihil cupiditate! Eius, placeat id. <br />
-
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-          laboriosam omnis, iusto expedita laudantium excepturi dolores
-          voluptates ex ipsum, eius incidunt vero deleniti maxime? Natus officia
-          iste ut quis dolorum.
-        </p>
-      </div>
-
-      <div class="my-5 py-4 px-md-5">
-        <div class="accordion accordion-flush" id="locationsAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-heading1">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapse1"
-                aria-expanded="true"
-                aria-controls="flush-collapse1"
-              >
-                Gum.iNc AFRICA
-              </button>
-            </h2>
-
-            <div
-              id="flush-collapse1"
-              class="accordion-collapse collapse"
-              aria-labelledby="flush-heading1"
-              data-bs-parent="#locationsAccordion"
-            >
-              <div class="accordion-body">
-                Gum.iNc SOUTH AFRICA |Gum.iNc ZAMBIA |Gum.iNc BOTSWANA |Gum.iNc
-                TANZANIA |Gum.iNc MADAGASCAR |Gum.iNc MAURITIUS |Gum.iNc RWANDA
-                |Gum.iNc ZIMBABWE | Gum.Inc ETHIOPIA | Gum.Inc MOZAMBIQUE |
-                Gum.Inc SWAZILAND |Gum.Inc LESOTHO | Gum.Inc CHAD |Gum.INc
-                MOROCCO |
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-heading25">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapse25"
-                aria-expanded="true"
-                aria-controls="flush-collapse25"
-              >
-                Gum.iNc ASIA
-              </button>
-            </h2>
-
-            <div
-              id="flush-collapse25"
-              class="accordion-collapse collapse"
-              aria-labelledby="flush-heading25"
-              data-bs-parent="#locationsAccordion"
-            >
-              <div class="accordion-body">
-                Gum.INc CHINA | Gum.INc HONG KONG | Gum.INc JAPAN | Gum.INc
-                KOREA Gum.INc MALAYSIA | Gum.INc THAILAND | Gum.INc SINGAPORE|
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-heading2">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapse2"
-                aria-expanded="true"
-                aria-controls="flush-collapse2"
-              >
-                Gum.iNc AUSTRALIA
-              </button>
-            </h2>
-
-            <div
-              id="flush-collapse2"
-              class="accordion-collapse collapse"
-              aria-labelledby="flush-heading2"
-              data-bs-parent="#locationsAccordion"
-            >
-              <div class="accordion-body">
-                Gum.INc NEW SOUTH WALES | Gum.INc GREENSLAND | Gum.INc WESTERN
-                AUSTRALIA |Gum.iNc WESTERN AUSTRALIA | Gum.INc TASMANIA |
-                Gum.INc NORTHERN TERRITORY | ATLS SERIES AUSTRALIAN CAPITAL
-                TERRITORY
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-heading3">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapse3"
-                aria-expanded="true"
-                aria-controls="flush-collapse3"
-              >
-                Gum.iNc SOUTH AMERICA
-              </button>
-            </h2>
-
-            <div
-              id="flush-collapse3"
-              class="accordion-collapse collapse"
-              aria-labelledby="flush-heading3"
-              data-bs-parent="#locationsAccordion"
-            >
-              <div class="accordion-body">
-                Gum.INc ARGENTINA | Gum.INc BOLIVIA | Gum.INc BRAZIL | Gum.INc
-                CHILE Gum.INc COLOMBIA | Gum.INc ECUADOR | Gum.INc GUYANA |
-                Gum.INc PARAGUAY | Gum.INc PERU | Gum.INc SURINAME | Gum.INc
-                URUGUAY | Gum.iNc VENEZUELA
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-heading4">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapse4"
-                aria-expanded="true"
-                aria-controls="flush-collapse4"
-              >
-                Gum.iNc NORTH AMERICA
-              </button>
-            </h2>
-
-            <div
-              id="flush-collapse4"
-              class="accordion-collapse collapse"
-              aria-labelledby="flush-heading4"
-              data-bs-parent="#locationsAccordion"
-            >
-              <div class="accordion-body">
-                Gum.iNc ANTIGUA & BARBUDA |Gum.iNc ANGUILLA |Gum.iNc ARUBA
-                |Gum.Inc THE BAHAMAS |Gum.iNc BARBADOS |Gum.iNc BELIZE |Gum.iNc
-                BERMUDA |Gum.iNc BONAIRE |Gum.iNc BRITISH VIRGIN ISLANDS
-                |Gum.iNc CANADA |Gum.iNc CAYMAN ISLANDS |Gum.iNc CLIPPERTON
-                ISLAND |Gum.iNc COSTA RICA |Gum.iNc CUBA |Gum.iNc DOMINICA
-                |Gum.iNc DOMINICAN REPUBLIC |Gum.iNc EL SALVADOR |Gum.iNc
-                GREENLAND |Gum.iNc GRENADA | Gum.iNc GUADELOUPE| Gum.iNc
-                GUATEMALA | Gum.iNc HAITI | Gum.iNc HONDURAS | Gum.iNc JAMAICA |
-                Gum.iNc MEXICO | Gum.iNc NICARAGUA | Gum.iNc PANAMA | Gum.iNc
-                SAINT KITTS & NEVIS | Gum.iNc SAINT LUCIA | Gum.iNc TRINIDAD &
-                TOBAGO | Gum.iNc UNITED STATES OF AMERICA | Gum.iNc US VIRGIN
-                ISLANDS
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-heading5">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapse5"
-                aria-expanded="true"
-                aria-controls="flush-collapse5"
-              >
-                Gum.iNc EUROPE
-              </button>
-            </h2>
-
-            <div
-              id="flush-collapse5"
-              class="accordion-collapse collapse"
-              aria-labelledby="flush-heading5"
-              data-bs-parent="#locationsAccordion"
-            >
-              <div class="accordion-body">
-                Gum.iNc ALBANIA | Gum.iNc ANDORA | Gum.iNc AUSRIA | Gum.iNc
-                BELARUS Gum.iNc BELGIUM | Gum.iNc BOSNIA & HERZEGOVIA | Gum.iNc
-                BULGARIA |Gum.iNc CROATIA | Gum.iNc CZECH REPUBLIC | Gum.iNc
-                DENMARK | Gum.iNc ESTONIA | Gum.iNc FINLAND | Gum.iNc FRANCE |
-                Gum.iNc GERMANY Gum.iNc GREECE | Gum.iNc HUNGARY | Gum.iNc
-                ICELAND | Gum.iNc REPUBLIC OF IRELAND | Gum.iNc ITALY | Gum.iNc
-                KOSOVO | Gum.iNc LATIVA | Gum.iNc LIECHTENSTEIN | Gum.iNc
-                LITHUANA | Gum.iNc LUXEMBOURG | Gum.iNc NORTH MACEDONIA |
-                Gum.iNc MALTA | Gum.iNc MOLDOVA | Gum.iNc MONACO | Gum.iNc
-                MONTENEGRO | Gum.iNc NETHERLANDS| Gum.iNc NORWAY | Gum.iNc
-                POLAND | Gum.iNc PORTUGAL | Gum.iNc ROMANIA | Gum.iNc RUSSIA |
-                Gum.iNc SAN MARINO | Gum.iNc SERBIA | Gum.iNc SLOVAKIA | Gum.iNc
-                SLOVENIA | Gum.iNc SPAIN | Gum.iNc SWEEDEN | Gum.iNc SWITZERLAND
-                | Gum.iNc UKRAINE | Gum.iNc UNITED KINGDOM |Gum.iNc VATICAN CITY
-                | Gum.iNc ANTARCTIA
-              </div>
-            </div>
-          </div>
-
-          <p class="text-dark p-3">Gum.iNc Antarctica</p>
-        </div>
-      </div>
-
-      <div class="col-lg-9 py-4 mx-auto mt-5 text-center p-3">
-        Gum.iNc ® Headquarters 145 Stellenbosch Central Western Cape South
-        Africa www. Gum.iNc@.co.za Gum.iNc ® Offices 22 Eastwind Lane Brixtun
-        United Kingdom www.Gum.co.uk
-      </div>
-    </main>
-
-    <footer class="container d-lg-flex justify-content-between p-5">
-      <div class="text-center">
-        <p class="d-lg-inline">&copy; 2022 Gum.iNc. All Rights Reserved</p>
-
-        <a href="./partner.html" class="btn btn-success px-3 rounded-pill ms-3"
-          >Partner With Us</a
-        >
-      </div>
-
-      <div class="text-center mt-3 mt-lg-0">
-        <a
-          class="btn btn-outline-primary border-0 fs-4"
-          href="https://www.twitter.com"
-          target="_blank"
-          ><i class="bi bi-twitter"></i
-        ></a>
-
-        <a
-          class="btn btn-outline-primary border-0 fs-4"
-          href="https://www.instagram.com"
-          target="_blank"
-          ><i class="bi bi-instagram"></i
-        ></a>
-
-        <a
-          class="btn btn-outline-primary border-0 fs-4"
-          href="https://www.facebook.com"
-          target="_blank"
-          ><i class="bi bi-facebook"></i
-        ></a>
-      </div>
-    </footer>
-  </body>
+            <a class="btn btn-outline-primary border-0 fs-4" href="https://www.instagram.com" target="_blank"
+               ><i class="bi bi-instagram"></i
+            ></a>
+
+            <a class="btn btn-outline-primary border-0 fs-4" href="https://www.facebook.com" target="_blank"
+               ><i class="bi bi-facebook"></i
+            ></a>
+         </div>
+      </footer>
+   </body>
 </html>
